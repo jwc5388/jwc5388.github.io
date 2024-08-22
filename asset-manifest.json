@@ -1,21 +1,22 @@
 {
   "files": {
     "main.css": "/static/css/main.da495b6e.chunk.css",
-    "main.js": "/static/js/main.185fe8e7.chunk.js",
-    "main.js.map": "/static/js/main.185fe8e7.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.22f5cd78.js",
-    "runtime-main.js.map": "/static/js/runtime-main.22f5cd78.js.map",
-    "static/js/2.181d92a5.chunk.js": "/static/js/2.181d92a5.chunk.js",
-    "static/js/2.181d92a5.chunk.js.map": "/static/js/2.181d92a5.chunk.js.map",
-    "static/js/3.09489c3a.chunk.js": "/static/js/3.09489c3a.chunk.js",
-    "static/js/3.09489c3a.chunk.js.map": "/static/js/3.09489c3a.chunk.js.map",
+    "main.js": "/static/js/main.16360c2e.chunk.js",
+    "main.js.map": "/static/js/main.16360c2e.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.a778cd6f.js",
+    "runtime-main.js.map": "/static/js/runtime-main.a778cd6f.js.map",
+    "static/js/2.eb2f68ff.chunk.js": "/static/js/2.eb2f68ff.chunk.js",
+    "static/js/2.eb2f68ff.chunk.js.map": "/static/js/2.eb2f68ff.chunk.js.map",
+    "static/js/3.84374584.chunk.js": "/static/js/3.84374584.chunk.js",
+    "static/js/3.84374584.chunk.js.map": "/static/js/3.84374584.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.6caf9e39ed7f5f7861bc7813ff26a7b4.js": "/precache-manifest.6caf9e39ed7f5f7861bc7813ff26a7b4.js",
+    "precache-manifest.ba0b929c63d66b170cf9d529234648e0.js": "/precache-manifest.ba0b929c63d66b170cf9d529234648e0.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.da495b6e.chunk.css.map": "/static/css/main.da495b6e.chunk.css.map",
-    "static/js/2.181d92a5.chunk.js.LICENSE.txt": "/static/js/2.181d92a5.chunk.js.LICENSE.txt",
+    "static/js/2.eb2f68ff.chunk.js.LICENSE.txt": "/static/js/2.eb2f68ff.chunk.js.LICENSE.txt",
     "static/media/CSDissertation.pdf": "/static/media/CSDissertation.5bbfe2ab.pdf",
     "static/media/MathDissertation.pdf": "/static/media/MathDissertation.2b362807.pdf",
+    "static/media/cotons-production-gateway.apk": "/static/media/cotons-production-gateway.eea22f5e.apk",
     "static/media/cotons1.jpg": "/static/media/cotons1.fc5fff98.jpg",
     "static/media/cotons2.jpg": "/static/media/cotons2.b3832ab9.jpg",
     "static/media/dissertationlogo.jpg": "/static/media/dissertationlogo.de7467b3.jpg",
@@ -23,9 +24,9 @@
     "static/media/judo.jpg": "/static/media/judo.5895070a.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.22f5cd78.js",
-    "static/js/2.181d92a5.chunk.js",
+    "static/js/runtime-main.a778cd6f.js",
+    "static/js/2.eb2f68ff.chunk.js",
     "static/css/main.da495b6e.chunk.css",
-    "static/js/main.185fe8e7.chunk.js"
+    "static/js/main.16360c2e.chunk.js"
   ]
 }
