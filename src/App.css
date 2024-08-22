@@ -14,14 +14,14 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: white;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
 }
 
 .App-link {
@@ -35,4 +35,80 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.Mybutton{
+  padding: 10px 20px;
+  font-size: 16px;
+  color: blue;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.About-section,
+.Projects-section {
+  padding: 60px 20px;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+section {
+  padding: 60px 20px;
+  border-bottom: 1px solid #e7e7e7;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+.arrow.expanded {
+  transform: rotate(180deg); /* Rotate the arrow when expanded */
+}
+
+.entry-details {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.entry-image {
+  width: 200px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.download-link {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.download-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+.download-link span {
+  color: #007bff;
+  cursor: pointer;
+}
+
+.download-link a {
+  text-decoration: none;
+}
+
+.download-link span:hover {
+  text-decoration: underline;
 }
