@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e3965a49.css",
+    "main.js": "/static/js/main.625d1b4f.js",
+    "static/js/453.acca0757.chunk.js": "/static/js/453.acca0757.chunk.js",
+    "static/media/CSDissertation.pdf": "/static/media/CSDissertation.74a987856e7771e4268e.pdf",
+    "static/media/graduation.jpg": "/static/media/graduation.e5b2c575339b5c588a39.jpg",
+    "static/media/cotons2.jpg": "/static/media/cotons2.d75021d99f9b9b6983f9.jpg",
+    "static/media/MathDissertation.pdf": "/static/media/MathDissertation.3adf8ed6c5443e0ca736.pdf",
+    "static/media/judo.jpg": "/static/media/judo.62c0147bc221daa4d17b.jpg",
+    "static/media/cotons1.jpg": "/static/media/cotons1.aa2c1594dedac56fd396.jpg",
+    "static/media/dissertationlogo.jpg": "/static/media/dissertationlogo.907ad4cd3abae10fcd67.jpg",
+    "index.html": "/index.html",
+    "main.e3965a49.css.map": "/static/css/main.e3965a49.css.map",
+    "main.625d1b4f.js.map": "/static/js/main.625d1b4f.js.map",
+    "453.acca0757.chunk.js.map": "/static/js/453.acca0757.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e3965a49.css",
+    "static/js/main.625d1b4f.js"
+  ]
+}
