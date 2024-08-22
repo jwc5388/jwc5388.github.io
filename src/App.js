@@ -11,6 +11,8 @@ import cotonsImage1 from './assets/images/cotons1.jpg';
 import cotonsImage2 from './assets/images/cotons2.jpg';
 import dissertation1 from './assets/files/CSDissertation.pdf'; // Import the first dissertation file
 import dissertation2 from './assets/files/MathDissertation.pdf';
+import productionapk from './assets/files/cotons-production-gateway.apk';
+
 
 function App() {
 
@@ -85,13 +87,19 @@ function App() {
               location="Gyeong-gido, South Korea"
               dates="June 2023 – August 2023"
               details={[
-                'Created a mobile application to facilitate the production of the Sense1 Pro model. The application efficiently mapped QR codes, barcodes, and subsequently encoded them onto NFC tags.',
+                <div key="detail-1">
+                  Created a mobile application to facilitate the production of the Sense1 Pro model. The application efficiently mapped QR codes, barcodes, and subsequently encoded them onto NFC tags. -  
+                  <a href={productionapk} download style={{ marginLeft: '8px', textDecoration: 'underline', color: '#007BFF' }}>
+                    Download app APK
+                  </a>
+                </div>,
                 'Designed and developed a Bluetooth version application ‘Cotons ai’ utilizing Kotlin to capture essential data, including the BCG signal, 6-axis sensor signal, and temperature, ensuring accurate and reliable data acquisition.',
                 'More Details about CareSix:',
               ]}
               isExpanded={expandedSections.experience.entries.appdeveloper}
               onClick={() => toggleEntry('experience', 'appdeveloper')}
             />
+
             <Entry
               title="WHAT COMPANY IS CARESIX?"
               location="Jeju Island, South Korea"

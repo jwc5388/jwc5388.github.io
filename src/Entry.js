@@ -1,7 +1,5 @@
-// src/Entry.js
-
 import React from 'react';
-import './App.css'; // Create a CSS file specifically for the Entry component
+import './App.css'; // Ensure you have proper styling in App.css
 import { useState } from 'react';
 
 function Entry({ title, location, dates, details, imageSrc, isExpanded, onClick }) {
@@ -27,7 +25,8 @@ function Entry({ title, location, dates, details, imageSrc, isExpanded, onClick 
           <ul>
             {details.map((detail, index) => (
               <li key={index}>
-                {typeof detail === 'string' ? (
+                {/* Adjusted logic to handle JSX elements properly */}
+                {typeof detail === 'string' || React.isValidElement(detail) ? (
                   <span>{detail}</span>
                 ) : (
                   <div>
