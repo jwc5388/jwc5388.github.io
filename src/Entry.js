@@ -25,12 +25,11 @@ function Entry({ title, location, dates, details, imageSrc, isExpanded, onClick 
           <ul>
             {details.map((detail, index) => (
               <li key={index}>
-                {/* Adjusted logic to handle JSX elements properly */}
                 {typeof detail === 'string' || React.isValidElement(detail) ? (
                   <span>{detail}</span>
                 ) : (
                   <div>
-                    <div className="detail-header" onClick={() => toggleDetail(index)}>
+                    <div className="detail-header" onClick={() => toggleDetail(index)} style={{ cursor: 'pointer', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                       <span>{detail.title || 'More Details'}</span>
                       <span className={`arrow ${expandedDetails[index] ? 'expanded' : ''}`}>&#x25BC;</span>
                     </div>

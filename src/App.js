@@ -21,7 +21,8 @@ function App() {
     experience: {expanded: false, entries: {}},
     education: {expanded: false, entries: {}},
     skills: {expanded:false},
-    volunteer: {expanded:false}
+    volunteer: {expanded:false},
+    caresixContent: {expanded:false},
   });
 
   const toggleSection = (section) => {
@@ -46,7 +47,6 @@ function App() {
       },
     }));
   };
-
 
   return (
     <div className="App">
@@ -106,7 +106,7 @@ function App() {
                   </a>
                 </div>,
                 'Designed and developed a Bluetooth version application ‘Cotons ai’ utilizing Kotlin to capture essential data, including the BCG signal, 6-axis sensor signal, and temperature, ensuring accurate and reliable data acquisition.',
-                'More Details about CareSix:',
+                // 'More Details about CareSix:',
               ]}
               isExpanded={expandedSections.experience.entries.appdeveloper}
               onClick={() => toggleEntry('experience', 'appdeveloper')}
@@ -120,12 +120,13 @@ function App() {
                 {
                   title: 'AI collar for future veterinary care',
                   content: (
-                    <div>
+                    <div style={{ paddingBottom: '20px' }}>
                       <p>The AI collar developed by CareSix revolutionizes veterinary care by monitoring pets' health in real-time.</p>
                       <img src={cotonsImage1} alt="CareSix AI Collar" style={{ width: '100%', borderRadius: '8px' }} />
                     </div>
                   ),
                 },
+                // <div style={{ marginBottom: '20px' }}></div>,
                 {
                   title: 'Awards',
                   content: (
@@ -139,6 +140,7 @@ function App() {
                     </div>
                   ),
                 },
+
                 {
                   title: 'More about the company',
                   content: (
@@ -157,6 +159,7 @@ function App() {
               isExpanded={expandedSections.experience.entries.caresix}
               onClick={() => toggleEntry('experience', 'caresix')}
             />
+
             {/* Add more entries here as needed */}
           </div>
         )}
