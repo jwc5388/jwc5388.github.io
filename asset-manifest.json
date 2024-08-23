@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.da495b6e.chunk.css",
-    "main.js": "/static/js/main.16360c2e.chunk.js",
-    "main.js.map": "/static/js/main.16360c2e.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.a778cd6f.js",
-    "runtime-main.js.map": "/static/js/runtime-main.a778cd6f.js.map",
-    "static/js/2.eb2f68ff.chunk.js": "/static/js/2.eb2f68ff.chunk.js",
-    "static/js/2.eb2f68ff.chunk.js.map": "/static/js/2.eb2f68ff.chunk.js.map",
-    "static/js/3.84374584.chunk.js": "/static/js/3.84374584.chunk.js",
-    "static/js/3.84374584.chunk.js.map": "/static/js/3.84374584.chunk.js.map",
+    "main.css": "/static/css/main.4b28d5a7.chunk.css",
+    "main.js": "/static/js/main.8952c69d.chunk.js",
+    "main.js.map": "/static/js/main.8952c69d.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.d0d28778.js",
+    "runtime-main.js.map": "/static/js/runtime-main.d0d28778.js.map",
+    "static/js/2.58ec822a.chunk.js": "/static/js/2.58ec822a.chunk.js",
+    "static/js/2.58ec822a.chunk.js.map": "/static/js/2.58ec822a.chunk.js.map",
+    "static/js/3.9051afc8.chunk.js": "/static/js/3.9051afc8.chunk.js",
+    "static/js/3.9051afc8.chunk.js.map": "/static/js/3.9051afc8.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.ba0b929c63d66b170cf9d529234648e0.js": "/precache-manifest.ba0b929c63d66b170cf9d529234648e0.js",
+    "precache-manifest.087992794de38b8a38255f26ed92aa4c.js": "/precache-manifest.087992794de38b8a38255f26ed92aa4c.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.da495b6e.chunk.css.map": "/static/css/main.da495b6e.chunk.css.map",
-    "static/js/2.eb2f68ff.chunk.js.LICENSE.txt": "/static/js/2.eb2f68ff.chunk.js.LICENSE.txt",
+    "static/css/main.4b28d5a7.chunk.css.map": "/static/css/main.4b28d5a7.chunk.css.map",
+    "static/js/2.58ec822a.chunk.js.LICENSE.txt": "/static/js/2.58ec822a.chunk.js.LICENSE.txt",
     "static/media/CSDissertation.pdf": "/static/media/CSDissertation.5bbfe2ab.pdf",
     "static/media/MathDissertation.pdf": "/static/media/MathDissertation.2b362807.pdf",
     "static/media/cotons-production-gateway.apk": "/static/media/cotons-production-gateway.eea22f5e.apk",
@@ -24,9 +24,9 @@
     "static/media/judo.jpg": "/static/media/judo.5895070a.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.a778cd6f.js",
-    "static/js/2.eb2f68ff.chunk.js",
-    "static/css/main.da495b6e.chunk.css",
-    "static/js/main.16360c2e.chunk.js"
+    "static/js/runtime-main.d0d28778.js",
+    "static/js/2.58ec822a.chunk.js",
+    "static/css/main.4b28d5a7.chunk.css",
+    "static/js/main.8952c69d.chunk.js"
   ]
 }
