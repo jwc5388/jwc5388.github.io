@@ -12,6 +12,7 @@ import cotonsImage2 from './assets/images/cotons2.jpg';
 import dissertation1 from './assets/files/CSDissertation.pdf'; // Import the first dissertation file
 import dissertation2 from './assets/files/MathDissertation.pdf';
 import productionapk from './assets/files/cotons-production-gateway.apk';
+import { FaEnvelope, FaPhone, FaLinkedin } from 'react-icons/fa';
 
 
 function App() {
@@ -20,7 +21,7 @@ function App() {
     experience: {expanded: false, entries: {}},
     education: {expanded: false, entries: {}},
     skills: {expanded:false},
-    volunteer: false
+    volunteer: {expanded:false}
   });
 
   const toggleSection = (section) => {
@@ -51,6 +52,17 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>Jae Woo Chang's Portfolio</h1>
+        <div className="contact-icons">
+          <a href="mailto:peter.jaewoochang@gmail.com" aria-label="Email">
+            <FaEnvelope size={30} style={{ margin: '0 15px', color: '#000' }} />
+          </a>
+          <a href="tel:+821074465388" aria-label="Phone">
+            <FaPhone size={30} style={{ margin: '0 15px', color: '#000' }} />
+          </a>
+          <a href="https://www.linkedin.com/in/jwcbillion33" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <FaLinkedin size={30} style={{ margin: '0 15px', color: '#000' }} />
+          </a>
+        </div>
       </header>
 
       <section className="Experience-section">
@@ -62,9 +74,9 @@ function App() {
               location="Jeju Island, South Korea"
               dates="June 2019 - August 2019"
               details={[
-                'Conducted in-depth analysis of veterinary clinics in Korea, focusing on the profitability of services related to dogs and cats.',
+                'Conducted in-depth analysis of veterinary clinics in Korea, focusing on assessing the profitability of their services.',
                 'Gathered, cleaned, and organized large datasets from various sources to ensure data accuracy and integrity.',
-                'Applied statistical techniques to identify patterns, trends, and insights related to profit margins, customer behavior, and market demand.',
+                'Applied statistical techniques using SQL to identify patterns, trends, and insights related to profit margins, customer behavior, and market demand.',
               ]}
               isExpanded={expandedSections.experience.entries.bigDataAnalyst}
               onClick={() => toggleEntry('experience', 'bigDataAnalyst')}
@@ -222,7 +234,7 @@ function App() {
 
       <section className="Volunteer-section">
         <h2 onClick={() => toggleSection('volunteer')}>Volunteer Experience or Leadership</h2>
-        {expandedSections.volunteer && (
+        {expandedSections.volunteer.expanded && (
           <div className="section-content">
             <div className="entry">
               <h3>Volunteer Developer at Non-Profit</h3>

@@ -55,6 +55,7 @@
 }
 
 section {
+  cursor: pointer;
   padding: 60px 20px;
   border-bottom: 1px solid #e7e7e7;
   max-width: 800px;
