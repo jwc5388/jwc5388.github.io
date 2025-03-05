@@ -63,7 +63,7 @@ function App() {
             <FaLinkedin size={30} style={{ margin: '0 15px', color: '#000' }} />
           </a>
         </div>
-        <PythonGame />
+        {/* <PythonGame /> */}
       </header>
 
       <section className="Experience-section">
