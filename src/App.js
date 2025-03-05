@@ -9,11 +9,16 @@ import judoImage from './assets/images/judo.jpg';
 import dissImage from './assets/images/dissertationlogo.jpg';
 import cotonsImage1 from './assets/images/cotons1.jpg';
 import cotonsImage2 from './assets/images/cotons2.jpg';
+import favaImage1 from './assets/images/fava1.jpeg';
+import favaImage2 from './assets/images/fava2.jpeg';
+import cesImage1 from './assets/images/ces1.jpeg';
+import cesImage2 from './assets/images/ces2.jpeg';
+import cesImage3 from './assets/images/ces3.jpeg';
 import dissertation1 from './assets/files/CSDissertation.pdf';
 import dissertation2 from './assets/files/MathDissertation.pdf';
 import productionapk from './assets/files/cotons-production-gateway.apk';
 import { FaEnvelope, FaPhone, FaLinkedin } from 'react-icons/fa';
-import PythonGame from './components/PythonGame.js';
+// import PythonGame from './components/PythonGame.js';
 
 function App() {
 
@@ -198,6 +203,10 @@ function App() {
                 'Represented CareSix, connecting with veterinary professionals and industry innovators across Asia.',
                 'Showcased award-winning devices, including the Sense1 Pro dog wearable and the Sense1 Guardian, both receiving positive feedback from doctors and professionals.',
                 'Engaged in discussions about advancing veterinary technology and animal healthcare solutions.',
+                <div key="fava-images">
+                  <img src={favaImage1} alt="Fava Exhibition 1" style={{ width: '100%', borderRadius: '8px', marginTop: '10px' }} />
+                  <img src={favaImage2} alt="Fava Exhibition 2" style={{ width: '100%', borderRadius: '8px', marginTop: '10px' }} />
+                </div>
               ]}
               isExpanded={expandedSections.engagements.entries.fava2024}
               onClick={() => toggleEntry('engagements', 'fava2024')}
@@ -205,11 +214,16 @@ function App() {
             <Entry
               title="CES 2025 Exhibition"
               location="Las Vegas, USA"
-              dates="Upcoming January 2025"
+              dates="January 2025"
               details={[
                 'Invited to exhibit at CES 2025 in Venetian Suite 29-225.',
                 'Showcasing the latest advancements in veterinary technology and wearable animal health monitoring devices.',
                 'Networking with global tech leaders and innovators to push the boundaries of animal healthcare solutions.',
+                <div key="ces2025-images">
+                  <img src={cesImage1} alt="CES 2025 Exhibition 1" style={{ width: '100%', borderRadius: '8px', marginTop: '10px' }} />
+                  <img src={cesImage2} alt="CES 2025 Exhibition 2" style={{ width: '100%', borderRadius: '8px', marginTop: '10px' }} />
+                  <img src={cesImage3} alt="CES 2025 Exhibition 3" style={{ width: '100%', borderRadius: '8px', marginTop: '10px' }} />
+                </div>
               ]}
               isExpanded={expandedSections.engagements.entries.ces2025}
               onClick={() => toggleEntry('engagements', 'ces2025')}
