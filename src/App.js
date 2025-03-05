@@ -23,6 +23,7 @@ function App() {
     skills: {expanded:false},
     volunteer: {expanded:false},
     caresixContent: {expanded:false},
+    engagements: {expanded: false, entries: {}},
   });
 
   const toggleSection = (section) => {
