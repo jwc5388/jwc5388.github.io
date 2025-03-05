@@ -121,8 +121,108 @@ function App() {
               isExpanded={expandedSections.experience.entries.mathematician}
               onClick={() => toggleEntry('experience', 'mathematician')}
             />
+
+<Entry
+              title="WHAT COMPANY IS CARESIX?"
+              location="Jeju Island, South Korea"
+              dates="Future Of Veterinary Care"
+              details={[
+                {
+                  title: 'AI collar for future veterinary care',
+                  content: (
+                    <div style={{ paddingBottom: '20px' }}>
+                      <p>The AI collar developed by CareSix revolutionizes veterinary care by monitoring pets' health in real-time.</p>
+                      <img src={cotonsImage1} alt="CareSix AI Collar" style={{ width: '100%', borderRadius: '8px' }} />
+                    </div>
+                  ),
+                },
+                // <div style={{ marginBottom: '20px' }}></div>,
+                {
+                  title: 'Awards',
+                  content: (
+                    <div>
+                      <p>CES 2023</p>
+                      <img src={cotonsImage2} alt="CareSix AI Collar" style={{ width: '100%', borderRadius: '8px' }} />
+                      <ul>
+                        <li>Best Tech Innovation Award 2022</li>
+                        <li>HealthTech Excellence Award 2023</li>
+                      </ul>
+                    </div>
+                  ),
+                },
+
+                {
+                  title: 'More about the company',
+                  content: (
+                    <div>
+                      <p>
+                        CareSix is at the forefront of pet healthcare technology. Learn more on their{' '}
+                        <a href="https://cotons.ai" target="_blank" rel="noopener noreferrer">
+                          official website
+                        </a>
+                        .
+                      </p>
+                    </div>
+                  ),
+                },
+              ]}
+              isExpanded={expandedSections.experience.entries.caresix}
+              onClick={() => toggleEntry('experience', 'caresix')}
+            />
           </div>
         )}
+      </section>
+
+
+      <section className="Education-section">
+        <h2 onClick={() => toggleSection('education')}>Education/Qualification</h2>
+        {expandedSections.education.expanded && (
+          <div className="section-content">
+            <Entry
+              title="Bachelor of Science in Mathematics and Computer Science"
+              location="University of St Andrews, St Andrews, Scotland"
+              dates="Graduated June 2024"
+              details={[
+                <div key="dissertation1" className="download-link">
+                  <a href={dissertation1} download="Dissertation1.pdf">
+                    <img src={dissImage} alt="Download Dissertation 1" className="download-icon" />
+                  </a>
+                  <span>Computer Science Dissertation</span>
+                </div>,
+                <div key="dissertation2" className="download-link">
+                <a href={dissertation2} download="Dissertation2.pdf">
+                  <img src={dissImage} alt="Download Dissertation 2" className="download-icon" />
+                </a>
+                <span>Mathematics Dissertation</span>
+              </div>,
+
+              ]}
+              imageSrc={degreeImage} // The image to display
+              isExpanded={expandedSections.education.entries.degree}
+              onClick={() => toggleEntry('education', 'degree')}
+            />
+            <Entry
+              title="St Andrews Judo Club/ Registered as member of Judo Scotland"
+              location=""
+              dates=""
+              details={[
+              ]}
+              imageSrc={judoImage} // The image to display
+              isExpanded={expandedSections.education.entries.judo}
+              onClick={() => toggleEntry('education', 'judo')}
+            />
+            <Entry
+              title="Committee member of St Andrews Korean Society"
+              location="Treasurer for St Andrews Korean Society"
+              details={[
+              ]}
+              isExpanded={expandedSections.education.entries.society}
+              onClick={() => toggleEntry('education', 'society')}
+              />
+            {/* Add more entries here as needed */}
+          </div>
+        )}
+
       </section>
 
       <section className="Skills-section">
