@@ -3,17 +3,17 @@ import './App.css';
 import Mybutton from './components/Buttons.js'
 import React from 'react';
 import { useState } from 'react';
-import Entry from './Entry'; // Import the Entry component
-import degreeImage from './assets/images/graduation.jpg'; // Import the image
-import judoImage from './assets/images/judo.jpg'; // Import the image
+import Entry from './Entry';
+import degreeImage from './assets/images/graduation.jpg';
+import judoImage from './assets/images/judo.jpg';
 import dissImage from './assets/images/dissertationlogo.jpg';
 import cotonsImage1 from './assets/images/cotons1.jpg';
 import cotonsImage2 from './assets/images/cotons2.jpg';
-import dissertation1 from './assets/files/CSDissertation.pdf'; // Import the first dissertation file
+import dissertation1 from './assets/files/CSDissertation.pdf';
 import dissertation2 from './assets/files/MathDissertation.pdf';
 import productionapk from './assets/files/cotons-production-gateway.apk';
 import { FaEnvelope, FaPhone, FaLinkedin } from 'react-icons/fa';
-
+import PythonGame from './components/PythonGame.js';
 
 function App() {
 
@@ -63,6 +63,7 @@ function App() {
             <FaLinkedin size={30} style={{ margin: '0 15px', color: '#000' }} />
           </a>
         </div>
+        <PythonGame />
       </header>
 
       <section className="Experience-section">
@@ -70,150 +71,58 @@ function App() {
         {expandedSections.experience.expanded && (
           <div className="section-content">
             <Entry
-              title="BIG DATA ANALYST/ HRG COMPANY"
-              location="Jeju Island, South Korea"
-              dates="June 2019 - August 2019"
+              title="AI Algorithm Developer, CareSix Inc."
+              location="Seoul, South Korea"
+              dates="September 2024 - Present"
               details={[
-                'Conducted in-depth analysis of veterinary clinics in Korea, focusing on assessing the profitability of their services.',
-                'Gathered, cleaned, and organized large datasets from various sources to ensure data accuracy and integrity.',
-                'Applied statistical techniques using SQL to identify patterns, trends, and insights related to profit margins, customer behavior, and market demand.',
+                'Developed a machine learning-based algorithm for canine heart rate estimation using Long Short-Term Memory (LSTM) models with TensorFlow and Keras.',
+                'Designed an AI-driven system for detecting IJK peaks in ballistocardiogram (BCG) signals, leveraging deep learning-based signal processing.',
+                'Applied unsupervised learning techniques to automate IJK peak detection, reducing dependency on ECG signals.',
               ]}
-              isExpanded={expandedSections.experience.entries.bigDataAnalyst}
-              onClick={() => toggleEntry('experience', 'bigDataAnalyst')}
+              isExpanded={expandedSections.experience.entries.aiAlgorithm}
+              onClick={() => toggleEntry('experience', 'aiAlgorithm')}
             />
             <Entry
-              title="MATHEMATICIAN/ CARESIX"
-              location="Jeju Island, South Korea"
-              dates="May 2022 – August 2022"
+              title="Web Developer, CareSix Inc."
+              location="Seoul, South Korea"
+              dates="February 2024 - Present"
               details={[
-                'Implemented the Fourier Transform algorithm using Python to separate unnecessary signals from an ECG signal, improving the accuracy and reliability of ECG measurements.',
-                'Conducted data analysis to validate the effectiveness of the algorithm and identify potential areas for improvement.',
-                'Participated in team meetings and discussions to provide insights and recommendations on mathematical and analytical aspects of healthcare technologies.',
-                'Documented and communicated the algorithm and its findings to non-technical stakeholders.',
+                'Developed a web-based dog recognition platform using TypeScript with React, integrating a backend algorithm for dog identification.',
+                'Designed and built a hospital management system for veterinary hospitals and pet tracking.',
+                'Integrated AWS RDS for secure data management and scalability.',
               ]}
-              isExpanded={expandedSections.experience.entries.mathematician}
-              onClick={() => toggleEntry('experience', 'mathematician')}
+              isExpanded={expandedSections.experience.entries.webDeveloper}
+              onClick={() => toggleEntry('experience', 'webDeveloper')}
             />
             <Entry
-              title="APP DEVELOPER/ CARESIX"
-              location="Gyeong-gido, South Korea"
-              dates="June 2023 – August 2023"
+              title="App Developer, CareSix Inc."
+              location="Yongin, South Korea"
+              dates="June 2023 - August 2023"
               details={[
                 <div key="detail-1">
-                  Created a mobile application to facilitate the production of the Sense1 Pro model. The application efficiently mapped QR codes, barcodes, and subsequently encoded them onto NFC tags. -  
+                  Developed a production application for the Sense1 Vet model in Kotlin, mapping NFC tags, QR codes, and barcodes into a structured CSV format. -
                   <a href={productionapk} download style={{ marginLeft: '8px', textDecoration: 'underline', color: '#007BFF' }}>
                     Download app APK
                   </a>
                 </div>,
-                'Designed and developed a Bluetooth version application ‘Cotons ai’ utilizing Kotlin to capture essential data, including the BCG signal, 6-axis sensor signal, and temperature, ensuring accurate and reliable data acquisition.',
-                // 'More Details about CareSix:',
+                'Built a Bluetooth-enabled app (Cotons AI) in Flutter for capturing BCG signals, 6-axis sensor data, and temperature readings.',
               ]}
               isExpanded={expandedSections.experience.entries.appdeveloper}
               onClick={() => toggleEntry('experience', 'appdeveloper')}
             />
-
             <Entry
-              title="WHAT COMPANY IS CARESIX?"
-              location="Jeju Island, South Korea"
-              dates="Future Of Veterinary Care"
+              title="Mathematician, CareSix Inc."
+              location="Jeju, South Korea"
+              dates="May 2022 - August 2022"
               details={[
-                {
-                  title: 'AI collar for future veterinary care',
-                  content: (
-                    <div style={{ paddingBottom: '20px' }}>
-                      <p>The AI collar developed by CareSix revolutionizes veterinary care by monitoring pets' health in real-time.</p>
-                      <img src={cotonsImage1} alt="CareSix AI Collar" style={{ width: '100%', borderRadius: '8px' }} />
-                    </div>
-                  ),
-                },
-                // <div style={{ marginBottom: '20px' }}></div>,
-                {
-                  title: 'Awards',
-                  content: (
-                    <div>
-                      <p>CES 2023</p>
-                      <img src={cotonsImage2} alt="CareSix AI Collar" style={{ width: '100%', borderRadius: '8px' }} />
-                      <ul>
-                        <li>Best Tech Innovation Award 2022</li>
-                        <li>HealthTech Excellence Award 2023</li>
-                      </ul>
-                    </div>
-                  ),
-                },
-
-                {
-                  title: 'More about the company',
-                  content: (
-                    <div>
-                      <p>
-                        CareSix is at the forefront of pet healthcare technology. Learn more on their{' '}
-                        <a href="https://cotons.ai" target="_blank" rel="noopener noreferrer">
-                          official website
-                        </a>
-                        .
-                      </p>
-                    </div>
-                  ),
-                },
+                'Implemented Fourier Transform in Python to filter noise from BCG measurements, enhancing signal clarity.',
+                'Conducted statistical analysis using Python and NumPy to validate algorithm effectiveness.',
               ]}
-              isExpanded={expandedSections.experience.entries.caresix}
-              onClick={() => toggleEntry('experience', 'caresix')}
+              isExpanded={expandedSections.experience.entries.mathematician}
+              onClick={() => toggleEntry('experience', 'mathematician')}
             />
-
-            {/* Add more entries here as needed */}
           </div>
         )}
-      </section>
-
-      <section className="Education-section">
-        <h2 onClick={() => toggleSection('education')}>Education/Qualification</h2>
-        {expandedSections.education.expanded && (
-          <div className="section-content">
-            <Entry
-              title="Bachelor of Science in Mathematics and Computer Science"
-              location="University of St Andrews, St Andrews, Scotland"
-              dates="Graduated June 2024"
-              details={[
-                <div key="dissertation1" className="download-link">
-                  <a href={dissertation1} download="Dissertation1.pdf">
-                    <img src={dissImage} alt="Download Dissertation 1" className="download-icon" />
-                  </a>
-                  <span>Computer Science Dissertation</span>
-                </div>,
-                <div key="dissertation2" className="download-link">
-                <a href={dissertation2} download="Dissertation2.pdf">
-                  <img src={dissImage} alt="Download Dissertation 2" className="download-icon" />
-                </a>
-                <span>Mathematics Dissertation</span>
-              </div>,
-
-              ]}
-              imageSrc={degreeImage} // The image to display
-              isExpanded={expandedSections.education.entries.degree}
-              onClick={() => toggleEntry('education', 'degree')}
-            />
-            <Entry
-              title="St Andrews Judo Club/ Registered as member of Judo Scotland"
-              location=""
-              dates=""
-              details={[
-              ]}
-              imageSrc={judoImage} // The image to display
-              isExpanded={expandedSections.education.entries.judo}
-              onClick={() => toggleEntry('education', 'judo')}
-            />
-            <Entry
-              title="Committee member of St Andrews Korean Society"
-              location="Treasurer for St Andrews Korean Society"
-              details={[
-              ]}
-              isExpanded={expandedSections.education.entries.society}
-              onClick={() => toggleEntry('education', 'society')}
-              />
-            {/* Add more entries here as needed */}
-          </div>
-        )}
-
       </section>
 
       <section className="Skills-section">
@@ -221,15 +130,12 @@ function App() {
         {expandedSections.skills.expanded && (
           <div className="section-content">
             <ul className="skills-list">
-              <li>Fluent in English and Korean.</li>
-              <li>Proficient in app development using Kotlin and Flutter- Dart.</li>
-              <li>Proficient in app/web development with React (JavaScript).</li>
-              <li>Skilled in mathematical modelling in python.</li>
-              <li>Experienced in coding with Java, Python, and JavaScript.</li>
-              <li>Background in financial mathematics, with strong proficiency in mathematical modelling, risk management, and financial analysis.</li>
-              <li>Skilled in game theory, with an understanding of strategic decision-making and competitive behavior analysis. </li>
-              <li>Teamwork and Collaboration: Effective communication and collaboration skills to work in a team environment and contribute to project success.</li>
-              <li>Leadership</li>
+              <li>Programming: Python, Java, JavaScript, Kotlin, Dart</li>
+              <li>App/Web Development: Kotlin, Flutter-Dart, React (TypeScript, JavaScript)</li>
+              <li>Data Analysis: SQL, Python (Mathematical Modeling)</li>
+              <li>AI & Machine Learning: LSTM models, Unsupervised Learning, Deep Learning, TensorFlow, Keras</li>
+              <li>Mathematics & Finance: Mathematical Modeling, Risk Management, Financial Analysis</li>
+              <li>Fluent in English and Korean</li>
             </ul>
           </div>
         )}
