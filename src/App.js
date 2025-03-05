@@ -67,7 +67,7 @@ function App() {
       </header>
 
       <section className="Experience-section">
-        <h2 onClick={() => toggleSection('experience')}>Experience</h2>
+        <h2 onClick={() => toggleSection('experience')}>Work Experience</h2>
         {expandedSections.experience.expanded && (
           <div className="section-content">
             <Entry
@@ -122,8 +122,8 @@ function App() {
               onClick={() => toggleEntry('experience', 'mathematician')}
             />
 
-<Entry
-              title="WHAT COMPANY IS CARESIX?"
+            <Entry
+              title="What Company is CareSix?"
               location="Jeju Island, South Korea"
               dates="Future Of Veterinary Care"
               details={[
@@ -144,7 +144,7 @@ function App() {
                       <p>CES 2023</p>
                       <img src={cotonsImage2} alt="CareSix AI Collar" style={{ width: '100%', borderRadius: '8px' }} />
                       <ul>
-                        <li>Best Tech Innovation Award 2022</li>
+                        <li>CES Best Tech Innovation Award 2022</li>
                         <li>HealthTech Excellence Award 2023</li>
                       </ul>
                     </div>
@@ -168,6 +168,50 @@ function App() {
               ]}
               isExpanded={expandedSections.experience.entries.caresix}
               onClick={() => toggleEntry('experience', 'caresix')}
+            />
+          </div>
+        )}
+      </section>
+
+      <section className="Engagement-section">
+        <h2 onClick={() => toggleSection('engagements')}>Professional Engagements</h2>
+        {expandedSections.engagements.expanded && (
+          <div className="section-content">
+            <Entry
+              title="J-AGRI Exhibition, Tokyo"
+              location="Tokyo, Japan"
+              dates="October 9-11, 2024"
+              details={[
+                'Represented HRG as Lead Manager, showcasing the 2025 CES Innovation Awards-winning project: the first-ever wearable cow health monitor.',
+                'Engaged with industry leaders, shared insights, and connected with experts in agricultural technology.',
+                'Demonstrated innovative approaches to livestock health monitoring, receiving significant industry recognition.',
+              ]}
+              isExpanded={expandedSections.engagements.entries.jAgri}
+              onClick={() => toggleEntry('engagements', 'jAgri')}
+            />
+            <Entry
+              title="FAVA 2024 - 23rd Federation of Asian Veterinary Associations Congress"
+              location="Daejeon, South Korea"
+              dates="October 25-27, 2024"
+              details={[
+                'Represented CareSix, connecting with veterinary professionals and industry innovators across Asia.',
+                'Showcased award-winning devices, including the Sense1 Pro dog wearable and the Sense1 Guardian, both receiving positive feedback from doctors and professionals.',
+                'Engaged in discussions about advancing veterinary technology and animal healthcare solutions.',
+              ]}
+              isExpanded={expandedSections.engagements.entries.fava2024}
+              onClick={() => toggleEntry('engagements', 'fava2024')}
+            />
+            <Entry
+              title="CES 2025 Exhibition"
+              location="Las Vegas, USA"
+              dates="Upcoming January 2025"
+              details={[
+                'Invited to exhibit at CES 2025 in Venetian Suite 29-225.',
+                'Showcasing the latest advancements in veterinary technology and wearable animal health monitoring devices.',
+                'Networking with global tech leaders and innovators to push the boundaries of animal healthcare solutions.',
+              ]}
+              isExpanded={expandedSections.engagements.entries.ces2025}
+              onClick={() => toggleEntry('engagements', 'ces2025')}
             />
           </div>
         )}
@@ -235,7 +279,7 @@ function App() {
               <li>Data Analysis: SQL, Python (Mathematical Modeling)</li>
               <li>AI & Machine Learning: LSTM models, Unsupervised Learning, Deep Learning, TensorFlow, Keras</li>
               <li>Mathematics & Finance: Mathematical Modeling, Risk Management, Financial Analysis</li>
-              <li>Fluent in English and Korean</li>
+              <li>Native level in English and Korean</li>
             </ul>
           </div>
         )}
