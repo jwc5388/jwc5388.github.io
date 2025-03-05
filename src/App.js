@@ -14,6 +14,7 @@ import favaImage2 from './assets/images/fava2.jpeg';
 import cesImage1 from './assets/images/ces1.jpeg';
 import cesImage2 from './assets/images/ces2.jpeg';
 import cesImage3 from './assets/images/ces3.jpeg';
+import jagriImage1 from './assets/images/jagri1.jpeg';
 import dissertation1 from './assets/files/CSDissertation.pdf';
 import dissertation2 from './assets/files/MathDissertation.pdf';
 import productionapk from './assets/files/cotons-production-gateway.apk';
@@ -151,7 +152,7 @@ function App() {
                       <img src={cotonsImage2} alt="CareSix AI Collar" style={{ width: '100%', borderRadius: '8px' }} />
                       <ul>
                         <li>CES Best Tech Innovation Award 2022</li>
-                        <li>HealthTech Excellence Award 2023</li>
+                        <li>Edison Awards Nominee 2024</li>
                       </ul>
                     </div>
                   ),
@@ -191,6 +192,9 @@ function App() {
                 'Represented HRG as Lead Manager, showcasing the 2025 CES Innovation Awards-winning project: the first-ever wearable cow health monitor.',
                 'Engaged with industry leaders, shared insights, and connected with experts in agricultural technology.',
                 'Demonstrated innovative approaches to livestock health monitoring, receiving significant industry recognition.',
+                <div key="jagri-images">
+                  <img src={jagriImage1} alt="J-Agri Exhibition 1" style={{ width: '100%', borderRadius: '8px', marginTop: '10px' }} />
+                </div>
               ]}
               isExpanded={expandedSections.engagements.entries.jAgri}
               onClick={() => toggleEntry('engagements', 'jAgri')}
