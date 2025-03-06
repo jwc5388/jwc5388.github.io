@@ -155,13 +155,16 @@ function App() {
                       <ul>
                         <li>CES Best Tech Innovation Award 2022</li>
                         <li>
-                          <img src={edisonImage} alt="Edison Awards" style={{ width: '100%', borderRadius: '8px', marginBottom: '8px' }} />
-                          Edison Awards Nominee 2024
+                          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                            <img src={edisonImage} alt="Edison Awards" style={{ width: '100%', borderRadius: '8px', marginBottom: '8px' }} />
+                            <span>Edison Awards Nominee 2024</span>
+                          </div>
                         </li>
                       </ul>
                     </div>
                   ),
                 },
+                
                 
 
                 {
