@@ -151,21 +151,17 @@ function App() {
                   content: (
                     <div>
                       <p>CES 2023</p>
-                      <img src={cotonsImage2} alt="CareSix AI Collar" style={{ width: '100%', borderRadius: '8px', marginBottom: '8px' }} />
+                      <div key="awards-images">
+                        <img src={cotonsImage2} alt="ces awards" style={{ width: '100%', borderRadius: '8px', marginTop: '10px' }} />
+                        <img src={edisonImage} alt="edison awards" style={{ width: '100%', borderRadius: '8px', marginTop: '10px' }} />
+                      </div>
                       <ul>
                         <li>CES Best Tech Innovation Award 2022</li>
-                        <li>
-                          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                            <img src={edisonImage} alt="Edison Awards" style={{ width: '100%', borderRadius: '8px', marginBottom: '8px' }} />
-                            <span>Edison Awards Nominee 2024</span>
-                          </div>
-                        </li>
+                        <li>Edison Awards Nominee 2024</li>
                       </ul>
                     </div>
                   ),
                 },
-                
-                
 
                 {
                   title: 'More about the company',
