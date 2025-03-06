@@ -1,31 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "582ea8a72893f7939fb799d0fabd2ca4",
+    "revision": "d5d860df4cbd8341ec8b5085faaf4682",
     "url": "/index.html"
   },
   {
-    "revision": "f2414f456d9003c9fcaa",
+    "revision": "5dc74b4b999f350a6f36",
     "url": "/static/css/main.4b28d5a7.chunk.css"
   },
   {
-    "revision": "4215bc6d068e3c445033",
-    "url": "/static/js/2.0930f143.chunk.js"
+    "revision": "00f51f8073ac1397f429",
+    "url": "/static/js/2.d978dce5.chunk.js"
   },
   {
     "revision": "60f6bf9e100e456690e9ab6c9a37bfc2",
-    "url": "/static/js/2.0930f143.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.d978dce5.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "245365565da261bf8ee7",
-    "url": "/static/js/3.d17306a9.chunk.js"
+    "revision": "08c6b9eb9fe159761798",
+    "url": "/static/js/3.2f8d1d76.chunk.js"
   },
   {
-    "revision": "f2414f456d9003c9fcaa",
-    "url": "/static/js/main.c88db45a.chunk.js"
+    "revision": "5dc74b4b999f350a6f36",
+    "url": "/static/js/main.a9350548.chunk.js"
   },
   {
-    "revision": "bec96aa48eeb9a563400",
-    "url": "/static/js/runtime-main.235e4a56.js"
+    "revision": "863a14ca2571223965ce",
+    "url": "/static/js/runtime-main.69594b41.js"
   },
   {
     "revision": "5bbfe2abff33dcdce7a45eefd33daf57",
@@ -64,6 +64,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/dissertationlogo.de7467b3.jpg"
   },
   {
+    "revision": "a471ba492589ac5f89514c66ff71a50d",
+    "url": "/static/media/edison.a471ba49.jpeg"
+  },
+  {
     "revision": "2879d698e3d3af1347e1a187a1a84645",
     "url": "/static/media/fava1.2879d698.jpeg"
   },
@@ -78,6 +82,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "3abee51d551efe4389fe04f78a48fa94",
     "url": "/static/media/jagri1.3abee51d.jpeg"
+  },
+  {
+    "revision": "c4b72a2473fcc7b88fbdaa1a635f999c",
+    "url": "/static/media/jagri2.c4b72a24.jpeg"
   },
   {
     "revision": "5895070a1cb5b5f31734f5949acb253e",
