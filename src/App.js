@@ -15,6 +15,8 @@ import cesImage1 from './assets/images/ces1.jpeg';
 import cesImage2 from './assets/images/ces2.jpeg';
 import cesImage3 from './assets/images/ces3.jpeg';
 import jagriImage1 from './assets/images/jagri1.jpeg';
+import jagriImage2 from './assets/images/jagri2.jpeg';
+import edisonImage from './assets/images/edison.jpeg';
 import dissertation1 from './assets/files/CSDissertation.pdf';
 import dissertation2 from './assets/files/MathDissertation.pdf';
 import productionapk from './assets/files/cotons-production-gateway.apk';
@@ -149,14 +151,18 @@ function App() {
                   content: (
                     <div>
                       <p>CES 2023</p>
-                      <img src={cotonsImage2} alt="CareSix AI Collar" style={{ width: '100%', borderRadius: '8px' }} />
+                      <img src={cotonsImage2} alt="CareSix AI Collar" style={{ width: '100%', borderRadius: '8px', marginBottom: '8px' }} />
                       <ul>
                         <li>CES Best Tech Innovation Award 2022</li>
-                        <li>Edison Awards Nominee 2024</li>
+                        <li>
+                          <img src={edisonImage} alt="Edison Awards" style={{ width: '100%', borderRadius: '8px', marginBottom: '8px' }} />
+                          Edison Awards Nominee 2024
+                        </li>
                       </ul>
                     </div>
                   ),
                 },
+                
 
                 {
                   title: 'More about the company',
