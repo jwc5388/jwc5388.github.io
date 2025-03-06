@@ -80,7 +80,7 @@ function App() {
         {expandedSections.experience.expanded && (
           <div className="section-content">
             <Entry
-              title="AI Algorithm Developer, CareSix Inc."
+              title="AI Algorithm Developer, CareSix Co., LTD"
               location="Seoul, South Korea"
               dates="September 2024 - Present"
               details={[
@@ -92,7 +92,7 @@ function App() {
               onClick={() => toggleEntry('experience', 'aiAlgorithm')}
             />
             <Entry
-              title="Web Developer, CareSix Inc."
+              title="Web Developer, CareSix Co., LTD"
               location="Seoul, South Korea"
               dates="February 2024 - Present"
               details={[
@@ -104,7 +104,7 @@ function App() {
               onClick={() => toggleEntry('experience', 'webDeveloper')}
             />
             <Entry
-              title="App Developer, CareSix Inc."
+              title="App Developer, CareSix Co., LTD"
               location="Yongin, South Korea"
               dates="June 2023 - August 2023"
               details={[
@@ -120,7 +120,7 @@ function App() {
               onClick={() => toggleEntry('experience', 'appdeveloper')}
             />
             <Entry
-              title="Mathematician, CareSix Inc."
+              title="Mathematician, CareSix Co., LTD"
               location="Jeju, South Korea"
               dates="May 2022 - August 2022"
               details={[
