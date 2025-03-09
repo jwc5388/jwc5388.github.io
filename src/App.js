@@ -17,6 +17,11 @@ import cesImage3 from './assets/images/ces3.jpeg';
 import jagriImage1 from './assets/images/jagri1.jpeg';
 import jagriImage2 from './assets/images/jagri2.jpeg';
 import edisonImage from './assets/images/edison.jpeg';
+import senseoneImage1 from './assets/images/senseone1.png';
+import senseoneImage2 from './assets/images/senseone2.png';
+import senseoneImage3 from './assets/images/senseone3.png';
+import senseoneImage4 from './assets/images/senseone4.png';
+import senseoneImage5 from './assets/images/senseone5.png';
 import dissertation1 from './assets/files/CSDissertation.pdf';
 import dissertation2 from './assets/files/MathDissertation.pdf';
 import productionapk from './assets/files/cotons-production-gateway.apk';
@@ -277,6 +282,28 @@ function App() {
               ]}
               isExpanded={expandedSections.projects.entries.sudokuGame}
               onClick={() => toggleEntry('projects', 'sudokuGame')}
+            />
+            <Entry
+              title="Sense1 Vet AI Algorithm"
+              location="CareSix"
+              dates="[Your Project Date Here]"
+              details={[
+                'Developed a machine learning-based AI algorithm for **canine heart rate estimation** using **Long Short-Term Memory (LSTM) models**.',
+                'Designed and implemented **signal processing techniques** to analyze ballistocardiogram (BCG) data for heart rate detection.',
+                'Built a **deep learning pipeline** using **TensorFlow and Keras** to enhance real-time heart rate monitoring accuracy.',
+                'Applied **unsupervised learning** for **IJK peak detection**, reducing dependency on ECG signals for heart rate analysis.',
+                'Collaborated with **hardware engineers and production teams** to optimize data acquisition and improve signal quality.',
+                'Contributed to the development of **Sense1 Vet**, an AI-powered wearable device for veterinary health monitoring.',
+                <div key="sense1vet-images">
+                  <img src={senseoneImage1} alt="SenseOne Project 1" style={{ width: '100%', borderRadius: '8px', marginTop: '10px' }} />
+                  <img src={senseoneImage2} alt="SenseOne Project 2" style={{ width: '100%', borderRadius: '8px', marginTop: '10px' }} />
+                  <img src={senseoneImage3} alt="SenseOne Project 3" style={{ width: '100%', borderRadius: '8px', marginTop: '10px' }} />
+                  <img src={senseoneImage4} alt="SenseOne Project 4" style={{ width: '100%', borderRadius: '8px', marginTop: '10px' }} />
+                  <img src={senseoneImage5} alt="SenseOne Project 5" style={{ width: '100%', borderRadius: '8px', marginTop: '10px' }} />
+                </div>
+              ]}
+              isExpanded={expandedSections.projects.entries.sense1Vet}
+              onClick={() => toggleEntry('projects', 'sense1Vet')}
             />
           </div>
         )}
