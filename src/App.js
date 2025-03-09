@@ -288,12 +288,12 @@ function App() {
               location="CareSix"
               dates="[Your Project Date Here]"
               details={[
-                'Developed a machine learning-based AI algorithm for **canine heart rate estimation** using **Long Short-Term Memory (LSTM) models**.',
-                'Designed and implemented **signal processing techniques** to analyze ballistocardiogram (BCG) data for heart rate detection.',
-                'Built a **deep learning pipeline** using **TensorFlow and Keras** to enhance real-time heart rate monitoring accuracy.',
-                'Applied **unsupervised learning** for **IJK peak detection**, reducing dependency on ECG signals for heart rate analysis.',
-                'Collaborated with **hardware engineers and production teams** to optimize data acquisition and improve signal quality.',
-                'Contributed to the development of **Sense1 Vet**, an AI-powered wearable device for veterinary health monitoring.',
+                'Developed a machine learning-based AI algorithm for canine heart rate estimation using Long Short-Term Memory (LSTM) models.',
+                'Designed and implemented signal processing techniques to analyze ballistocardiogram (BCG) data for heart rate detection.',
+                'Built a deep learning pipeline using TensorFlow and Keras to enhance real-time heart rate monitoring accuracy.',
+                'Applied unsupervised learning for IJK peak detection, reducing dependency on ECG signals for heart rate analysis.',
+                'Collaborated with hardware engineers and production teams to optimize data acquisition and improve signal quality.',
+                'Contributed to the development of Sense1 Vet, an AI-powered wearable device for veterinary health monitoring.',
                 <div key="sense1vet-images" style={{ 
                   display: 'flex', 
                   overflowX: 'auto', 
