@@ -294,17 +294,24 @@ function App() {
                 'Applied **unsupervised learning** for **IJK peak detection**, reducing dependency on ECG signals for heart rate analysis.',
                 'Collaborated with **hardware engineers and production teams** to optimize data acquisition and improve signal quality.',
                 'Contributed to the development of **Sense1 Vet**, an AI-powered wearable device for veterinary health monitoring.',
-                <div key="sense1vet-images">
-                  <img src={senseoneImage1} alt="SenseOne Project 1" style={{ width: '100%', borderRadius: '8px', marginTop: '10px' }} />
-                  <img src={senseoneImage2} alt="SenseOne Project 2" style={{ width: '100%', borderRadius: '8px', marginTop: '10px' }} />
-                  <img src={senseoneImage3} alt="SenseOne Project 3" style={{ width: '100%', borderRadius: '8px', marginTop: '10px' }} />
-                  <img src={senseoneImage4} alt="SenseOne Project 4" style={{ width: '100%', borderRadius: '8px', marginTop: '10px' }} />
-                  <img src={senseoneImage5} alt="SenseOne Project 5" style={{ width: '100%', borderRadius: '8px', marginTop: '10px' }} />
+                <div key="sense1vet-images" style={{ 
+                  display: 'flex', 
+                  overflowX: 'auto', 
+                  whiteSpace: 'nowrap', 
+                  gap: '10px', 
+                  padding: '10px 0' 
+                }}>
+                  <img src={senseoneImage1} alt="SenseOne Project 1" style={{ height: '200px', borderRadius: '8px' }} />
+                  <img src={senseoneImage2} alt="SenseOne Project 2" style={{ height: '200px', borderRadius: '8px' }} />
+                  <img src={senseoneImage3} alt="SenseOne Project 3" style={{ height: '200px', borderRadius: '8px' }} />
+                  <img src={senseoneImage4} alt="SenseOne Project 4" style={{ height: '200px', borderRadius: '8px' }} />
+                  <img src={senseoneImage5} alt="SenseOne Project 5" style={{ height: '200px', borderRadius: '8px' }} />
                 </div>
               ]}
               isExpanded={expandedSections.projects.entries.sense1Vet}
               onClick={() => toggleEntry('projects', 'sense1Vet')}
             />
+
           </div>
         )}
       </section>
