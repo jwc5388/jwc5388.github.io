@@ -259,7 +259,7 @@ function App() {
                 //   <img src={urImage2} alt="Royal Game of Ur 2" style={{ width: '100%', borderRadius: '8px', marginTop: '10px' }} />
                 // </div>
               ]}
-              isExpanded={expandedSections.engagements.entries.royalGame}
+              isExpanded={expandedSections.projects.entries.royalGame}
               onClick={() => toggleEntry('projects', 'royalGame')}
             />
             <Entry
@@ -275,7 +275,7 @@ function App() {
                 //   <img src={sudokuImage2} alt="Sudoku Game 2" style={{ width: '100%', borderRadius: '8px', marginTop: '10px' }} />
                 // </div>
               ]}
-              isExpanded={expandedSections.engagements.entries.sudokuGame}
+              isExpanded={expandedSections.projects.entries.sudokuGame}
               onClick={() => toggleEntry('projects', 'sudokuGame')}
             />
           </div>
