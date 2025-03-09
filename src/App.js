@@ -241,6 +241,46 @@ function App() {
         )}
       </section>
 
+      <section className="Project-section">
+        <h2 onClick={() => toggleSection('projects')}>Project Engagements</h2>
+        {expandedSections.engagements.expanded && (
+          <div className="section-content">
+            <Entry
+              title="Royal Game of Ur"
+              location="University Project"
+              dates="[Your Project Date Here]"
+              details={[
+                'Developed a digital version of the ancient board game "Royal Game of Ur" as part of a major university project.',
+                'Implemented advanced game logic, AI opponents, and an interactive user interface to simulate strategic gameplay.',
+                'Focused on enhancing user experience through a well-designed UI and optimized game mechanics.',
+                <div key="ur-images">
+                  <img src={urImage1} alt="Royal Game of Ur 1" style={{ width: '100%', borderRadius: '8px', marginTop: '10px' }} />
+                  <img src={urImage2} alt="Royal Game of Ur 2" style={{ width: '100%', borderRadius: '8px', marginTop: '10px' }} />
+                </div>
+              ]}
+              isExpanded={expandedSections.engagements.entries.royalGame}
+              onClick={() => toggleEntry('engagements', 'royalGame')}
+            />
+            <Entry
+              title="Sudoku Game"
+              location="University Project"
+              dates="[Your Project Date Here]"
+              details={[
+                'Designed and developed an advanced Sudoku game with unique puzzle generation and difficulty settings.',
+                'Implemented a backend algorithm for efficient puzzle solving and validation using mathematical techniques.',
+                'Integrated a user-friendly interface to provide an engaging and interactive gaming experience.',
+                <div key="sudoku-images">
+                  <img src={sudokuImage1} alt="Sudoku Game 1" style={{ width: '100%', borderRadius: '8px', marginTop: '10px' }} />
+                  <img src={sudokuImage2} alt="Sudoku Game 2" style={{ width: '100%', borderRadius: '8px', marginTop: '10px' }} />
+                </div>
+              ]}
+              isExpanded={expandedSections.engagements.entries.sudokuGame}
+              onClick={() => toggleEntry('engagements', 'sudokuGame')}
+            />
+          </div>
+        )}
+      </section>
+
 
       <section className="Education-section">
         <h2 onClick={() => toggleSection('education')}>Education/Qualification</h2>
