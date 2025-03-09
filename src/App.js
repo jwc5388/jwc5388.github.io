@@ -249,7 +249,7 @@ function App() {
 
       <section className="Project-section">
         <h2 onClick={() => toggleSection('projects')}>Project Engagements</h2>
-        {expandedSections.engagements.expanded && (
+        {expandedSections.projects.expanded && (
           <div className="section-content">
             <Entry
               title="Royal Game of Ur"
