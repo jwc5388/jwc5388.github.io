@@ -260,7 +260,7 @@ function App() {
                 // </div>
               ]}
               isExpanded={expandedSections.engagements.entries.royalGame}
-              onClick={() => toggleEntry('engagements', 'royalGame')}
+              onClick={() => toggleEntry('projects', 'royalGame')}
             />
             <Entry
               title="Sudoku Game"
@@ -276,7 +276,7 @@ function App() {
                 // </div>
               ]}
               isExpanded={expandedSections.engagements.entries.sudokuGame}
-              onClick={() => toggleEntry('engagements', 'sudokuGame')}
+              onClick={() => toggleEntry('projects', 'sudokuGame')}
             />
           </div>
         )}
