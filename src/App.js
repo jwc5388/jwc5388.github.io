@@ -22,6 +22,8 @@ import senseoneImage2 from './assets/images/senseone2.png';
 import senseoneImage3 from './assets/images/senseone3.png';
 import senseoneImage4 from './assets/images/senseone4.png';
 import senseoneImage5 from './assets/images/senseone5.png';
+import royalUrImage1 from './assets/images/royalur1.png';
+import royalUrImage2 from './assets/images/royalur2.png';
 import dissertation1 from './assets/files/CSDissertation.pdf';
 import dissertation2 from './assets/files/MathDissertation.pdf';
 import productionapk from './assets/files/cotons-production-gateway.apk';
@@ -259,10 +261,16 @@ function App() {
                 'Developed a digital version of the ancient board game "Royal Game of Ur" as part of a major university project.',
                 'Implemented advanced game logic, AI opponents, and an interactive user interface to simulate strategic gameplay.',
                 'Focused on enhancing user experience through a well-designed UI and optimized game mechanics.',
-                // <div key="ur-images">
-                //   <img src={urImage1} alt="Royal Game of Ur 1" style={{ width: '100%', borderRadius: '8px', marginTop: '10px' }} />
-                //   <img src={urImage2} alt="Royal Game of Ur 2" style={{ width: '100%', borderRadius: '8px', marginTop: '10px' }} />
-                // </div>
+                <div key="RoyalUr-images" style={{ 
+                  display: 'flex', 
+                  overflowX: 'auto', 
+                  whiteSpace: 'nowrap', 
+                  gap: '10px', 
+                  padding: '10px 0' 
+                }}>
+                  <img src={royalUrImage1} alt="SenseOne Project 1" style={{ height: '300px', borderRadius: '8px' }} />
+                  <img src={royalUrImage2} alt="SenseOne Project 2" style={{ height: '300px', borderRadius: '8px' }} />
+                </div>
               ]}
               isExpanded={expandedSections.projects.entries.royalGame}
               onClick={() => toggleEntry('projects', 'royalGame')}
@@ -301,11 +309,11 @@ function App() {
                   gap: '10px', 
                   padding: '10px 0' 
                 }}>
-                  <img src={senseoneImage1} alt="SenseOne Project 1" style={{ height: '200px', borderRadius: '8px' }} />
-                  <img src={senseoneImage2} alt="SenseOne Project 2" style={{ height: '200px', borderRadius: '8px' }} />
-                  <img src={senseoneImage3} alt="SenseOne Project 3" style={{ height: '200px', borderRadius: '8px' }} />
-                  <img src={senseoneImage4} alt="SenseOne Project 4" style={{ height: '200px', borderRadius: '8px' }} />
-                  <img src={senseoneImage5} alt="SenseOne Project 5" style={{ height: '200px', borderRadius: '8px' }} />
+                  <img src={senseoneImage1} alt="SenseOne Project 1" style={{ height: '300px', borderRadius: '8px' }} />
+                  <img src={senseoneImage2} alt="SenseOne Project 2" style={{ height: '300px', borderRadius: '8px' }} />
+                  <img src={senseoneImage3} alt="SenseOne Project 3" style={{ height: '300px', borderRadius: '8px' }} />
+                  <img src={senseoneImage4} alt="SenseOne Project 4" style={{ height: '300px', borderRadius: '8px' }} />
+                  <img src={senseoneImage5} alt="SenseOne Project 5" style={{ height: '300px', borderRadius: '8px' }} />
                 </div>
               ]}
               isExpanded={expandedSections.projects.entries.sense1Vet}
