@@ -5,7 +5,9 @@ import React from 'react';
 import { useState } from 'react';
 import Entry from './Entry';
 import degreeImage from './assets/images/graduation.jpg';
-import judoImage from './assets/images/judo.jpg';
+import judoImage1 from './assets/images/judo1.jpg';
+import judoImage2 from './assets/images/judo2.jpg';
+import judoImage3 from './assets/images/judo2.jpg';
 import dissImage from './assets/images/dissertationlogo.jpg';
 import cotonsImage1 from './assets/images/cotons1.jpg';
 import cotonsImage2 from './assets/images/cotons2.jpg';
@@ -16,7 +18,7 @@ import cesImage2 from './assets/images/ces2.jpeg';
 import cesImage3 from './assets/images/ces3.jpeg';
 import jagriImage1 from './assets/images/jagri1.jpeg';
 import jagriImage2 from './assets/images/jagri2.jpeg';
-import edisonImage from './assets/images/edison.jpeg';
+import edisonImage from './assets/images/edison1.jpeg';
 import senseoneImage1 from './assets/images/senseone1.png';
 import senseoneImage2 from './assets/images/senseone2.png';
 import senseoneImage3 from './assets/images/senseone3.png';
@@ -393,9 +395,18 @@ function App() {
               title="St Andrews Judo Club/ Registered as member of Judo Scotland"
               location=""
               dates=""
-              details={[
-              ]}
-              imageSrc={judoImage} // The image to display
+              details={[<div key="judo-images" style={{ 
+                display: 'flex', 
+                overflowX: 'auto', 
+                whiteSpace: 'nowrap', 
+                gap: '10px', 
+                padding: '10px 0' 
+              }}>
+                <img src={judoImage1} alt="Judo Image 1" style={{ height: '400px', borderRadius: '8px' }} />
+                <img src={judoImage2} alt="Judo Image 2" style={{ height: '400px', borderRadius: '8px' }} />
+                <img src={judoImage3} alt="Judo Image 3" style={{ height: '400px', borderRadius: '8px' }} />
+              </div>
+            ]}
               isExpanded={expandedSections.education.entries.judo}
               onClick={() => toggleEntry('education', 'judo')}
             />
