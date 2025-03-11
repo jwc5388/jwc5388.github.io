@@ -282,12 +282,16 @@ function App() {
             />
             <Entry
               title="Sudoku Game"
-              location="University Junior Honours Project"
-              dates="[Your Project Date Here]"
+              location="University of St Andrews Computer Science Junior Honours Project"
+              dates="September 2022 ~ March 2023"
               details={[
-                'Designed and developed an advanced Sudoku game with unique puzzle generation and difficulty settings.',
-                'Implemented a backend algorithm for efficient puzzle solving and validation using mathematical techniques.',
-                'Integrated a user-friendly interface to provide an engaging and interactive gaming experience.',
+                'Developed a collaborative Sudoku puzzle platform that allows users to create, share, and play puzzles.',
+                'Designed and built the front-end with React.js, leveraging its flexibility, performance, and rich ecosystem. Implemented lifecycle methods to resolve rendering issues.',
+                'Implemented a Node.js and Express.js backend, prioritizing speed, scalability, and security. Managed environment variables for secure authentication and database integration.',
+                'Utilized MariaDB as the relational database, implementing primary and foreign keys for structured data relationships and efficient querying.',
+                'Followed Agile development (Scrum methodology), utilizing sprints to ensure continuous progress and iterative development.',
+                'Engineered advanced Sudoku generation and validation algorithms, supporting multiple difficulty levels for an engaging user experience.',
+                'Designed and implemented the front-end using React.JS, chosen for its flexibility, performance, and extensive ecosystem. Addressed rendering issues by utilizing lifecycle methods to correctly update puzzle states.',
                 <div key="sodoku-images" style={{ 
                   display: 'flex', 
                   overflowX: 'auto', 
@@ -307,7 +311,7 @@ function App() {
             />
             <Entry
               title="Sense1 Vet AI Algorithm"
-              location="CareSix"
+              location="CareSix Co., LTD"
               dates="September 2024 ~ Present"
               details={[
                 'Developed a machine learning-based AI algorithm for canine heart rate estimation using Long Short-Term Memory (LSTM) models.',
