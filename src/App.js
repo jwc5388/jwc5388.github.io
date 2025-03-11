@@ -210,8 +210,15 @@ function App() {
                 'Represented HRG as Lead Manager, showcasing the 2025 CES Innovation Awards-winning project: the first-ever wearable cow health monitor.',
                 'Engaged with industry leaders, shared insights, and connected with experts in agricultural technology.',
                 'Demonstrated innovative approaches to livestock health monitoring, receiving significant industry recognition.',
-                <div key="jagri-images">
-                  <img src={jagriImage1} alt="J-Agri Exhibition 1" style={{ width: '100%', borderRadius: '8px', marginTop: '10px' }} />
+                <div key="jagri-images"style={{ 
+                  display: 'flex', 
+                  overflowX: 'auto', 
+                  whiteSpace: 'nowrap', 
+                  gap: '10px', 
+                  padding: '10px 0' 
+                }}>
+                  <img src={jagriImage1} alt="J-Agri Exhibition 1" style={{ height: '400px', borderRadius: '8px' }} />
+                  <img src={jagriImage2} alt="J-Agri Exhibition 2" style={{height: '400px', borderRadius: '8px'}} />
                 </div>
               ]}
               isExpanded={expandedSections.engagements.entries.jAgri}
@@ -225,9 +232,15 @@ function App() {
                 'Represented CareSix, connecting with veterinary professionals and industry innovators across Asia.',
                 'Showcased award-winning devices, including the Sense1 Pro dog wearable and the Sense1 Guardian, both receiving positive feedback from doctors and professionals.',
                 'Engaged in discussions about advancing veterinary technology and animal healthcare solutions.',
-                <div key="fava-images">
-                  <img src={favaImage1} alt="Fava Exhibition 1" style={{ width: '100%', borderRadius: '8px', marginTop: '10px' }} />
-                  <img src={favaImage2} alt="Fava Exhibition 2" style={{ width: '100%', borderRadius: '8px', marginTop: '10px' }} />
+                <div key="fava-images" style={{ 
+                  display: 'flex', 
+                  overflowX: 'auto', 
+                  whiteSpace: 'nowrap', 
+                  gap: '10px', 
+                  padding: '10px 0' 
+                }}>
+                  <img src={favaImage1} alt="Fava Exhibition 1" style={{ height: '400px', borderRadius: '8px' }} />
+                  <img src={favaImage2} alt="Fava Exhibition 2" style={{ height: '400px', borderRadius: '8px' }} />
                 </div>
               ]}
               isExpanded={expandedSections.engagements.entries.fava2024}
@@ -241,10 +254,16 @@ function App() {
                 'Invited to exhibit at CES 2025 in Venetian Suite 29-225.',
                 'Showcasing the latest advancements in veterinary technology and wearable animal health monitoring devices.',
                 'Networking with global tech leaders and innovators to push the boundaries of animal healthcare solutions.',
-                <div key="ces2025-images">
-                  <img src={cesImage1} alt="CES 2025 Exhibition 1" style={{ width: '100%', borderRadius: '8px', marginTop: '10px' }} />
-                  <img src={cesImage2} alt="CES 2025 Exhibition 2" style={{ width: '100%', borderRadius: '8px', marginTop: '10px' }} />
-                  <img src={cesImage3} alt="CES 2025 Exhibition 3" style={{ width: '100%', borderRadius: '8px', marginTop: '10px' }} />
+                <div key="ces2025-images" style={{ 
+                  display: 'flex', 
+                  overflowX: 'auto', 
+                  whiteSpace: 'nowrap', 
+                  gap: '10px', 
+                  padding: '10px 0' 
+                }}>
+                  <img src={cesImage1} alt="CES 2025 Exhibition 1" style={{ height: '400px', borderRadius: '8px' }} />
+                  <img src={cesImage2} alt="CES 2025 Exhibition 2" style={{ height: '400px', borderRadius: '8px' }} />
+                  <img src={cesImage3} alt="CES 2025 Exhibition 3" style={{ height: '400px', borderRadius: '8px' }} />
                 </div>
               ]}
               isExpanded={expandedSections.engagements.entries.ces2025}
