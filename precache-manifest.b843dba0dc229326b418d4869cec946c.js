@@ -1,31 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c6ea6237233106fac6ab7a718fb6b17e",
+    "revision": "5874a6a6b78e538b6a0f1873a05c29e8",
     "url": "/index.html"
   },
   {
-    "revision": "097ce2b77527890dc5a5",
+    "revision": "6c190cb9c3cfd5144621",
     "url": "/static/css/main.4b28d5a7.chunk.css"
   },
   {
-    "revision": "03b0a80851b5ace3b6dd",
-    "url": "/static/js/2.1a9ebb4c.chunk.js"
+    "revision": "a17c3bc7afac266a2111",
+    "url": "/static/js/2.dc3b967b.chunk.js"
   },
   {
     "revision": "60f6bf9e100e456690e9ab6c9a37bfc2",
-    "url": "/static/js/2.1a9ebb4c.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.dc3b967b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "853dd4ce4078393fdcff",
-    "url": "/static/js/3.edce3822.chunk.js"
+    "revision": "2bf5c6c81fc1949c558a",
+    "url": "/static/js/3.f07aa761.chunk.js"
   },
   {
-    "revision": "097ce2b77527890dc5a5",
-    "url": "/static/js/main.e177a4e2.chunk.js"
+    "revision": "6c190cb9c3cfd5144621",
+    "url": "/static/js/main.d2c2196d.chunk.js"
   },
   {
-    "revision": "b8cf1ffe19370be50f86",
-    "url": "/static/js/runtime-main.6e21d7dc.js"
+    "revision": "e8ee1641b5d48e640eea",
+    "url": "/static/js/runtime-main.61ea9ed3.js"
   },
   {
     "revision": "5bbfe2abff33dcdce7a45eefd33daf57",
@@ -34,6 +34,30 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "2b362807d032562105be7c66754f385d",
     "url": "/static/media/MathDissertation.2b362807.pdf"
+  },
+  {
+    "revision": "3adaf9f5d632b32afb43f9e83d597009",
+    "url": "/static/media/auraid1.3adaf9f5.png"
+  },
+  {
+    "revision": "ba195c38f448f3fa97094bd29d377059",
+    "url": "/static/media/auraid2.ba195c38.png"
+  },
+  {
+    "revision": "981d503a01eac9e2d066a93d63fa75d3",
+    "url": "/static/media/auraid3.981d503a.png"
+  },
+  {
+    "revision": "9cb34ceed0337752271b45ed30dc3987",
+    "url": "/static/media/auraid4.9cb34cee.png"
+  },
+  {
+    "revision": "87af7513ed6b9becae1e508e42b9742a",
+    "url": "/static/media/auraid5.87af7513.png"
+  },
+  {
+    "revision": "3a9fdd6fdf8c574bd544c80212bd7ed3",
+    "url": "/static/media/auraid6.3a9fdd6f.png"
   },
   {
     "revision": "c051e384dba93885b4cba095a64b38f4",
