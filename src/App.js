@@ -376,7 +376,7 @@ function App() {
               onClick={() => toggleEntry('projects', 'sense1Vet')}
             />
             <Entry
-              title="AURA ID WEBSITE"
+              title="AURA ID Website"
               location="CareSix Co., LTD"
               dates="February 2025 ~ Present"
               details={[
