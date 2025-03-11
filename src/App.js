@@ -37,6 +37,7 @@ import auraIdIamge3 from './assets/images/auraid3.png';
 import auraIdIamge4 from './assets/images/auraid4.png';
 import auraIdIamge5 from './assets/images/auraid5.png';
 import auraIdIamge6 from './assets/images/auraid6.png';
+import auraIdIamge7 from './assets/images/auraid7.png';
 import dissertation1 from './assets/files/CSDissertation.pdf';
 import dissertation2 from './assets/files/MathDissertation.pdf';
 import productionapk from './assets/files/cotons-production-gateway.apk';
@@ -390,11 +391,12 @@ function App() {
                   padding: '10px 0' 
                 }}>
                   <img src={auraIdIamge1} alt="AuraId Project 1" style={{ height: '400px', borderRadius: '8px' }} />
-                  <img src={auraIdIamge2} alt="AuraId Project 2" style={{ height: '400px', borderRadius: '8px' }} />
+                  <img src={auraIdIamge7} alt="AuraId Project 2" style={{ height: '400px', borderRadius: '8px' }} />
                   <img src={auraIdIamge3} alt="AuraId Project 3" style={{ height: '400px', borderRadius: '8px' }} />
                   <img src={auraIdIamge4} alt="AuraId Project 4" style={{ height: '400px', borderRadius: '8px' }} />
                   <img src={auraIdIamge5} alt="AuraId Project 5" style={{ height: '400px', borderRadius: '8px' }} />
                   <img src={auraIdIamge6} alt="AuraId Project 6" style={{ height: '400px', borderRadius: '8px' }} />
+                  <img src={auraIdIamge2} alt="AuraId Project 7" style={{ height: '400px', borderRadius: '8px' }} />
                 </div>
               ]}
               isExpanded={expandedSections.projects.entries.auraid}
