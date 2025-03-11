@@ -7,7 +7,7 @@ import Entry from './Entry';
 import degreeImage from './assets/images/graduation.jpg';
 import judoImage1 from './assets/images/judo1.jpg';
 import judoImage2 from './assets/images/judo2.jpeg';
-import judoImage3 from './assets/images/judo2.jpeg';
+import judoImage3 from './assets/images/judo3.jpeg';
 import dissImage from './assets/images/dissertationlogo.jpg';
 import cotonsImage1 from './assets/images/cotons1.jpg';
 import cotonsImage2 from './assets/images/cotons2.jpg';
