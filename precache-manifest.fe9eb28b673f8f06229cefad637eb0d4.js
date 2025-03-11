@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f883534518f41dcba562962352643730",
+    "revision": "4ef15e357d68c2d87354c240d3f8a437",
     "url": "/index.html"
   },
   {
-    "revision": "38494b7145b6ce983cb8",
+    "revision": "e0d2da60cc328f1ab49b",
     "url": "/static/css/main.4b28d5a7.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/3.edce3822.chunk.js"
   },
   {
-    "revision": "38494b7145b6ce983cb8",
-    "url": "/static/js/main.cc486b80.chunk.js"
+    "revision": "e0d2da60cc328f1ab49b",
+    "url": "/static/js/main.40b241f6.chunk.js"
   },
   {
     "revision": "b8cf1ffe19370be50f86",
@@ -88,16 +88,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/jagri2.c4b72a24.jpeg"
   },
   {
-    "revision": "5895070a1cb5b5f31734f5949acb253e",
-    "url": "/static/media/judo1.5895070a.jpg"
+    "revision": "28c0bd26f58b148f7fa7455d26c4fea5",
+    "url": "/static/media/judo1.28c0bd26.jpg"
   },
   {
-    "revision": "f5d336e2cbacc275ae6870872aa359ee",
-    "url": "/static/media/judo2.f5d336e2.jpeg"
+    "revision": "8cbe23a6057e32c3d3bf3758ac0a3fce",
+    "url": "/static/media/judo2.8cbe23a6.jpg"
   },
   {
-    "revision": "b872977ae6799d4e870a542b6acb9435",
-    "url": "/static/media/judo3.b872977a.jpeg"
+    "revision": "169ecf91d613abb387b8e77a848c7839",
+    "url": "/static/media/judo3.169ecf91.jpg"
   },
   {
     "revision": "6fd689bf92e748e8523104c0b308c85f",
