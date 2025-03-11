@@ -385,9 +385,16 @@ function App() {
                 </a>
                 <span>Mathematics Dissertation</span>
               </div>,
-
+              <div key="graduation-images" style={{ 
+                display: 'flex', 
+                overflowX: 'auto', 
+                whiteSpace: 'nowrap', 
+                gap: '10px', 
+                padding: '10px 0' 
+              }}>
+                <img src={degreeImage} alt="SenseOne Project 1" style={{ height: '400px', borderRadius: '8px' }} />
+              </div>
               ]}
-              imageSrc={degreeImage} // The image to display
               isExpanded={expandedSections.education.entries.degree}
               onClick={() => toggleEntry('education', 'degree')}
             />
