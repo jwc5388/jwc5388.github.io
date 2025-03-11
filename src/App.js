@@ -261,7 +261,7 @@ function App() {
             <Entry
               title="Royal Game of Ur"
               location="University Project"
-              dates="[Your Project Date Here]"
+              dates="January 2021 ~ March 2021"
               details={[
                 'Developed a digital version of the ancient board game "Royal Game of Ur" as part of a major university project.',
                 'Implemented advanced game logic, AI opponents, and an interactive user interface to simulate strategic gameplay.',
