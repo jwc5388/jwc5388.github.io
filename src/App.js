@@ -38,6 +38,9 @@ import auraIdIamge4 from './assets/images/auraid4.png';
 import auraIdIamge5 from './assets/images/auraid5.png';
 import auraIdIamge6 from './assets/images/auraid6.png';
 import auraIdIamge7 from './assets/images/auraid7.png';
+import elizaImage1 from './assets/images/eliza1.png';
+import elizaImage2 from './assets/images/eliza2.png';
+import elizaImage3 from './assets/images/eliza3.png';
 import dissertation1 from './assets/files/CSDissertation.pdf';
 import dissertation2 from './assets/files/MathDissertation.pdf';
 import productionapk from './assets/files/cotons-production-gateway.apk';
@@ -296,6 +299,31 @@ function App() {
         <h2 onClick={() => toggleSection('projects')}>Project Engagements</h2>
         {expandedSections.projects.expanded && (
           <div className="section-content">
+            <Entry
+              title="Eliza AI Basic Project"
+              location="University Project"
+              dates="September 2020 ~ December 2020"
+              details={[
+                'Developed an AI chatbot in Java using a scripting system with keywords, decomposition rules, and reassembly rules, simulating three personalities: a psychologist, a politician, and a five-year-old child. Implemented pre and post substitutions using regex for sentence transformation and synonym handling.',
+                'Structured the chatbot engine into modular Java classes, including an Eliza Engine (managing input processing and response generation), a Decomposition Engine (applying regex-based pattern matching), and a Reassembly Engine (constructing responses with predefined grammatical structures).',
+                'Implemented priority-based keyword matching, ensuring responses aligned with conversational context. Used regular expressions (regex) for pattern recognition, allowing dynamic sentence decomposition and reassembly for natural conversations.',
+                'Collaborated using Mercurial for version control, managing project updates. Resolved merge conflicts with commands like hg resolve --all and hg merge, and manually edited clashing files for synchronization.',
+                'Conducted iterative testing, refining keyword priorities to improve chatbot accuracy and ensuring smooth response flow. Identified challenges like post-substitution issues, where responses sometimes lacked precision, and planned improvements for more nuanced conversation handling.',
+                <div key="Eliza-images" style={{ 
+                  display: 'flex', 
+                  overflowX: 'auto', 
+                  whiteSpace: 'nowrap', 
+                  gap: '10px', 
+                  padding: '10px 0' 
+                }}>
+                  <img src={elizaImage1} alt="Eliza Project 1" style={{ height: '400px', borderRadius: '8px' }} />
+                  <img src={elizaImage2} alt="Eliza Project 2" style={{ height: '400px', borderRadius: '8px' }} />
+                  <img src={elizaImage3} alt="Eliza Project 2" style={{ height: '400px', borderRadius: '8px' }} />
+                </div>
+              ]}
+              isExpanded={expandedSections.projects.entries.eliza}
+              onClick={() => toggleEntry('projects', 'eliza')}
+            />
             <Entry
               title="Royal Game of Ur"
               location="University Project"
