@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/static/css/main.4b28d5a7.chunk.css",
-    "main.js": "/static/js/main.08871a0c.chunk.js",
-    "main.js.map": "/static/js/main.08871a0c.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.226ecde3.js",
-    "runtime-main.js.map": "/static/js/runtime-main.226ecde3.js.map",
-    "static/js/2.2b341c2f.chunk.js": "/static/js/2.2b341c2f.chunk.js",
-    "static/js/2.2b341c2f.chunk.js.map": "/static/js/2.2b341c2f.chunk.js.map",
-    "static/js/3.e3724221.chunk.js": "/static/js/3.e3724221.chunk.js",
-    "static/js/3.e3724221.chunk.js.map": "/static/js/3.e3724221.chunk.js.map",
+    "main.js": "/static/js/main.71aa75c2.chunk.js",
+    "main.js.map": "/static/js/main.71aa75c2.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.d6effdf3.js",
+    "runtime-main.js.map": "/static/js/runtime-main.d6effdf3.js.map",
+    "static/js/2.4dd9715a.chunk.js": "/static/js/2.4dd9715a.chunk.js",
+    "static/js/2.4dd9715a.chunk.js.map": "/static/js/2.4dd9715a.chunk.js.map",
+    "static/js/3.581b0c26.chunk.js": "/static/js/3.581b0c26.chunk.js",
+    "static/js/3.581b0c26.chunk.js.map": "/static/js/3.581b0c26.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.4f1ca54ee8066cfc2d33bcc779b6a085.js": "/precache-manifest.4f1ca54ee8066cfc2d33bcc779b6a085.js",
+    "precache-manifest.beb6edd8b2044002bbbaa46f0dbf74ba.js": "/precache-manifest.beb6edd8b2044002bbbaa46f0dbf74ba.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.4b28d5a7.chunk.css.map": "/static/css/main.4b28d5a7.chunk.css.map",
-    "static/js/2.2b341c2f.chunk.js.LICENSE.txt": "/static/js/2.2b341c2f.chunk.js.LICENSE.txt",
+    "static/js/2.4dd9715a.chunk.js.LICENSE.txt": "/static/js/2.4dd9715a.chunk.js.LICENSE.txt",
     "static/media/CSDissertation.pdf": "/static/media/CSDissertation.5bbfe2ab.pdf",
     "static/media/MathDissertation.pdf": "/static/media/MathDissertation.2b362807.pdf",
     "static/media/auraid1.png": "/static/media/auraid1.3adaf9f5.png",
@@ -31,6 +31,9 @@
     "static/media/cotons2.jpg": "/static/media/cotons2.b3832ab9.jpg",
     "static/media/dissertationlogo.jpg": "/static/media/dissertationlogo.de7467b3.jpg",
     "static/media/edison1.jpeg": "/static/media/edison1.7dcf1324.jpeg",
+    "static/media/eliza1.png": "/static/media/eliza1.5f05fe4c.png",
+    "static/media/eliza2.png": "/static/media/eliza2.0a8c450a.png",
+    "static/media/eliza3.png": "/static/media/eliza3.0837ff50.png",
     "static/media/fava1.jpeg": "/static/media/fava1.2879d698.jpeg",
     "static/media/fava2.jpeg": "/static/media/fava2.47b92081.jpeg",
     "static/media/graduation.jpg": "/static/media/graduation.723792f0.jpg",
@@ -53,9 +56,9 @@
     "static/media/sudoku5.png": "/static/media/sudoku5.9e3ab2c9.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.226ecde3.js",
-    "static/js/2.2b341c2f.chunk.js",
+    "static/js/runtime-main.d6effdf3.js",
+    "static/js/2.4dd9715a.chunk.js",
     "static/css/main.4b28d5a7.chunk.css",
-    "static/js/main.08871a0c.chunk.js"
+    "static/js/main.71aa75c2.chunk.js"
   ]
 }
