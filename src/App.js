@@ -31,6 +31,12 @@ import sudokuImage2 from './assets/images/sudoku2.png';
 import sudokuImage3 from './assets/images/sudoku3.png';
 import sudokuImage4 from './assets/images/sudoku4.png';
 import sudokuImage5 from './assets/images/sudoku5.png';
+import auraIdIamge1 from './assets/images/auraid1.png';
+import auraIdIamge2 from './assets/images/auraid2.png';
+import auraIdIamge3 from './assets/images/auraid3.png';
+import auraIdIamge4 from './assets/images/auraid4.png';
+import auraIdIamge5 from './assets/images/auraid5.png';
+import auraIdIamge6 from './assets/images/auraid6.png';
 import dissertation1 from './assets/files/CSDissertation.pdf';
 import dissertation2 from './assets/files/MathDissertation.pdf';
 import productionapk from './assets/files/cotons-production-gateway.apk';
@@ -367,6 +373,35 @@ function App() {
               ]}
               isExpanded={expandedSections.projects.entries.sense1Vet}
               onClick={() => toggleEntry('projects', 'sense1Vet')}
+            />
+            <Entry
+              title="AURA ID WEBSITE"
+              location="CareSix Co., LTD"
+              dates="February 2025 ~ Present"
+              details={[
+                'Developed a machine learning-based AI algorithm for canine heart rate estimation using Long Short-Term Memory (LSTM) models.',
+                'Designed and implemented signal processing techniques to analyze ballistocardiogram (BCG) data for heart rate detection.',
+                'Built a deep learning pipeline using TensorFlow and Keras to enhance real-time heart rate monitoring accuracy.',
+                'Applied unsupervised learning for IJK peak detection, reducing dependency on ECG signals for heart rate analysis.',
+                'Collaborated with hardware engineers and production teams to optimize data acquisition and improve signal quality.',
+                'Contributed to the development of Sense1 Vet, an AI-powered wearable device for veterinary health monitoring.',
+                <div key="auraid-images" style={{ 
+                  display: 'flex', 
+                  overflowX: 'auto', 
+                  whiteSpace: 'nowrap', 
+                  gap: '10px', 
+                  padding: '10px 0' 
+                }}>
+                  <img src={auraIdIamge1} alt="AuraId Project 1" style={{ height: '400px', borderRadius: '8px' }} />
+                  <img src={auraIdIamge2} alt="AuraId Project 2" style={{ height: '400px', borderRadius: '8px' }} />
+                  <img src={auraIdIamge3} alt="AuraId Project 3" style={{ height: '400px', borderRadius: '8px' }} />
+                  <img src={auraIdIamge4} alt="AuraId Project 4" style={{ height: '400px', borderRadius: '8px' }} />
+                  <img src={auraIdIamge5} alt="AuraId Project 5" style={{ height: '400px', borderRadius: '8px' }} />
+                  <img src={auraIdIamge6} alt="AuraId Project 6" style={{ height: '400px', borderRadius: '8px' }} />
+                </div>
+              ]}
+              isExpanded={expandedSections.projects.entries.auraid}
+              onClick={() => toggleEntry('projects', 'auraid')}
             />
 
           </div>
