@@ -379,12 +379,9 @@ function App() {
               location="CareSix Co., LTD"
               dates="February 2025 ~ Present"
               details={[
-                'Developed a machine learning-based AI algorithm for canine heart rate estimation using Long Short-Term Memory (LSTM) models.',
-                'Designed and implemented signal processing techniques to analyze ballistocardiogram (BCG) data for heart rate detection.',
-                'Built a deep learning pipeline using TensorFlow and Keras to enhance real-time heart rate monitoring accuracy.',
-                'Applied unsupervised learning for IJK peak detection, reducing dependency on ECG signals for heart rate analysis.',
-                'Collaborated with hardware engineers and production teams to optimize data acquisition and improve signal quality.',
-                'Contributed to the development of Sense1 Vet, an AI-powered wearable device for veterinary health monitoring.',
+                'Developed a web-based dog recognition platform using TypeScript with React, implementing an advanced backend algorithm developed by Jeju Nationaly University for accurate dog identification based on image recognition technology.',
+                'Designed and implemented a veterinary hospital management system, enabling efficient patient tracking and cage record management for veterinarians.',
+                'Integrated AWS RDS (Relational Database Service) for secure, scalable data management, ensuring seamless data retrieval and storage for both the dog recognition platform and the hospital management system.',
                 <div key="auraid-images" style={{ 
                   display: 'flex', 
                   overflowX: 'auto', 
