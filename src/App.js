@@ -392,11 +392,11 @@ function App() {
                 }}>
                   <img src={auraIdIamge1} alt="AuraId Project 1" style={{ height: '400px', borderRadius: '8px' }} />
                   <img src={auraIdIamge7} alt="AuraId Project 2" style={{ height: '400px', borderRadius: '8px' }} />
-                  <img src={auraIdIamge3} alt="AuraId Project 3" style={{ height: '400px', borderRadius: '8px' }} />
-                  <img src={auraIdIamge4} alt="AuraId Project 4" style={{ height: '400px', borderRadius: '8px' }} />
-                  <img src={auraIdIamge5} alt="AuraId Project 5" style={{ height: '400px', borderRadius: '8px' }} />
-                  <img src={auraIdIamge6} alt="AuraId Project 6" style={{ height: '400px', borderRadius: '8px' }} />
-                  <img src={auraIdIamge2} alt="AuraId Project 7" style={{ height: '400px', borderRadius: '8px' }} />
+                  <img src={auraIdIamge2} alt="AuraId Project 3" style={{ height: '400px', borderRadius: '8px' }} />
+                  <img src={auraIdIamge3} alt="AuraId Project 4" style={{ height: '400px', borderRadius: '8px' }} />
+                  <img src={auraIdIamge4} alt="AuraId Project 5" style={{ height: '400px', borderRadius: '8px' }} />
+                  <img src={auraIdIamge5} alt="AuraId Project 6" style={{ height: '400px', borderRadius: '8px' }} />
+                  <img src={auraIdIamge6} alt="AuraId Project 7" style={{ height: '400px', borderRadius: '8px' }} />
                 </div>
               ]}
               isExpanded={expandedSections.projects.entries.auraid}
