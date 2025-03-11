@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/static/css/main.4b28d5a7.chunk.css",
-    "main.js": "/static/js/main.fb61740b.chunk.js",
-    "main.js.map": "/static/js/main.fb61740b.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.649dc8ec.js",
-    "runtime-main.js.map": "/static/js/runtime-main.649dc8ec.js.map",
-    "static/js/2.6a8ad9a3.chunk.js": "/static/js/2.6a8ad9a3.chunk.js",
-    "static/js/2.6a8ad9a3.chunk.js.map": "/static/js/2.6a8ad9a3.chunk.js.map",
-    "static/js/3.1b863ec7.chunk.js": "/static/js/3.1b863ec7.chunk.js",
-    "static/js/3.1b863ec7.chunk.js.map": "/static/js/3.1b863ec7.chunk.js.map",
+    "main.js": "/static/js/main.e0c66d18.chunk.js",
+    "main.js.map": "/static/js/main.e0c66d18.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.6e21d7dc.js",
+    "runtime-main.js.map": "/static/js/runtime-main.6e21d7dc.js.map",
+    "static/js/2.1a9ebb4c.chunk.js": "/static/js/2.1a9ebb4c.chunk.js",
+    "static/js/2.1a9ebb4c.chunk.js.map": "/static/js/2.1a9ebb4c.chunk.js.map",
+    "static/js/3.edce3822.chunk.js": "/static/js/3.edce3822.chunk.js",
+    "static/js/3.edce3822.chunk.js.map": "/static/js/3.edce3822.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.18c420eac412932f888f6b953ee1b349.js": "/precache-manifest.18c420eac412932f888f6b953ee1b349.js",
+    "precache-manifest.c057160c8d61f7e7cc688bf10902ba2c.js": "/precache-manifest.c057160c8d61f7e7cc688bf10902ba2c.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.4b28d5a7.chunk.css.map": "/static/css/main.4b28d5a7.chunk.css.map",
-    "static/js/2.6a8ad9a3.chunk.js.LICENSE.txt": "/static/js/2.6a8ad9a3.chunk.js.LICENSE.txt",
+    "static/js/2.1a9ebb4c.chunk.js.LICENSE.txt": "/static/js/2.1a9ebb4c.chunk.js.LICENSE.txt",
     "static/media/CSDissertation.pdf": "/static/media/CSDissertation.5bbfe2ab.pdf",
     "static/media/MathDissertation.pdf": "/static/media/MathDissertation.2b362807.pdf",
     "static/media/ces1.jpeg": "/static/media/ces1.c051e384.jpeg",
@@ -31,6 +31,7 @@
     "static/media/jagri2.jpeg": "/static/media/jagri2.c4b72a24.jpeg",
     "static/media/judo1.jpg": "/static/media/judo1.5895070a.jpg",
     "static/media/judo2.jpeg": "/static/media/judo2.f5d336e2.jpeg",
+    "static/media/judo3.jpeg": "/static/media/judo3.b872977a.jpeg",
     "static/media/royalur1.png": "/static/media/royalur1.6fd689bf.png",
     "static/media/royalur2.png": "/static/media/royalur2.d58c226c.png",
     "static/media/senseone1.png": "/static/media/senseone1.4182b771.png",
@@ -45,9 +46,9 @@
     "static/media/sudoku5.png": "/static/media/sudoku5.9e3ab2c9.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.649dc8ec.js",
-    "static/js/2.6a8ad9a3.chunk.js",
+    "static/js/runtime-main.6e21d7dc.js",
+    "static/js/2.1a9ebb4c.chunk.js",
     "static/css/main.4b28d5a7.chunk.css",
-    "static/js/main.fb61740b.chunk.js"
+    "static/js/main.e0c66d18.chunk.js"
   ]
 }
