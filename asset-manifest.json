@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/static/css/main.4b28d5a7.chunk.css",
-    "main.js": "/static/js/main.faf24bd6.chunk.js",
-    "main.js.map": "/static/js/main.faf24bd6.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.2d31f1c5.js",
-    "runtime-main.js.map": "/static/js/runtime-main.2d31f1c5.js.map",
-    "static/js/2.4d259807.chunk.js": "/static/js/2.4d259807.chunk.js",
-    "static/js/2.4d259807.chunk.js.map": "/static/js/2.4d259807.chunk.js.map",
-    "static/js/3.075298f8.chunk.js": "/static/js/3.075298f8.chunk.js",
-    "static/js/3.075298f8.chunk.js.map": "/static/js/3.075298f8.chunk.js.map",
+    "main.js": "/static/js/main.d4d7564e.chunk.js",
+    "main.js.map": "/static/js/main.d4d7564e.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.f038b431.js",
+    "runtime-main.js.map": "/static/js/runtime-main.f038b431.js.map",
+    "static/js/2.a7d82217.chunk.js": "/static/js/2.a7d82217.chunk.js",
+    "static/js/2.a7d82217.chunk.js.map": "/static/js/2.a7d82217.chunk.js.map",
+    "static/js/3.b60af378.chunk.js": "/static/js/3.b60af378.chunk.js",
+    "static/js/3.b60af378.chunk.js.map": "/static/js/3.b60af378.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.5362037d85cc512d09009db2d8e14a4b.js": "/precache-manifest.5362037d85cc512d09009db2d8e14a4b.js",
+    "precache-manifest.096911656b3363f9f4f4e19a55757ce5.js": "/precache-manifest.096911656b3363f9f4f4e19a55757ce5.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.4b28d5a7.chunk.css.map": "/static/css/main.4b28d5a7.chunk.css.map",
-    "static/js/2.4d259807.chunk.js.LICENSE.txt": "/static/js/2.4d259807.chunk.js.LICENSE.txt",
+    "static/js/2.a7d82217.chunk.js.LICENSE.txt": "/static/js/2.a7d82217.chunk.js.LICENSE.txt",
     "static/media/CSDissertation.pdf": "/static/media/CSDissertation.5bbfe2ab.pdf",
     "static/media/MathDissertation.pdf": "/static/media/MathDissertation.2b362807.pdf",
     "static/media/ces1.jpeg": "/static/media/ces1.c051e384.jpeg",
@@ -36,12 +36,17 @@
     "static/media/senseone2.png": "/static/media/senseone2.348815dd.png",
     "static/media/senseone3.png": "/static/media/senseone3.38218693.png",
     "static/media/senseone4.png": "/static/media/senseone4.bdbd1898.png",
-    "static/media/senseone5.png": "/static/media/senseone5.8c0a1e9b.png"
+    "static/media/senseone5.png": "/static/media/senseone5.8c0a1e9b.png",
+    "static/media/sudoku1.png": "/static/media/sudoku1.cfd2d7a9.png",
+    "static/media/sudoku2.png": "/static/media/sudoku2.7c1a15ed.png",
+    "static/media/sudoku3.png": "/static/media/sudoku3.9a4d2ddc.png",
+    "static/media/sudoku4.png": "/static/media/sudoku4.456136fd.png",
+    "static/media/sudoku5.png": "/static/media/sudoku5.9e3ab2c9.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.2d31f1c5.js",
-    "static/js/2.4d259807.chunk.js",
+    "static/js/runtime-main.f038b431.js",
+    "static/js/2.a7d82217.chunk.js",
     "static/css/main.4b28d5a7.chunk.css",
-    "static/js/main.faf24bd6.chunk.js"
+    "static/js/main.d4d7564e.chunk.js"
   ]
 }

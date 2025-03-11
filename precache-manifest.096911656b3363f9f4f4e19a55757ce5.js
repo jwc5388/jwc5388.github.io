@@ -1,31 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2c3444c5c576b9c37a994dd562869457",
+    "revision": "b897c98a85425c50e51de5e6d2c7eb64",
     "url": "/index.html"
   },
   {
-    "revision": "9a87260a91c736d08e70",
+    "revision": "7f324ba649dd48a1e6e1",
     "url": "/static/css/main.4b28d5a7.chunk.css"
   },
   {
-    "revision": "8407771c229e6ba52159",
-    "url": "/static/js/2.4d259807.chunk.js"
+    "revision": "b5c14c9b559bcc187c60",
+    "url": "/static/js/2.a7d82217.chunk.js"
   },
   {
     "revision": "60f6bf9e100e456690e9ab6c9a37bfc2",
-    "url": "/static/js/2.4d259807.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.a7d82217.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b7ae1d73bc461447e1bb",
-    "url": "/static/js/3.075298f8.chunk.js"
+    "revision": "22cfaa2fdb92f34f7004",
+    "url": "/static/js/3.b60af378.chunk.js"
   },
   {
-    "revision": "9a87260a91c736d08e70",
-    "url": "/static/js/main.faf24bd6.chunk.js"
+    "revision": "7f324ba649dd48a1e6e1",
+    "url": "/static/js/main.d4d7564e.chunk.js"
   },
   {
-    "revision": "25131e0c9d16edd61844",
-    "url": "/static/js/runtime-main.2d31f1c5.js"
+    "revision": "99c4dccfbbd1ffba2419",
+    "url": "/static/js/runtime-main.f038b431.js"
   },
   {
     "revision": "5bbfe2abff33dcdce7a45eefd33daf57",
@@ -118,5 +118,25 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "8c0a1e9b3b6074e9f3f4964e7cfefa0e",
     "url": "/static/media/senseone5.8c0a1e9b.png"
+  },
+  {
+    "revision": "cfd2d7a92ddcfcb967309f1af0ad0baa",
+    "url": "/static/media/sudoku1.cfd2d7a9.png"
+  },
+  {
+    "revision": "7c1a15eda009e36eb30a4c796defbeca",
+    "url": "/static/media/sudoku2.7c1a15ed.png"
+  },
+  {
+    "revision": "9a4d2ddc342e897da0bd977bf4b27f69",
+    "url": "/static/media/sudoku3.9a4d2ddc.png"
+  },
+  {
+    "revision": "456136fdc3fb413821dc8149d134a20f",
+    "url": "/static/media/sudoku4.456136fd.png"
+  },
+  {
+    "revision": "9e3ab2c9fd20fee69727441251e2da0b",
+    "url": "/static/media/sudoku5.9e3ab2c9.png"
   }
 ]);
