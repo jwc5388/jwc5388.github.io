@@ -156,7 +156,7 @@ function App() {
                   content: (
                     <div style={{ paddingBottom: '20px' }}>
                       <p>The AI collar developed by CareSix revolutionizes veterinary care by monitoring pets' health in real-time.</p>
-                      <img src={cotonsImage1} alt="CareSix AI Collar" style={{ width: '100%', borderRadius: '8px' }} />
+                      <img src={cotonsImage1} alt="CareSix AI Collar" style={{ height: '400px', borderRadius: '8px' }} />
                     </div>
                   ),
                 },
@@ -448,6 +448,8 @@ function App() {
             <ul className="skills-list">
               <li>Programming: Python, Java, JavaScript, Kotlin, Dart</li>
               <li>App/Web Development: Kotlin, Flutter-Dart, React (TypeScript, JavaScript)</li>
+              <li>Database: MySQL, MongoDB, PostgreSQL</li>
+              <li>Agile Methodologies(Scrum), Sprint Planning,Version Control (Git)</li>
               <li>Data Analysis: SQL, Python (Mathematical Modeling)</li>
               <li>AI & Machine Learning: LSTM models, Unsupervised Learning, Deep Learning, TensorFlow, Keras</li>
               <li>Mathematics & Finance: Mathematical Modeling, Risk Management, Financial Analysis</li>
