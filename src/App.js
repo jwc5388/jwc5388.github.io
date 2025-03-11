@@ -24,6 +24,11 @@ import senseoneImage4 from './assets/images/senseone4.png';
 import senseoneImage5 from './assets/images/senseone5.png';
 import royalUrImage1 from './assets/images/royalur1.png';
 import royalUrImage2 from './assets/images/royalur2.png';
+import sudokuImage1 from './assets/images/sudoku1.png';
+import sudokuImage2 from './assets/images/sudoku2.png';
+import sudokuImage3 from './assets/images/sudoku3.png';
+import sudokuImage4 from './assets/images/sudoku4.png';
+import sudokuImage5 from './assets/images/sudoku5.png';
 import dissertation1 from './assets/files/CSDissertation.pdf';
 import dissertation2 from './assets/files/MathDissertation.pdf';
 import productionapk from './assets/files/cotons-production-gateway.apk';
@@ -268,8 +273,8 @@ function App() {
                   gap: '10px', 
                   padding: '10px 0' 
                 }}>
-                  <img src={royalUrImage1} alt="SenseOne Project 1" style={{ height: '300px', borderRadius: '8px' }} />
-                  <img src={royalUrImage2} alt="SenseOne Project 2" style={{ height: '300px', borderRadius: '8px' }} />
+                  <img src={royalUrImage1} alt="SenseOne Project 1" style={{ height: '400px', borderRadius: '8px' }} />
+                  <img src={royalUrImage2} alt="SenseOne Project 2" style={{ height: '400px', borderRadius: '8px' }} />
                 </div>
               ]}
               isExpanded={expandedSections.projects.entries.royalGame}
@@ -277,16 +282,25 @@ function App() {
             />
             <Entry
               title="Sudoku Game"
-              location="University Project"
+              location="University Junior Honours Project"
               dates="[Your Project Date Here]"
               details={[
                 'Designed and developed an advanced Sudoku game with unique puzzle generation and difficulty settings.',
                 'Implemented a backend algorithm for efficient puzzle solving and validation using mathematical techniques.',
                 'Integrated a user-friendly interface to provide an engaging and interactive gaming experience.',
-                // <div key="sudoku-images">
-                //   <img src={sudokuImage1} alt="Sudoku Game 1" style={{ width: '100%', borderRadius: '8px', marginTop: '10px' }} />
-                //   <img src={sudokuImage2} alt="Sudoku Game 2" style={{ width: '100%', borderRadius: '8px', marginTop: '10px' }} />
-                // </div>
+                <div key="sodoku-images" style={{ 
+                  display: 'flex', 
+                  overflowX: 'auto', 
+                  whiteSpace: 'nowrap', 
+                  gap: '10px', 
+                  padding: '10px 0' 
+                }}>
+                  <img src={sudokuImage1} alt="Sudoku Project 1" style={{ height: '400px', borderRadius: '8px' }} />
+                  <img src={sudokuImage2} alt="Sudoku Project 2" style={{ height: '400px', borderRadius: '8px' }} />
+                  <img src={sudokuImage3} alt="Sudoku Project 3" style={{ height: '400px', borderRadius: '8px' }} />
+                  <img src={sudokuImage4} alt="Sudoku Project 4" style={{ height: '400px', borderRadius: '8px' }} />
+                  <img src={sudokuImage5} alt="Sudoku Project 5" style={{ height: '400px', borderRadius: '8px' }} />
+                </div>
               ]}
               isExpanded={expandedSections.projects.entries.sudokuGame}
               onClick={() => toggleEntry('projects', 'sudokuGame')}
@@ -294,7 +308,7 @@ function App() {
             <Entry
               title="Sense1 Vet AI Algorithm"
               location="CareSix"
-              dates="[Your Project Date Here]"
+              dates="September 2024 ~ Present"
               details={[
                 'Developed a machine learning-based AI algorithm for canine heart rate estimation using Long Short-Term Memory (LSTM) models.',
                 'Designed and implemented signal processing techniques to analyze ballistocardiogram (BCG) data for heart rate detection.',
@@ -309,11 +323,11 @@ function App() {
                   gap: '10px', 
                   padding: '10px 0' 
                 }}>
-                  <img src={senseoneImage1} alt="SenseOne Project 1" style={{ height: '300px', borderRadius: '8px' }} />
-                  <img src={senseoneImage2} alt="SenseOne Project 2" style={{ height: '300px', borderRadius: '8px' }} />
-                  <img src={senseoneImage3} alt="SenseOne Project 3" style={{ height: '300px', borderRadius: '8px' }} />
-                  <img src={senseoneImage4} alt="SenseOne Project 4" style={{ height: '300px', borderRadius: '8px' }} />
-                  <img src={senseoneImage5} alt="SenseOne Project 5" style={{ height: '300px', borderRadius: '8px' }} />
+                  <img src={senseoneImage1} alt="SenseOne Project 1" style={{ height: '400px', borderRadius: '8px' }} />
+                  <img src={senseoneImage2} alt="SenseOne Project 2" style={{ height: '400px', borderRadius: '8px' }} />
+                  <img src={senseoneImage3} alt="SenseOne Project 3" style={{ height: '400px', borderRadius: '8px' }} />
+                  <img src={senseoneImage4} alt="SenseOne Project 4" style={{ height: '400px', borderRadius: '8px' }} />
+                  <img src={senseoneImage5} alt="SenseOne Project 5" style={{ height: '400px', borderRadius: '8px' }} />
                 </div>
               ]}
               isExpanded={expandedSections.projects.entries.sense1Vet}
