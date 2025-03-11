@@ -165,10 +165,19 @@ function App() {
                   title: 'Awards',
                   content: (
                     <div>
-                      <p>CES 2023</p>
-                      <div key="awards-images">
-                        <img src={cotonsImage2} alt="ces awards" style={{ width: '100%', borderRadius: '8px', marginTop: '10px' }} />
-                        <img src={edisonImage} alt="edison awards" style={{ width: '100%', borderRadius: '8px', marginTop: '10px' }} />
+                      {/* <p>CES 2023</p> */}
+                      <div 
+                        key="awards-images" 
+                        style={{ 
+                          display: 'flex', 
+                          overflowX: 'auto', 
+                          whiteSpace: 'nowrap', 
+                          gap: '10px', 
+                          padding: '10px 0' 
+                        }}
+                      >
+                        <img src={cotonsImage2} alt="CES Awards" style={{ height: '400px', borderRadius: '8px' }} />
+                        <img src={edisonImage} alt="Edison Awards" style={{ height: '400px', borderRadius: '8px' }} />
                       </div>
                       <ul>
                         <li>CES Best Tech Innovation Award 2022</li>
@@ -177,6 +186,7 @@ function App() {
                     </div>
                   ),
                 },
+                
 
                 {
                   title: 'More about the company',
