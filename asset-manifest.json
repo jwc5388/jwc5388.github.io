@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/static/css/main.4b28d5a7.chunk.css",
-    "main.js": "/static/js/main.6bf40e3a.chunk.js",
-    "main.js.map": "/static/js/main.6bf40e3a.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.61ea9ed3.js",
-    "runtime-main.js.map": "/static/js/runtime-main.61ea9ed3.js.map",
-    "static/js/2.dc3b967b.chunk.js": "/static/js/2.dc3b967b.chunk.js",
-    "static/js/2.dc3b967b.chunk.js.map": "/static/js/2.dc3b967b.chunk.js.map",
-    "static/js/3.f07aa761.chunk.js": "/static/js/3.f07aa761.chunk.js",
-    "static/js/3.f07aa761.chunk.js.map": "/static/js/3.f07aa761.chunk.js.map",
+    "main.js": "/static/js/main.1ccb1788.chunk.js",
+    "main.js.map": "/static/js/main.1ccb1788.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.226ecde3.js",
+    "runtime-main.js.map": "/static/js/runtime-main.226ecde3.js.map",
+    "static/js/2.2b341c2f.chunk.js": "/static/js/2.2b341c2f.chunk.js",
+    "static/js/2.2b341c2f.chunk.js.map": "/static/js/2.2b341c2f.chunk.js.map",
+    "static/js/3.e3724221.chunk.js": "/static/js/3.e3724221.chunk.js",
+    "static/js/3.e3724221.chunk.js.map": "/static/js/3.e3724221.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.0de5d6ffbcedc13a2f506e5600d0dfe3.js": "/precache-manifest.0de5d6ffbcedc13a2f506e5600d0dfe3.js",
+    "precache-manifest.774bb97b54483698609c13b8be9a9276.js": "/precache-manifest.774bb97b54483698609c13b8be9a9276.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.4b28d5a7.chunk.css.map": "/static/css/main.4b28d5a7.chunk.css.map",
-    "static/js/2.dc3b967b.chunk.js.LICENSE.txt": "/static/js/2.dc3b967b.chunk.js.LICENSE.txt",
+    "static/js/2.2b341c2f.chunk.js.LICENSE.txt": "/static/js/2.2b341c2f.chunk.js.LICENSE.txt",
     "static/media/CSDissertation.pdf": "/static/media/CSDissertation.5bbfe2ab.pdf",
     "static/media/MathDissertation.pdf": "/static/media/MathDissertation.2b362807.pdf",
     "static/media/auraid1.png": "/static/media/auraid1.3adaf9f5.png",
@@ -22,6 +22,7 @@
     "static/media/auraid4.png": "/static/media/auraid4.9cb34cee.png",
     "static/media/auraid5.png": "/static/media/auraid5.87af7513.png",
     "static/media/auraid6.png": "/static/media/auraid6.3a9fdd6f.png",
+    "static/media/auraid7.png": "/static/media/auraid7.3279fb86.png",
     "static/media/ces1.jpeg": "/static/media/ces1.c051e384.jpeg",
     "static/media/ces2.jpeg": "/static/media/ces2.a3a7a1fb.jpeg",
     "static/media/ces3.jpeg": "/static/media/ces3.029918d9.jpeg",
@@ -52,9 +53,9 @@
     "static/media/sudoku5.png": "/static/media/sudoku5.9e3ab2c9.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.61ea9ed3.js",
-    "static/js/2.dc3b967b.chunk.js",
+    "static/js/runtime-main.226ecde3.js",
+    "static/js/2.2b341c2f.chunk.js",
     "static/css/main.4b28d5a7.chunk.css",
-    "static/js/main.6bf40e3a.chunk.js"
+    "static/js/main.1ccb1788.chunk.js"
   ]
 }
