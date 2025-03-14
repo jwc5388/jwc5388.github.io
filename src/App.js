@@ -521,7 +521,7 @@ function App() {
         )}
       </section>
 
-      <section className="Volunteer-section">
+      {/* <section className="Volunteer-section">
         <h2 onClick={() => toggleSection('volunteer')}>Volunteer Experience or Leadership</h2>
         {expandedSections.volunteer.expanded && (
           <div className="section-content">
@@ -540,9 +540,9 @@ function App() {
             </div>
             {/* Add more entries here as needed */}
           </div>
-        )}
-      </section>
-    </div>
+    //     )} */}
+    //   </section>
+    // </div>
 
 
       );
