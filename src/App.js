@@ -296,6 +296,7 @@ function App() {
               location="Jeonju University, South Korea"
               dates="August 19, 2025"
               details={[
+                "Qualified for the finals by ranking 1st place in the AI Factory preliminary competition, solving a Fashion-MNIST quantum computing challenge through coding.",
                 "Participated in a 1-night, 2-day hackathon focused on Quantum Computing and Artificial Intelligence.",
                 "Competed in advanced problem-solving sessions combining quantum algorithms with AI-driven approaches.",
                 "Awarded the Excellence Prize (우수상) for innovative application of quantum AI methods.",
