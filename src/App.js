@@ -470,6 +470,20 @@ function App() {
               isExpanded={expandedSections.education.entries.degree}
               onClick={() => toggleEntry('education', 'degree')}
             />
+
+            {/* 새 IBM x RedHat Entry 추가 */}
+            <Entry
+              title="AI Transformation - AX Academy"
+              location="IBM x RedHat"
+              dates="Completed"
+              details={[
+                "Participated in the AI Transformation program hosted by IBM and RedHat under AX Academy.",
+                "Focused on applying cloud-native technologies and AI-driven solutions for enterprise transformation.",
+                "Gained practical experience in hybrid cloud, open-source collaboration, and modern AI deployment strategies."
+              ]}
+              isExpanded={expandedSections.education.entries.ibmAxAcademy}
+              onClick={() => toggleEntry('education', 'ibmAxAcademy')}
+            />
             <Entry
               title="St Andrews Judo Club/ Registered as member of Judo Scotland"
               location=""
