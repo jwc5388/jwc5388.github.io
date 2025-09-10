@@ -18,22 +18,19 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Setup Node (use Node 18 LTS)
+      - name: Setup Node (LTS 18)
         uses: actions/setup-node@v4
         with:
           node-version: 18
           cache: 'npm'
 
-      - name: Install deps (tolerate old lockfile)
-        run: npm install
+      - name: Install deps (lockfile exact)
+        run: npm ci              # ← npm install 대신 npm ci
 
-      - name: Build (CRA v3 workaround)
-        env:
-          NODE_OPTIONS: --openssl-legacy-provider
-        run: npm run build
+      - name: Build (CRA v5 / webpack5)
+        run: npm run build       # ← NODE_OPTIONS 제거
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
@@ -47,6 +44,5 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
+      - id: deployment
         uses: actions/deploy-pages@v4
