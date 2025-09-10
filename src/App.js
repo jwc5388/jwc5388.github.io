@@ -41,6 +41,9 @@ import auraIdIamge7 from './assets/images/auraid7.png';
 import elizaImage1 from './assets/images/eliza1.png';
 import elizaImage2 from './assets/images/eliza2.png';
 import elizaImage3 from './assets/images/eliza3.png';
+import quantumImage1 from './assets/images/quantum1.jpeg';
+import quantumImage2 from './assets/images/quantum2.jpeg';
+import quantumImage3 from './assets/images/quantum3.jpeg';
 import dissertation1 from './assets/files/CSDissertation.pdf';
 import dissertation2 from './assets/files/MathDissertation.pdf';
 import productionapk from './assets/files/cotons-production-gateway.apk';
@@ -300,7 +303,18 @@ function App() {
                 "Participated in a 1-night, 2-day hackathon focused on Quantum Computing and Artificial Intelligence.",
                 "Competed in advanced problem-solving sessions combining quantum algorithms with AI-driven approaches.",
                 "Awarded the Excellence Prize (우수상) for innovative application of quantum AI methods.",
-                "Collaborated with peers to explore practical use cases of quantum machine learning and optimization."
+                "Collaborated with peers to explore practical use cases of quantum machine learning and optimization.",
+                <div key="quantum-images" style={{ 
+                  display: 'flex', 
+                  overflowX: 'auto', 
+                  whiteSpace: 'nowrap', 
+                  gap: '10px', 
+                  padding: '10px 0' 
+                }}>
+                  <img src={quantumImage1} alt="Quantum AI Hackathon 1" style={{ height: '400px', borderRadius: '8px' }} />
+                  <img src={quantumImage2} alt="Quantum AI Hackathon 2" style={{ height: '400px', borderRadius: '8px' }} />
+                  <img src={quantumImage3} alt="Quantum AI Hackathon 3" style={{ height: '400px', borderRadius: '8px' }} />
+                </div>
               ]}
               isExpanded={expandedSections.engagements.entries.quantumAIHackathon}
               onClick={() => toggleEntry('engagements', 'quantumAIHackathon')}
