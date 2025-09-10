@@ -297,7 +297,7 @@ function App() {
             <Entry
               title="2025 Quantum AI Hackathon"
               location="Jeonju University, South Korea"
-              dates="August 19, 2025"
+              dates="August 18-19, 2025"
               details={[
                 "Qualified for the finals by ranking 1st place in the AI Factory preliminary competition, solving a Fashion-MNIST quantum computing challenge through coding.",
                 "Participated in a 1-night, 2-day hackathon focused on Quantum Computing and Artificial Intelligence.",
