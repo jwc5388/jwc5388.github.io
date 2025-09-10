@@ -431,6 +431,21 @@ function App() {
               onClick={() => toggleEntry('projects', 'auraid')}
             />
 
+            <Entry
+              title="Law-Intelligence"
+              location="IBM Final Group Project"
+              dates="2025 ~ Present"
+              details={[
+                "Developing a Law AI Assistant that leverages LLM (Large Language Models) with Retrieval-Augmented Generation (RAG).",
+                "Implementing prompt engineering techniques to improve response accuracy and context awareness in legal queries.",
+                "Exploring fine-tuning strategies on Korean law corpora to align the assistant with domain-specific terminology and reasoning.",
+                "Designing a pipeline that integrates legal document chunking, vector embeddings, and FAISS-based semantic search.",
+                "Building a robust evaluation framework to measure factual consistency, legal validity, and user trust in AI-generated responses."
+              ]}
+              isExpanded={expandedSections.projects.entries.lawIntelligence}
+              onClick={() => toggleEntry('projects', 'lawIntelligence')}
+            />
+
           </div>
         )}
       </section>
@@ -473,7 +488,7 @@ function App() {
 
             {/* 새 IBM x RedHat Entry 추가 */}
             <Entry
-              title="AI Transformation - AX Academy"
+              title="[IBM x RedHat] AI Transformation - AX Academy"
               location="IBM x RedHat"
               dates="Completed"
               details={[
