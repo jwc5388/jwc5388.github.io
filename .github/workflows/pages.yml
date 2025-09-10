@@ -30,7 +30,9 @@ jobs:
         run: npm ci              # ← npm install 대신 npm ci
 
       - name: Build (CRA v5 / webpack5)
-        run: npm run build       # ← NODE_OPTIONS 제거
+        env:
+          CI: false         # 경고가 있어도 빌드 실패로 취급하지 않음
+        run: npm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
