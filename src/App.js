@@ -291,6 +291,19 @@ function App() {
               isExpanded={expandedSections.engagements.entries.ces2025}
               onClick={() => toggleEntry('engagements', 'ces2025')}
             />
+            <Entry
+              title="2025 Quantum AI Hackathon"
+              location="Jeonju University, South Korea"
+              dates="August 19, 2025"
+              details={[
+                "Participated in a 1-night, 2-day hackathon focused on Quantum Computing and Artificial Intelligence.",
+                "Competed in advanced problem-solving sessions combining quantum algorithms with AI-driven approaches.",
+                "Awarded the Excellence Prize (우수상) for innovative application of quantum AI methods.",
+                "Collaborated with peers to explore practical use cases of quantum machine learning and optimization."
+              ]}
+              isExpanded={expandedSections.engagements.entries.quantumAIHackathon}
+              onClick={() => toggleEntry('engagements', 'quantumAIHackathon')}
+            />
           </div>
         )}
       </section>
@@ -432,7 +445,7 @@ function App() {
             />
 
             <Entry
-              title="Law-Intelligence"
+              title="[IBM x RedHat] Law-Intelligence"
               location="IBM Final Group Project"
               dates="2025 ~ Present"
               details={[
@@ -490,7 +503,7 @@ function App() {
             <Entry
               title="[IBM x RedHat] AI Transformation - AX Academy"
               location="IBM x RedHat"
-              dates="Completed"
+              dates="April 2025 ~ Present"
               details={[
                 "Participated in the AI Transformation program hosted by IBM and RedHat under AX Academy.",
                 "Focused on applying cloud-native technologies and AI-driven solutions for enterprise transformation.",
