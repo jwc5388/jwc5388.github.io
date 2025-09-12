@@ -44,6 +44,7 @@ import elizaImage3 from './assets/images/eliza3.png';
 import quantumImage1 from './assets/images/quantum1.jpeg';
 import quantumImage2 from './assets/images/quantum2.jpeg';
 import quantumImage3 from './assets/images/quantum3.jpeg';
+import quantumImage4 from './assets/images/quantum4.jpeg';
 import dissertation1 from './assets/files/CSDissertation.pdf';
 import dissertation2 from './assets/files/MathDissertation.pdf';
 import productionapk from './assets/files/cotons-production-gateway.apk';
@@ -311,6 +312,7 @@ function App() {
                   gap: '10px', 
                   padding: '10px 0' 
                 }}>
+                  <img src={quantumImage4} alt="Quantum AI Hackathon 4" style={{ height: '400px', borderRadius: '8px' }} />
                   <img src={quantumImage1} alt="Quantum AI Hackathon 1" style={{ height: '400px', borderRadius: '8px' }} />
                   <img src={quantumImage2} alt="Quantum AI Hackathon 2" style={{ height: '400px', borderRadius: '8px' }} />
                   <img src={quantumImage3} alt="Quantum AI Hackathon 3" style={{ height: '400px', borderRadius: '8px' }} />
