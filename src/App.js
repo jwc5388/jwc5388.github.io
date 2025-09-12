@@ -89,7 +89,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Jae Woo Chang's Portfolio!!</h1>
+        <h1>Jae Woo Chang's Portfolio</h1>
         <div className="contact-icons">
           <a href="mailto:peter.jaewoochang@gmail.com" aria-label="Email">
             <FaEnvelope size={30} style={{ margin: '0 15px', color: '#000' }} />
@@ -134,7 +134,7 @@ function App() {
             />
             <Entry
               title="App Developer, CareSix Co., LTD"
-              location="Yongin, South Korea"
+              location="Jeju Island, South Korea"
               dates="June 2023 - August 2023"
               details={[
                 <div key="detail-1">
@@ -150,7 +150,7 @@ function App() {
             />
             <Entry
               title="Mathematician, CareSix Co., LTD"
-              location="Jeju, South Korea"
+              location="Jeju Island, South Korea"
               dates="May 2022 - August 2022"
               details={[
                 'Implemented Fourier Transform in Python to filter noise from BCG measurements, enhancing signal clarity.',
