@@ -567,14 +567,30 @@ function App() {
         {expandedSections.skills.expanded && (
           <div className="section-content">
             <ul className="skills-list">
-              <li>Programming: Python, Java, JavaScript, Kotlin, Dart</li>
-              <li>App/Web Development: Kotlin, Flutter-Dart, React (TypeScript, JavaScript)</li>
-              <li>Database: MySQL, MongoDB, PostgreSQL</li>
-              <li>Agile Methodologies(Scrum), Sprint Planning,Version Control (Git)</li>
-              <li>Data Analysis: SQL, Python (Mathematical Modeling)</li>
-              <li>AI & Machine Learning: LSTM models, Unsupervised Learning, Deep Learning, TensorFlow, Keras</li>
-              <li>Mathematics & Finance: Mathematical Modeling, Risk Management, Financial Analysis</li>
-              <li>Native level in English and Korean</li>
+              <li>
+                <strong>AI & Machine Learning:</strong> Deep Learning, NumPy, Pandas
+              </li>
+              <li>
+                <strong>Deep Learning Frameworks:</strong> PyTorch, TensorFlow, Keras
+              </li>
+              <li>
+                <strong>Programming:</strong> Python, Java, JavaScript, Kotlin, Dart
+              </li>
+              <li>
+                <strong>App / Web Development:</strong> Kotlin, Flutter (Dart), React (TypeScript, JavaScript)
+              </li>
+              <li>
+                <strong>Database:</strong> MySQL, MongoDB, PostgreSQL
+              </li>
+              <li>
+                <strong>Workflow & Tools:</strong> Agile (Scrum), Sprint Planning, Version Control (Git)
+              </li>
+              <li>
+                <strong>Mathematics & Finance:</strong> Mathematical Modeling, Risk Management, Financial Analysis
+              </li>
+              <li>
+                <strong>Languages:</strong> Native English & Korean
+              </li>
             </ul>
           </div>
         )}
