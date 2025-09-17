@@ -327,22 +327,18 @@ function App() {
       </section>
 
       <section className="Project-section">
-      <h2 onClick={() => toggleSection('projects')}>Project Engagements</h2>
-      {expandedSections.projects.expanded && (
-        <div className="section-content">
+        <h2 onClick={() => toggleSection('projects')}>Project Engagements</h2>
+        {expandedSections.projects.expanded && (
+          <div className="section-content">
 
-          {/* ===== Featured Projects ===== */}
-          <div className="subheader">Featured Projects</div>
+            {/* ===== Featured Projects ===== */}
+            <h3 style={{ marginTop: 0 }}>Featured Projects</h3>
 
-          <div className="featured-card">
-            <div className="entry-header">
-              <span className="entry-title">Sense1 Vet AI Algorithm</span>
-              <span className="badge badge-primary">FEATURED</span>
-            </div>
+            {/* Sense1 Vet AI Algorithm */}
             <Entry
-              title={null}  // 타이틀은 위에서 렌더링
+              title="Sense1 Vet AI Algorithm"
               location="CareSix Co., LTD"
-              dates="September 2024 ~ Present"
+              dates="September 2024 ~ Febuary 2025"
               details={[
                 'Developed a machine learning-based AI algorithm for canine heart rate estimation using Long Short-Term Memory (LSTM) models.',
                 'Designed and implemented signal processing techniques to analyze ballistocardiogram (BCG) data for heart rate detection.',
@@ -352,7 +348,9 @@ function App() {
                 'Enhanced preprocessing pipeline by applying advanced noise reduction techniques, improving signal-to-noise ratio and robustness of model input features.',
                 'Collaborated with hardware engineers and production teams to optimize data acquisition and improve signal quality.',
                 'Contributed to the development of Sense1 Vet, an AI-powered wearable device for veterinary health monitoring.',
-                <div key="sense1vet-images" style={{ display: 'flex', overflowX: 'auto', whiteSpace: 'nowrap', gap: '10px', padding: '10px 0' }}>
+                <div key="sense1vet-images" style={{
+                  display: 'flex', overflowX: 'auto', whiteSpace: 'nowrap', gap: '10px', padding: '10px 0'
+                }}>
                   <img src={senseoneImage1} alt="SenseOne Project 1" style={{ height: '400px', borderRadius: '8px' }} />
                   <img src={senseoneImage2} alt="SenseOne Project 2" style={{ height: '400px', borderRadius: '8px' }} />
                   <img src={senseoneImage3} alt="SenseOne Project 3" style={{ height: '400px', borderRadius: '8px' }} />
@@ -363,15 +361,10 @@ function App() {
               isExpanded={expandedSections.projects.entries.sense1Vet}
               onClick={() => toggleEntry('projects', 'sense1Vet')}
             />
-          </div>
 
-          <div className="featured-card">
-            <div className="entry-header">
-              <span className="entry-title">[IBM x RedHat] Law-Intelligence</span>
-              <span className="badge badge-primary">FEATURED</span>
-            </div>
+            {/* Law-Intelligence */}
             <Entry
-              title={null}
+              title="[IBM x RedHat] Law-Intelligence"
               location="IBM Final Group Project"
               dates="2025 ~ Present"
               details={[
@@ -384,15 +377,10 @@ function App() {
               isExpanded={expandedSections.projects.entries.lawIntelligence}
               onClick={() => toggleEntry('projects', 'lawIntelligence')}
             />
-          </div>
 
-          <div className="featured-card">
-            <div className="entry-header">
-              <span className="entry-title">[IBM x RedHat] Therapy-Intelligence</span>
-              <span className="badge badge-primary">FEATURED</span>
-            </div>
+            {/* Therapy-Intelligence */}
             <Entry
-              title={null}
+              title="[IBM x RedHat] Therapy-Intelligence"
               location="IBM x RedHat Innovation Project"
               dates="2025 ~ Present"
               details={[
@@ -406,18 +394,13 @@ function App() {
               isExpanded={expandedSections.projects.entries.therapyIntelligence}
               onClick={() => toggleEntry('projects', 'therapyIntelligence')}
             />
-          </div>
 
-          {/* ===== Other Projects (Mini) ===== */}
-          <div className="subheader subheader-muted">Other Projects (Mini)</div>
+            {/* ===== Other Projects (Mini) ===== */}
+            <h3 style={{ marginTop: 24 }}>Other Projects (Mini)</h3>
 
-          <div className="mini-card">
-            <div className="entry-header mini">
-              <span className="entry-title mini">Eliza AI Basic Project</span>
-              <span className="badge badge-muted">MINI</span>
-            </div>
+            {/* Eliza */}
             <Entry
-              title={null}
+              title="Eliza AI Basic Project"
               location="University Project"
               dates="September 2020 ~ December 2020"
               details={[
@@ -426,7 +409,9 @@ function App() {
                 'Implemented priority-based keyword matching, ensuring responses aligned with conversational context. Used regular expressions (regex) for pattern recognition, allowing dynamic sentence decomposition and reassembly for natural conversations.',
                 'Collaborated using Mercurial for version control, managing project updates. Resolved merge conflicts with commands like hg resolve --all and hg merge, and manually edited clashing files for synchronization.',
                 'Conducted iterative testing, refining keyword priorities to improve chatbot accuracy and ensuring smooth response flow. Identified challenges like post-substitution issues, where responses sometimes lacked precision, and planned improvements for more nuanced conversation handling.',
-                <div key="Eliza-images" style={{ display: 'flex', overflowX: 'auto', whiteSpace: 'nowrap', gap: '10px', padding: '10px 0' }}>
+                <div key="Eliza-images" style={{
+                  display: 'flex', overflowX: 'auto', whiteSpace: 'nowrap', gap: '10px', padding: '10px 0'
+                }}>
                   <img src={elizaImage1} alt="Eliza Project 1" style={{ height: '400px', borderRadius: '8px' }} />
                   <img src={elizaImage2} alt="Eliza Project 2" style={{ height: '400px', borderRadius: '8px' }} />
                   <img src={elizaImage3} alt="Eliza Project 3" style={{ height: '400px', borderRadius: '8px' }} />
@@ -435,22 +420,19 @@ function App() {
               isExpanded={expandedSections.projects.entries.eliza}
               onClick={() => toggleEntry('projects', 'eliza')}
             />
-          </div>
 
-          <div className="mini-card">
-            <div className="entry-header mini">
-              <span className="entry-title mini">Royal Game of Ur</span>
-              <span className="badge badge-muted">MINI</span>
-            </div>
+            {/* Royal Game of Ur */}
             <Entry
-              title={null}
+              title="Royal Game of Ur"
               location="University Project"
               dates="January 2021 ~ March 2021"
               details={[
                 'Developed a digital version of the ancient board game "Royal Game of Ur" as part of a major university project.',
                 'Implemented advanced game logic, AI opponents, and an interactive user interface to simulate strategic gameplay.',
                 'Focused on enhancing user experience through a well-designed UI and optimized game mechanics.',
-                <div key="RoyalUr-images" style={{ display: 'flex', overflowX: 'auto', whiteSpace: 'nowrap', gap: '10px', padding: '10px 0' }}>
+                <div key="RoyalUr-images" style={{
+                  display: 'flex', overflowX: 'auto', whiteSpace: 'nowrap', gap: '10px', padding: '10px 0'
+                }}>
                   <img src={royalUrImage1} alt="RoyalUr Project 1" style={{ height: '400px', borderRadius: '8px' }} />
                   <img src={royalUrImage2} alt="RoyalUr Project 2" style={{ height: '400px', borderRadius: '8px' }} />
                 </div>
@@ -458,15 +440,10 @@ function App() {
               isExpanded={expandedSections.projects.entries.royalGame}
               onClick={() => toggleEntry('projects', 'royalGame')}
             />
-          </div>
 
-          <div className="mini-card">
-            <div className="entry-header mini">
-              <span className="entry-title mini">Sudoku Game</span>
-              <span className="badge badge-muted">MINI</span>
-            </div>
+            {/* Sudoku Game */}
             <Entry
-              title={null}
+              title="Sudoku Game"
               location="University of St Andrews Computer Science Junior Honours Project"
               dates="September 2022 ~ March 2023"
               details={[
@@ -477,7 +454,9 @@ function App() {
                 'Followed Agile development (Scrum methodology), utilizing sprints to ensure continuous progress and iterative development.',
                 'Engineered advanced Sudoku generation and validation algorithms, supporting multiple difficulty levels for an engaging user experience.',
                 'Designed and implemented the front-end using React.JS, chosen for its flexibility, performance, and extensive ecosystem. Addressed rendering issues by utilizing lifecycle methods to correctly update puzzle states.',
-                <div key="sudoku-images" style={{ display: 'flex', overflowX: 'auto', whiteSpace: 'nowrap', gap: '10px', padding: '10px 0' }}>
+                <div key="sudoku-images" style={{
+                  display: 'flex', overflowX: 'auto', whiteSpace: 'nowrap', gap: '10px', padding: '10px 0'
+                }}>
                   <img src={sudokuImage1} alt="Sudoku Project 1" style={{ height: '400px', borderRadius: '8px' }} />
                   <img src={sudokuImage2} alt="Sudoku Project 2" style={{ height: '400px', borderRadius: '8px' }} />
                   <img src={sudokuImage3} alt="Sudoku Project 3" style={{ height: '400px', borderRadius: '8px' }} />
@@ -488,11 +467,10 @@ function App() {
               isExpanded={expandedSections.projects.entries.sudokuGame}
               onClick={() => toggleEntry('projects', 'sudokuGame')}
             />
-          </div>
 
-        </div>
-      )}
-    </section>
+          </div>
+        )}
+      </section>
 
       <section className="Achievements-section">
         <h2 onClick={() => toggleSection('achievements')}>Achievements / Awards</h2>
