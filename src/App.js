@@ -51,6 +51,7 @@ import productionapk from './assets/files/cotons-production-gateway.apk';
 import { FaEnvelope, FaPhone, FaLinkedin } from 'react-icons/fa';
 // import PythonGame from './components/PythonGame.js';
 
+
 function App() {
 
   const [expandedSections, setExpandedSections] = useState({
@@ -61,6 +62,7 @@ function App() {
     caresixContent: {expanded:false},
     engagements: {expanded: false, entries: {}},
     projects: {expanded: false, entries: {}},
+    achievements: {expanded: false, entries: {}}, // ✅ 추가
   });
 
   const toggleSection = (section) => {
@@ -174,12 +176,10 @@ function App() {
                     </div>
                   ),
                 },
-                // <div style={{ marginBottom: '20px' }}></div>,
                 {
                   title: 'Awards',
                   content: (
                     <div>
-                      {/* <p>CES 2023</p> */}
                       <div 
                         key="awards-images" 
                         style={{ 
@@ -200,8 +200,6 @@ function App() {
                     </div>
                   ),
                 },
-                
-
                 {
                   title: 'More about the company',
                   content: (
@@ -482,7 +480,7 @@ function App() {
 
       <section className="Achievements-section">
         <h2 onClick={() => toggleSection('achievements')}>Achievements / Awards</h2>
-        {expandedSections.achievements?.expanded && (
+        {expandedSections.achievements.expanded && (
           <div className="section-content">
             <Entry
               title="AI Factory Quantum AI 예선 1위 & 본선 진출"
@@ -498,7 +496,6 @@ function App() {
                   gap: '10px', 
                   padding: '10px 0' 
                 }}>
-                  {/* 필요시 이미지 추가 */}
                   {/* <img src={quantumImage1} alt="Quantum AI 1" style={{ height: '300px', borderRadius: '8px' }} /> */}
                 </div>
               ]}
@@ -541,12 +538,9 @@ function App() {
               isExpanded={expandedSections.achievements.entries.cesInnovation}
               onClick={() => toggleEntry('achievements', 'cesInnovation')}
             />
-
-            {/* 여기에 수상·입상·본선 등 기록을 계속 추가하면 됨 */}
           </div>
         )}
       </section>
-
 
       <section className="Education-section">
         <h2 onClick={() => toggleSection('education')}>Education/Qualification</h2>
@@ -583,7 +577,6 @@ function App() {
               onClick={() => toggleEntry('education', 'degree')}
             />
 
-            {/* 새 IBM x RedHat Entry 추가 */}
             <Entry
               title="[IBM x RedHat] AI Transformation - AX Academy"
               location="IBM x RedHat"
@@ -623,7 +616,6 @@ function App() {
               isExpanded={expandedSections.education.entries.society}
               onClick={() => toggleEntry('education', 'society')}
               />
-            {/* Add more entries here as needed */}
           </div>
         )}
 
@@ -680,15 +672,11 @@ function App() {
                 </li>
               </ul>
             </div>
-            {/* Add more entries here as needed */}
           </div>
-    //     )} */}
-    //   </section>
-    // </div>
-
-
-      );
+        )} */}
+      {/* </section> */}
+    </div>
+  );
 }
-
 
 export default App;
