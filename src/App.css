@@ -1,149 +1,115 @@
-/* ================================
-   Project Section – visual hierarchy
-   ================================ */
+.App {
+  text-align: center;
+}
 
-/* 소제목 스타일 */
-.subheader {
-  font-weight: 700;
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: black;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.Mybutton{
+  padding: 10px 20px;
   font-size: 16px;
-  margin: 8px 0 12px;
+  color: blue;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.subheader-muted {
-  color: #666;
-  margin-top: 28px;
-  font-weight: 700;
-  font-size: 15px;
+.About-section,
+.Projects-section {
+  padding: 60px 20px;
+  border-bottom: 1px solid #e7e7e7;
 }
 
-/* Entry 상단 헤더(타이틀 + 배지) */
+section {
+  cursor: pointer;
+  padding: 60px 20px;
+  border-bottom: 1px solid #e7e7e7;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
 .entry-header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  gap: 12px;
-  margin-bottom: 6px;
+  align-items: center;
+  cursor: pointer;
 }
 
-.entry-header.mini {
-  margin-bottom: 4px;
+.arrow {
+  transition: transform 0.3s ease;
 }
 
-/* 타이틀 크기 차등 */
-.entry-title {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 1.25;
+.arrow.expanded {
+  transform: rotate(180deg); /* Rotate the arrow when expanded */
 }
 
-.entry-title.mini {
-  font-weight: 600;
-  font-size: 16px;
+.entry-details {
+  padding-left: 20px;
+  margin-top: 10px;
 }
 
-/* 배지 공통 */
-.badge {
-  border-radius: 999px;
-  padding: 2px 10px;
-  font-size: 11px;
-  line-height: 18px;
-  border: 1px solid #e5e7eb;
-  white-space: nowrap;
-  user-select: none;
+.entry-image {
+  width: 200px;
+  margin-top: 10px;
+  border-radius: 5px;
 }
 
-/* 배지 변형 */
-.badge-primary {
-  background: #f5f8ff;  /* 은은한 파랑 배경 */
-  border-color: #d6e2ff;
-  color: #1e40af;
+.download-link {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
 }
 
-.badge-muted {
-  background: #f7f7f7;
-  border-color: #e5e5e5;
-  color: #555;
+.download-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
 }
 
-/* Featured 카드 */
-.featured-card {
-  position: relative;
-  background: #fafafa;
-  border: 1px solid #eee;
-  border-left: 4px solid #3b82f6; /* 포인트 바 */
-  border-radius: 12px;
-  padding: 14px 16px;
-  margin-bottom: 16px;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
-  transition: box-shadow 140ms ease, transform 140ms ease;
+.download-link span {
+  color: #007bff;
+  cursor: pointer;
 }
 
-.featured-card:hover {
-  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
-  transform: translateY(-1px);
+.download-link a {
+  text-decoration: none;
 }
 
-/* Mini 카드 */
-.mini-card {
-  border-left: 3px dashed #ddd;    /* 얇은 점선 바 */
-  padding: 8px 0 8px 12px;
-  margin-bottom: 10px;
-}
-
-/* 이미지 가로 스크롤 영역 공통(가독성) */
-.section-content .horizontal-scroll,
-.section-content div[style*="overflowX: 'auto'"] {
-  scrollbar-width: thin;           /* Firefox */
-}
-
-.section-content div[style*="overflowX: 'auto'"]::-webkit-scrollbar {
-  height: 8px;
-}
-
-.section-content div[style*="overflowX: 'auto'"]::-webkit-scrollbar-thumb {
-  background: #d9d9d9;
-  border-radius: 999px;
-}
-
-/* Project 섹션 상단/하단 간격 살짝 정리 */
-.Project-section .section-content > .subheader,
-.Project-section .section-content > .subheader-muted {
-  margin-left: 2px;
-}
-
-/* 반응형(모바일) 최적화) */
-@media (max-width: 640px) {
-  .entry-title { font-size: 16px; }
-  .entry-title.mini { font-size: 15px; }
-  .featured-card { padding: 12px 12px; border-radius: 10px; }
-  .badge { font-size: 10px; padding: 1px 8px; }
-}
-
-/* 다크 모드(선택): body에 .dark 클래스가 붙는 경우 */
-.dark .featured-card {
-  background: #0f172a;             /* slate-900 */
-  border-color: #1f2937;
-  border-left-color: #60a5fa;      /* light blue */
-  box-shadow: none;
-}
-
-.dark .mini-card { border-left-color: #374151; }
-
-.dark .subheader,
-.dark .subheader-muted,
-.dark .entry-title,
-.dark .entry-title.mini {
-  color: #e5e7eb;
-}
-
-.dark .badge-primary {
-  background: rgba(96,165,250,0.12);
-  border-color: rgba(96,165,250,0.35);
-  color: #93c5fd;
-}
-
-.dark .badge-muted {
-  background: rgba(255,255,255,0.06);
-  border-color: rgba(255,255,255,0.12);
-  color: #cbd5e1;
+.download-link span:hover {
+  text-decoration: underline;
 }
