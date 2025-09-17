@@ -118,6 +118,8 @@ function App() {
                 'Developed a machine learning-based algorithm for canine heart rate estimation using Long Short-Term Memory (LSTM) models with TensorFlow and Keras.',
                 'Designed an AI-driven system for detecting IJK peaks in ballistocardiogram (BCG) signals, leveraging deep learning-based signal processing.',
                 'Applied unsupervised learning techniques to automate IJK peak detection, reducing dependency on ECG signals.',
+                'Incorporated mathematical modeling of physiological signals to extract domain-specific features, capturing the periodicity of IJK peaks.',
+                'Enhanced preprocessing pipeline by applying advanced noise reduction techniques, improving signal-to-noise ratio and robustness of model input features.'
               ]}
               isExpanded={expandedSections.experience.entries.aiAlgorithm}
               onClick={() => toggleEntry('experience', 'aiAlgorithm')}
