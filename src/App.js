@@ -483,12 +483,12 @@ function App() {
         {expandedSections.achievements.expanded && (
           <div className="section-content">
             <Entry
-              title="AI Factory Quantum AI 예선 1위 & 본선 진출"
+              title="AI Factory Quantum AI – 1st Place in Qualifying Round & Finalist"
               location="Jeonju University, South Korea"
               dates="August 2025"
               details={[
-                '패션-MNIST 양자컴퓨팅 과제(코딩 기반) 예선 1위로 본선 진출.',
-                '본선에서 Quantum AI 응용 아이디어 및 구현으로 우수상(Excellence Prize) 수상.',
+                'Ranked 1st in the qualifying round with a coding-based Fashion-MNIST quantum computing challenge.',
+                'Advanced to the finals; awarded the Excellence Prize for innovative application of quantum AI methods.',
                 <div key="qa-images" style={{ 
                   display: 'flex', 
                   overflowX: 'auto', 
@@ -496,6 +496,7 @@ function App() {
                   gap: '10px', 
                   padding: '10px 0' 
                 }}>
+                  {/* Optional: images can be added here */}
                   {/* <img src={quantumImage1} alt="Quantum AI 1" style={{ height: '300px', borderRadius: '8px' }} /> */}
                 </div>
               ]}
@@ -504,36 +505,36 @@ function App() {
             />
 
             <Entry
-              title="Kaggle Competition – 상위 3%"
+              title="Kaggle Competition – Top 3%"
               location="Global (Online)"
               dates="2024"
               details={[
-                'Tabular 분류/회귀 대회에서 EDA → 피처엔지니어링 → 앙상블(GBDT + Stacking)로 상위 3% 달성.',
-                '코드 재현성 확보 및 리더보드 점수 안정화를 위한 시드 고정·KFold 설계.',
+                'Achieved Top 3% using an EDA → feature engineering → ensemble pipeline (GBDT + stacking).',
+                'Ensured reproducibility and leaderboard stability with robust seeding and well-designed K-Fold validation.',
               ]}
               isExpanded={expandedSections.achievements.entries.kaggleTop3}
               onClick={() => toggleEntry('achievements', 'kaggleTop3')}
             />
 
             <Entry
-              title="Dacon 전력소비량 예측 – 상위 5%"
+              title="Dacon Electricity Consumption Forecast – Top 5%"
               location="Korea (Online)"
               dates="2025"
               details={[
-                'TimeSeriesSplit 기반 검증/튜닝 파이프라인 구축, Optuna로 모델별 하이퍼파라미터 탐색.',
-                'XGBoost · LightGBM · CatBoost 스태킹 + Ridge 메타러너로 점수 향상.',
+                'Built a TimeSeriesSplit-based validation and tuning pipeline; applied Optuna for per-model hyperparameter search.',
+                'Improved score via XGBoost · LightGBM · CatBoost stacking with a Ridge meta-learner.',
               ]}
               isExpanded={expandedSections.achievements.entries.daconTop5}
               onClick={() => toggleEntry('achievements', 'daconTop5')}
             />
 
             <Entry
-              title="CES Innovation Awards – 프로젝트 리드 참여"
+              title="CES Innovation Awards – Project Lead Participation"
               location="Las Vegas, USA"
               dates="2025"
               details={[
-                '웨어러블 동물 헬스 모니터링 프로젝트 리드로 전시/시연 협업.',
-                '기술/제품 스토리텔링과 데모 동선 설계, 글로벌 파트너 밋업 주도.',
+                'Led the wearable animal health monitoring project for live demos and partner engagements.',
+                'Crafted technical/product storytelling, demo flow, and coordinated global partner meetings.',
               ]}
               isExpanded={expandedSections.achievements.entries.cesInnovation}
               onClick={() => toggleEntry('achievements', 'cesInnovation')}
