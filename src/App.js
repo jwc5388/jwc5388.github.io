@@ -111,7 +111,7 @@ function App() {
         {expandedSections.experience.expanded && (
           <div className="section-content">
             <Entry
-              title="AI Algorithm Developer, CareSix Co., LTD"
+              title="AI/ML Engineer & Researcher, CareSix Co., LTD"
               location="Seoul, South Korea"
               dates="September 2024 - Present"
               details={[
