@@ -434,7 +434,7 @@ function App() {
               isExpanded={expandedSections.projects.entries.sense1Vet}
               onClick={() => toggleEntry('projects', 'sense1Vet')}
             />
-            <Entry
+            {/* <Entry
               title="AURA ID Website"
               location="CareSix Co., LTD"
               dates="February 2025 ~ Present"
@@ -460,7 +460,7 @@ function App() {
               ]}
               isExpanded={expandedSections.projects.entries.auraid}
               onClick={() => toggleEntry('projects', 'auraid')}
-            />
+            /> */}
 
             <Entry
               title="[IBM x RedHat] Law-Intelligence"
