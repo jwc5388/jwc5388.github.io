@@ -330,10 +330,6 @@ function App() {
         <h2 onClick={() => toggleSection('projects')}>Project Engagements</h2>
         {expandedSections.projects.expanded && (
           <div className="section-content">
-
-            {/* ===== Main Projects (항상 표시) ===== */}
-            <h3 style={{ marginTop: 0 }}>Main Projects</h3>
-
             {/* Sense1 Vet AI Algorithm */}
             <Entry
               title="Sense1 Vet AI Algorithm"
