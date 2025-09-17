@@ -480,6 +480,73 @@ function App() {
         )}
       </section>
 
+      <section className="Achievements-section">
+        <h2 onClick={() => toggleSection('achievements')}>Achievements / Awards</h2>
+        {expandedSections.achievements?.expanded && (
+          <div className="section-content">
+            <Entry
+              title="AI Factory Quantum AI 예선 1위 & 본선 진출"
+              location="Jeonju University, South Korea"
+              dates="August 2025"
+              details={[
+                '패션-MNIST 양자컴퓨팅 과제(코딩 기반) 예선 1위로 본선 진출.',
+                '본선에서 Quantum AI 응용 아이디어 및 구현으로 우수상(Excellence Prize) 수상.',
+                <div key="qa-images" style={{ 
+                  display: 'flex', 
+                  overflowX: 'auto', 
+                  whiteSpace: 'nowrap', 
+                  gap: '10px', 
+                  padding: '10px 0' 
+                }}>
+                  {/* 필요시 이미지 추가 */}
+                  {/* <img src={quantumImage1} alt="Quantum AI 1" style={{ height: '300px', borderRadius: '8px' }} /> */}
+                </div>
+              ]}
+              isExpanded={expandedSections.achievements.entries.quantumAI}
+              onClick={() => toggleEntry('achievements', 'quantumAI')}
+            />
+
+            <Entry
+              title="Kaggle Competition – 상위 3%"
+              location="Global (Online)"
+              dates="2024"
+              details={[
+                'Tabular 분류/회귀 대회에서 EDA → 피처엔지니어링 → 앙상블(GBDT + Stacking)로 상위 3% 달성.',
+                '코드 재현성 확보 및 리더보드 점수 안정화를 위한 시드 고정·KFold 설계.',
+              ]}
+              isExpanded={expandedSections.achievements.entries.kaggleTop3}
+              onClick={() => toggleEntry('achievements', 'kaggleTop3')}
+            />
+
+            <Entry
+              title="Dacon 전력소비량 예측 – 상위 5%"
+              location="Korea (Online)"
+              dates="2025"
+              details={[
+                'TimeSeriesSplit 기반 검증/튜닝 파이프라인 구축, Optuna로 모델별 하이퍼파라미터 탐색.',
+                'XGBoost · LightGBM · CatBoost 스태킹 + Ridge 메타러너로 점수 향상.',
+              ]}
+              isExpanded={expandedSections.achievements.entries.daconTop5}
+              onClick={() => toggleEntry('achievements', 'daconTop5')}
+            />
+
+            <Entry
+              title="CES Innovation Awards – 프로젝트 리드 참여"
+              location="Las Vegas, USA"
+              dates="2025"
+              details={[
+                '웨어러블 동물 헬스 모니터링 프로젝트 리드로 전시/시연 협업.',
+                '기술/제품 스토리텔링과 데모 동선 설계, 글로벌 파트너 밋업 주도.',
+              ]}
+              isExpanded={expandedSections.achievements.entries.cesInnovation}
+              onClick={() => toggleEntry('achievements', 'cesInnovation')}
+            />
+
+            {/* 여기에 수상·입상·본선 등 기록을 계속 추가하면 됨 */}
+          </div>
+        )}
+      </section>
+
 
       <section className="Education-section">
         <h2 onClick={() => toggleSection('education')}>Education/Qualification</h2>
