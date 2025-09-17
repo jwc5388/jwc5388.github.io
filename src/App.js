@@ -49,10 +49,49 @@ import dissertation1 from './assets/files/CSDissertation.pdf';
 import dissertation2 from './assets/files/MathDissertation.pdf';
 import productionapk from './assets/files/cotons-production-gateway.apk';
 import { FaEnvelope, FaPhone, FaLinkedin } from 'react-icons/fa';
-// import PythonGame from './components/PythonGame.js';
-
 
 function App() {
+
+  // ===== 언어 상태 & 라벨 i18n =====
+  const [lang, setLang] = useState('ENG'); // 'ENG' | 'KOR'
+  const t = {
+    ENG: {
+      headerTitle: "Jae Woo Chang's Portfolio",
+      work: "Work Experience",
+      engagements: "Professional Engagements",
+      projects: "Project Engagements",
+      otherProjects: "Other Projects",
+      achievements: "Achievements / Awards",
+      education: "Education/Qualification",
+      skills: "Skills",
+      companyAbout: "What Company is CareSix?",
+      futureOfVet: "Future Of Veterinary Care",
+      companyMore: "More about the company",
+      officialSite: "official website",
+      downloadApk: "Download app APK",
+      mainProjects: "Main Projects",
+      collapseUp: "▴",
+      collapseDown: "▾",
+    },
+    KOR: {
+      headerTitle: "장재우 포트폴리오",
+      work: "경력",
+      engagements: "대외활동",
+      projects: "프로젝트",
+      otherProjects: "기타 프로젝트",
+      achievements: "수상 / 성과",
+      education: "학력/자격",
+      skills: "보유기술",
+      companyAbout: "CareSix는 어떤 회사?",
+      futureOfVet: "수의학의 미래",
+      companyMore: "회사 더보기",
+      officialSite: "공식 웹사이트",
+      downloadApk: "앱 APK 다운로드",
+      mainProjects: "주요 프로젝트",
+      collapseUp: "▴",
+      collapseDown: "▾",
+    }
+  };
 
   const [expandedSections, setExpandedSections] = useState({
     experience: {expanded: false, entries: {}},
@@ -62,7 +101,7 @@ function App() {
     caresixContent: {expanded:false},
     engagements: {expanded: false, entries: {}},
     projects: {expanded: false, entries: {}},
-    achievements: {expanded: false, entries: {}}, // ✅ 추가
+    achievements: {expanded: false, entries: {}},
   });
 
   const toggleSection = (section) => {
@@ -88,10 +127,392 @@ function App() {
     }));
   };
 
+  // ====== 각 Entry 문구(ENG/KOR) ======
+  // Work – AI/ML Engineer & Researcher
+  const work_ai_title = lang === 'ENG' ? "AI/ML Engineer & Researcher, CareSix Co., LTD" : "AI/ML 엔지니어 & 리서처, 케어식스";
+  const work_ai_details = lang === 'ENG'
+    ? [
+        'Developed a machine learning-based algorithm for canine heart rate estimation using Long Short-Term Memory (LSTM) models with TensorFlow and Keras.',
+        'Designed an AI-driven system for detecting IJK peaks in ballistocardiogram (BCG) signals, leveraging deep learning-based signal processing.',
+        'Applied unsupervised learning techniques to automate IJK peak detection, reducing dependency on ECG signals.',
+        'Incorporated mathematical modeling of physiological signals to extract domain-specific features, capturing the periodicity of IJK peaks.',
+        'Enhanced preprocessing pipeline by applying advanced noise reduction techniques, improving signal-to-noise ratio and robustness of model input features.'
+      ]
+    : [
+        'TensorFlow/Keras 기반 LSTM으로 개 심박 추정 알고리즘을 개발.',
+        'BCG 신호의 IJK 피크를 딥러닝 신호처리로 검출하는 AI 시스템 설계.',
+        'ECG 의존도를 낮추기 위해 IJK 피크 비지도 검출 적용.',
+        '생체신호의 주기성(IJK)을 수학적 모델링으로 도메인 특화 피처로 반영.',
+        '고급 노이즈 제거로 전처리 강화(SNR 향상, 입력 피처 견고성 개선).'
+      ];
+
+  // Work – Web Developer
+  const work_web_title = lang === 'ENG' ? "Web Developer, CareSix Co., LTD" : "웹 개발자, 케어식스";
+  const work_web_details = lang === 'ENG'
+    ? [
+        'Developed a web-based dog recognition platform using TypeScript with React, integrating a backend algorithm for dog identification.',
+        'Designed and built a hospital management system for veterinary hospitals and pet tracking.',
+        'Integrated AWS RDS for secure data management and scalability.',
+      ]
+    : [
+        'TypeScript/React 기반 반려견 인식 웹 플랫폼 개발(백엔드 알고리즘 연동).',
+        '수의 병원용 관리 시스템(환자/케이지 기록 추적) 설계·구현.',
+        'AWS RDS 연동으로 보안·확장성 보장.'
+      ];
+
+  // Work – App Developer (production-grade Kotlin tool)
+  const work_app_title = lang === 'ENG' ? "App Developer, CareSix Co., LTD" : "앱 개발자, 케어식스";
+  const work_app_details = lang === 'ENG'
+    ? [
+        <div key="detail-1">
+          Developed a production-grade application in Kotlin for the Sense1 Vet model, actively used in the device manufacturing and deployment process. 
+          The app automated mapping of NFC tags, QR codes, and barcodes into a structured CSV format, ensuring traceability and quality control. -
+          <a href={productionapk} download style={{ marginLeft: '8px', textDecoration: 'underline', color: '#007BFF' }}>
+            {t[lang].downloadApk}
+          </a>
+        </div>,
+        'Built a Bluetooth-enabled app (Cotons AI) in Flutter for capturing BCG signals, 6-axis sensor data, and temperature readings.',
+      ]
+    : [
+        <div key="detail-1">
+          Kotlin으로 Sense1 Vet 양산/배포 공정에 실제 사용되는 프로덕션급 앱을 개발. 
+          NFC/QR/바코드 매핑을 자동화하여 CSV로 내보내고, 추적 가능성과 품질 관리를 보장. -
+          <a href={productionapk} download style={{ marginLeft: '8px', textDecoration: 'underline', color: '#007BFF' }}>
+            {t[lang].downloadApk}
+          </a>
+        </div>,
+        'Flutter(블루투스 연동)로 BCG/6축 센서/온도 데이터 수집 앱(Cotons AI) 개발.'
+      ];
+
+  // Work – Mathematician
+  const work_math_title = lang === 'ENG' ? "Mathematician, CareSix Co., LTD" : "수학 리서처, 케어식스";
+  const work_math_details = lang === 'ENG'
+    ? [
+        'Implemented Fourier Transform in Python to filter noise from BCG measurements, enhancing signal clarity.',
+        'Conducted statistical analysis using Python and NumPy to validate algorithm effectiveness.',
+      ]
+    : [
+        'Python 기반 푸리에 변환으로 BCG 노이즈 제거, 신호 명료도 향상.',
+        'Python/NumPy 통계 분석으로 알고리즘 효과 검증.'
+      ];
+
+  // Company info (CareSix)
+  const company_awards_list = lang === 'ENG'
+    ? ['CES Best Tech Innovation Award 2022', 'Edison Awards Nominee 2024']
+    : ['CES Best Tech Innovation Award 2022', 'Edison Awards 후보 2024'];
+
+  // Engagements text
+  const jAgri_details = lang === 'ENG'
+    ? [
+        'Represented HRG as Lead Manager, showcasing the 2025 CES Innovation Awards-winning project: the first-ever wearable cow health monitor.',
+        'Engaged with industry leaders, shared insights, and connected with experts in agricultural technology.',
+        'Demonstrated innovative approaches to livestock health monitoring, receiving significant industry recognition.',
+        <div key="jagri-images" style={{ display: 'flex', overflowX: 'auto', whiteSpace: 'nowrap', gap: '10px', padding: '10px 0' }}>
+          <img src={jagriImage1} alt="J-Agri Exhibition 1" style={{ height: '400px', borderRadius: '8px' }} />
+          <img src={jagriImage2} alt="J-Agri Exhibition 2" style={{ height: '400px', borderRadius: '8px' }} />
+        </div>
+      ]
+    : [
+        'HRG 리드 매니저로 참가, 2025 CES 혁신상 수상 프로젝트(세계 최초 착용형 소 헬스 모니터) 전시.',
+        '애그테크 업계 리더들과 네트워킹 및 기술 인사이트 공유.',
+        '가축 헬스 모니터링의 혁신적 접근 시연, 업계 주목.'
+      ];
+
+  const fava_details = lang === 'ENG'
+    ? [
+        'Represented CareSix, connecting with veterinary professionals and industry innovators across Asia.',
+        'Showcased award-winning devices, including the Sense1 Pro dog wearable and the Sense1 Guardian, both receiving positive feedback from doctors and professionals.',
+        'Engaged in discussions about advancing veterinary technology and animal healthcare solutions.',
+        <div key="fava-images" style={{ display: 'flex', overflowX: 'auto', whiteSpace: 'nowrap', gap: '10px', padding: '10px 0' }}>
+          <img src={favaImage1} alt="Fava Exhibition 1" style={{ height: '400px', borderRadius: '8px' }} />
+          <img src={favaImage2} alt="Fava Exhibition 2" style={{ height: '400px', borderRadius: '8px' }} />
+        </div>
+      ]
+    : [
+        'CareSix 대표로 참가, 아시아 수의사/업계 혁신가들과 교류.',
+        'Sense1 Pro/Guardian 등 수상 디바이스 전시, 의료진으로부터 긍정적 피드백 확보.',
+        '수의 테크와 동물 헬스케어 솔루션 발전에 대한 논의 참여.'
+      ];
+
+  const ces_details = lang === 'ENG'
+    ? [
+        'Invited to exhibit at CES 2025 in Venetian Suite 29-225.',
+        'Showcasing the latest advancements in veterinary technology and wearable animal health monitoring devices.',
+        'Networking with global tech leaders and innovators to push the boundaries of animal healthcare solutions.',
+        <div key="ces2025-images" style={{ display: 'flex', overflowX: 'auto', whiteSpace: 'nowrap', gap: '10px', padding: '10px 0' }}>
+          <img src={cesImage1} alt="CES 2025 Exhibition 1" style={{ height: '400px', borderRadius: '8px' }} />
+          <img src={cesImage2} alt="CES 2025 Exhibition 2" style={{ height: '400px', borderRadius: '8px' }} />
+          <img src={cesImage3} alt="CES 2025 Exhibition 3" style={{ height: '400px', borderRadius: '8px' }} />
+        </div>
+      ]
+    : [
+        'CES 2025 Venetian Suite 29-225 전시 초청.',
+        '수의 테크/웨어러블 헬스 모니터링 최신 기술 시연.',
+        '글로벌 테크 리더들과 네트워킹을 통해 헬스케어 한계 확장.'
+      ];
+
+  const quantum_details = lang === 'ENG'
+    ? [
+        "Qualified for the finals by ranking 1st place in the AI Factory preliminary competition, solving a Fashion-MNIST quantum computing challenge through coding.",
+        "Participated in a 1-night, 2-day hackathon focused on Quantum Computing and Artificial Intelligence.",
+        "Competed in advanced problem-solving sessions combining quantum algorithms with AI-driven approaches.",
+        "Awarded the Excellence Prize (우수상) for innovative application of quantum AI methods.",
+        "Collaborated with peers to explore practical use cases of quantum machine learning and optimization.",
+        <div key="quantum-images" style={{ display: 'flex', overflowX: 'auto', whiteSpace: 'nowrap', gap: '10px', padding: '10px 0' }}>
+          <img src={quantumImage4} alt="Quantum AI Hackathon 4" style={{ height: '400px', borderRadius: '8px' }} />
+          <img src={quantumImage1} alt="Quantum AI Hackathon 1" style={{ height: '400px', borderRadius: '8px' }} />
+          <img src={quantumImage2} alt="Quantum AI Hackathon 2" style={{ height: '400px', borderRadius: '8px' }} />
+          <img src={quantumImage3} alt="Quantum AI Hackathon 3" style={{ height: '400px', borderRadius: '8px' }} />
+        </div>
+      ]
+    : [
+        "AI Factory 예선(패션-MNIST 양자 과제) 1위로 본선 진출.",
+        "양자컴퓨팅·AI 주제의 1박 2일 해커톤 참가.",
+        "양자 알고리즘과 AI 접근을 결합한 고난도 문제 해결 세션 수행.",
+        "양자 AI 응용의 혁신성으로 우수상 수상.",
+        "동료들과 양자 ML/최적화의 실사용 사례를 탐구.",
+      ];
+
+  // Projects – Main (Sense1, Law, Therapy)
+  const pj_sense1_details = lang === 'ENG'
+    ? [
+        'Developed a machine learning-based AI algorithm for canine heart rate estimation using Long Short-Term Memory (LSTM) models.',
+        'Designed and implemented signal processing techniques to analyze ballistocardiogram (BCG) data for heart rate detection.',
+        'Built a deep learning pipeline using TensorFlow and Keras to enhance real-time heart rate monitoring accuracy.',
+        'Applied unsupervised learning for IJK peak detection, reducing dependency on ECG signals for heart rate analysis.',
+        'Incorporated mathematical modeling of physiological signals to extract domain-specific features, capturing the periodicity of IJK peaks.',
+        'Enhanced preprocessing pipeline by applying advanced noise reduction techniques, improving signal-to-noise ratio and robustness of model input features.',
+        'Collaborated with hardware engineers and production teams to optimize data acquisition and improve signal quality.',
+        'Contributed to the development of Sense1 Vet, an AI-powered wearable device for veterinary health monitoring.',
+        <div key="sense1vet-images" style={{ display: 'flex', overflowX: 'auto', whiteSpace: 'nowrap', gap: '10px', padding: '10px 0' }}>
+          <img src={senseoneImage1} alt="SenseOne Project 1" style={{ height: '400px', borderRadius: '8px' }} />
+          <img src={senseoneImage2} alt="SenseOne Project 2" style={{ height: '400px', borderRadius: '8px' }} />
+          <img src={senseoneImage3} alt="SenseOne Project 3" style={{ height: '400px', borderRadius: '8px' }} />
+          <img src={senseoneImage4} alt="SenseOne Project 4" style={{ height: '400px', borderRadius: '8px' }} />
+          <img src={senseoneImage5} alt="SenseOne Project 5" style={{ height: '400px', borderRadius: '8px' }} />
+        </div>
+      ]
+    : [
+        'TensorFlow/Keras LSTM으로 개 심박 추정 AI 알고리즘을 개발.',
+        'BCG 데이터의 심박 검출을 위한 신호처리 기법을 설계/구현.',
+        '실시간 정확도 향상을 위한 딥러닝 파이프라인 구축.',
+        'ECG 의존도 감소를 위해 IJK 피크 비지도 검출 적용.',
+        'IJK 주기성 등 생체신호 수학 모델링으로 도메인 피처 구성.',
+        '고급 노이즈 제거로 전처리 개선(SNR/견고성 향상).',
+        '하드웨어/생산팀과 협업하여 데이터 수집·품질 최적화.',
+        '수의 웨어러블 헬스 모니터링 디바이스 Sense1 Vet 개발에 기여.',
+      ];
+
+  const pj_law_details = lang === 'ENG'
+    ? [
+        "Developing a Law AI Assistant that leverages LLM (Large Language Models) with Retrieval-Augmented Generation (RAG).",
+        "Implementing prompt engineering techniques to improve response accuracy and context awareness in legal queries.",
+        "Exploring fine-tuning strategies on Korean law corpora to align the assistant with domain-specific terminology and reasoning.",
+        "Designing a pipeline that integrates legal document chunking, vector embeddings, and FAISS-based semantic search.",
+        "Building a robust evaluation framework to measure factual consistency, legal validity, and user trust in AI-generated responses."
+      ]
+    : [
+        "RAG 기반 LLM을 활용한 법률 AI 어시스턴트 개발.",
+        "법률 질의의 정확도/맥락 인지를 높이기 위한 프롬프트 엔지니어링.",
+        "한국어 법률 코퍼스 미세튜닝 전략 탐색(도메인 용어·추론 정렬).",
+        "문서 청킹/임베딩/FAISS 시맨틱 검색 파이프라인 설계.",
+        "사실 일치성·법적 타당성·신뢰도 평가 프레임워크 구축."
+      ];
+
+  const pj_therapy_details = lang === 'ENG'
+    ? [
+        "Developing a therapy-oriented AI assistant integrating Speech-to-Text (STT) and Text-to-Speech (TTS) pipelines to enable natural conversational interfaces.",
+        "Built the front-end with React Native for cross-platform mobile deployment, focusing on real-time responsiveness and accessibility.",
+        "Leveraged IBM Watsonx for model selection and orchestration, ensuring scalable integration of domain-specific LLMs.",
+        "Implemented Retrieval-Augmented Generation (RAG) to ground therapeutic responses on validated resources and knowledge bases.",
+        "Applied advanced prompt engineering and tuning strategies to adapt model outputs for counseling and therapy-like scenarios.",
+        "Designed a robust evaluation pipeline measuring response empathy, factual consistency, and therapeutic appropriateness."
+      ]
+    : [
+        "STT/TTS 파이프라인을 통합해 자연스러운 대화형 인터페이스를 제공하는 테라피 지향 AI 어시스턴트 개발.",
+        "React Native 기반 크로스플랫폼 모바일 프론트엔드 구현(실시간 응답성/접근성 중점).",
+        "IBM Watsonx로 모델 선정/오케스트레이션을 수행, 도메인 LLM의 확장 가능 통합 보장.",
+        "검증된 자료/지식베이스에 기반한 RAG 구현으로 응답 신뢰도 확보.",
+        "상담 시나리오 적합성을 높이기 위한 고급 프롬프트 튜닝 적용.",
+        "공감·사실성·치료 적합성 지표로 평가 파이프라인 설계."
+      ];
+
+  // Other Projects – Eliza / Royal / Sudoku / AURA ID (full details 유지)
+  const eliza_details = lang === 'ENG'
+    ? [
+        'Developed an AI chatbot in Java using a scripting system with keywords, decomposition rules, and reassembly rules, simulating three personalities: a psychologist, a politician, and a five-year-old child. Implemented pre and post substitutions using regex for sentence transformation and synonym handling.',
+        'Structured the chatbot engine into modular Java classes, including an Eliza Engine (managing input processing and response generation), a Decomposition Engine (applying regex-based pattern matching), and a Reassembly Engine (constructing responses with predefined grammatical structures).',
+        'Implemented priority-based keyword matching, ensuring responses aligned with conversational context. Used regular expressions (regex) for pattern recognition, allowing dynamic sentence decomposition and reassembly for natural conversations.',
+        'Collaborated using Mercurial for version control, managing project updates. Resolved merge conflicts with commands like hg resolve --all and hg merge, and manually edited clashing files for synchronization.',
+        'Conducted iterative testing, refining keyword priorities to improve chatbot accuracy and ensuring smooth response flow. Identified challenges like post-substitution issues, where responses sometimes lacked precision, and planned improvements for more nuanced conversation handling.',
+        <div key="Eliza-images" style={{ display: 'flex', overflowX: 'auto', whiteSpace: 'nowrap', gap: '10px', padding: '10px 0' }}>
+          <img src={elizaImage1} alt="Eliza Project 1" style={{ height: '400px', borderRadius: '8px' }} />
+          <img src={elizaImage2} alt="Eliza Project 2" style={{ height: '400px', borderRadius: '8px' }} />
+          <img src={elizaImage3} alt="Eliza Project 3" style={{ height: '400px', borderRadius: '8px' }} />
+        </div>
+      ]
+    : [
+        'Java로 키워드·분해 규칙·재조립 규칙 기반 스크립팅 시스템을 구현, 심리학자/정치인/5세 어린이 3개 페르소나를 시뮬레이션. 정규식을 활용한 전/후 치환으로 문장 변환·동의어 처리.',
+        'Eliza Engine(입력 처리/응답 생성), Decomposition Engine(정규식 패턴 매칭), Reassembly Engine(규칙 기반 응답 구성) 등 모듈형 아키텍처.',
+        '우선순위 기반 키워드 매칭과 정규식 패턴 인식으로 문장 분해·재조립을 동적으로 수행.',
+        'Mercurial 기반 협업/버전관리, 충돌 해결(hg resolve/merge) 및 수동 편집.',
+        '반복 테스트로 키워드 우선순위를 다듬어 정확도 향상 및 응답 흐름 개선; 후치환 이슈 등 개선 과제 도출.'
+      ];
+
+  const royal_details = lang === 'ENG'
+    ? [
+        'Developed a digital version of the ancient board game "Royal Game of Ur" as part of a major university project.',
+        'Implemented advanced game logic, AI opponents, and an interactive user interface to simulate strategic gameplay.',
+        'Focused on enhancing user experience through a well-designed UI and optimized game mechanics.',
+        <div key="RoyalUr-images" style={{ display: 'flex', overflowX: 'auto', whiteSpace: 'nowrap', gap: '10px', padding: '10px 0' }}>
+          <img src={royalUrImage1} alt="RoyalUr Project 1" style={{ height: '400px', borderRadius: '8px' }} />
+          <img src={royalUrImage2} alt="RoyalUr Project 2" style={{ height: '400px', borderRadius: '8px' }} />
+        </div>
+      ]
+    : [
+        '고대 보드게임 “Royal Game of Ur”의 디지털 버전 개발(대학 메이저 프로젝트).',
+        '고급 게임 로직/AI 상대/인터랙티브 UI를 구현해 전략적 플레이 시뮬레이션.',
+        'UI/게임 메커닉스 최적화로 사용자 경험 강화.'
+      ];
+
+  const sudoku_details = lang === 'ENG'
+    ? [
+        'Developed a collaborative Sudoku puzzle platform that allows users to create, share, and play puzzles.',
+        'Designed and built the front-end with React.js, leveraging its flexibility, performance, and rich ecosystem. Implemented lifecycle methods to resolve rendering issues.',
+        'Implemented a Node.js and Express.js backend, prioritizing speed, scalability, and security. Managed environment variables for secure authentication and database integration.',
+        'Utilized MariaDB as the relational database, implementing primary and foreign keys for structured data relationships and efficient querying.',
+        'Followed Agile development (Scrum methodology), utilizing sprints to ensure continuous progress and iterative development.',
+        'Engineered advanced Sudoku generation and validation algorithms, supporting multiple difficulty levels for an engaging user experience.',
+        'Designed and implemented the front-end using React.JS, chosen for its flexibility, performance, and extensive ecosystem. Addressed rendering issues by utilizing lifecycle methods to correctly update puzzle states.',
+        <div key="sudoku-images" style={{ display: 'flex', overflowX: 'auto', whiteSpace: 'nowrap', gap: '10px', padding: '10px 0' }}>
+          <img src={sudokuImage1} alt="Sudoku Project 1" style={{ height: '400px', borderRadius: '8px' }} />
+          <img src={sudokuImage2} alt="Sudoku Project 2" style={{ height: '400px', borderRadius: '8px' }} />
+          <img src={sudokuImage3} alt="Sudoku Project 3" style={{ height: '400px', borderRadius: '8px' }} />
+          <img src={sudokuImage4} alt="Sudoku Project 4" style={{ height: '400px', borderRadius: '8px' }} />
+          <img src={sudokuImage5} alt="Sudoku Project 5" style={{ height: '400px', borderRadius: '8px' }} />
+        </div>
+      ]
+    : [
+        '사용자들이 스도쿠 퍼즐을 제작/공유/플레이할 수 있는 협업 플랫폼 개발.',
+        'React.js 프론트엔드 설계·구현(성능/생태계 활용), 라이프사이클로 렌더링 이슈 해결.',
+        'Node/Express 백엔드로 속도·확장성·보안 확보, 환경변수로 인증/DB 연동 관리.',
+        'MariaDB(관계형)로 PK/FK 모델링·효율적 질의 설계.',
+        '애자일(Scrum) 기반 스프린트로 반복적 개발/개선.',
+        '난이도 조절 가능한 생성/검증 알고리즘으로 UX 강화.',
+        '렌더링 상태 동기화 개선으로 프론트 안정화.',
+      ];
+
+  const aura_details = lang === 'ENG'
+    ? [
+        'Developed a web-based dog recognition platform using TypeScript with React, implementing an advanced backend algorithm developed by Jeju Nationaly University for accurate dog identification based on image recognition technology.',
+        'Designed and implemented a veterinary hospital management system, enabling efficient patient tracking and cage record management for veterinarians.',
+        'Integrated AWS RDS (Relational Database Service) for secure, scalable data management, ensuring seamless data retrieval and storage for both the dog recognition platform and the hospital management system.',
+        <div key="auraid-images" style={{ display: 'flex', overflowX: 'auto', whiteSpace: 'nowrap', gap: '10px', padding: '10px 0' }}>
+          <img src={auraIdIamge1} alt="AuraId Project 1" style={{ height: '400px', borderRadius: '8px' }} />
+          <img src={auraIdIamge7} alt="AuraId Project 2" style={{ height: '400px', borderRadius: '8px' }} />
+          <img src={auraIdIamge2} alt="AuraId Project 3" style={{ height: '400px', borderRadius: '8px' }} />
+          <img src={auraIdIamge3} alt="AuraId Project 4" style={{ height: '400px', borderRadius: '8px' }} />
+          <img src={auraIdIamge4} alt="AuraId Project 5" style={{ height: '400px', borderRadius: '8px' }} />
+          <img src={auraIdIamge5} alt="AuraId Project 6" style={{ height: '400px', borderRadius: '8px' }} />
+          <img src={auraIdIamge6} alt="AuraId Project 7" style={{ height: '400px', borderRadius: '8px' }} />
+        </div>
+      ]
+    : [
+        'TypeScript/React 기반 반려견 인식 웹 플랫폼 개발(제주대 알고리즘 연동으로 정확도 강화).',
+        '수의사 대상 병원 관리 시스템 설계/구현(환자 추적, 케이지 기록 관리).',
+        'AWS RDS로 보안/확장성 보장, 플랫폼·병원 시스템 공용 데이터 파이프라인 구축.'
+      ];
+
+  // Achievements
+  const ach_quantum_details = lang === 'ENG'
+    ? [
+        'Ranked 1st in the qualifying round with a coding-based Fashion-MNIST quantum computing challenge.',
+        'Advanced to the finals; awarded the Excellence Prize for innovative application of quantum AI methods.',
+        <div key="qa-images" style={{ display: 'flex', overflowX: 'auto', whiteSpace: 'nowrap', gap: '10px', padding: '10px 0' }}>
+          {/* optional images */}
+        </div>
+      ]
+    : [
+        '패션-MNIST 양자 과제로 예선 1위, 본선 진출.',
+        '양자 AI 응용 혁신성으로 우수상 수상.',
+      ];
+
+  const ach_kaggle_details = lang === 'ENG'
+    ? [
+        'Achieved Top 3% using an EDA → feature engineering → ensemble pipeline (GBDT + stacking).',
+        'Ensured reproducibility and leaderboard stability with robust seeding and well-designed K-Fold validation.',
+      ]
+    : [
+        'EDA → 피처 엔지니어링 → 앙상블(GBDT+스태킹) 파이프라인으로 상위 3% 달성.',
+        '시드 고정/K-Fold 설계로 재현성·리더보드 안정성 확보.',
+      ];
+
+  const ach_dacon_details = lang === 'ENG'
+    ? [
+        'Built a TimeSeriesSplit-based validation and tuning pipeline; applied Optuna for per-model hyperparameter search.',
+        'Improved score via XGBoost · LightGBM · CatBoost stacking with a Ridge meta-learner.',
+      ]
+    : [
+        'TimeSeriesSplit 검증/튜닝 파이프라인 구축, Optuna로 모델별 하이퍼파라미터 탐색.',
+        'XGBoost·LightGBM·CatBoost 스태킹 + Ridge 메타러너로 점수 향상.',
+      ];
+
+  const ach_ces_details = lang === 'ENG'
+    ? [
+        'Led the wearable animal health monitoring project for live demos and partner engagements.',
+        'Crafted technical/product storytelling, demo flow, and coordinated global partner meetings.',
+      ]
+    : [
+        '웨어러블 동물 헬스 모니터링 프로젝트 리드(라이브 데모/파트너 밋업).',
+        '기술/제품 스토리텔링과 데모 동선 설계, 글로벌 파트너 미팅 주도.',
+      ];
+
+  // Education snippets
+  const edu_degree_title = lang === 'ENG' ? "Bachelor of Science in Mathematics and Computer Science" : "수학·컴퓨터과학 학사";
+  const edu_degree_loc   = lang === 'ENG' ? "University of St Andrews, St Andrews, Scotland" : "세인트앤드루스 대학교, 스코틀랜드";
+  const edu_degree_date  = lang === 'ENG' ? "Graduated June 2024" : "2024년 6월 졸업";
+  const edu_cs_dis       = lang === 'ENG' ? "Computer Science Dissertation" : "컴퓨터과학 학위논문";
+  const edu_math_dis     = lang === 'ENG' ? "Mathematics Dissertation" : "수학 학위논문";
+
+  const edu_ibm_title = "[IBM x RedHat] AI Transformation - AX Academy";
+  const edu_ibm_loc   = "IBM x RedHat";
+  const edu_ibm_details = lang === 'ENG'
+    ? [
+        "Participated in the AI Transformation program hosted by IBM and RedHat under AX Academy.",
+        "Focused on applying cloud-native technologies and AI-driven solutions for enterprise transformation.",
+        "Gained practical experience in hybrid cloud, open-source collaboration, and modern AI deployment strategies."
+      ]
+    : [
+        "IBM/RedHat 주관 AX Academy의 AI Transformation 프로그램 참여.",
+        "클라우드 네이티브/AI 솔루션의 엔터프라이즈 적용에 집중.",
+        "하이브리드 클라우드/오픈소스 협업/현대적 배포 전략 실무 경험."
+      ];
+
+  const edu_judo_title = lang === 'ENG' ? "St Andrews Judo Club / Registered as member of Judo Scotland" : "세인트앤드루스 유도부 / Judo Scotland 등록 회원";
+  const edu_soc_title  = lang === 'ENG' ? "Committee member of St Andrews Korean Society" : "세인트앤드루스 한인회 운영진";
+  const edu_soc_loc    = lang === 'ENG' ? "Treasurer for St Andrews Korean Society" : "한인회 회계 담당";
+
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Jae Woo Chang's Portfolio</h1>
+        <h1>{t[lang].headerTitle}</h1>
+
+        {/* Language Toggle */}
+        <div style={{ display:'flex', alignItems:'center', gap:8, margin:'6px 0 10px' }}>
+          <button
+            onClick={()=>setLang('ENG')}
+            style={{ padding:'6px 10px', borderRadius:8, border:'1px solid #ddd', background: lang==='ENG' ? '#eef3ff' : '#fff' }}
+          >
+            ENG
+          </button>
+          <button
+            onClick={()=>setLang('KOR')}
+            style={{ padding:'6px 10px', borderRadius:8, border:'1px solid #ddd', background: lang==='KOR' ? '#eef3ff' : '#fff' }}
+          >
+            KOR
+          </button>
+        </div>
+
         <div className="contact-icons">
           <a href="mailto:peter.jaewoochang@gmail.com" aria-label="Email">
             <FaEnvelope size={30} style={{ margin: '0 15px', color: '#000' }} />
@@ -103,116 +524,92 @@ function App() {
             <FaLinkedin size={30} style={{ margin: '0 15px', color: '#000' }} />
           </a>
         </div>
-        {/* <PythonGame /> */}
       </header>
 
+      {/* ===== Work Experience ===== */}
       <section className="Experience-section">
-        <h2 onClick={() => toggleSection('experience')}>Work Experience</h2>
+        <h2 onClick={() => toggleSection('experience')}>{t[lang].work}</h2>
         {expandedSections.experience.expanded && (
           <div className="section-content">
             <Entry
-              title="AI/ML Engineer & Researcher, CareSix Co., LTD"
-              location="Seoul, South Korea"
+              title={work_ai_title}
+              location={lang==='ENG' ? "Seoul, South Korea" : "대한민국 서울"}
               dates="September 2024 - Present"
-              details={[
-                'Developed a machine learning-based algorithm for canine heart rate estimation using Long Short-Term Memory (LSTM) models with TensorFlow and Keras.',
-                'Designed an AI-driven system for detecting IJK peaks in ballistocardiogram (BCG) signals, leveraging deep learning-based signal processing.',
-                'Applied unsupervised learning techniques to automate IJK peak detection, reducing dependency on ECG signals.',
-                'Incorporated mathematical modeling of physiological signals to extract domain-specific features, capturing the periodicity of IJK peaks.',
-                'Enhanced preprocessing pipeline by applying advanced noise reduction techniques, improving signal-to-noise ratio and robustness of model input features.'
-              ]}
+              details={work_ai_details}
               isExpanded={expandedSections.experience.entries.aiAlgorithm}
               onClick={() => toggleEntry('experience', 'aiAlgorithm')}
             />
             <Entry
-              title="Web Developer, CareSix Co., LTD"
-              location="Seoul, South Korea"
+              title={work_web_title}
+              location={lang==='ENG' ? "Seoul, South Korea" : "대한민국 서울"}
               dates="February 2024 - Present"
-              details={[
-                'Developed a web-based dog recognition platform using TypeScript with React, integrating a backend algorithm for dog identification.',
-                'Designed and built a hospital management system for veterinary hospitals and pet tracking.',
-                'Integrated AWS RDS for secure data management and scalability.',
-              ]}
+              details={work_web_details}
               isExpanded={expandedSections.experience.entries.webDeveloper}
               onClick={() => toggleEntry('experience', 'webDeveloper')}
             />
             <Entry
-              title="App Developer, CareSix Co., LTD"
-              location="Jeju Island, South Korea"
+              title={work_app_title}
+              location={lang==='ENG' ? "Jeju Island, South Korea" : "대한민국 제주"}
               dates="June 2023 - August 2023"
-              details={[
-                <div key="detail-1">
-                  Developed a production-grade application in Kotlin for the Sense1 Vet model, actively used in the device manufacturing and deployment process. 
-                  The app automated mapping of NFC tags, QR codes, and barcodes into a structured CSV format, ensuring traceability and quality control. -
-                  <a href={productionapk} download style={{ marginLeft: '8px', textDecoration: 'underline', color: '#007BFF' }}>
-                    Download app APK
-                  </a>
-                </div>,
-                'Built a Bluetooth-enabled app (Cotons AI) in Flutter for capturing BCG signals, 6-axis sensor data, and temperature readings.',
-              ]}
+              details={work_app_details}
               isExpanded={expandedSections.experience.entries.appdeveloper}
               onClick={() => toggleEntry('experience', 'appdeveloper')}
             />
             <Entry
-              title="Mathematician, CareSix Co., LTD"
-              location="Jeju Island, South Korea"
+              title={work_math_title}
+              location={lang==='ENG' ? "Jeju Island, South Korea" : "대한민국 제주"}
               dates="May 2022 - August 2022"
-              details={[
-                'Implemented Fourier Transform in Python to filter noise from BCG measurements, enhancing signal clarity.',
-                'Conducted statistical analysis using Python and NumPy to validate algorithm effectiveness.',
-              ]}
+              details={work_math_details}
               isExpanded={expandedSections.experience.entries.mathematician}
               onClick={() => toggleEntry('experience', 'mathematician')}
             />
 
             <Entry
-              title="What Company is CareSix?"
-              location="Jeju Island, South Korea"
-              dates="Future Of Veterinary Care"
+              title={t[lang].companyAbout}
+              location={lang==='ENG' ? "Jeju Island, South Korea" : "대한민국 제주"}
+              dates={t[lang].futureOfVet}
               details={[
                 {
-                  title: 'AI collar for future veterinary care',
+                  title: lang==='ENG' ? 'AI collar for future veterinary care' : '미래 수의학을 위한 AI 목걸이',
                   content: (
                     <div style={{ paddingBottom: '20px' }}>
-                      <p>The AI collar developed by CareSix revolutionizes veterinary care by monitoring pets' health in real-time.</p>
+                      <p>
+                        {lang==='ENG'
+                          ? "The AI collar developed by CareSix revolutionizes veterinary care by monitoring pets' health in real-time."
+                          : "CareSix의 AI 목걸이는 반려동물의 건강을 실시간 모니터링하여 수의 진료를 혁신합니다."}
+                      </p>
                       <img src={cotonsImage1} alt="CareSix AI Collar" style={{ height: '400px', borderRadius: '8px' }} />
                     </div>
                   ),
                 },
                 {
-                  title: 'Awards',
+                  title: lang==='ENG' ? 'Awards' : '수상',
                   content: (
                     <div>
-                      <div 
-                        key="awards-images" 
-                        style={{ 
-                          display: 'flex', 
-                          overflowX: 'auto', 
-                          whiteSpace: 'nowrap', 
-                          gap: '10px', 
-                          padding: '10px 0' 
-                        }}
+                      <div
+                        key="awards-images"
+                        style={{ display:'flex', overflowX:'auto', whiteSpace:'nowrap', gap:'10px', padding:'10px 0' }}
                       >
                         <img src={cotonsImage2} alt="CES Awards" style={{ height: '400px', borderRadius: '8px' }} />
                         <img src={edisonImage} alt="Edison Awards" style={{ height: '400px', borderRadius: '8px' }} />
                       </div>
                       <ul>
-                        <li>CES Best Tech Innovation Award 2022</li>
-                        <li>Edison Awards Nominee 2024</li>
+                        {company_awards_list.map((x, i)=><li key={i}>{x}</li>)}
                       </ul>
                     </div>
                   ),
                 },
                 {
-                  title: 'More about the company',
+                  title: t[lang].companyMore,
                   content: (
                     <div>
                       <p>
-                        CareSix is at the forefront of pet healthcare technology. Learn more on their{' '}
+                        {lang==='ENG'
+                          ? "CareSix is at the forefront of pet healthcare technology. Learn more on their "
+                          : "CareSix는 반려동물 헬스케어 테크를 선도합니다. 더 보려면 "}
                         <a href="https://cotons.ai" target="_blank" rel="noopener noreferrer">
-                          official website
-                        </a>
-                        .
+                          {t[lang].officialSite}
+                        </a>.
                       </p>
                     </div>
                   ),
@@ -225,100 +622,40 @@ function App() {
         )}
       </section>
 
+      {/* ===== Engagements ===== */}
       <section className="Engagement-section">
-        <h2 onClick={() => toggleSection('engagements')}>Professional Engagements</h2>
+        <h2 onClick={() => toggleSection('engagements')}>{t[lang].engagements}</h2>
         {expandedSections.engagements.expanded && (
           <div className="section-content">
             <Entry
               title="J-AGRI Exhibition, Tokyo"
-              location="Tokyo, Japan"
+              location={lang==='ENG' ? "Tokyo, Japan" : "일본 도쿄"}
               dates="October 9-11, 2024"
-              details={[
-                'Represented HRG as Lead Manager, showcasing the 2025 CES Innovation Awards-winning project: the first-ever wearable cow health monitor.',
-                'Engaged with industry leaders, shared insights, and connected with experts in agricultural technology.',
-                'Demonstrated innovative approaches to livestock health monitoring, receiving significant industry recognition.',
-                <div key="jagri-images"style={{ 
-                  display: 'flex', 
-                  overflowX: 'auto', 
-                  whiteSpace: 'nowrap', 
-                  gap: '10px', 
-                  padding: '10px 0' 
-                }}>
-                  <img src={jagriImage1} alt="J-Agri Exhibition 1" style={{ height: '400px', borderRadius: '8px' }} />
-                  <img src={jagriImage2} alt="J-Agri Exhibition 2" style={{height: '400px', borderRadius: '8px'}} />
-                </div>
-              ]}
+              details={jAgri_details}
               isExpanded={expandedSections.engagements.entries.jAgri}
               onClick={() => toggleEntry('engagements', 'jAgri')}
             />
             <Entry
               title="FAVA 2024 - 23rd Federation of Asian Veterinary Associations Congress"
-              location="Daejeon, South Korea"
+              location={lang==='ENG' ? "Daejeon, South Korea" : "대한민국 대전"}
               dates="October 25-27, 2024"
-              details={[
-                'Represented CareSix, connecting with veterinary professionals and industry innovators across Asia.',
-                'Showcased award-winning devices, including the Sense1 Pro dog wearable and the Sense1 Guardian, both receiving positive feedback from doctors and professionals.',
-                'Engaged in discussions about advancing veterinary technology and animal healthcare solutions.',
-                <div key="fava-images" style={{ 
-                  display: 'flex', 
-                  overflowX: 'auto', 
-                  whiteSpace: 'nowrap', 
-                  gap: '10px', 
-                  padding: '10px 0' 
-                }}>
-                  <img src={favaImage1} alt="Fava Exhibition 1" style={{ height: '400px', borderRadius: '8px' }} />
-                  <img src={favaImage2} alt="Fava Exhibition 2" style={{ height: '400px', borderRadius: '8px' }} />
-                </div>
-              ]}
+              details={fava_details}
               isExpanded={expandedSections.engagements.entries.fava2024}
               onClick={() => toggleEntry('engagements', 'fava2024')}
             />
             <Entry
               title="CES 2025 Exhibition"
-              location="Las Vegas, USA"
+              location={lang==='ENG' ? "Las Vegas, USA" : "미국 라스베이거스"}
               dates="January 2025"
-              details={[
-                'Invited to exhibit at CES 2025 in Venetian Suite 29-225.',
-                'Showcasing the latest advancements in veterinary technology and wearable animal health monitoring devices.',
-                'Networking with global tech leaders and innovators to push the boundaries of animal healthcare solutions.',
-                <div key="ces2025-images" style={{ 
-                  display: 'flex', 
-                  overflowX: 'auto', 
-                  whiteSpace: 'nowrap', 
-                  gap: '10px', 
-                  padding: '10px 0' 
-                }}>
-                  <img src={cesImage1} alt="CES 2025 Exhibition 1" style={{ height: '400px', borderRadius: '8px' }} />
-                  <img src={cesImage2} alt="CES 2025 Exhibition 2" style={{ height: '400px', borderRadius: '8px' }} />
-                  <img src={cesImage3} alt="CES 2025 Exhibition 3" style={{ height: '400px', borderRadius: '8px' }} />
-                </div>
-              ]}
+              details={ces_details}
               isExpanded={expandedSections.engagements.entries.ces2025}
               onClick={() => toggleEntry('engagements', 'ces2025')}
             />
             <Entry
-              title="2025 Quantum AI Hackathon"
-              location="Jeonju University, South Korea"
+              title={lang==='ENG' ? "2025 Quantum AI Hackathon" : "2025 퀀텀 AI 해커톤"}
+              location={lang==='ENG' ? "Jeonju University, South Korea" : "대한민국 전주대"}
               dates="August 18-19, 2025"
-              details={[
-                "Qualified for the finals by ranking 1st place in the AI Factory preliminary competition, solving a Fashion-MNIST quantum computing challenge through coding.",
-                "Participated in a 1-night, 2-day hackathon focused on Quantum Computing and Artificial Intelligence.",
-                "Competed in advanced problem-solving sessions combining quantum algorithms with AI-driven approaches.",
-                "Awarded the Excellence Prize (우수상) for innovative application of quantum AI methods.",
-                "Collaborated with peers to explore practical use cases of quantum machine learning and optimization.",
-                <div key="quantum-images" style={{ 
-                  display: 'flex', 
-                  overflowX: 'auto', 
-                  whiteSpace: 'nowrap', 
-                  gap: '10px', 
-                  padding: '10px 0' 
-                }}>
-                  <img src={quantumImage4} alt="Quantum AI Hackathon 4" style={{ height: '400px', borderRadius: '8px' }} />
-                  <img src={quantumImage1} alt="Quantum AI Hackathon 1" style={{ height: '400px', borderRadius: '8px' }} />
-                  <img src={quantumImage2} alt="Quantum AI Hackathon 2" style={{ height: '400px', borderRadius: '8px' }} />
-                  <img src={quantumImage3} alt="Quantum AI Hackathon 3" style={{ height: '400px', borderRadius: '8px' }} />
-                </div>
-              ]}
+              details={quantum_details}
               isExpanded={expandedSections.engagements.entries.quantumAIHackathon}
               onClick={() => toggleEntry('engagements', 'quantumAIHackathon')}
             />
@@ -326,245 +663,135 @@ function App() {
         )}
       </section>
 
+      {/* ===== Projects ===== */}
       <section className="Project-section">
-        <h2 onClick={() => toggleSection('projects')}>Project Engagements</h2>
+        <h2 onClick={() => toggleSection('projects')}>{t[lang].projects}</h2>
         {expandedSections.projects.expanded && (
           <div className="section-content">
-            {/* Sense1 Vet AI Algorithm */}
+
+            {/* Main Projects – 항상 표시 */}
+            <h3 style={{ marginTop: 0 }}>{t[lang].mainProjects}</h3>
+
             <Entry
-              title="Sense1 Vet AI Algorithm"
-              location="CareSix Co., LTD"
-              dates="September 2024 ~ February 2025"
-              details={[
-                'Developed a machine learning-based AI algorithm for canine heart rate estimation using Long Short-Term Memory (LSTM) models.',
-                'Designed and implemented signal processing techniques to analyze ballistocardiogram (BCG) data for heart rate detection.',
-                'Built a deep learning pipeline using TensorFlow and Keras to enhance real-time heart rate monitoring accuracy.',
-                'Applied unsupervised learning for IJK peak detection, reducing dependency on ECG signals for heart rate analysis.',
-                'Incorporated mathematical modeling of physiological signals to extract domain-specific features, capturing the periodicity of IJK peaks.',
-                'Enhanced preprocessing pipeline by applying advanced noise reduction techniques, improving signal-to-noise ratio and robustness of model input features.',
-                'Collaborated with hardware engineers and production teams to optimize data acquisition and improve signal quality.',
-                'Contributed to the development of Sense1 Vet, an AI-powered wearable device for veterinary health monitoring.',
-                <div key="sense1vet-images" style={{
-                  display: 'flex', overflowX: 'auto', whiteSpace: 'nowrap', gap: '10px', padding: '10px 0'
-                }}>
-                  <img src={senseoneImage1} alt="SenseOne Project 1" style={{ height: '400px', borderRadius: '8px' }} />
-                  <img src={senseoneImage2} alt="SenseOne Project 2" style={{ height: '400px', borderRadius: '8px' }} />
-                  <img src={senseoneImage3} alt="SenseOne Project 3" style={{ height: '400px', borderRadius: '8px' }} />
-                  <img src={senseoneImage4} alt="SenseOne Project 4" style={{ height: '400px', borderRadius: '8px' }} />
-                  <img src={senseoneImage5} alt="SenseOne Project 5" style={{ height: '400px', borderRadius: '8px' }} />
-                </div>
-              ]}
+              title={lang==='ENG' ? "Sense1 Vet AI Algorithm" : "Sense1 Vet AI 알고리즘"}
+              location={lang==='ENG' ? "CareSix Co., LTD" : "케어식스"}
+              dates={lang==='ENG' ? "September 2024 ~ February 2025" : "2024.09 ~ 2025.02"}
+              details={pj_sense1_details}
               isExpanded={expandedSections.projects.entries.sense1Vet}
               onClick={() => toggleEntry('projects', 'sense1Vet')}
             />
 
-            {/* Law-Intelligence */}
             <Entry
               title="[IBM x RedHat] Law-Intelligence"
-              location="IBM Final Group Project"
-              dates="2025 ~ Present"
-              details={[
-                "Developing a Law AI Assistant that leverages LLM (Large Language Models) with Retrieval-Augmented Generation (RAG).",
-                "Implementing prompt engineering techniques to improve response accuracy and context awareness in legal queries.",
-                "Exploring fine-tuning strategies on Korean law corpora to align the assistant with domain-specific terminology and reasoning.",
-                "Designing a pipeline that integrates legal document chunking, vector embeddings, and FAISS-based semantic search.",
-                "Building a robust evaluation framework to measure factual consistency, legal validity, and user trust in AI-generated responses."
-              ]}
+              location={lang==='ENG' ? "IBM Final Group Project" : "IBM 파이널 그룹 프로젝트"}
+              dates={lang==='ENG' ? "2025 ~ Present" : "2025 ~ 진행중"}
+              details={pj_law_details}
               isExpanded={expandedSections.projects.entries.lawIntelligence}
               onClick={() => toggleEntry('projects', 'lawIntelligence')}
             />
 
-            {/* Therapy-Intelligence */}
             <Entry
               title="[IBM x RedHat] Therapy-Intelligence"
-              location="IBM x RedHat Innovation Project"
-              dates="2025 ~ Present"
-              details={[
-                "Developing a therapy-oriented AI assistant integrating Speech-to-Text (STT) and Text-to-Speech (TTS) pipelines to enable natural conversational interfaces.",
-                "Built the front-end with React Native for cross-platform mobile deployment, focusing on real-time responsiveness and accessibility.",
-                "Leveraged IBM Watsonx for model selection and orchestration, ensuring scalable integration of domain-specific LLMs.",
-                "Implemented Retrieval-Augmented Generation (RAG) to ground therapeutic responses on validated resources and knowledge bases.",
-                "Applied advanced prompt engineering and tuning strategies to adapt model outputs for counseling and therapy-like scenarios.",
-                "Designed a robust evaluation pipeline measuring response empathy, factual consistency, and therapeutic appropriateness."
-              ]}
+              location={lang==='ENG' ? "IBM x RedHat Innovation Project" : "IBM x RedHat 이노베이션 프로젝트"}
+              dates={lang==='ENG' ? "2025 ~ Present" : "2025 ~ 진행중"}
+              details={pj_therapy_details}
               isExpanded={expandedSections.projects.entries.therapyIntelligence}
               onClick={() => toggleEntry('projects', 'therapyIntelligence')}
             />
 
-            {/* ===== Other Projects (클릭으로 펼침) ===== */}
+            {/* Other Projects – 클릭으로 펼침 */}
             <h3
-              style={{ marginTop: 24, cursor: 'pointer', userSelect: 'none', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}
+              style={{ marginTop: 24, cursor:'pointer', userSelect:'none', display:'flex', alignItems:'center', justifyContent:'space-between' }}
               onClick={() => toggleEntry('projects', 'otherProjects')}
             >
-              Other Projects
+              {t[lang].otherProjects}
               <span style={{ fontSize: 18 }}>
-                {expandedSections.projects.entries.otherProjects ? '▴' : '▾'}
+                {expandedSections.projects.entries.otherProjects ? t[lang].collapseUp : t[lang].collapseDown}
               </span>
             </h3>
 
             {expandedSections.projects.entries.otherProjects && (
               <div>
-
-                {/* Eliza */}
                 <Entry
                   title="Eliza AI Basic Project"
-                  location="University Project"
-                  dates="September 2020 ~ December 2020"
-                  details={[
-                    'Developed an AI chatbot in Java using a scripting system with keywords, decomposition rules, and reassembly rules, simulating three personalities: a psychologist, a politician, and a five-year-old child. Implemented pre and post substitutions using regex for sentence transformation and synonym handling.',
-                    'Structured the chatbot engine into modular Java classes, including an Eliza Engine (managing input processing and response generation), a Decomposition Engine (applying regex-based pattern matching), and a Reassembly Engine (constructing responses with predefined grammatical structures).',
-                    'Implemented priority-based keyword matching, ensuring responses aligned with conversational context. Used regular expressions (regex) for pattern recognition, allowing dynamic sentence decomposition and reassembly for natural conversations.',
-                    'Collaborated using Mercurial for version control, managing project updates. Resolved merge conflicts with commands like hg resolve --all and hg merge, and manually edited clashing files for synchronization.',
-                    'Conducted iterative testing, refining keyword priorities to improve chatbot accuracy and ensuring smooth response flow. Identified challenges like post-substitution issues, where responses sometimes lacked precision, and planned improvements for more nuanced conversation handling.',
-                    <div key="Eliza-images" style={{
-                      display: 'flex', overflowX: 'auto', whiteSpace: 'nowrap', gap: '10px', padding: '10px 0'
-                    }}>
-                      <img src={elizaImage1} alt="Eliza Project 1" style={{ height: '400px', borderRadius: '8px' }} />
-                      <img src={elizaImage2} alt="Eliza Project 2" style={{ height: '400px', borderRadius: '8px' }} />
-                      <img src={elizaImage3} alt="Eliza Project 3" style={{ height: '400px', borderRadius: '8px' }} />
-                    </div>
-                  ]}
+                  location={lang==='ENG' ? "University Project" : "대학 프로젝트"}
+                  dates={lang==='ENG' ? "September 2020 ~ December 2020" : "2020.09 ~ 2020.12"}
+                  details={eliza_details}
                   isExpanded={expandedSections.projects.entries.eliza}
                   onClick={() => toggleEntry('projects', 'eliza')}
                 />
 
-                {/* Royal Game of Ur */}
                 <Entry
                   title="Royal Game of Ur"
-                  location="University Project"
-                  dates="January 2021 ~ March 2021"
-                  details={[
-                    'Developed a digital version of the ancient board game "Royal Game of Ur" as part of a major university project.',
-                    'Implemented advanced game logic, AI opponents, and an interactive user interface to simulate strategic gameplay.',
-                    'Focused on enhancing user experience through a well-designed UI and optimized game mechanics.',
-                    <div key="RoyalUr-images" style={{
-                      display: 'flex', overflowX: 'auto', whiteSpace: 'nowrap', gap: '10px', padding: '10px 0'
-                    }}>
-                      <img src={royalUrImage1} alt="RoyalUr Project 1" style={{ height: '400px', borderRadius: '8px' }} />
-                      <img src={royalUrImage2} alt="RoyalUr Project 2" style={{ height: '400px', borderRadius: '8px' }} />
-                    </div>
-                  ]}
+                  location={lang==='ENG' ? "University Project" : "대학 프로젝트"}
+                  dates={lang==='ENG' ? "January 2021 ~ March 2021" : "2021.01 ~ 2021.03"}
+                  details={royal_details}
                   isExpanded={expandedSections.projects.entries.royalGame}
                   onClick={() => toggleEntry('projects', 'royalGame')}
                 />
 
-                {/* Sudoku Game */}
                 <Entry
                   title="Sudoku Game"
-                  location="University of St Andrews Computer Science Junior Honours Project"
-                  dates="September 2022 ~ March 2023"
-                  details={[
-                    'Developed a collaborative Sudoku puzzle platform that allows users to create, share, and play puzzles.',
-                    'Designed and built the front-end with React.js, leveraging its flexibility, performance, and rich ecosystem. Implemented lifecycle methods to resolve rendering issues.',
-                    'Implemented a Node.js and Express.js backend, prioritizing speed, scalability, and security. Managed environment variables for secure authentication and database integration.',
-                    'Utilized MariaDB as the relational database, implementing primary and foreign keys for structured data relationships and efficient querying.',
-                    'Followed Agile development (Scrum methodology), utilizing sprints to ensure continuous progress and iterative development.',
-                    'Engineered advanced Sudoku generation and validation algorithms, supporting multiple difficulty levels for an engaging user experience.',
-                    'Designed and implemented the front-end using React.JS, chosen for its flexibility, performance, and extensive ecosystem. Addressed rendering issues by utilizing lifecycle methods to correctly update puzzle states.',
-                    <div key="sudoku-images" style={{
-                      display: 'flex', overflowX: 'auto', whiteSpace: 'nowrap', gap: '10px', padding: '10px 0'
-                    }}>
-                      <img src={sudokuImage1} alt="Sudoku Project 1" style={{ height: '400px', borderRadius: '8px' }} />
-                      <img src={sudokuImage2} alt="Sudoku Project 2" style={{ height: '400px', borderRadius: '8px' }} />
-                      <img src={sudokuImage3} alt="Sudoku Project 3" style={{ height: '400px', borderRadius: '8px' }} />
-                      <img src={sudokuImage4} alt="Sudoku Project 4" style={{ height: '400px', borderRadius: '8px' }} />
-                      <img src={sudokuImage5} alt="Sudoku Project 5" style={{ height: '400px', borderRadius: '8px' }} />
-                    </div>
-                  ]}
+                  location={lang==='ENG' ? "University of St Andrews Computer Science Junior Honours Project" : "세인트앤드루스대 컴퓨터과학 3학년 프로젝트"}
+                  dates={lang==='ENG' ? "September 2022 ~ March 2023" : "2022.09 ~ 2023.03"}
+                  details={sudoku_details}
                   isExpanded={expandedSections.projects.entries.sudokuGame}
                   onClick={() => toggleEntry('projects', 'sudokuGame')}
                 />
 
-                {/* AURA ID Website (복귀) */}
                 <Entry
                   title="AURA ID Website"
-                  location="CareSix Co., LTD"
-                  dates="February 2025 ~ Present"
-                  details={[
-                    'Developed a web-based dog recognition platform using TypeScript with React, implementing an advanced backend algorithm developed by Jeju Nationaly University for accurate dog identification based on image recognition technology.',
-                    'Designed and implemented a veterinary hospital management system, enabling efficient patient tracking and cage record management for veterinarians.',
-                    'Integrated AWS RDS (Relational Database Service) for secure, scalable data management, ensuring seamless data retrieval and storage for both the dog recognition platform and the hospital management system.',
-                    <div key="auraid-images" style={{
-                      display: 'flex', overflowX: 'auto', whiteSpace: 'nowrap', gap: '10px', padding: '10px 0'
-                    }}>
-                      <img src={auraIdIamge1} alt="AuraId Project 1" style={{ height: '400px', borderRadius: '8px' }} />
-                      <img src={auraIdIamge7} alt="AuraId Project 2" style={{ height: '400px', borderRadius: '8px' }} />
-                      <img src={auraIdIamge2} alt="AuraId Project 3" style={{ height: '400px', borderRadius: '8px' }} />
-                      <img src={auraIdIamge3} alt="AuraId Project 4" style={{ height: '400px', borderRadius: '8px' }} />
-                      <img src={auraIdIamge4} alt="AuraId Project 5" style={{ height: '400px', borderRadius: '8px' }} />
-                      <img src={auraIdIamge5} alt="AuraId Project 6" style={{ height: '400px', borderRadius: '8px' }} />
-                      <img src={auraIdIamge6} alt="AuraId Project 7" style={{ height: '400px', borderRadius: '8px' }} />
-                    </div>
-                  ]}
+                  location={lang==='ENG' ? "CareSix Co., LTD" : "케어식스"}
+                  dates={lang==='ENG' ? "February 2025 ~ Present" : "2025.02 ~ 진행중"}
+                  details={aura_details}
                   isExpanded={expandedSections.projects.entries.auraid}
                   onClick={() => toggleEntry('projects', 'auraid')}
                 />
-
               </div>
             )}
-
           </div>
         )}
       </section>
 
+      {/* ===== Achievements ===== */}
       <section className="Achievements-section">
-        <h2 onClick={() => toggleSection('achievements')}>Achievements / Awards</h2>
+        <h2 onClick={() => toggleSection('achievements')}>{t[lang].achievements}</h2>
         {expandedSections.achievements.expanded && (
           <div className="section-content">
             <Entry
-              title="AI Factory Quantum AI – 1st Place in Qualifying Round & Finalist"
-              location="Jeonju University, South Korea"
+              title={lang==='ENG'
+                ? "AI Factory Quantum AI – 1st Place in Qualifying Round & Finalist"
+                : "AI Factory Quantum AI – 예선 1위 & 본선 진출"}
+              location={lang==='ENG' ? "Jeonju University, South Korea" : "대한민국 전주대"}
               dates="August 2025"
-              details={[
-                'Ranked 1st in the qualifying round with a coding-based Fashion-MNIST quantum computing challenge.',
-                'Advanced to the finals; awarded the Excellence Prize for innovative application of quantum AI methods.',
-                <div key="qa-images" style={{ 
-                  display: 'flex', 
-                  overflowX: 'auto', 
-                  whiteSpace: 'nowrap', 
-                  gap: '10px', 
-                  padding: '10px 0' 
-                }}>
-                  {/* Optional: images can be added here */}
-                  {/* <img src={quantumImage1} alt="Quantum AI 1" style={{ height: '300px', borderRadius: '8px' }} /> */}
-                </div>
-              ]}
+              details={ach_quantum_details}
               isExpanded={expandedSections.achievements.entries.quantumAI}
               onClick={() => toggleEntry('achievements', 'quantumAI')}
             />
 
             <Entry
-              title="Kaggle Competition – Top 3%"
+              title={lang==='ENG' ? "Kaggle Competition – Top 3%" : "Kaggle Competition – 상위 3%"}
               location="Global (Online)"
               dates="2024"
-              details={[
-                'Achieved Top 3% using an EDA → feature engineering → ensemble pipeline (GBDT + stacking).',
-                'Ensured reproducibility and leaderboard stability with robust seeding and well-designed K-Fold validation.',
-              ]}
+              details={ach_kaggle_details}
               isExpanded={expandedSections.achievements.entries.kaggleTop3}
               onClick={() => toggleEntry('achievements', 'kaggleTop3')}
             />
 
             <Entry
-              title="Dacon Electricity Consumption Forecast – Top 5%"
-              location="Korea (Online)"
+              title={lang==='ENG' ? "Dacon Electricity Consumption Forecast – Top 5%" : "Dacon 전력소비량 예측 – 상위 5%"}
+              location={lang==='ENG' ? "Korea (Online)" : "대한민국 (온라인)"}
               dates="2025"
-              details={[
-                'Built a TimeSeriesSplit-based validation and tuning pipeline; applied Optuna for per-model hyperparameter search.',
-                'Improved score via XGBoost · LightGBM · CatBoost stacking with a Ridge meta-learner.',
-              ]}
+              details={ach_dacon_details}
               isExpanded={expandedSections.achievements.entries.daconTop5}
               onClick={() => toggleEntry('achievements', 'daconTop5')}
             />
 
             <Entry
-              title="CES Innovation Awards – Project Lead Participation"
-              location="Las Vegas, USA"
+              title={lang==='ENG' ? "CES Innovation Awards – Project Lead Participation" : "CES Innovation Awards – 프로젝트 리드 참여"}
+              location={lang==='ENG' ? "Las Vegas, USA" : "미국 라스베이거스"}
               dates="2025"
-              details={[
-                'Led the wearable animal health monitoring project for live demos and partner engagements.',
-                'Crafted technical/product storytelling, demo flow, and coordinated global partner meetings.',
-              ]}
+              details={ach_ces_details}
               isExpanded={expandedSections.achievements.entries.cesInnovation}
               onClick={() => toggleEntry('achievements', 'cesInnovation')}
             />
@@ -572,139 +799,103 @@ function App() {
         )}
       </section>
 
+      {/* ===== Education ===== */}
       <section className="Education-section">
-        <h2 onClick={() => toggleSection('education')}>Education/Qualification</h2>
+        <h2 onClick={() => toggleSection('education')}>{t[lang].education}</h2>
         {expandedSections.education.expanded && (
           <div className="section-content">
             <Entry
-              title="Bachelor of Science in Mathematics and Computer Science"
-              location="University of St Andrews, St Andrews, Scotland"
-              dates="Graduated June 2024"
+              title={edu_degree_title}
+              location={edu_degree_loc}
+              dates={edu_degree_date}
               details={[
                 <div key="dissertation1" className="download-link">
                   <a href={dissertation1} download="Dissertation1.pdf">
                     <img src={dissImage} alt="Download Dissertation 1" className="download-icon" />
                   </a>
-                  <span>Computer Science Dissertation</span>
+                  <span>{edu_cs_dis}</span>
                 </div>,
                 <div key="dissertation2" className="download-link">
-                <a href={dissertation2} download="Dissertation2.pdf">
-                  <img src={dissImage} alt="Download Dissertation 2" className="download-icon" />
-                </a>
-                <span>Mathematics Dissertation</span>
-              </div>,
-              <div key="graduation-images" style={{ 
-                display: 'flex', 
-                overflowX: 'auto', 
-                whiteSpace: 'nowrap', 
-                gap: '10px', 
-                padding: '10px 0' 
-              }}>
-                <img src={degreeImage} alt="SenseOne Project 1" style={{ height: '400px', borderRadius: '8px' }} />
-              </div>
+                  <a href={dissertation2} download="Dissertation2.pdf">
+                    <img src={dissImage} alt="Download Dissertation 2" className="download-icon" />
+                  </a>
+                  <span>{edu_math_dis}</span>
+                </div>,
+                <div key="graduation-images" style={{ display:'flex', overflowX:'auto', whiteSpace:'nowrap', gap:'10px', padding:'10px 0' }}>
+                  <img src={degreeImage} alt="Graduation" style={{ height: '400px', borderRadius: '8px' }} />
+                </div>
               ]}
               isExpanded={expandedSections.education.entries.degree}
               onClick={() => toggleEntry('education', 'degree')}
             />
 
             <Entry
-              title="[IBM x RedHat] AI Transformation - AX Academy"
-              location="IBM x RedHat"
-              dates="April 2025 ~ Present"
-              details={[
-                "Participated in the AI Transformation program hosted by IBM and RedHat under AX Academy.",
-                "Focused on applying cloud-native technologies and AI-driven solutions for enterprise transformation.",
-                "Gained practical experience in hybrid cloud, open-source collaboration, and modern AI deployment strategies."
-              ]}
+              title={edu_ibm_title}
+              location={edu_ibm_loc}
+              dates={lang==='ENG' ? "April 2025 ~ Present" : "2025.04 ~ 진행중"}
+              details={edu_ibm_details}
               isExpanded={expandedSections.education.entries.ibmAxAcademy}
               onClick={() => toggleEntry('education', 'ibmAxAcademy')}
             />
+
             <Entry
-              title="St Andrews Judo Club/ Registered as member of Judo Scotland"
+              title={edu_judo_title}
               location=""
               dates=""
-              details={[<div key="judo-images" style={{ 
-                display: 'flex', 
-                overflowX: 'auto', 
-                whiteSpace: 'nowrap', 
-                gap: '10px', 
-                padding: '10px 0' 
-              }}>
-                <img src={judoImage1} alt="Judo Image 1" style={{ height: '400px', borderRadius: '8px' }} />
-                <img src={judoImage2} alt="Judo Image 2" style={{ height: '400px', borderRadius: '8px' }} />
-                <img src={judoImage3} alt="Judo Image 3" style={{ height: '400px', borderRadius: '8px' }} />
-              </div>
-            ]}
+              details={[
+                <div key="judo-images" style={{ display:'flex', overflowX:'auto', whiteSpace:'nowrap', gap:'10px', padding:'10px 0' }}>
+                  <img src={judoImage1} alt="Judo Image 1" style={{ height: '400px', borderRadius: '8px' }} />
+                  <img src={judoImage2} alt="Judo Image 2" style={{ height: '400px', borderRadius: '8px' }} />
+                  <img src={judoImage3} alt="Judo Image 3" style={{ height: '400px', borderRadius: '8px' }} />
+                </div>
+              ]}
               isExpanded={expandedSections.education.entries.judo}
               onClick={() => toggleEntry('education', 'judo')}
             />
             <Entry
-              title="Committee member of St Andrews Korean Society"
-              location="Treasurer for St Andrews Korean Society"
-              details={[
-              ]}
+              title={edu_soc_title}
+              location={edu_soc_loc}
+              details={[]}
               isExpanded={expandedSections.education.entries.society}
               onClick={() => toggleEntry('education', 'society')}
-              />
+            />
           </div>
         )}
-
       </section>
 
+      {/* ===== Skills ===== */}
       <section className="Skills-section">
-        <h2 onClick={() => toggleSection('skills')}>Skills</h2>
+        <h2 onClick={() => toggleSection('skills')}>{t[lang].skills}</h2>
         {expandedSections.skills.expanded && (
           <div className="section-content">
-            <ul className="skills-list">
-              <li>
-                <strong>AI & Machine Learning:</strong> Deep Learning, NumPy, Pandas
-              </li>
-              <li>
-                <strong>Deep Learning Frameworks:</strong> PyTorch, TensorFlow, Keras
-              </li>
-              <li>
-                <strong>Programming:</strong> Python, Java, JavaScript, Kotlin, Dart
-              </li>
-              <li>
-                <strong>App / Web Development:</strong> Kotlin, Flutter (Dart), React (TypeScript, JavaScript)
-              </li>
-              <li>
-                <strong>Database:</strong> MySQL, MongoDB, PostgreSQL
-              </li>
-              <li>
-                <strong>Workflow & Tools:</strong> Agile (Scrum), Sprint Planning, Version Control (Git)
-              </li>
-              <li>
-                <strong>Mathematics & Finance:</strong> Mathematical Modeling, Risk Management, Financial Analysis
-              </li>
-              <li>
-                <strong>Languages:</strong> Native English & Korean
-              </li>
-            </ul>
+            {lang==='ENG' ? (
+              <ul className="skills-list">
+                <li><strong>AI & Machine Learning:</strong> Deep Learning, NumPy, Pandas</li>
+                <li><strong>Deep Learning Frameworks:</strong> PyTorch, TensorFlow, Keras</li>
+                <li><strong>Programming:</strong> Python, Java, JavaScript, Kotlin, Dart</li>
+                <li><strong>App / Web Development:</strong> Kotlin, Flutter (Dart), React (TypeScript, JavaScript)</li>
+                <li><strong>Database:</strong> MySQL, MongoDB, PostgreSQL</li>
+                <li><strong>Workflow & Tools:</strong> Agile (Scrum), Sprint Planning, Version Control (Git)</li>
+                <li><strong>Mathematics & Finance:</strong> Mathematical Modeling, Risk Management, Financial Analysis</li>
+                <li><strong>Languages:</strong> Native English & Korean</li>
+              </ul>
+            ) : (
+              <ul className="skills-list">
+                <li><strong>AI & 머신러닝:</strong> 딥러닝, NumPy, Pandas</li>
+                <li><strong>딥러닝 프레임워크:</strong> PyTorch, TensorFlow, Keras</li>
+                <li><strong>프로그래밍:</strong> Python, Java, JavaScript, Kotlin, Dart</li>
+                <li><strong>앱/웹 개발:</strong> Kotlin, Flutter(Dart), React(TypeScript, JavaScript)</li>
+                <li><strong>데이터베이스:</strong> MySQL, MongoDB, PostgreSQL</li>
+                <li><strong>워크플로/도구:</strong> Agile(Scrum), 스프린트 기획, Git</li>
+                <li><strong>수학/금융:</strong> 수리모델링, 리스크 관리, 재무 분석</li>
+                <li><strong>언어:</strong> 한국어/영어 원어민 수준</li>
+              </ul>
+            )}
           </div>
         )}
       </section>
 
-      {/* <section className="Volunteer-section">
-        <h2 onClick={() => toggleSection('volunteer')}>Volunteer Experience or Leadership</h2>
-        {expandedSections.volunteer.expanded && (
-          <div className="section-content">
-            <div className="entry">
-              <h3>Volunteer Developer at Non-Profit</h3>
-              <p>Community Center, Seoul</p>
-              <p>January 2020 - Present</p>
-              <ul>
-                <li>
-                  Helped develop a community-focused application to facilitate communication among members.
-                </li>
-                <li>
-                  Led workshops on coding and technology for young learners.
-                </li>
-              </ul>
-            </div>
-          </div>
-        )} */}
-      {/* </section> */}
+      {/* Volunteer 섹션은 주석 유지 */}
     </div>
   );
 }
