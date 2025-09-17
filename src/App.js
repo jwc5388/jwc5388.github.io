@@ -330,82 +330,11 @@ function App() {
         <h2 onClick={() => toggleSection('projects')}>Project Engagements</h2>
         {expandedSections.projects.expanded && (
           <div className="section-content">
-            <Entry
-              title="Eliza AI Basic Project"
-              location="University Project"
-              dates="September 2020 ~ December 2020"
-              details={[
-                'Developed an AI chatbot in Java using a scripting system with keywords, decomposition rules, and reassembly rules, simulating three personalities: a psychologist, a politician, and a five-year-old child. Implemented pre and post substitutions using regex for sentence transformation and synonym handling.',
-                'Structured the chatbot engine into modular Java classes, including an Eliza Engine (managing input processing and response generation), a Decomposition Engine (applying regex-based pattern matching), and a Reassembly Engine (constructing responses with predefined grammatical structures).',
-                'Implemented priority-based keyword matching, ensuring responses aligned with conversational context. Used regular expressions (regex) for pattern recognition, allowing dynamic sentence decomposition and reassembly for natural conversations.',
-                'Collaborated using Mercurial for version control, managing project updates. Resolved merge conflicts with commands like hg resolve --all and hg merge, and manually edited clashing files for synchronization.',
-                'Conducted iterative testing, refining keyword priorities to improve chatbot accuracy and ensuring smooth response flow. Identified challenges like post-substitution issues, where responses sometimes lacked precision, and planned improvements for more nuanced conversation handling.',
-                <div key="Eliza-images" style={{ 
-                  display: 'flex', 
-                  overflowX: 'auto', 
-                  whiteSpace: 'nowrap', 
-                  gap: '10px', 
-                  padding: '10px 0' 
-                }}>
-                  <img src={elizaImage1} alt="Eliza Project 1" style={{ height: '400px', borderRadius: '8px' }} />
-                  <img src={elizaImage2} alt="Eliza Project 2" style={{ height: '400px', borderRadius: '8px' }} />
-                  <img src={elizaImage3} alt="Eliza Project 2" style={{ height: '400px', borderRadius: '8px' }} />
-                </div>
-              ]}
-              isExpanded={expandedSections.projects.entries.eliza}
-              onClick={() => toggleEntry('projects', 'eliza')}
-            />
-            <Entry
-              title="Royal Game of Ur"
-              location="University Project"
-              dates="January 2021 ~ March 2021"
-              details={[
-                'Developed a digital version of the ancient board game "Royal Game of Ur" as part of a major university project.',
-                'Implemented advanced game logic, AI opponents, and an interactive user interface to simulate strategic gameplay.',
-                'Focused on enhancing user experience through a well-designed UI and optimized game mechanics.',
-                <div key="RoyalUr-images" style={{ 
-                  display: 'flex', 
-                  overflowX: 'auto', 
-                  whiteSpace: 'nowrap', 
-                  gap: '10px', 
-                  padding: '10px 0' 
-                }}>
-                  <img src={royalUrImage1} alt="SenseOne Project 1" style={{ height: '400px', borderRadius: '8px' }} />
-                  <img src={royalUrImage2} alt="SenseOne Project 2" style={{ height: '400px', borderRadius: '8px' }} />
-                </div>
-              ]}
-              isExpanded={expandedSections.projects.entries.royalGame}
-              onClick={() => toggleEntry('projects', 'royalGame')}
-            />
-            <Entry
-              title="Sudoku Game"
-              location="University of St Andrews Computer Science Junior Honours Project"
-              dates="September 2022 ~ March 2023"
-              details={[
-                'Developed a collaborative Sudoku puzzle platform that allows users to create, share, and play puzzles.',
-                'Designed and built the front-end with React.js, leveraging its flexibility, performance, and rich ecosystem. Implemented lifecycle methods to resolve rendering issues.',
-                'Implemented a Node.js and Express.js backend, prioritizing speed, scalability, and security. Managed environment variables for secure authentication and database integration.',
-                'Utilized MariaDB as the relational database, implementing primary and foreign keys for structured data relationships and efficient querying.',
-                'Followed Agile development (Scrum methodology), utilizing sprints to ensure continuous progress and iterative development.',
-                'Engineered advanced Sudoku generation and validation algorithms, supporting multiple difficulty levels for an engaging user experience.',
-                'Designed and implemented the front-end using React.JS, chosen for its flexibility, performance, and extensive ecosystem. Addressed rendering issues by utilizing lifecycle methods to correctly update puzzle states.',
-                <div key="sodoku-images" style={{ 
-                  display: 'flex', 
-                  overflowX: 'auto', 
-                  whiteSpace: 'nowrap', 
-                  gap: '10px', 
-                  padding: '10px 0' 
-                }}>
-                  <img src={sudokuImage1} alt="Sudoku Project 1" style={{ height: '400px', borderRadius: '8px' }} />
-                  <img src={sudokuImage2} alt="Sudoku Project 2" style={{ height: '400px', borderRadius: '8px' }} />
-                  <img src={sudokuImage3} alt="Sudoku Project 3" style={{ height: '400px', borderRadius: '8px' }} />
-                  <img src={sudokuImage4} alt="Sudoku Project 4" style={{ height: '400px', borderRadius: '8px' }} />
-                  <img src={sudokuImage5} alt="Sudoku Project 5" style={{ height: '400px', borderRadius: '8px' }} />
-                </div>
-              ]}
-              isExpanded={expandedSections.projects.entries.sudokuGame}
-              onClick={() => toggleEntry('projects', 'sudokuGame')}
-            />
+
+            {/* ===== Featured Projects ===== */}
+            <h3 style={{ marginTop: 0 }}>Featured Projects</h3>
+
+            {/* Sense1 Vet AI Algorithm */}
             <Entry
               title="Sense1 Vet AI Algorithm"
               location="CareSix Co., LTD"
@@ -415,14 +344,12 @@ function App() {
                 'Designed and implemented signal processing techniques to analyze ballistocardiogram (BCG) data for heart rate detection.',
                 'Built a deep learning pipeline using TensorFlow and Keras to enhance real-time heart rate monitoring accuracy.',
                 'Applied unsupervised learning for IJK peak detection, reducing dependency on ECG signals for heart rate analysis.',
+                'Incorporated mathematical modeling of physiological signals to extract domain-specific features, capturing the periodicity of IJK peaks.',
+                'Enhanced preprocessing pipeline by applying advanced noise reduction techniques, improving signal-to-noise ratio and robustness of model input features.',
                 'Collaborated with hardware engineers and production teams to optimize data acquisition and improve signal quality.',
                 'Contributed to the development of Sense1 Vet, an AI-powered wearable device for veterinary health monitoring.',
-                <div key="sense1vet-images" style={{ 
-                  display: 'flex', 
-                  overflowX: 'auto', 
-                  whiteSpace: 'nowrap', 
-                  gap: '10px', 
-                  padding: '10px 0' 
+                <div key="sense1vet-images" style={{
+                  display: 'flex', overflowX: 'auto', whiteSpace: 'nowrap', gap: '10px', padding: '10px 0'
                 }}>
                   <img src={senseoneImage1} alt="SenseOne Project 1" style={{ height: '400px', borderRadius: '8px' }} />
                   <img src={senseoneImage2} alt="SenseOne Project 2" style={{ height: '400px', borderRadius: '8px' }} />
@@ -434,34 +361,8 @@ function App() {
               isExpanded={expandedSections.projects.entries.sense1Vet}
               onClick={() => toggleEntry('projects', 'sense1Vet')}
             />
-            {/* <Entry
-              title="AURA ID Website"
-              location="CareSix Co., LTD"
-              dates="February 2025 ~ Present"
-              details={[
-                'Developed a web-based dog recognition platform using TypeScript with React, implementing an advanced backend algorithm developed by Jeju Nationaly University for accurate dog identification based on image recognition technology.',
-                'Designed and implemented a veterinary hospital management system, enabling efficient patient tracking and cage record management for veterinarians.',
-                'Integrated AWS RDS (Relational Database Service) for secure, scalable data management, ensuring seamless data retrieval and storage for both the dog recognition platform and the hospital management system.',
-                <div key="auraid-images" style={{ 
-                  display: 'flex', 
-                  overflowX: 'auto', 
-                  whiteSpace: 'nowrap', 
-                  gap: '10px', 
-                  padding: '10px 0' 
-                }}>
-                  <img src={auraIdIamge1} alt="AuraId Project 1" style={{ height: '400px', borderRadius: '8px' }} />
-                  <img src={auraIdIamge7} alt="AuraId Project 2" style={{ height: '400px', borderRadius: '8px' }} />
-                  <img src={auraIdIamge2} alt="AuraId Project 3" style={{ height: '400px', borderRadius: '8px' }} />
-                  <img src={auraIdIamge3} alt="AuraId Project 4" style={{ height: '400px', borderRadius: '8px' }} />
-                  <img src={auraIdIamge4} alt="AuraId Project 5" style={{ height: '400px', borderRadius: '8px' }} />
-                  <img src={auraIdIamge5} alt="AuraId Project 6" style={{ height: '400px', borderRadius: '8px' }} />
-                  <img src={auraIdIamge6} alt="AuraId Project 7" style={{ height: '400px', borderRadius: '8px' }} />
-                </div>
-              ]}
-              isExpanded={expandedSections.projects.entries.auraid}
-              onClick={() => toggleEntry('projects', 'auraid')}
-            /> */}
 
+            {/* Law-Intelligence */}
             <Entry
               title="[IBM x RedHat] Law-Intelligence"
               location="IBM Final Group Project"
@@ -475,6 +376,96 @@ function App() {
               ]}
               isExpanded={expandedSections.projects.entries.lawIntelligence}
               onClick={() => toggleEntry('projects', 'lawIntelligence')}
+            />
+
+            {/* Therapy-Intelligence */}
+            <Entry
+              title="[IBM x RedHat] Therapy-Intelligence"
+              location="IBM x RedHat Innovation Project"
+              dates="2025 ~ Present"
+              details={[
+                "Developing a therapy-oriented AI assistant integrating Speech-to-Text (STT) and Text-to-Speech (TTS) pipelines to enable natural conversational interfaces.",
+                "Built the front-end with React Native for cross-platform mobile deployment, focusing on real-time responsiveness and accessibility.",
+                "Leveraged IBM Watsonx for model selection and orchestration, ensuring scalable integration of domain-specific LLMs.",
+                "Implemented Retrieval-Augmented Generation (RAG) to ground therapeutic responses on validated resources and knowledge bases.",
+                "Applied advanced prompt engineering and tuning strategies to adapt model outputs for counseling and therapy-like scenarios.",
+                "Designed a robust evaluation pipeline measuring response empathy, factual consistency, and therapeutic appropriateness."
+              ]}
+              isExpanded={expandedSections.projects.entries.therapyIntelligence}
+              onClick={() => toggleEntry('projects', 'therapyIntelligence')}
+            />
+
+            {/* ===== Other Projects (Mini) ===== */}
+            <h3 style={{ marginTop: 24 }}>Other Projects (Mini)</h3>
+
+            {/* Eliza */}
+            <Entry
+              title="Eliza AI Basic Project"
+              location="University Project"
+              dates="September 2020 ~ December 2020"
+              details={[
+                'Developed an AI chatbot in Java using a scripting system with keywords, decomposition rules, and reassembly rules, simulating three personalities: a psychologist, a politician, and a five-year-old child. Implemented pre and post substitutions using regex for sentence transformation and synonym handling.',
+                'Structured the chatbot engine into modular Java classes, including an Eliza Engine (managing input processing and response generation), a Decomposition Engine (applying regex-based pattern matching), and a Reassembly Engine (constructing responses with predefined grammatical structures).',
+                'Implemented priority-based keyword matching, ensuring responses aligned with conversational context. Used regular expressions (regex) for pattern recognition, allowing dynamic sentence decomposition and reassembly for natural conversations.',
+                'Collaborated using Mercurial for version control, managing project updates. Resolved merge conflicts with commands like hg resolve --all and hg merge, and manually edited clashing files for synchronization.',
+                'Conducted iterative testing, refining keyword priorities to improve chatbot accuracy and ensuring smooth response flow. Identified challenges like post-substitution issues, where responses sometimes lacked precision, and planned improvements for more nuanced conversation handling.',
+                <div key="Eliza-images" style={{
+                  display: 'flex', overflowX: 'auto', whiteSpace: 'nowrap', gap: '10px', padding: '10px 0'
+                }}>
+                  <img src={elizaImage1} alt="Eliza Project 1" style={{ height: '400px', borderRadius: '8px' }} />
+                  <img src={elizaImage2} alt="Eliza Project 2" style={{ height: '400px', borderRadius: '8px' }} />
+                  <img src={elizaImage3} alt="Eliza Project 3" style={{ height: '400px', borderRadius: '8px' }} />
+                </div>
+              ]}
+              isExpanded={expandedSections.projects.entries.eliza}
+              onClick={() => toggleEntry('projects', 'eliza')}
+            />
+
+            {/* Royal Game of Ur */}
+            <Entry
+              title="Royal Game of Ur"
+              location="University Project"
+              dates="January 2021 ~ March 2021"
+              details={[
+                'Developed a digital version of the ancient board game "Royal Game of Ur" as part of a major university project.',
+                'Implemented advanced game logic, AI opponents, and an interactive user interface to simulate strategic gameplay.',
+                'Focused on enhancing user experience through a well-designed UI and optimized game mechanics.',
+                <div key="RoyalUr-images" style={{
+                  display: 'flex', overflowX: 'auto', whiteSpace: 'nowrap', gap: '10px', padding: '10px 0'
+                }}>
+                  <img src={royalUrImage1} alt="RoyalUr Project 1" style={{ height: '400px', borderRadius: '8px' }} />
+                  <img src={royalUrImage2} alt="RoyalUr Project 2" style={{ height: '400px', borderRadius: '8px' }} />
+                </div>
+              ]}
+              isExpanded={expandedSections.projects.entries.royalGame}
+              onClick={() => toggleEntry('projects', 'royalGame')}
+            />
+
+            {/* Sudoku Game */}
+            <Entry
+              title="Sudoku Game"
+              location="University of St Andrews Computer Science Junior Honours Project"
+              dates="September 2022 ~ March 2023"
+              details={[
+                'Developed a collaborative Sudoku puzzle platform that allows users to create, share, and play puzzles.',
+                'Designed and built the front-end with React.js, leveraging its flexibility, performance, and rich ecosystem. Implemented lifecycle methods to resolve rendering issues.',
+                'Implemented a Node.js and Express.js backend, prioritizing speed, scalability, and security. Managed environment variables for secure authentication and database integration.',
+                'Utilized MariaDB as the relational database, implementing primary and foreign keys for structured data relationships and efficient querying.',
+                'Followed Agile development (Scrum methodology), utilizing sprints to ensure continuous progress and iterative development.',
+                'Engineered advanced Sudoku generation and validation algorithms, supporting multiple difficulty levels for an engaging user experience.',
+                'Designed and implemented the front-end using React.JS, chosen for its flexibility, performance, and extensive ecosystem. Addressed rendering issues by utilizing lifecycle methods to correctly update puzzle states.',
+                <div key="sudoku-images" style={{
+                  display: 'flex', overflowX: 'auto', whiteSpace: 'nowrap', gap: '10px', padding: '10px 0'
+                }}>
+                  <img src={sudokuImage1} alt="Sudoku Project 1" style={{ height: '400px', borderRadius: '8px' }} />
+                  <img src={sudokuImage2} alt="Sudoku Project 2" style={{ height: '400px', borderRadius: '8px' }} />
+                  <img src={sudokuImage3} alt="Sudoku Project 3" style={{ height: '400px', borderRadius: '8px' }} />
+                  <img src={sudokuImage4} alt="Sudoku Project 4" style={{ height: '400px', borderRadius: '8px' }} />
+                  <img src={sudokuImage5} alt="Sudoku Project 5" style={{ height: '400px', borderRadius: '8px' }} />
+                </div>
+              ]}
+              isExpanded={expandedSections.projects.entries.sudokuGame}
+              onClick={() => toggleEntry('projects', 'sudokuGame')}
             />
 
           </div>
