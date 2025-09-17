@@ -327,172 +327,172 @@ function App() {
       </section>
 
       <section className="Project-section">
-        <h2 onClick={() => toggleSection('projects')}>Project Engagements</h2>
-        {expandedSections.projects.expanded && (
-          <div className="section-content">
+      <h2 onClick={() => toggleSection('projects')}>Project Engagements</h2>
+      {expandedSections.projects.expanded && (
+        <div className="section-content">
 
-            {/* ===== Featured Projects ===== */}
-            <div className="subheader">Featured Projects</div>
+          {/* ===== Featured Projects ===== */}
+          <div className="subheader">Featured Projects</div>
 
-            <div className="featured-card">
-              <div className="entry-header">
-                <span className="entry-title">Sense1 Vet AI Algorithm</span>
-                <span className="badge badge-primary">FEATURED</span>
-              </div>
-              <Entry
-                title={null}  // 타이틀은 위에서 렌더링
-                location="CareSix Co., LTD"
-                dates="September 2024 ~ Present"
-                details={[
-                  'Developed a machine learning-based AI algorithm for canine heart rate estimation using Long Short-Term Memory (LSTM) models.',
-                  'Designed and implemented signal processing techniques to analyze ballistocardiogram (BCG) data for heart rate detection.',
-                  'Built a deep learning pipeline using TensorFlow and Keras to enhance real-time heart rate monitoring accuracy.',
-                  'Applied unsupervised learning for IJK peak detection, reducing dependency on ECG signals for heart rate analysis.',
-                  'Incorporated mathematical modeling of physiological signals to extract domain-specific features, capturing the periodicity of IJK peaks.',
-                  'Enhanced preprocessing pipeline by applying advanced noise reduction techniques, improving signal-to-noise ratio and robustness of model input features.',
-                  'Collaborated with hardware engineers and production teams to optimize data acquisition and improve signal quality.',
-                  'Contributed to the development of Sense1 Vet, an AI-powered wearable device for veterinary health monitoring.',
-                  <div key="sense1vet-images" style={{ display: 'flex', overflowX: 'auto', whiteSpace: 'nowrap', gap: '10px', padding: '10px 0' }}>
-                    <img src={senseoneImage1} alt="SenseOne Project 1" style={{ height: '400px', borderRadius: '8px' }} />
-                    <img src={senseoneImage2} alt="SenseOne Project 2" style={{ height: '400px', borderRadius: '8px' }} />
-                    <img src={senseoneImage3} alt="SenseOne Project 3" style={{ height: '400px', borderRadius: '8px' }} />
-                    <img src={senseoneImage4} alt="SenseOne Project 4" style={{ height: '400px', borderRadius: '8px' }} />
-                    <img src={senseoneImage5} alt="SenseOne Project 5" style={{ height: '400px', borderRadius: '8px' }} />
-                  </div>
-                ]}
-                isExpanded={expandedSections.projects.entries.sense1Vet}
-                onClick={() => toggleEntry('projects', 'sense1Vet')}
-              />
+          <div className="featured-card">
+            <div className="entry-header">
+              <span className="entry-title">Sense1 Vet AI Algorithm</span>
+              <span className="badge badge-primary">FEATURED</span>
             </div>
-
-            <div className="featured-card">
-              <div className="entry-header">
-                <span className="entry-title">[IBM x RedHat] Law-Intelligence</span>
-                <span className="badge badge-primary">FEATURED</span>
-              </div>
-              <Entry
-                title={null}
-                location="IBM Final Group Project"
-                dates="2025 ~ Present"
-                details={[
-                  "Developing a Law AI Assistant that leverages LLM (Large Language Models) with Retrieval-Augmented Generation (RAG).",
-                  "Implementing prompt engineering techniques to improve response accuracy and context awareness in legal queries.",
-                  "Exploring fine-tuning strategies on Korean law corpora to align the assistant with domain-specific terminology and reasoning.",
-                  "Designing a pipeline that integrates legal document chunking, vector embeddings, and FAISS-based semantic search.",
-                  "Building a robust evaluation framework to measure factual consistency, legal validity, and user trust in AI-generated responses."
-                ]}
-                isExpanded={expandedSections.projects.entries.lawIntelligence}
-                onClick={() => toggleEntry('projects', 'lawIntelligence')}
-              />
-            </div>
-
-            <div className="featured-card">
-              <div className="entry-header">
-                <span className="entry-title">[IBM x RedHat] Therapy-Intelligence</span>
-                <span className="badge badge-primary">FEATURED</span>
-              </div>
-              <Entry
-                title={null}
-                location="IBM x RedHat Innovation Project"
-                dates="2025 ~ Present"
-                details={[
-                  "Developing a therapy-oriented AI assistant integrating Speech-to-Text (STT) and Text-to-Speech (TTS) pipelines to enable natural conversational interfaces.",
-                  "Built the front-end with React Native for cross-platform mobile deployment, focusing on real-time responsiveness and accessibility.",
-                  "Leveraged IBM Watsonx for model selection and orchestration, ensuring scalable integration of domain-specific LLMs.",
-                  "Implemented Retrieval-Augmented Generation (RAG) to ground therapeutic responses on validated resources and knowledge bases.",
-                  "Applied advanced prompt engineering and tuning strategies to adapt model outputs for counseling and therapy-like scenarios.",
-                  "Designed a robust evaluation pipeline measuring response empathy, factual consistency, and therapeutic appropriateness."
-                ]}
-                isExpanded={expandedSections.projects.entries.therapyIntelligence}
-                onClick={() => toggleEntry('projects', 'therapyIntelligence')}
-              />
-            </div>
-
-            {/* ===== Other Projects (Mini) ===== */}
-            <div className="subheader subheader-muted">Other Projects (Mini)</div>
-
-            <div className="mini-card">
-              <div className="entry-header mini">
-                <span className="entry-title mini">Eliza AI Basic Project</span>
-                <span className="badge badge-muted">MINI</span>
-              </div>
-              <Entry
-                title={null}
-                location="University Project"
-                dates="September 2020 ~ December 2020"
-                details={[
-                  'Developed an AI chatbot in Java using a scripting system with keywords, decomposition rules, and reassembly rules, simulating three personalities: a psychologist, a politician, and a five-year-old child. Implemented pre and post substitutions using regex for sentence transformation and synonym handling.',
-                  'Structured the chatbot engine into modular Java classes, including an Eliza Engine (managing input processing and response generation), a Decomposition Engine (applying regex-based pattern matching), and a Reassembly Engine (constructing responses with predefined grammatical structures).',
-                  'Implemented priority-based keyword matching, ensuring responses aligned with conversational context. Used regular expressions (regex) for pattern recognition, allowing dynamic sentence decomposition and reassembly for natural conversations.',
-                  'Collaborated using Mercurial for version control, managing project updates. Resolved merge conflicts with commands like hg resolve --all and hg merge, and manually edited clashing files for synchronization.',
-                  'Conducted iterative testing, refining keyword priorities to improve chatbot accuracy and ensuring smooth response flow. Identified challenges like post-substitution issues, where responses sometimes lacked precision, and planned improvements for more nuanced conversation handling.',
-                  <div key="Eliza-images" style={{ display: 'flex', overflowX: 'auto', whiteSpace: 'nowrap', gap: '10px', padding: '10px 0' }}>
-                    <img src={elizaImage1} alt="Eliza Project 1" style={{ height: '400px', borderRadius: '8px' }} />
-                    <img src={elizaImage2} alt="Eliza Project 2" style={{ height: '400px', borderRadius: '8px' }} />
-                    <img src={elizaImage3} alt="Eliza Project 3" style={{ height: '400px', borderRadius: '8px' }} />
-                  </div>
-                ]}
-                isExpanded={expandedSections.projects.entries.eliza}
-                onClick={() => toggleEntry('projects', 'eliza')}
-              />
-            </div>
-
-            <div className="mini-card">
-              <div className="entry-header mini">
-                <span className="entry-title mini">Royal Game of Ur</span>
-                <span className="badge badge-muted">MINI</span>
-              </div>
-              <Entry
-                title={null}
-                location="University Project"
-                dates="January 2021 ~ March 2021"
-                details={[
-                  'Developed a digital version of the ancient board game "Royal Game of Ur" as part of a major university project.',
-                  'Implemented advanced game logic, AI opponents, and an interactive user interface to simulate strategic gameplay.',
-                  'Focused on enhancing user experience through a well-designed UI and optimized game mechanics.',
-                  <div key="RoyalUr-images" style={{ display: 'flex', overflowX: 'auto', whiteSpace: 'nowrap', gap: '10px', padding: '10px 0' }}>
-                    <img src={royalUrImage1} alt="RoyalUr Project 1" style={{ height: '400px', borderRadius: '8px' }} />
-                    <img src={royalUrImage2} alt="RoyalUr Project 2" style={{ height: '400px', borderRadius: '8px' }} />
-                  </div>
-                ]}
-                isExpanded={expandedSections.projects.entries.royalGame}
-                onClick={() => toggleEntry('projects', 'royalGame')}
-              />
-            </div>
-
-            <div className="mini-card">
-              <div className="entry-header mini">
-                <span className="entry-title mini">Sudoku Game</span>
-                <span className="badge badge-muted">MINI</span>
-              </div>
-              <Entry
-                title={null}
-                location="University of St Andrews Computer Science Junior Honours Project"
-                dates="September 2022 ~ March 2023"
-                details={[
-                  'Developed a collaborative Sudoku puzzle platform that allows users to create, share, and play puzzles.',
-                  'Designed and built the front-end with React.js, leveraging its flexibility, performance, and rich ecosystem. Implemented lifecycle methods to resolve rendering issues.',
-                  'Implemented a Node.js and Express.js backend, prioritizing speed, scalability, and security. Managed environment variables for secure authentication and database integration.',
-                  'Utilized MariaDB as the relational database, implementing primary and foreign keys for structured data relationships and efficient querying.',
-                  'Followed Agile development (Scrum methodology), utilizing sprints to ensure continuous progress and iterative development.',
-                  'Engineered advanced Sudoku generation and validation algorithms, supporting multiple difficulty levels for an engaging user experience.',
-                  'Designed and implemented the front-end using React.JS, chosen for its flexibility, performance, and extensive ecosystem. Addressed rendering issues by utilizing lifecycle methods to correctly update puzzle states.',
-                  <div key="sudoku-images" style={{ display: 'flex', overflowX: 'auto', whiteSpace: 'nowrap', gap: '10px', padding: '10px 0' }}>
-                    <img src={sudokuImage1} alt="Sudoku Project 1" style={{ height: '400px', borderRadius: '8px' }} />
-                    <img src={sudokuImage2} alt="Sudoku Project 2" style={{ height: '400px', borderRadius: '8px' }} />
-                    <img src={sudokuImage3} alt="Sudoku Project 3" style={{ height: '400px', borderRadius: '8px' }} />
-                    <img src={sudokuImage4} alt="Sudoku Project 4" style={{ height: '400px', borderRadius: '8px' }} />
-                    <img src={sudokuImage5} alt="Sudoku Project 5" style={{ height: '400px', borderRadius: '8px' }} />
-                  </div>
-                ]}
-                isExpanded={expandedSections.projects.entries.sudokuGame}
-                onClick={() => toggleEntry('projects', 'sudokuGame')}
-              />
-            </div>
-
+            <Entry
+              title={null}  // 타이틀은 위에서 렌더링
+              location="CareSix Co., LTD"
+              dates="September 2024 ~ Present"
+              details={[
+                'Developed a machine learning-based AI algorithm for canine heart rate estimation using Long Short-Term Memory (LSTM) models.',
+                'Designed and implemented signal processing techniques to analyze ballistocardiogram (BCG) data for heart rate detection.',
+                'Built a deep learning pipeline using TensorFlow and Keras to enhance real-time heart rate monitoring accuracy.',
+                'Applied unsupervised learning for IJK peak detection, reducing dependency on ECG signals for heart rate analysis.',
+                'Incorporated mathematical modeling of physiological signals to extract domain-specific features, capturing the periodicity of IJK peaks.',
+                'Enhanced preprocessing pipeline by applying advanced noise reduction techniques, improving signal-to-noise ratio and robustness of model input features.',
+                'Collaborated with hardware engineers and production teams to optimize data acquisition and improve signal quality.',
+                'Contributed to the development of Sense1 Vet, an AI-powered wearable device for veterinary health monitoring.',
+                <div key="sense1vet-images" style={{ display: 'flex', overflowX: 'auto', whiteSpace: 'nowrap', gap: '10px', padding: '10px 0' }}>
+                  <img src={senseoneImage1} alt="SenseOne Project 1" style={{ height: '400px', borderRadius: '8px' }} />
+                  <img src={senseoneImage2} alt="SenseOne Project 2" style={{ height: '400px', borderRadius: '8px' }} />
+                  <img src={senseoneImage3} alt="SenseOne Project 3" style={{ height: '400px', borderRadius: '8px' }} />
+                  <img src={senseoneImage4} alt="SenseOne Project 4" style={{ height: '400px', borderRadius: '8px' }} />
+                  <img src={senseoneImage5} alt="SenseOne Project 5" style={{ height: '400px', borderRadius: '8px' }} />
+                </div>
+              ]}
+              isExpanded={expandedSections.projects.entries.sense1Vet}
+              onClick={() => toggleEntry('projects', 'sense1Vet')}
+            />
           </div>
-        )}
-      </section>
+
+          <div className="featured-card">
+            <div className="entry-header">
+              <span className="entry-title">[IBM x RedHat] Law-Intelligence</span>
+              <span className="badge badge-primary">FEATURED</span>
+            </div>
+            <Entry
+              title={null}
+              location="IBM Final Group Project"
+              dates="2025 ~ Present"
+              details={[
+                "Developing a Law AI Assistant that leverages LLM (Large Language Models) with Retrieval-Augmented Generation (RAG).",
+                "Implementing prompt engineering techniques to improve response accuracy and context awareness in legal queries.",
+                "Exploring fine-tuning strategies on Korean law corpora to align the assistant with domain-specific terminology and reasoning.",
+                "Designing a pipeline that integrates legal document chunking, vector embeddings, and FAISS-based semantic search.",
+                "Building a robust evaluation framework to measure factual consistency, legal validity, and user trust in AI-generated responses."
+              ]}
+              isExpanded={expandedSections.projects.entries.lawIntelligence}
+              onClick={() => toggleEntry('projects', 'lawIntelligence')}
+            />
+          </div>
+
+          <div className="featured-card">
+            <div className="entry-header">
+              <span className="entry-title">[IBM x RedHat] Therapy-Intelligence</span>
+              <span className="badge badge-primary">FEATURED</span>
+            </div>
+            <Entry
+              title={null}
+              location="IBM x RedHat Innovation Project"
+              dates="2025 ~ Present"
+              details={[
+                "Developing a therapy-oriented AI assistant integrating Speech-to-Text (STT) and Text-to-Speech (TTS) pipelines to enable natural conversational interfaces.",
+                "Built the front-end with React Native for cross-platform mobile deployment, focusing on real-time responsiveness and accessibility.",
+                "Leveraged IBM Watsonx for model selection and orchestration, ensuring scalable integration of domain-specific LLMs.",
+                "Implemented Retrieval-Augmented Generation (RAG) to ground therapeutic responses on validated resources and knowledge bases.",
+                "Applied advanced prompt engineering and tuning strategies to adapt model outputs for counseling and therapy-like scenarios.",
+                "Designed a robust evaluation pipeline measuring response empathy, factual consistency, and therapeutic appropriateness."
+              ]}
+              isExpanded={expandedSections.projects.entries.therapyIntelligence}
+              onClick={() => toggleEntry('projects', 'therapyIntelligence')}
+            />
+          </div>
+
+          {/* ===== Other Projects (Mini) ===== */}
+          <div className="subheader subheader-muted">Other Projects (Mini)</div>
+
+          <div className="mini-card">
+            <div className="entry-header mini">
+              <span className="entry-title mini">Eliza AI Basic Project</span>
+              <span className="badge badge-muted">MINI</span>
+            </div>
+            <Entry
+              title={null}
+              location="University Project"
+              dates="September 2020 ~ December 2020"
+              details={[
+                'Developed an AI chatbot in Java using a scripting system with keywords, decomposition rules, and reassembly rules, simulating three personalities: a psychologist, a politician, and a five-year-old child. Implemented pre and post substitutions using regex for sentence transformation and synonym handling.',
+                'Structured the chatbot engine into modular Java classes, including an Eliza Engine (managing input processing and response generation), a Decomposition Engine (applying regex-based pattern matching), and a Reassembly Engine (constructing responses with predefined grammatical structures).',
+                'Implemented priority-based keyword matching, ensuring responses aligned with conversational context. Used regular expressions (regex) for pattern recognition, allowing dynamic sentence decomposition and reassembly for natural conversations.',
+                'Collaborated using Mercurial for version control, managing project updates. Resolved merge conflicts with commands like hg resolve --all and hg merge, and manually edited clashing files for synchronization.',
+                'Conducted iterative testing, refining keyword priorities to improve chatbot accuracy and ensuring smooth response flow. Identified challenges like post-substitution issues, where responses sometimes lacked precision, and planned improvements for more nuanced conversation handling.',
+                <div key="Eliza-images" style={{ display: 'flex', overflowX: 'auto', whiteSpace: 'nowrap', gap: '10px', padding: '10px 0' }}>
+                  <img src={elizaImage1} alt="Eliza Project 1" style={{ height: '400px', borderRadius: '8px' }} />
+                  <img src={elizaImage2} alt="Eliza Project 2" style={{ height: '400px', borderRadius: '8px' }} />
+                  <img src={elizaImage3} alt="Eliza Project 3" style={{ height: '400px', borderRadius: '8px' }} />
+                </div>
+              ]}
+              isExpanded={expandedSections.projects.entries.eliza}
+              onClick={() => toggleEntry('projects', 'eliza')}
+            />
+          </div>
+
+          <div className="mini-card">
+            <div className="entry-header mini">
+              <span className="entry-title mini">Royal Game of Ur</span>
+              <span className="badge badge-muted">MINI</span>
+            </div>
+            <Entry
+              title={null}
+              location="University Project"
+              dates="January 2021 ~ March 2021"
+              details={[
+                'Developed a digital version of the ancient board game "Royal Game of Ur" as part of a major university project.',
+                'Implemented advanced game logic, AI opponents, and an interactive user interface to simulate strategic gameplay.',
+                'Focused on enhancing user experience through a well-designed UI and optimized game mechanics.',
+                <div key="RoyalUr-images" style={{ display: 'flex', overflowX: 'auto', whiteSpace: 'nowrap', gap: '10px', padding: '10px 0' }}>
+                  <img src={royalUrImage1} alt="RoyalUr Project 1" style={{ height: '400px', borderRadius: '8px' }} />
+                  <img src={royalUrImage2} alt="RoyalUr Project 2" style={{ height: '400px', borderRadius: '8px' }} />
+                </div>
+              ]}
+              isExpanded={expandedSections.projects.entries.royalGame}
+              onClick={() => toggleEntry('projects', 'royalGame')}
+            />
+          </div>
+
+          <div className="mini-card">
+            <div className="entry-header mini">
+              <span className="entry-title mini">Sudoku Game</span>
+              <span className="badge badge-muted">MINI</span>
+            </div>
+            <Entry
+              title={null}
+              location="University of St Andrews Computer Science Junior Honours Project"
+              dates="September 2022 ~ March 2023"
+              details={[
+                'Developed a collaborative Sudoku puzzle platform that allows users to create, share, and play puzzles.',
+                'Designed and built the front-end with React.js, leveraging its flexibility, performance, and rich ecosystem. Implemented lifecycle methods to resolve rendering issues.',
+                'Implemented a Node.js and Express.js backend, prioritizing speed, scalability, and security. Managed environment variables for secure authentication and database integration.',
+                'Utilized MariaDB as the relational database, implementing primary and foreign keys for structured data relationships and efficient querying.',
+                'Followed Agile development (Scrum methodology), utilizing sprints to ensure continuous progress and iterative development.',
+                'Engineered advanced Sudoku generation and validation algorithms, supporting multiple difficulty levels for an engaging user experience.',
+                'Designed and implemented the front-end using React.JS, chosen for its flexibility, performance, and extensive ecosystem. Addressed rendering issues by utilizing lifecycle methods to correctly update puzzle states.',
+                <div key="sudoku-images" style={{ display: 'flex', overflowX: 'auto', whiteSpace: 'nowrap', gap: '10px', padding: '10px 0' }}>
+                  <img src={sudokuImage1} alt="Sudoku Project 1" style={{ height: '400px', borderRadius: '8px' }} />
+                  <img src={sudokuImage2} alt="Sudoku Project 2" style={{ height: '400px', borderRadius: '8px' }} />
+                  <img src={sudokuImage3} alt="Sudoku Project 3" style={{ height: '400px', borderRadius: '8px' }} />
+                  <img src={sudokuImage4} alt="Sudoku Project 4" style={{ height: '400px', borderRadius: '8px' }} />
+                  <img src={sudokuImage5} alt="Sudoku Project 5" style={{ height: '400px', borderRadius: '8px' }} />
+                </div>
+              ]}
+              isExpanded={expandedSections.projects.entries.sudokuGame}
+              onClick={() => toggleEntry('projects', 'sudokuGame')}
+            />
+          </div>
+
+        </div>
+      )}
+    </section>
 
       <section className="Achievements-section">
         <h2 onClick={() => toggleSection('achievements')}>Achievements / Awards</h2>
