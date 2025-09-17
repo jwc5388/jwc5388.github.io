@@ -142,7 +142,8 @@ function App() {
               dates="June 2023 - August 2023"
               details={[
                 <div key="detail-1">
-                  Developed a production application for the Sense1 Vet model in Kotlin, mapping NFC tags, QR codes, and barcodes into a structured CSV format. -
+                  Developed a production-grade application in Kotlin for the Sense1 Vet model, actively used in the device manufacturing and deployment process. 
+                  The app automated mapping of NFC tags, QR codes, and barcodes into a structured CSV format, ensuring traceability and quality control. -
                   <a href={productionapk} download style={{ marginLeft: '8px', textDecoration: 'underline', color: '#007BFF' }}>
                     Download app APK
                   </a>
