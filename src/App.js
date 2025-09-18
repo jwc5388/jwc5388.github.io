@@ -51,7 +51,7 @@ import { FaEnvelope, FaPhone, FaLinkedin } from 'react-icons/fa';
 
 // ===== 스킬 아이콘 =====
 import {
-  SiPython, SiJava, SiJavascript, SiTypescript, SiKotlin, SiDart,
+  SiPython, SiJavascript, SiTypescript, SiKotlin, SiDart,
   SiReact, SiFlutter,
   SiPytorch, SiTensorflow, SiKeras, SiNumpy, SiPandas,
   SiMysql, SiMongodb, SiPostgresql,
@@ -59,13 +59,15 @@ import {
   SiFigma, SiAdobeillustrator
 } from 'react-icons/si';
 
+import { FaJava } from 'react-icons/fa';
+
 function App() {
 
   // ===== 언어 상태 & 라벨 i18n =====
   const [lang, setLang] = useState('ENG'); // 'ENG' | 'KOR'
   const t = {
     ENG: {
-      headerTitle: "Jae Woo Chang's Portfolio!!!!!!!!!!!!!",
+      headerTitle: "Jae Woo Chang's Portfolio!!!!!",
       work: "Work Experience",
       engagements: "Professional Engagements",
       projects: "Project Engagements",
@@ -508,7 +510,7 @@ function App() {
       ]},
       { title: "Programming", items: [
         { Icon: SiPython, label: "Python" },
-        { Icon: SiJava, label: "Java" },
+        { Icon: FaJava, label: "Java" },
         { Icon: SiJavascript, label: "JavaScript" },
         { Icon: SiTypescript, label: "TypeScript" },
         { Icon: SiKotlin, label: "Kotlin" },
@@ -546,7 +548,7 @@ function App() {
       ]},
       { title: "프로그래밍", items: [
         { Icon: SiPython, label: "Python" },
-        { Icon: SiJava, label: "Java" },
+        { Icon: FaJava, label: "Java" },
         { Icon: SiJavascript, label: "JavaScript" },
         { Icon: SiTypescript, label: "TypeScript" },
         { Icon: SiKotlin, label: "Kotlin" },
