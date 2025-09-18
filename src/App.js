@@ -1,8 +1,7 @@
 // import logo from './logo.svg';
 import './App.css';
 import Mybutton from './components/Buttons.js'
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import Entry from './Entry';
 import degreeImage from './assets/images/graduation.jpg';
 import judoImage1 from './assets/images/judo1.jpg';
@@ -49,6 +48,16 @@ import dissertation1 from './assets/files/CSDissertation.pdf';
 import dissertation2 from './assets/files/MathDissertation.pdf';
 import productionapk from './assets/files/cotons-production-gateway.apk';
 import { FaEnvelope, FaPhone, FaLinkedin } from 'react-icons/fa';
+
+// ===== 스킬 아이콘 =====
+import {
+  SiPython, SiJava, SiJavascript, SiTypescript, SiKotlin, SiDart,
+  SiReact, SiFlutter,
+  SiPytorch, SiTensorflow, SiKeras, SiNumpy, SiPandas,
+  SiMysql, SiMongodb, SiPostgresql,
+  SiGit, SiJira, SiConfluence, SiSlack,
+  SiFigma, SiAdobeillustrator
+} from 'react-icons/si';
 
 function App() {
 
@@ -207,7 +216,7 @@ function App() {
     </div>
   );
 
-  // ===== Engagements (각각 이미지 미디어 분리) =====
+  // ===== Engagements =====
   const jAgri_media = (
     <div key="jagri-images" style={{ display:'flex', overflowX:'auto', whiteSpace:'nowrap', gap:'10px', padding:'10px 0' }}>
       <img src={jagriImage1} alt="J-Agri Exhibition 1" style={{ height: '400px', borderRadius: '8px' }} />
@@ -436,7 +445,7 @@ function App() {
     'AWS RDS로 보안/확장성 보장, 플랫폼·병원 시스템 공용 데이터 파이프라인 구축.',
   ];
 
-  // Achievements
+  // ===== Achievements =====
   const ach_quantum_ENG = [
     'Ranked 1st in the qualifying round with a coding-based Fashion-MNIST quantum computing challenge.',
     'Advanced to the finals; awarded the Excellence Prize for innovative application of quantum AI methods.',
@@ -473,14 +482,101 @@ function App() {
     '기술/제품 스토리텔링과 데모 동선 설계, 글로벌 파트너 미팅 주도.',
   ];
 
-  // Education – degree media
-  const degree_media = (
-    <div key="graduation-images" style={{ display:'flex', overflowX:'auto', whiteSpace:'nowrap', gap:'10px', padding:'10px 0' }}>
-      <img src={degreeImage} alt="Graduation" style={{ height: '400px', borderRadius: '8px' }} />
+  // ===== Skills 컴포넌트 & 데이터 =====
+  const SkillItem = ({ Icon, label }) => (
+    <div className="skill-item">
+      <span className="skill-icon"><Icon size={18} /></span>
+      <span className="skill-label">{label}</span>
     </div>
   );
+  const SkillGroup = ({ title, items }) => (
+    <div className="skill-card">
+      <div className="skill-title">{title}</div>
+      <div className="skill-items-wrap">
+        {items.map((it, idx) => <SkillItem key={idx} Icon={it.Icon} label={it.label} />)}
+      </div>
+    </div>
+  );
+  const skillsData = {
+    ENG: [
+      { title: "AI & Machine Learning", items: [
+        { Icon: SiPytorch, label: "PyTorch" },
+        { Icon: SiTensorflow, label: "TensorFlow" },
+        { Icon: SiKeras, label: "Keras" },
+        { Icon: SiNumpy, label: "NumPy" },
+        { Icon: SiPandas, label: "Pandas" },
+      ]},
+      { title: "Programming", items: [
+        { Icon: SiPython, label: "Python" },
+        { Icon: SiJava, label: "Java" },
+        { Icon: SiJavascript, label: "JavaScript" },
+        { Icon: SiTypescript, label: "TypeScript" },
+        { Icon: SiKotlin, label: "Kotlin" },
+        { Icon: SiDart, label: "Dart" },
+      ]},
+      { title: "App / Web", items: [
+        { Icon: SiReact, label: "React" },
+        { Icon: SiFlutter, label: "Flutter" },
+      ]},
+      { title: "Database", items: [
+        { Icon: SiMysql, label: "MySQL" },
+        { Icon: SiMongodb, label: "MongoDB" },
+        { Icon: SiPostgresql, label: "PostgreSQL" },
+      ]},
+      { title: "Workflow & Tools", items: [
+        { Icon: SiGit, label: "Git" },
+        { Icon: SiJira, label: "Jira" },
+        { Icon: SiConfluence, label: "Confluence" },
+        { Icon: SiSlack, label: "Slack" },
+        { Icon: SiAdobeillustrator, label: "Adobe Illustrator" },
+        { Icon: SiFigma, label: "Figma" },
+      ]},
+      { title: "Languages", items: [
+        { Icon: SiJavascript, label: "English (Native)" },
+        { Icon: SiReact, label: "Korean (Native)" },
+      ]},
+    ],
+    KOR: [
+      { title: "AI & 머신러닝", items: [
+        { Icon: SiPytorch, label: "PyTorch" },
+        { Icon: SiTensorflow, label: "TensorFlow" },
+        { Icon: SiKeras, label: "Keras" },
+        { Icon: SiNumpy, label: "NumPy" },
+        { Icon: SiPandas, label: "Pandas" },
+      ]},
+      { title: "프로그래밍", items: [
+        { Icon: SiPython, label: "Python" },
+        { Icon: SiJava, label: "Java" },
+        { Icon: SiJavascript, label: "JavaScript" },
+        { Icon: SiTypescript, label: "TypeScript" },
+        { Icon: SiKotlin, label: "Kotlin" },
+        { Icon: SiDart, label: "Dart" },
+      ]},
+      { title: "앱 / 웹", items: [
+        { Icon: SiReact, label: "React" },
+        { Icon: SiFlutter, label: "Flutter" },
+      ]},
+      { title: "데이터베이스", items: [
+        { Icon: SiMysql, label: "MySQL" },
+        { Icon: SiMongodb, label: "MongoDB" },
+        { Icon: SiPostgresql, label: "PostgreSQL" },
+      ]},
+      { title: "워크플로 & 도구", items: [
+        { Icon: SiGit, label: "Git" },
+        { Icon: SiJira, label: "Jira" },
+        { Icon: SiConfluence, label: "Confluence" },
+        { Icon: SiSlack, label: "Slack" },
+        { Icon: SiAdobeillustrator, label: "Adobe Illustrator" },
+        { Icon: SiFigma, label: "Figma" },
+      ]},
+      { title: "언어", items: [
+        { Icon: SiJavascript, label: "영어 (원어민)" },
+        { Icon: SiReact, label: "한국어 (원어민)" },
+      ]},
+    ],
+  };
 
-  // UI
+  // ===== UI =====
   return (
     <div className="App">
       <header className="App-header">
@@ -553,7 +649,7 @@ function App() {
               onClick={() => toggleEntry('experience', 'mathematician')}
             />
 
-            {/* Company about (with images in both languages) */}
+            {/* Company about */}
             <Entry
               title={t[lang].companyAbout}
               location={lang==='ENG' ? "Jeju Island, South Korea" : "대한민국 제주"}
@@ -806,7 +902,9 @@ function App() {
                   </a>
                   <span>{lang==='ENG' ? "Mathematics Dissertation" : "수학 학위논문"}</span>
                 </div>,
-                degree_media
+                <div key="graduation-images" style={{ display:'flex', overflowX:'auto', whiteSpace:'nowrap', gap:'10px', padding:'10px 0' }}>
+                  <img src={degreeImage} alt="Graduation" style={{ height: '400px', borderRadius: '8px' }} />
+                </div>
               ]}
               isExpanded={expandedSections.education.entries.degree}
               onClick={() => toggleEntry('education', 'degree')}
@@ -857,39 +955,21 @@ function App() {
         )}
       </section>
 
-      {/* ===== Skills ===== */}
+      {/* ===== Skills (아이콘 카드) ===== */}
       <section className="Skills-section">
         <h2 onClick={() => toggleSection('skills')}>{t[lang].skills}</h2>
         {expandedSections.skills.expanded && (
           <div className="section-content">
-            {lang==='ENG' ? (
-              <ul className="skills-list">
-                <li><strong>AI & Machine Learning:</strong> Deep Learning, NumPy, Pandas</li>
-                <li><strong>Deep Learning Frameworks:</strong> PyTorch, TensorFlow, Keras</li>
-                <li><strong>Programming:</strong> Python, Java, JavaScript, Kotlin, Dart</li>
-                <li><strong>App / Web Development:</strong> Kotlin, Flutter (Dart), React (TypeScript, JavaScript)</li>
-                <li><strong>Database:</strong> MySQL, MongoDB, PostgreSQL</li>
-                <li><strong>Workflow & Tools:</strong> Agile (Scrum), Sprint Planning, Version Control (Git)</li>
-                <li><strong>Mathematics & Finance:</strong> Mathematical Modeling, Risk Management, Financial Analysis</li>
-                <li><strong>Languages:</strong> Native English & Korean</li>
-              </ul>
-            ) : (
-              <ul className="skills-list">
-                <li><strong>AI & 머신러닝:</strong> 딥러닝, NumPy, Pandas</li>
-                <li><strong>딥러닝 프레임워크:</strong> PyTorch, TensorFlow, Keras</li>
-                <li><strong>프로그래밍:</strong> Python, Java, JavaScript, Kotlin, Dart</li>
-                <li><strong>앱/웹 개발:</strong> Kotlin, Flutter(Dart), React(TypeScript, JavaScript)</li>
-                <li><strong>데이터베이스:</strong> MySQL, MongoDB, PostgreSQL</li>
-                <li><strong>워크플로/도구:</strong> Agile(Scrum), 스프린트 기획, Git</li>
-                <li><strong>수학/금융:</strong> 수리모델링, 리스크 관리, 재무 분석</li>
-                <li><strong>언어:</strong> 한국어/영어 원어민 수준</li>
-              </ul>
-            )}
+            <div className="skills-grid">
+              {skillsData[lang].map((g, i) => (
+                <SkillGroup key={i} title={g.title} items={g.items} />
+              ))}
+            </div>
           </div>
         )}
       </section>
 
-      {/* Volunteer 섹션은 주석 유지 */}
+      {/* Volunteer 섹션은 주석 상태 */}
     </div>
   );
 }
