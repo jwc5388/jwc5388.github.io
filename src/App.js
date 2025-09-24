@@ -649,6 +649,92 @@ function App() {
         )}
       </section>
 
+
+      {/* ===== Education ===== */}
+      <section className="Education-section">
+        <h2 onClick={() => toggleSection('education')}>{t[lang].education}</h2>
+        {expandedSections.education.expanded && (
+          <div className="section-content">
+            <Entry
+              title={lang==='ENG' ? "Bachelor of Science in Mathematics and Computer Science" : "수학·컴퓨터과학 학사"}
+              location={lang==='ENG' ? "University of St Andrews, St Andrews, Scotland" : "세인트앤드루스 대학교, 스코틀랜드"}
+              dates={lang==='ENG' ? "Graduated June 2024" : "2024년 6월 졸업"}
+              details={[
+                <div key="dissertation1" className="download-link">
+                  <button
+                    type="button"
+                    onClick={(e) => { e.stopPropagation(); window.open(dissertation1, '_blank', 'noopener'); }}
+                    style={{ background:'transparent', border:0, padding:0, cursor:'pointer' }}
+                  >
+                    <img src={dissImage} alt="Open Dissertation 1" className="download-icon" />
+                  </button>
+                  <span>{lang==='ENG' ? "Computer Science Dissertation" : "컴퓨터과학 학위논문"}</span>
+                </div>,
+                <div key="dissertation2" className="download-link">
+                  <button
+                    type="button"
+                    onClick={(e) => { e.stopPropagation(); window.open(dissertation2, '_blank', 'noopener'); }}
+                    style={{ background:'transparent', border:0, padding:0, cursor:'pointer' }}
+                  >
+                    <img src={dissImage} alt="Open Dissertation 2" className="download-icon" />
+                  </button>
+                  <span>{lang==='ENG' ? "Mathematics Dissertation" : "수학 학위논문"}</span>
+                </div>,
+                <div key="graduation-images" style={{ display:'flex', overflowX:'auto', whiteSpace:'nowrap', gap:'10px', padding:'10px 0' }}>
+                  <img src={dissertationImage1} alt="dissertation1" style={{ height: '400px', borderRadius: '8px' }} />
+                  <img src={dissertationImage2} alt="dissertation2" style={{ height: '400px', borderRadius: '8px' }} />
+                  <img src={degreeImage} alt="Graduation" style={{ height: '400px', borderRadius: '8px' }} />
+                </div>
+              ]}
+              isExpanded={expandedSections.education.entries.degree}
+              onClick={() => toggleEntry('education', 'degree')}
+            />
+
+            <Entry
+              title="[IBM x RedHat] AI Transformation - AX Academy"
+              location="IBM x RedHat"
+              dates={lang==='ENG' ? "April 2025 ~ Present" : "2025.04 ~ 진행중"}
+              details={lang==='ENG'
+                ? [
+                    "Participated in the AI Transformation program hosted by IBM and RedHat under AX Academy.",
+                    "Focused on applying cloud-native technologies and AI-driven solutions for enterprise transformation.",
+                    "Gained practical experience in hybrid cloud, open-source collaboration, and modern AI deployment strategies."
+                  ]
+                : [
+                    "IBM/RedHat 주관 AX Academy의 AI Transformation 프로그램 참여.",
+                    "클라우드 네이티브/AI 솔루션의 엔터프라이즈 적용에 집중.",
+                    "하이브리드 클라우드/오픈소스 협업/현대적 배포 전략 실무 경험."
+                  ]
+              }
+              isExpanded={expandedSections.education.entries.ibmAxAcademy}
+              onClick={() => toggleEntry('education', 'ibmAxAcademy')}
+            />
+
+            <Entry
+              title={lang==='ENG' ? "St Andrews Judo Club / Registered as member of Judo Scotland" : "세인트앤드루스 유도부 / Judo Scotland 등록 회원"}
+              location=""
+              dates=""
+              details={[
+                <div key="judo-images" style={{ display:'flex', overflowX:'auto', whiteSpace:'nowrap', gap:'10px', padding:'10px 0' }}>
+                  <img src={judoImage1} alt="Judo Image 1" style={{ height: '400px', borderRadius: '8px' }} />
+                  <img src={judoImage2} alt="Judo Image 2" style={{ height: '400px', borderRadius: '8px' }} />
+                  <img src={judoImage3} alt="Judo Image 3" style={{ height: '400px', borderRadius: '8px' }} />
+                </div>
+              ]}
+              isExpanded={expandedSections.education.entries.judo}
+              onClick={() => toggleEntry('education', 'judo')}
+            />
+            <Entry
+              title={lang==='ENG' ? "Committee member of St Andrews Korean Society" : "세인트앤드루스 한인회 운영진"}
+              location={lang==='ENG' ? "Treasurer for St Andrews Korean Society" : "한인회 회계 담당"}
+              details={[]}
+              isExpanded={expandedSections.education.entries.society}
+              onClick={() => toggleEntry('education', 'society')}
+            />
+          </div>
+        )}
+      </section>
+
       {/* ===== Work Experience ===== */}
       <section className="Experience-section">
         <h2 onClick={() => toggleSection('experience')}>{t[lang].work}</h2>
@@ -912,91 +998,6 @@ function App() {
               details={lang==='ENG' ? ach_ces_ENG : ach_ces_KOR}
               isExpanded={expandedSections.achievements.entries.cesInnovation}
               onClick={() => toggleEntry('achievements', 'cesInnovation')}
-            />
-          </div>
-        )}
-      </section>
-
-      {/* ===== Education ===== */}
-      <section className="Education-section">
-        <h2 onClick={() => toggleSection('education')}>{t[lang].education}</h2>
-        {expandedSections.education.expanded && (
-          <div className="section-content">
-            <Entry
-              title={lang==='ENG' ? "Bachelor of Science in Mathematics and Computer Science" : "수학·컴퓨터과학 학사"}
-              location={lang==='ENG' ? "University of St Andrews, St Andrews, Scotland" : "세인트앤드루스 대학교, 스코틀랜드"}
-              dates={lang==='ENG' ? "Graduated June 2024" : "2024년 6월 졸업"}
-              details={[
-                <div key="dissertation1" className="download-link">
-                  <button
-                    type="button"
-                    onClick={(e) => { e.stopPropagation(); window.open(dissertation1, '_blank', 'noopener'); }}
-                    style={{ background:'transparent', border:0, padding:0, cursor:'pointer' }}
-                  >
-                    <img src={dissImage} alt="Open Dissertation 1" className="download-icon" />
-                  </button>
-                  <span>{lang==='ENG' ? "Computer Science Dissertation" : "컴퓨터과학 학위논문"}</span>
-                </div>,
-                <div key="dissertation2" className="download-link">
-                  <button
-                    type="button"
-                    onClick={(e) => { e.stopPropagation(); window.open(dissertation2, '_blank', 'noopener'); }}
-                    style={{ background:'transparent', border:0, padding:0, cursor:'pointer' }}
-                  >
-                    <img src={dissImage} alt="Open Dissertation 2" className="download-icon" />
-                  </button>
-                  <span>{lang==='ENG' ? "Mathematics Dissertation" : "수학 학위논문"}</span>
-                </div>,
-                <div key="graduation-images" style={{ display:'flex', overflowX:'auto', whiteSpace:'nowrap', gap:'10px', padding:'10px 0' }}>
-                  <img src={dissertationImage1} alt="dissertation1" style={{ height: '400px', borderRadius: '8px' }} />
-                  <img src={dissertationImage2} alt="dissertation2" style={{ height: '400px', borderRadius: '8px' }} />
-                  <img src={degreeImage} alt="Graduation" style={{ height: '400px', borderRadius: '8px' }} />
-                </div>
-              ]}
-              isExpanded={expandedSections.education.entries.degree}
-              onClick={() => toggleEntry('education', 'degree')}
-            />
-
-            <Entry
-              title="[IBM x RedHat] AI Transformation - AX Academy"
-              location="IBM x RedHat"
-              dates={lang==='ENG' ? "April 2025 ~ Present" : "2025.04 ~ 진행중"}
-              details={lang==='ENG'
-                ? [
-                    "Participated in the AI Transformation program hosted by IBM and RedHat under AX Academy.",
-                    "Focused on applying cloud-native technologies and AI-driven solutions for enterprise transformation.",
-                    "Gained practical experience in hybrid cloud, open-source collaboration, and modern AI deployment strategies."
-                  ]
-                : [
-                    "IBM/RedHat 주관 AX Academy의 AI Transformation 프로그램 참여.",
-                    "클라우드 네이티브/AI 솔루션의 엔터프라이즈 적용에 집중.",
-                    "하이브리드 클라우드/오픈소스 협업/현대적 배포 전략 실무 경험."
-                  ]
-              }
-              isExpanded={expandedSections.education.entries.ibmAxAcademy}
-              onClick={() => toggleEntry('education', 'ibmAxAcademy')}
-            />
-
-            <Entry
-              title={lang==='ENG' ? "St Andrews Judo Club / Registered as member of Judo Scotland" : "세인트앤드루스 유도부 / Judo Scotland 등록 회원"}
-              location=""
-              dates=""
-              details={[
-                <div key="judo-images" style={{ display:'flex', overflowX:'auto', whiteSpace:'nowrap', gap:'10px', padding:'10px 0' }}>
-                  <img src={judoImage1} alt="Judo Image 1" style={{ height: '400px', borderRadius: '8px' }} />
-                  <img src={judoImage2} alt="Judo Image 2" style={{ height: '400px', borderRadius: '8px' }} />
-                  <img src={judoImage3} alt="Judo Image 3" style={{ height: '400px', borderRadius: '8px' }} />
-                </div>
-              ]}
-              isExpanded={expandedSections.education.entries.judo}
-              onClick={() => toggleEntry('education', 'judo')}
-            />
-            <Entry
-              title={lang==='ENG' ? "Committee member of St Andrews Korean Society" : "세인트앤드루스 한인회 운영진"}
-              location={lang==='ENG' ? "Treasurer for St Andrews Korean Society" : "한인회 회계 담당"}
-              details={[]}
-              isExpanded={expandedSections.education.entries.society}
-              onClick={() => toggleEntry('education', 'society')}
             />
           </div>
         )}
