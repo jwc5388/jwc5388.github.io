@@ -44,6 +44,11 @@ import quantumImage1 from './assets/images/quantum1.jpeg';
 import quantumImage2 from './assets/images/quantum2.jpeg';
 import quantumImage3 from './assets/images/quantum3.jpeg';
 import quantumImage4 from './assets/images/quantum4.jpeg';
+import daconImage1 from './assets/images/dacon1.png';
+import daconImage2 from './assets/images/dacon2.png';
+import daconImage3 from './assets/images/dacon3.png';
+import daconImage4 from './assets/images/dacon4.png';
+import daconImage5 from './assets/images/dacon5.png';
 import dissertation1 from './assets/files/CSDissertation.pdf';
 import dissertation2 from './assets/files/MathDissertation.pdf';
 import productionapk from './assets/files/cotons-production-gateway.apk';
@@ -448,6 +453,24 @@ function App() {
   ];
 
   // ===== Achievements =====
+  const dacon = (
+    <div key="dacon-images" style={{ display:'flex', overflowX:'auto', whiteSpace:'nowrap', gap:'10px', padding:'10px 0' }}>
+      <img src={daconImage1} alt="Dacon Competition 1" style={{ height: '400px', borderRadius: '8px' }} />
+      <img src={daconImage2} alt="Dacon Competition 2" style={{ height: '400px', borderRadius: '8px' }} />
+      <img src={daconImage3} alt="Dacon Competition 3" style={{ height: '400px', borderRadius: '8px' }} />
+      <img src={daconImage4} alt="Dacon Competition 4" style={{ height: '400px', borderRadius: '8px' }} />
+      <img src={daconImage5} alt="Dacon Competition 5" style={{ height: '400px', borderRadius: '8px' }} />
+    </div>
+  );
+  const ach_dacon_ENG = [
+    'Built a TimeSeriesSplit-based validation and tuning pipeline; applied Optuna for per-model hyperparameter search.',
+    'Improved score via XGBoost · LightGBM · CatBoost stacking with a Ridge meta-learner.',
+  ];
+  const ach_dacon_KOR = [
+    'TimeSeriesSplit 검증/튜닝 파이프라인 구축, Optuna로 모델별 하이퍼파라미터 탐색.',
+    'XGBoost·LightGBM·CatBoost 스태킹 + Ridge 메타러너로 점수 향상.',
+  ];
+
   const ach_quantum_ENG = [
     'Ranked 1st in the qualifying round with a coding-based Fashion-MNIST quantum computing challenge.',
     'Advanced to the finals; awarded the Excellence Prize for innovative application of quantum AI methods.',
@@ -466,15 +489,7 @@ function App() {
     '시드 고정/K-Fold 설계로 재현성·리더보드 안정성 확보.',
   ];
 
-  const ach_dacon_ENG = [
-    'Built a TimeSeriesSplit-based validation and tuning pipeline; applied Optuna for per-model hyperparameter search.',
-    'Improved score via XGBoost · LightGBM · CatBoost stacking with a Ridge meta-learner.',
-  ];
-  const ach_dacon_KOR = [
-    'TimeSeriesSplit 검증/튜닝 파이프라인 구축, Optuna로 모델별 하이퍼파라미터 탐색.',
-    'XGBoost·LightGBM·CatBoost 스태킹 + Ridge 메타러너로 점수 향상.',
-  ];
-
+  
   const ach_ces_ENG = [
     'Led the wearable animal health monitoring project for live demos and partner engagements.',
     'Crafted technical/product storytelling, demo flow, and coordinated global partner meetings.',
@@ -860,16 +875,6 @@ function App() {
         <h2 onClick={() => toggleSection('achievements')}>{t[lang].achievements}</h2>
         {expandedSections.achievements.expanded && (
           <div className="section-content">
-            <Entry
-              title={lang==='ENG'
-                ? "AI Factory Quantum AI – 1st Place in Qualifying Round & Finalist"
-                : "AI Factory Quantum AI – 예선 1위 & 본선 진출"}
-              location={lang==='ENG' ? "Jeonju University, South Korea" : "대한민국 전주대"}
-              dates="August 2025"
-              details={lang==='ENG' ? ach_quantum_ENG : ach_quantum_KOR}
-              isExpanded={expandedSections.achievements.entries.quantumAI}
-              onClick={() => toggleEntry('achievements', 'quantumAI')}
-            />
 
             <Entry
               title={lang==='ENG' ? "2025 Quantum AI Hackathon" : "2025 퀀텀 AI 해커톤"}
@@ -890,7 +895,16 @@ function App() {
             />
 
             <Entry
-              title={lang==='ENG' ? "Dacon Electricity Consumption Forecast – Top 5%" : "Dacon 전력소비량 예측 – 상위 5%"}
+              title={lang==='ENG' ? "Dacon AI Competitions" : "Dacon AI 대회"}
+              location={lang==='ENG' ? "Korea (Online)" : "대한민국 (온라인)"}
+              dates="2025-Present"
+              details={getDetails(ach_dacon_ENG, ach_dacon_KOR, dacon)}
+              isExpanded={expandedSections.engagements.entries.daconCompetitions}
+              onClick={() => toggleEntry('engagements', 'daconCompetitions')}
+            />
+
+            <Entry
+              title={lang==='ENG' ? "Dacon AI Competitions" : "Dacon AI 대회"}
               location={lang==='ENG' ? "Korea (Online)" : "대한민국 (온라인)"}
               dates="2025"
               details={lang==='ENG' ? ach_dacon_ENG : ach_dacon_KOR}
