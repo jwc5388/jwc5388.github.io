@@ -51,8 +51,8 @@ import daconImage4 from './assets/images/dacon4.png';
 import daconImage5 from './assets/images/dacon5.png';
 import dissertation1 from './assets/files/CSDissertation.pdf';
 import dissertation2 from './assets/files/MathDissertation.pdf';
-import dissertationImage1 from './assets/files/dissertation1.png';
-import dissertationImage2 from './assets/files/dissertation2.png';
+import dissertationImage1 from './assets/images/dissertation1.png';
+import dissertationImage2 from './assets/images/dissertation2.png';
 import productionapk from './assets/files/cotons-production-gateway.apk';
 import { FaEnvelope, FaPhone, FaLinkedin } from 'react-icons/fa';
 
