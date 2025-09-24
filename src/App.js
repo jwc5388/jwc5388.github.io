@@ -51,6 +51,8 @@ import daconImage4 from './assets/images/dacon4.png';
 import daconImage5 from './assets/images/dacon5.png';
 import dissertation1 from './assets/files/CSDissertation.pdf';
 import dissertation2 from './assets/files/MathDissertation.pdf';
+import dissertationImage1 from './assets/files/dissertation1.png';
+import dissertationImage2 from './assets/files/dissertation2.png';
 import productionapk from './assets/files/cotons-production-gateway.apk';
 import { FaEnvelope, FaPhone, FaLinkedin } from 'react-icons/fa';
 
@@ -946,6 +948,8 @@ function App() {
                   <span>{lang==='ENG' ? "Mathematics Dissertation" : "수학 학위논문"}</span>
                 </div>,
                 <div key="graduation-images" style={{ display:'flex', overflowX:'auto', whiteSpace:'nowrap', gap:'10px', padding:'10px 0' }}>
+                  <img src={dissertationImage1} alt="dissertation1" style={{ height: '400px', borderRadius: '8px' }} />
+                  <img src={dissertationImage2} alt="dissertation2" style={{ height: '400px', borderRadius: '8px' }} />
                   <img src={degreeImage} alt="Graduation" style={{ height: '400px', borderRadius: '8px' }} />
                 </div>
               ]}
