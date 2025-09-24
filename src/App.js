@@ -913,13 +913,13 @@ function App() {
               details={[
                 <div key="dissertation1" className="download-link">
                   <a href={dissertation1} target="_blank" rel="noopener noreferrer">
-                    <img src={dissImage} alt="Download Dissertation 1" className="download-icon" />
+                    <img src={dissImage} alt="View Dissertation 1" className="download-icon" />
                   </a>
                   <span>{lang==='ENG' ? "Computer Science Dissertation" : "컴퓨터과학 학위논문"}</span>
                 </div>,
                 <div key="dissertation2" className="download-link">
                   <a href={dissertation2} target="_blank" rel="noopener noreferrer">
-                    <img src={dissImage} alt="Download Dissertation 2" className="download-icon" />
+                    <img src={dissImage} alt="View Dissertation 2" className="download-icon" />
                   </a>
                   <span>{lang==='ENG' ? "Mathematics Dissertation" : "수학 학위논문"}</span>
                 </div>,
