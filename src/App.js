@@ -897,19 +897,10 @@ function App() {
             <Entry
               title={lang==='ENG' ? "Dacon AI Competitions" : "Dacon AI 대회"}
               location={lang==='ENG' ? "Korea (Online)" : "대한민국 (온라인)"}
-              dates="2025-Present"
+              dates="May 2025-Present"
               details={getDetails(ach_dacon_ENG, ach_dacon_KOR, dacon)}
               isExpanded={expandedSections.engagements.entries.daconCompetitions}
               onClick={() => toggleEntry('engagements', 'daconCompetitions')}
-            />
-
-            <Entry
-              title={lang==='ENG' ? "Dacon AI Competitions" : "Dacon AI 대회"}
-              location={lang==='ENG' ? "Korea (Online)" : "대한민국 (온라인)"}
-              dates="2025"
-              details={lang==='ENG' ? ach_dacon_ENG : ach_dacon_KOR}
-              isExpanded={expandedSections.achievements.entries.daconTop5}
-              onClick={() => toggleEntry('achievements', 'daconTop5')}
             />
 
             <Entry
