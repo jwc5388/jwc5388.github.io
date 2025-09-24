@@ -585,16 +585,20 @@ function App() {
         <h1>{t[lang].headerTitle}</h1>
 
         {/* Language Toggle */}
-        <div style={{ display:'flex', alignItems:'center', gap:8, margin:'6px 0 10px' }}>
+        <div className="lang-toggle" aria-label="Language toggle" style={{ margin:'6px 0 10px' }}>
+          <div
+            className="lang-indicator"
+            style={{ transform: `translateX(${lang === 'ENG' ? '0' : '100%'})` }}
+          />
           <button
-            onClick={()=>setLang('ENG')}
-            style={{ padding:'6px 10px', borderRadius:8, border:'1px solid #ddd', background: lang==='ENG' ? '#eef3ff' : '#fff' }}
+            className={`lang-btn ${lang === 'ENG' ? 'active' : ''}`}
+            onClick={() => setLang('ENG')}
           >
             ENG
           </button>
           <button
-            onClick={()=>setLang('KOR')}
-            style={{ padding:'6px 10px', borderRadius:8, border:'1px solid #ddd', background: lang==='KOR' ? '#eef3ff' : '#fff' }}
+            className={`lang-btn ${lang === 'KOR' ? 'active' : ''}`}
+            onClick={() => setLang('KOR')}
           >
             KOR
           </button>

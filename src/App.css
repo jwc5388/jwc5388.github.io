@@ -192,3 +192,47 @@ section {
   .skill-icon{width:20px;height:20px;}
   .skill-label{font-size:.92rem;}
 }
+
+
+/* ---- Language Toggle (ENG/KOR) ---- */
+.lang-toggle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  border: 1px solid #e5e7eb;
+  border-radius: 9999px;
+  padding: 4px;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+}
+
+.lang-btn {
+  position: relative;
+  z-index: 1;
+  font-size: 12px;
+  line-height: 1;
+  padding: 8px 14px;
+  border: 0;
+  background: transparent;
+  border-radius: 9999px;
+  color: #111827;
+  cursor: pointer;
+  transition: color .2s ease;
+}
+
+.lang-btn:hover { color: #000; }
+.lang-btn:focus-visible { outline: 2px solid #3b82f6; outline-offset: 2px; }
+
+/* 활성 하이라이트 배경 (슬라이더) */
+.lang-indicator {
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  width: calc(50% - 4px); /* 탭 2개 기준 */
+  border-radius: 9999px;
+  background: #111827;
+  transition: transform .25s ease;
+}
+
+.lang-btn.active { color: #fff; }
