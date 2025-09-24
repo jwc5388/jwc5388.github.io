@@ -912,15 +912,23 @@ function App() {
               dates={lang==='ENG' ? "Graduated June 2024" : "2024년 6월 졸업"}
               details={[
                 <div key="dissertation1" className="download-link">
-                  <a href={dissertation1} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
-                    <img src={dissImage} alt="View Dissertation 1" className="download-icon" />
-                  </a>
+                  <button
+                    type="button"
+                    onClick={(e) => { e.stopPropagation(); window.open(dissertation1, '_blank', 'noopener'); }}
+                    style={{ background:'transparent', border:0, padding:0, cursor:'pointer' }}
+                  >
+                    <img src={dissImage} alt="Open Dissertation 1" className="download-icon" />
+                  </button>
                   <span>{lang==='ENG' ? "Computer Science Dissertation" : "컴퓨터과학 학위논문"}</span>
                 </div>,
                 <div key="dissertation2" className="download-link">
-                  <a href={dissertation2} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
-                    <img src={dissImage} alt="View Dissertation 2" className="download-icon" />
-                  </a>
+                  <button
+                    type="button"
+                    onClick={(e) => { e.stopPropagation(); window.open(dissertation2, '_blank', 'noopener'); }}
+                    style={{ background:'transparent', border:0, padding:0, cursor:'pointer' }}
+                  >
+                    <img src={dissImage} alt="Open Dissertation 2" className="download-icon" />
+                  </button>
                   <span>{lang==='ENG' ? "Mathematics Dissertation" : "수학 학위논문"}</span>
                 </div>,
                 <div key="graduation-images" style={{ display:'flex', overflowX:'auto', whiteSpace:'nowrap', gap:'10px', padding:'10px 0' }}>
