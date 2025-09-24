@@ -49,6 +49,7 @@ import daconImage2 from './assets/images/dacon2.png';
 import daconImage3 from './assets/images/dacon3.png';
 import daconImage4 from './assets/images/dacon4.png';
 import daconImage5 from './assets/images/dacon5.png';
+import hackathon1 from './assets/images/hackathon1.png';
 import dissertation1 from './assets/files/CSDissertation.pdf';
 import dissertation2 from './assets/files/MathDissertation.pdf';
 import dissertationImage1 from './assets/images/dissertation1.png';
@@ -280,10 +281,7 @@ function App() {
 
   const quantum_media = (
     <div key="quantum-images" style={{ display:'flex', overflowX:'auto', whiteSpace:'nowrap', gap:'10px', padding:'10px 0' }}>
-      <img src={quantumImage4} alt="Quantum AI Hackathon 4" style={{ height: '400px', borderRadius: '8px' }} />
-      <img src={quantumImage1} alt="Quantum AI Hackathon 1" style={{ height: '400px', borderRadius: '8px' }} />
-      <img src={quantumImage2} alt="Quantum AI Hackathon 2" style={{ height: '400px', borderRadius: '8px' }} />
-      <img src={quantumImage3} alt="Quantum AI Hackathon 3" style={{ height: '400px', borderRadius: '8px' }} />
+      <img src={hackathon1} alt="K-Digital AI Hackathon 1" style={{ height: '400px', borderRadius: '8px' }} />
     </div>
   );
   const quantum_ENG = [
@@ -471,6 +469,29 @@ function App() {
   const ach_dacon_KOR = [
     'TimeSeriesSplit 검증/튜닝 파이프라인 구축, Optuna로 모델별 하이퍼파라미터 탐색.',
     'XGBoost·LightGBM·CatBoost 스태킹 + Ridge 메타러너로 점수 향상.',
+  ];
+
+  const hackathon_media = (
+    <div key="quantum-images" style={{ display:'flex', overflowX:'auto', whiteSpace:'nowrap', gap:'10px', padding:'10px 0' }}>
+      <img src={quantumImage4} alt="Quantum AI Hackathon 4" style={{ height: '400px', borderRadius: '8px' }} />
+      <img src={quantumImage1} alt="Quantum AI Hackathon 1" style={{ height: '400px', borderRadius: '8px' }} />
+      <img src={quantumImage2} alt="Quantum AI Hackathon 2" style={{ height: '400px', borderRadius: '8px' }} />
+      <img src={quantumImage3} alt="Quantum AI Hackathon 3" style={{ height: '400px', borderRadius: '8px' }} />
+    </div>
+  );
+  const hackathon_ENG = [
+    "Qualified for the finals by ranking 1st place in the AI Factory preliminary competition, solving a Fashion-MNIST quantum computing challenge through coding.",
+    "Participated in a 1-night, 2-day hackathon focused on Quantum Computing and Artificial Intelligence.",
+    "Competed in advanced problem-solving sessions combining quantum algorithms with AI-driven approaches.",
+    "Awarded the Excellence Prize (우수상) for innovative application of quantum AI methods.",
+    "Collaborated with peers to explore practical use cases of quantum machine learning and optimization.",
+  ];
+  const hackathon_KOR = [
+    "AI Factory 예선(패션-MNIST 양자 과제) 1위로 본선 진출.",
+    "양자컴퓨팅·AI 주제의 1박 2일 해커톤 참가.",
+    "양자 알고리즘과 AI 접근을 결합한 고난도 문제 해결 세션 수행.",
+    "양자 AI 응용의 혁신성으로 우수상 수상.",
+    "동료들과 양자 ML/최적화의 실사용 사례를 탐구.",
   ];
 
   const ach_quantum_ENG = [
@@ -969,6 +990,16 @@ function App() {
               location={lang==='ENG' ? "Jeonju University, South Korea" : "대한민국 전주대"}
               dates="August 18-19, 2025"
               details={getDetails(quantum_ENG, quantum_KOR, quantum_media)}
+              isExpanded={expandedSections.engagements.entries.quantumAIHackathon}
+              onClick={() => toggleEntry('engagements', 'quantumAIHackathon')}
+            />
+
+
+            <Entry
+              title={lang==='ENG' ? "2025 K-Digital Training AI Hackathon" : "2025 K-디지털 트레이닝 AI 해커톤"}
+              location={lang==='ENG' ? "Jeonju University, South Korea" : "대한민국 전주대"}
+              dates="August 18-19, 2025"
+              details={getDetails(hackathon_ENG, hackathon_KOR, hackathon_media)}
               isExpanded={expandedSections.engagements.entries.quantumAIHackathon}
               onClick={() => toggleEntry('engagements', 'quantumAIHackathon')}
             />
