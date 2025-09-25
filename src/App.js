@@ -50,6 +50,10 @@ import daconImage3 from './assets/images/dacon3.png';
 import daconImage4 from './assets/images/dacon4.png';
 import daconImage5 from './assets/images/dacon5.png';
 import hackathon1 from './assets/images/hackathon1.png';
+import hackathon2 from './assets/images/hackathon2.png';
+import hackathon3 from './assets/images/hackathon3.png';
+import hackathon4 from './assets/images/hackathon4.png';
+import hackathon5 from './assets/images/hackathon5.png';
 import dissertation1 from './assets/files/CSDissertation.pdf';
 import dissertation2 from './assets/files/MathDissertation.pdf';
 import dissertationImage1 from './assets/images/dissertation1.png';
@@ -283,6 +287,10 @@ function App() {
   const hackathon_media = (
     <div key="hackathon-images" style={{ display:'flex', overflowX:'auto', whiteSpace:'nowrap', gap:'10px', padding:'10px 0' }}>
       <img src={hackathon1} alt="K-Digital Training AI Hackathon" style={{ height: '400px', borderRadius: '8px' }} />
+      <img src={hackathon2} alt="K-Digital Training AI Hackathon" style={{ height: '400px', borderRadius: '8px' }} />
+      <img src={hackathon3} alt="K-Digital Training AI Hackathon" style={{ height: '400px', borderRadius: '8px' }} />
+      <img src={hackathon4} alt="K-Digital Training AI Hackathon" style={{ height: '400px', borderRadius: '8px' }} />
+      <img src={hackathon5} alt="K-Digital Training AI Hackathon" style={{ height: '400px', borderRadius: '8px' }} />
     </div>
   );
 
@@ -1001,7 +1009,7 @@ function App() {
             <Entry
               title={lang==='ENG' ? "2025 K-Digital Training AI Hackathon" : "2025 K-디지털 트레이닝 AI 해커톤"}
               location={lang==='ENG' ? "South Korea" : "대한민국"}
-              dates="2025"
+              dates="August 2025"
               details={getDetails(hackathon_ENG, hackathon_KOR, hackathon_media)}
               isExpanded={expandedSections.engagements.entries.kdigitalHackathon}
               onClick={() => toggleEntry('engagements', 'kdigitalHackathon')}
