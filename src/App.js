@@ -279,24 +279,27 @@ function App() {
     '글로벌 테크 리더들과 네트워킹을 통해 헬스케어 한계 확장.',
   ];
 
-  const quantum_media = (
-    <div key="quantum-images" style={{ display:'flex', overflowX:'auto', whiteSpace:'nowrap', gap:'10px', padding:'10px 0' }}>
-      <img src={hackathon1} alt="K-Digital AI Hackathon 1" style={{ height: '400px', borderRadius: '8px' }} />
+  // --- Hackathon section (updated) ---
+  const hackathon_media = (
+    <div key="hackathon-images" style={{ display:'flex', overflowX:'auto', whiteSpace:'nowrap', gap:'10px', padding:'10px 0' }}>
+      <img src={hackathon1} alt="K-Digital Training AI Hackathon" style={{ height: '400px', borderRadius: '8px' }} />
     </div>
   );
-  const quantum_ENG = [
-    "Qualified for the finals by ranking 1st place in the AI Factory preliminary competition, solving a Fashion-MNIST quantum computing challenge through coding.",
-    "Participated in a 1-night, 2-day hackathon focused on Quantum Computing and Artificial Intelligence.",
-    "Competed in advanced problem-solving sessions combining quantum algorithms with AI-driven approaches.",
-    "Awarded the Excellence Prize (우수상) for innovative application of quantum AI methods.",
-    "Collaborated with peers to explore practical use cases of quantum machine learning and optimization.",
+
+  const hackathon_ENG = [
+    "K-Digital Training AI Hackathon – built a reckless-driving detection system (dashcam video).",
+    "Used YOLOv8 (Ultralytics) with custom weight training; post-processing tracked object trajectories to classify behaviors.",
+    "Behaviors detected: aggressive cut-in (unsafe lane insertion), hard braking/deceleration, overspeeding, etc.",
+    "Mobile app flow: plate number, location, and offense type are auto-filled from inference; user adds details and submits a report.",
+    "Advanced to the finals (finalist), eliminated in the grand final.",
   ];
-  const quantum_KOR = [
-    "AI Factory 예선(패션-MNIST 양자 과제) 1위로 본선 진출.",
-    "양자컴퓨팅·AI 주제의 1박 2일 해커톤 참가.",
-    "양자 알고리즘과 AI 접근을 결합한 고난도 문제 해결 세션 수행.",
-    "양자 AI 응용의 혁신성으로 우수상 수상.",
-    "동료들과 양자 ML/최적화의 실사용 사례를 탐구.",
+
+  const hackathon_KOR = [
+    "K-디지털 트레이닝 AI 해커톤 – 대시캠 영상 기반 ‘난폭운전 감지 시스템’ 개발.",
+    "YOLOv8(Ultralytics) 모델 가중치 학습 후, 후처리에서 트래킹 궤적·속도·가감속 특성으로 행위 분류.",
+    "탐지 항목: 무리한 끼어들기, 급정지/급제동, 과속 등 난폭운전 유형.",
+    "앱 연동: 차량번호·위치·위반유형을 자동 추출해 포맷에 채워주고, 사용자가 상세 입력 후 신고 제출 가능.",
+    "본선 진출, 결선 탈락.",
   ];
 
   // ===== Projects – Main =====
@@ -471,7 +474,7 @@ function App() {
     'XGBoost·LightGBM·CatBoost 스태킹 + Ridge 메타러너로 점수 향상.',
   ];
 
-  const hackathon_media = (
+  const quantum_media = (
     <div key="quantum-images" style={{ display:'flex', overflowX:'auto', whiteSpace:'nowrap', gap:'10px', padding:'10px 0' }}>
       <img src={quantumImage4} alt="Quantum AI Hackathon 4" style={{ height: '400px', borderRadius: '8px' }} />
       <img src={quantumImage1} alt="Quantum AI Hackathon 1" style={{ height: '400px', borderRadius: '8px' }} />
@@ -479,14 +482,14 @@ function App() {
       <img src={quantumImage3} alt="Quantum AI Hackathon 3" style={{ height: '400px', borderRadius: '8px' }} />
     </div>
   );
-  const hackathon_ENG = [
+  const quantum_ENG = [
     "Qualified for the finals by ranking 1st place in the AI Factory preliminary competition, solving a Fashion-MNIST quantum computing challenge through coding.",
     "Participated in a 1-night, 2-day hackathon focused on Quantum Computing and Artificial Intelligence.",
     "Competed in advanced problem-solving sessions combining quantum algorithms with AI-driven approaches.",
     "Awarded the Excellence Prize (우수상) for innovative application of quantum AI methods.",
     "Collaborated with peers to explore practical use cases of quantum machine learning and optimization.",
   ];
-  const hackathon_KOR = [
+  const quantum_KOR = [
     "AI Factory 예선(패션-MNIST 양자 과제) 1위로 본선 진출.",
     "양자컴퓨팅·AI 주제의 1박 2일 해커톤 참가.",
     "양자 알고리즘과 AI 접근을 결합한 고난도 문제 해결 세션 수행.",
