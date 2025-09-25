@@ -1000,8 +1000,8 @@ function App() {
 
             <Entry
               title={lang==='ENG' ? "2025 K-Digital Training AI Hackathon" : "2025 K-디지털 트레이닝 AI 해커톤"}
-              location={lang==='ENG' ? "Jeonju University, South Korea" : "대한민국 전주대"}
-              dates="August 18-19, 2025"
+              location={lang==='ENG' ? "South Korea" : "대한민국"}
+              dates="2025"
               details={getDetails(hackathon_ENG, hackathon_KOR, hackathon_media)}
               isExpanded={expandedSections.engagements.entries.quantumAIHackathon}
               onClick={() => toggleEntry('engagements', 'quantumAIHackathon')}
