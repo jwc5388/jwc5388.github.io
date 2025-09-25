@@ -1004,7 +1004,7 @@ function App() {
               dates="2025"
               details={getDetails(hackathon_ENG, hackathon_KOR, hackathon_media)}
               isExpanded={expandedSections.engagements.entries.kdigitalHackathon}
-              onClick={() => toggleEntry('engagements', 'quantumAIHackathon')}
+              onClick={() => toggleEntry('engagements', 'kdigitalHackathon')}
             />
 
             <Entry
