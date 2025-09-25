@@ -54,6 +54,7 @@ import hackathon2 from './assets/images/hackathon2.png';
 import hackathon3 from './assets/images/hackathon3.png';
 import hackathon4 from './assets/images/hackathon4.png';
 import hackathon5 from './assets/images/hackathon5.png';
+import ibmImage1 from './assets/images/ibmImage1.png';
 import dissertation1 from './assets/files/CSDissertation.pdf';
 import dissertation2 from './assets/files/MathDissertation.pdf';
 import dissertationImage1 from './assets/images/dissertation1.png';
@@ -733,22 +734,27 @@ function App() {
               title="[IBM x RedHat] AI Transformation - AX Academy"
               location="IBM x RedHat"
               dates={lang==='ENG' ? "April 2025 ~ Present" : "2025.04 ~ 진행중"}
-              details={lang==='ENG'
-                ? [
-                    "Participated in the AI Transformation program hosted by IBM and RedHat under AX Academy.",
-                    "Focused on applying cloud-native technologies and AI-driven solutions for enterprise transformation.",
-                    "Gained practical experience in hybrid cloud, open-source collaboration, and modern AI deployment strategies."
-                  ]
-                : [
-                    "IBM/RedHat 주관 AX Academy의 AI Transformation 프로그램 참여.",
-                    "클라우드 네이티브/AI 솔루션의 엔터프라이즈 적용에 집중.",
-                    "하이브리드 클라우드/오픈소스 협업/현대적 배포 전략 실무 경험."
-                  ]
-              }
+              details={[
+                ...(lang==='ENG'
+                  ? [  
+                      "Participated in the AI Transformation program hosted by IBM and RedHat under AX Academy.",
+                      "Focused on applying cloud-native technologies and AI-driven solutions for enterprise transformation.",
+                      "Gained practical experience in hybrid cloud, open-source collaboration, and modern AI deployment strategies."
+                    ]
+                  : [
+                      "IBM/RedHat 주관 AX Academy의 AI Transformation 프로그램 참여.",
+                      "클라우드 네이티브/AI 솔루션의 엔터프라이즈 적용에 집중.",
+                      "하이브리드 클라우드/오픈소스 협업/현대적 배포 전략 실무 경험."
+                    ]),
+                // ⬇️ 여기에 이미지 블록 추가
+                <div key="ibm-images" style={{ display:'flex', overflowX:'auto', whiteSpace:'nowrap', gap:'10px', padding:'10px 0' }}>
+                  <img src={ibmImage1} alt="IBM x RedHat 1" style={{ height: '400px', borderRadius: '8px' }} />
+                  {/* <img src={ibmImage2} alt="IBM x RedHat 2" style={{ height: '400px', borderRadius: '8px' }} /> */}
+                </div>
+              ]}
               isExpanded={expandedSections.education.entries.ibmAxAcademy}
               onClick={() => toggleEntry('education', 'ibmAxAcademy')}
             />
-
             <Entry
               title={lang==='ENG' ? "St Andrews Judo Club / Registered as member of Judo Scotland" : "세인트앤드루스 유도부 / Judo Scotland 등록 회원"}
               location=""
