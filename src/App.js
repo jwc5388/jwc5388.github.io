@@ -342,18 +342,25 @@ function App() {
   ];
 
   const law_ENG = [
-    "Developing a Law AI Assistant that leverages LLM (Large Language Models) with Retrieval-Augmented Generation (RAG).",
-    "Implementing prompt engineering techniques to improve response accuracy and context awareness in legal queries.",
-    "Exploring fine-tuning strategies on Korean law corpora to align the assistant with domain-specific terminology and reasoning.",
-    "Designing a pipeline that integrates legal document chunking, vector embeddings, and FAISS-based semantic search.",
-    "Building a robust evaluation framework to measure factual consistency, legal validity, and user trust in AI-generated responses."
+  "Developing a Law AI Assistant that leverages LLM (Large Language Models) with Retrieval-Augmented Generation (RAG).",
+  "Implementing advanced prompt engineering techniques (zero-shot, few-shot, role-based, CoT) to improve response accuracy and context awareness in legal queries.",
+  "Optimizing through high-quality preprocessing: cleaning, normalizing, and chunking legal texts to align the assistant with domain-specific terminology and reasoning.",
+  "Designing a pipeline that integrates legal document chunking, vector embeddings, and FAISS-based semantic search.",
+  "Building a robust evaluation framework to measure factual consistency, legal validity, and user trust in AI-generated responses.",
+  "Advanced prompting to upgrade legal intelligent research and strategy simulation: Chain-of-Thought (CoT) for step-wise reasoning; Role-based prompting (plaintiff, defendant, bench) for strategic simulations; ReAct (Reason + Act) to alternate retrieval and reasoning.",
+  "Iterative RAG workflow: statutes/precedents retrieval → structured reasoning → follow-up retrieval → conclusion with explicit citations.",
+  "Primary data provenance: full-text Korean statutes and precedents approved for use from the National Law Information System (Korea), extracted and normalized into a clean text corpus."
   ];
+
   const law_KOR = [
     "RAG 기반 LLM을 활용한 법률 AI 어시스턴트 개발.",
-    "법률 질의의 정확도/맥락 인지를 높이기 위한 프롬프트 엔지니어링.",
-    "한국어 법률 코퍼스 미세튜닝 전략 탐색(도메인 용어·추론 정렬).",
+    "제로샷·퓨샷·역할 기반·CoT 등 고급 프롬프트 엔지니어링을 적용하여 법률 질의의 정확도와 맥락 인지 향상.",
+    "법령 텍스트를 정제·정규화·청킹하여 도메인 특화 용어와 추론 방식에 맞춘 고품질 전처리로 성능 최적화.",
     "문서 청킹/임베딩/FAISS 시맨틱 검색 파이프라인 설계.",
-    "사실 일치성·법적 타당성·신뢰도 평가 프레임워크 구축."
+    "사실 일치성·법적 타당성·신뢰도 평가 프레임워크 구축.",
+    "추론 강화(CoT)·역할 기반 프롬프팅(원고·피고·재판부)·ReAct(검색과 추론의 교대)를 적용하여 법률 지능형 리서치와 전략 시뮬레이션을 고도화.",
+    "RAG 반복 흐름: 법령/판례 검색 → 구조화된 추론 → 추가 검색 → 근거(출처) 명시 결론 도출.",
+    "데이터 출처: 국가법령정보시스템 승인 후 법령/판례 본문을 텍스트로 추출·정규화하여 코퍼스로 구축."
   ];
 
   const therapy_ENG = [
@@ -927,14 +934,14 @@ function App() {
               onClick={() => toggleEntry('projects', 'lawIntelligence')}
             />
 
-            <Entry
+            {/* <Entry
               title="[IBM x RedHat] Therapy-Intelligence"
               location={lang==='ENG' ? "IBM x RedHat Innovation Project" : "IBM x RedHat 이노베이션 프로젝트"}
               dates={lang==='ENG' ? "2025 ~ Present" : "2025 ~ 진행중"}
               details={lang==='ENG' ? therapy_ENG : therapy_KOR}
               isExpanded={expandedSections.projects.entries.therapyIntelligence}
               onClick={() => toggleEntry('projects', 'therapyIntelligence')}
-            />
+            /> */}
 
             {/* Other Projects – 클릭으로 펼침 */}
             <h3
