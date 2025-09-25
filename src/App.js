@@ -566,7 +566,7 @@ function App() {
         { Icon: SiPandas, label: "Pandas" },
         { Icon: SiOpenai, label: "Large Language Models (LLM)" },
       ]},
-      { title: "Programming", items: [
+      { title: "Programming Language", items: [
         { Icon: SiPython, label: "Python" },
         { Icon: FaJava, label: "Java" },
         { Icon: SiJavascript, label: "JavaScript" },
@@ -574,7 +574,7 @@ function App() {
         { Icon: SiKotlin, label: "Kotlin" },
         { Icon: SiDart, label: "Dart" },
       ]},
-      { title: "App / Web", items: [
+      { title: "App / Web Framework", items: [
         { Icon: SiReact, label: "React" },
         { Icon: SiFlutter, label: "Flutter" },
       ]},
@@ -586,9 +586,7 @@ function App() {
       { title: "Workflow & Tools", items: [
         { Icon: SiGit, label: "Git" },
         { Icon: SiJira, label: "Jira" },
-        { Icon: SiConfluence, label: "Confluence" },
         { Icon: SiSlack, label: "Slack" },
-        { Icon: SiAdobeillustrator, label: "Adobe Illustrator" },
         { Icon: SiFigma, label: "Figma" },
       ]},
       { title: "Languages", items: [
@@ -605,7 +603,7 @@ function App() {
         { Icon: SiPandas, label: "Pandas" },
         { Icon: SiOpenai, label: "대형 언어모델 (LLM)" },
       ]},
-      { title: "프로그래밍", items: [
+      { title: "프로그래밍 언어", items: [
         { Icon: SiPython, label: "Python" },
         { Icon: FaJava, label: "Java" },
         { Icon: SiJavascript, label: "JavaScript" },
@@ -613,7 +611,7 @@ function App() {
         { Icon: SiKotlin, label: "Kotlin" },
         { Icon: SiDart, label: "Dart" },
       ]},
-      { title: "앱 / 웹", items: [
+      { title: "앱 / 웹 프레임워크", items: [
         { Icon: SiReact, label: "React" },
         { Icon: SiFlutter, label: "Flutter" },
       ]},
@@ -625,9 +623,7 @@ function App() {
       { title: "워크플로 & 도구", items: [
         { Icon: SiGit, label: "Git" },
         { Icon: SiJira, label: "Jira" },
-        { Icon: SiConfluence, label: "Confluence" },
         { Icon: SiSlack, label: "Slack" },
-        { Icon: SiAdobeillustrator, label: "Adobe Illustrator" },
         { Icon: SiFigma, label: "Figma" },
       ]},
       { title: "언어", items: [
