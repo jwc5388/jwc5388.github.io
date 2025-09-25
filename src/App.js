@@ -60,7 +60,7 @@ import dissertation2 from './assets/files/MathDissertation.pdf';
 import dissertationImage1 from './assets/images/dissertation1.png';
 import dissertationImage2 from './assets/images/dissertation2.png';
 import productionapk from './assets/files/cotons-production-gateway.apk';
-import { FaEnvelope, FaPhone, FaLinkedin } from 'react-icons/fa';
+import { FaEnvelope, FaPhone, FaLinkedin, FaGithub } from 'react-icons/fa';
 
 // ===== 스킬 아이콘 =====
 import {
@@ -80,7 +80,7 @@ function App() {
   const [lang, setLang] = useState('ENG'); // 'ENG' | 'KOR'
   const t = {
     ENG: {
-      headerTitle: "Jae Woo Chang's Portfolio!!!!!",
+      headerTitle: "Jae Woo Chang's Portfolio",
       work: "Work Experience",
       engagements: "Professional Engagements",
       projects: "Project Engagements",
@@ -668,6 +668,9 @@ function App() {
           </a>
           <a href="tel:+821074465388" aria-label="Phone">
             <FaPhone size={30} style={{ margin: '0 15px', color: '#000' }} />
+          </a>
+          <a href="https://github.com/jwc5388" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <FaGithub size={30} style={{ margin: '0 15px', color: '#000' }} />
           </a>
           <a href="https://www.linkedin.com/in/jwcbillion33" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
             <FaLinkedin size={30} style={{ margin: '0 15px', color: '#000' }} />
