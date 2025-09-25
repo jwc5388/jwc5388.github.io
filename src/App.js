@@ -69,7 +69,7 @@ import {
   SiPytorch, SiTensorflow, SiKeras, SiNumpy, SiPandas,
   SiMysql, SiMongodb, SiPostgresql,
   SiGit, SiJira, SiConfluence, SiSlack,
-  SiFigma, SiAdobeillustrator
+  SiFigma, SiAdobeillustrator, SiOpenai
 } from 'react-icons/si';
 
 import { FaJava } from 'react-icons/fa';
@@ -564,6 +564,7 @@ function App() {
         { Icon: SiKeras, label: "Keras" },
         { Icon: SiNumpy, label: "NumPy" },
         { Icon: SiPandas, label: "Pandas" },
+        { Icon: SiOpenai, label: "Large Language Models (LLM)" },
       ]},
       { title: "Programming", items: [
         { Icon: SiPython, label: "Python" },
@@ -602,6 +603,7 @@ function App() {
         { Icon: SiKeras, label: "Keras" },
         { Icon: SiNumpy, label: "NumPy" },
         { Icon: SiPandas, label: "Pandas" },
+        { Icon: SiOpenai, label: "대형 언어모델 (LLM)" },
       ]},
       { title: "프로그래밍", items: [
         { Icon: SiPython, label: "Python" },
