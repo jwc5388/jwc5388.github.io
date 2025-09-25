@@ -69,7 +69,7 @@ import {
   SiPytorch, SiTensorflow, SiKeras, SiNumpy, SiPandas,
   SiMysql, SiMongodb, SiPostgresql,
   SiGit, SiJira, SiConfluence, SiSlack,
-  SiFigma, SiAdobeillustrator, SiOpenai
+  SiFigma, SiAdobeillustrator, SiOpenai, SiDocker
 } from 'react-icons/si';
 
 import { FaJava } from 'react-icons/fa';
@@ -591,6 +591,7 @@ function App() {
         { Icon: SiJira, label: "Jira" },
         { Icon: SiSlack, label: "Slack" },
         { Icon: SiFigma, label: "Figma" },
+        { Icon: SiDocker, label: "Docker" } 
       ]},
       { title: "Languages", items: [
         { Icon: SiJavascript, label: "English (Native)" },
@@ -628,6 +629,7 @@ function App() {
         { Icon: SiJira, label: "Jira" },
         { Icon: SiSlack, label: "Slack" },
         { Icon: SiFigma, label: "Figma" },
+        { Icon: SiDocker, label: "Docker" }
       ]},
       { title: "언어", items: [
         { Icon: SiJavascript, label: "영어 (원어민)" },
