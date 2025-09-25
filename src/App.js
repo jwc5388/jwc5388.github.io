@@ -1050,14 +1050,14 @@ function App() {
               onClick={() => toggleEntry('engagements', 'daconCompetitions')}
             />
 
-            <Entry
+            {/* <Entry
               title={lang==='ENG' ? "CES Innovation Awards – Project Lead Participation" : "CES Innovation Awards – 프로젝트 리드 참여"}
               location={lang==='ENG' ? "Las Vegas, USA" : "미국 라스베이거스"}
               dates="2025"
               details={lang==='ENG' ? ach_ces_ENG : ach_ces_KOR}
               isExpanded={expandedSections.achievements.entries.cesInnovation}
               onClick={() => toggleEntry('achievements', 'cesInnovation')}
-            />
+            /> */}
           </div>
         )}
       </section>
