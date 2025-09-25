@@ -482,12 +482,15 @@ function App() {
     </div>
   );
   const ach_dacon_ENG = [
-    'Built a TimeSeriesSplit-based validation and tuning pipeline; applied Optuna for per-model hyperparameter search.',
-    'Improved score via XGBoost · LightGBM · CatBoost stacking with a Ridge meta-learner.',
+    "Actively participated in multiple Dacon competitions covering both structured and unstructured datasets.",
+    "Gained hands-on experience with diverse machine learning models including DNN, CNN, and RNN across different problem domains.",
+    "Explored LLM applications by joining prompt engineering–focused competitions."
   ];
+
   const ach_dacon_KOR = [
-    'TimeSeriesSplit 검증/튜닝 파이프라인 구축, Optuna로 모델별 하이퍼파라미터 탐색.',
-    'XGBoost·LightGBM·CatBoost 스태킹 + Ridge 메타러너로 점수 향상.',
+    "정형·비정형 데이터를 아우르는 다수의 Dacon 대회에 적극 참여.",
+    "DNN, CNN, RNN 등 다양한 머신러닝 모델을 활용하며 여러 문제 영역을 경험.",
+    "LLM 프롬프트 엔지니어링 대회에도 참가하여 활용 가능성을 탐구."
   ];
 
   const quantum_media = (
