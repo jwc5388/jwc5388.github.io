@@ -680,9 +680,9 @@ function App() {
         {expandedSections.education.expanded && (
           <div className="section-content">
             <Entry
-              title={lang==='ENG' ? "Bachelor of Science in Mathematics and Computer Science" : "수학·컴퓨터과학 학사"}
-              location={lang==='ENG' ? "University of St Andrews, St Andrews, Scotland" : "세인트앤드루스 대학교, 스코틀랜드"}
-              dates={lang==='ENG' ? "Graduated June 2024" : "2024년 6월 졸업"}
+              title={lang==='ENG' ? "University of St Andrews, St Andrews, Scotland" : "세인트앤드루스 대학교, 스코틀랜드"}
+              location={lang==='ENG' ? "Bachelor of Science in Mathematics and Computer Science" : "수학·컴퓨터과학 학사"}
+              dates={lang==='ENG' ? "September 2019 - June 2024" : "2019년 9월 - 2024년 6월"}
               details={[
                 <div key="dissertation1" className="download-link">
                   <button
