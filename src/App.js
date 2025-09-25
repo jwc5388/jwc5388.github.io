@@ -1015,14 +1015,14 @@ function App() {
               onClick={() => toggleEntry('engagements', 'kdigitalHackathon')}
             />
 
-            <Entry
+            {/* <Entry
               title={lang==='ENG' ? "Kaggle Competition – Top 3%" : "Kaggle Competition – 상위 3%"}
               location="Global (Online)"
               dates="2024"
               details={lang==='ENG' ? ach_kaggle_ENG : ach_kaggle_KOR}
               isExpanded={expandedSections.achievements.entries.kaggleTop3}
               onClick={() => toggleEntry('achievements', 'kaggleTop3')}
-            />
+            /> */}
 
             <Entry
               title={lang==='ENG' ? "Dacon AI Competitions" : "Dacon AI 대회"}
