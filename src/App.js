@@ -343,21 +343,21 @@ function App() {
   ];
 
   const law_ENG = [
-  "Developing a Law AI Assistant that leverages LLM (Large Language Models) with Retrieval-Augmented Generation (RAG).",
-  "Implementing advanced prompt engineering techniques (zero-shot, few-shot, role-based, CoT) to improve response accuracy and context awareness in legal queries.",
-  "Optimizing through high-quality preprocessing: cleaning, normalizing, and chunking legal texts to align the assistant with domain-specific terminology and reasoning.",
-  "Designing a pipeline that integrates legal document chunking, vector embeddings, and FAISS-based semantic search.",
-  "Building a robust evaluation framework to measure factual consistency, legal validity, and user trust in AI-generated responses.",
-  "Advanced prompting to upgrade legal intelligent research and strategy simulation: Chain-of-Thought (CoT) for step-wise reasoning; Role-based prompting (plaintiff, defendant, bench) for strategic simulations; ReAct (Reason + Act) to alternate retrieval and reasoning.",
-  "Iterative RAG workflow: statutes/precedents retrieval → structured reasoning → follow-up retrieval → conclusion with explicit citations.",
-  "Primary data provenance: full-text Korean statutes and precedents approved for use from the National Law Information System (Korea), extracted and normalized into a clean text corpus."
+    "Developing a Legal AI Assistant that combines LLM (Llama-3-8B) with Retrieval-Augmented Generation (RAG) to specialize in legal queries.",
+    "Implementing advanced prompt engineering techniques (zero-shot, few-shot, role-based, CoT) to improve response accuracy and context awareness in legal reasoning.",
+    "Optimizing through high-quality preprocessing: cleaning, normalizing, and chunking legal texts to align the assistant with domain-specific terminology and reasoning.",
+    "Designing a pipeline that integrates legal document chunking, vector embeddings (bge-m3), and FAISS-based semantic search, with Llama-3-8B as the core reasoning and generation engine.",
+    "Building a robust evaluation framework to measure factual consistency, legal validity, and user trust in AI-generated responses.",
+    "Advanced prompting to upgrade legal intelligent research and strategy simulation: Chain-of-Thought (CoT) for step-wise reasoning; Role-based prompting (plaintiff, defendant, bench) for strategic simulations; ReAct (Reason + Act) to alternate retrieval and reasoning.",
+    "Iterative RAG workflow: statutes/precedents retrieval → structured reasoning → follow-up retrieval → conclusion with explicit citations.",
+    "Primary data provenance: full-text Korean statutes and precedents approved for use from the National Law Information System (Korea), extracted and normalized into a clean text corpus."
   ];
 
   const law_KOR = [
-    "RAG 기반 LLM을 활용한 법률 AI 어시스턴트 개발.",
-    "제로샷·퓨샷·역할 기반·CoT 등 고급 프롬프트 엔지니어링을 적용하여 법률 질의의 정확도와 맥락 인지 향상.",
+    "LLM(Llama-3-8B)과 Retrieval-Augmented Generation(RAG)을 결합해 법률 질의에 특화된 법률 AI 어시스턴트 개발.",
+    "제로샷·퓨샷·역할 기반·CoT 등 고급 프롬프트 엔지니어링을 적용하여 법률 추론의 정확도와 맥락 인지를 향상.",
     "법령 텍스트를 정제·정규화·청킹하여 도메인 특화 용어와 추론 방식에 맞춘 고품질 전처리로 성능 최적화.",
-    "문서 청킹/임베딩/FAISS 시맨틱 검색 파이프라인 설계.",
+    "문서 청킹/임베딩(bge-m3)/FAISS 시맨틱 검색 파이프라인을 설계하고, 핵심 추론·생성 엔진으로 Llama-3-8B를 활용.",
     "사실 일치성·법적 타당성·신뢰도 평가 프레임워크 구축.",
     "추론 강화(CoT)·역할 기반 프롬프팅(원고·피고·재판부)·ReAct(검색과 추론의 교대)를 적용하여 법률 지능형 리서치와 전략 시뮬레이션을 고도화.",
     "RAG 반복 흐름: 법령/판례 검색 → 구조화된 추론 → 추가 검색 → 근거(출처) 명시 결론 도출.",
