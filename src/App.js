@@ -736,17 +736,23 @@ function App() {
               dates={lang==='ENG' ? "April 2025 ~ Present" : "2025.04 ~ 진행중"}
               details={[
                 ...(lang==='ENG'
-                  ? [  
-                      "Participated in the AI Transformation program hosted by IBM and RedHat under AX Academy.",
-                      "Focused on applying cloud-native technologies and AI-driven solutions for enterprise transformation.",
-                      "Gained practical experience in hybrid cloud, open-source collaboration, and modern AI deployment strategies."
+                  ? [
+                      "Participated in the AI Transformation program hosted by IBM and RedHat.",
+                      "Hands-on learning with TensorFlow, Keras, and PyTorch; built and experimented with DNN, CNN, RNN, and NLP models.",
+                      "Studied and applied insights from AI disserations, including *Attention Is All You Need*, YOLO, and BERT.",
+                      "Learned advanced LLM applications directly from IBM developers, focusing on RAG and Prompt Engineering.",
+                      "Actively participated in multiple AI-related competitions: Dacon challenges, hackathons, and collaborative projects.",
+                      "Currently leading the final IBM presentation project: developing a Legal AI Assistant powered by LLM."
                     ]
                   : [
-                      "IBM/RedHat 주관 AX Academy의 AI Transformation 프로그램 참여.",
-                      "클라우드 네이티브/AI 솔루션의 엔터프라이즈 적용에 집중.",
-                      "하이브리드 클라우드/오픈소스 협업/현대적 배포 전략 실무 경험."
+                      "IBM/RedHat 주관 AI Transformation 프로그램 참여.",
+                      "TensorFlow, Keras, PyTorch를 활용해 DNN, CNN, RNN, NLP 모델 학습 및 실습.",
+                      "Attention Is All You Need, YOLO, BERT 등 주요 논문을 학습하고 적용.",
+                      "현직 IBM 개발자에게 LLM(RAG, Prompt Engineering) 심화 강의 수강.",
+                      "Dacon 대회, 해커톤 등 다수의 AI 관련 대회에 적극적으로 참가.",
+                      "과정 최종 단계로 IBM 발표용 팀 프로젝트 진행 중: 법률 AI Assistant LLM 개발."
                     ]),
-                // ⬇️ 여기에 이미지 블록 추가
+                // 이미지 블록
                 <div key="ibm-images" style={{ display:'flex', overflowX:'auto', whiteSpace:'nowrap', gap:'10px', padding:'10px 0' }}>
                   <img src={ibmImage1} alt="IBM x RedHat 1" style={{ height: '400px', borderRadius: '8px' }} />
                   {/* <img src={ibmImage2} alt="IBM x RedHat 2" style={{ height: '400px', borderRadius: '8px' }} /> */}
