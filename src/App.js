@@ -944,7 +944,7 @@ function App() {
             />
 
             <Entry
-              title="[IBM x RedHat] Law-Intelligence"
+              title="[IBM x RedHat] Law-AI"
               location={lang==='ENG' ? "IBM Final Group Project" : "IBM 파이널 그룹 프로젝트"}
               dates={lang==='ENG' ? "2025 ~ Present" : "2025 ~ 진행중"}
               details={lang==='ENG' ? law_ENG : law_KOR}
