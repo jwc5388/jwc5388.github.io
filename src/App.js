@@ -871,47 +871,6 @@ function App() {
         )}
       </section>
 
-      {/* ===== Engagements ===== */}
-      <section className="Engagement-section">
-        <h2 onClick={() => toggleSection('engagements')}>{t[lang].engagements}</h2>
-        {expandedSections.engagements.expanded && (
-          <div className="section-content">
-            <Entry
-              title="J-AGRI Exhibition, Tokyo"
-              location={lang==='ENG' ? "Tokyo, Japan" : "일본 도쿄"}
-              dates="October 9-11, 2024"
-              details={getDetails(jAgri_ENG, jAgri_KOR, jAgri_media)}
-              isExpanded={expandedSections.engagements.entries.jAgri}
-              onClick={() => toggleEntry('engagements', 'jAgri')}
-            />
-            <Entry
-              title="FAVA 2024 - 23rd Federation of Asian Veterinary Associations Congress"
-              location={lang==='ENG' ? "Daejeon, South Korea" : "대한민국 대전"}
-              dates="October 25-27, 2024"
-              details={getDetails(fava_ENG, fava_KOR, fava_media)}
-              isExpanded={expandedSections.engagements.entries.fava2024}
-              onClick={() => toggleEntry('engagements', 'fava2024')}
-            />
-            <Entry
-              title="CES 2025 Exhibition"
-              location={lang==='ENG' ? "Las Vegas, USA" : "미국 라스베이거스"}
-              dates="January 2025"
-              details={getDetails(ces_ENG, ces_KOR, ces_media)}
-              isExpanded={expandedSections.engagements.entries.ces2025}
-              onClick={() => toggleEntry('engagements', 'ces2025')}
-            />
-            {/* <Entry
-              title={lang==='ENG' ? "2025 Quantum AI Hackathon" : "2025 퀀텀 AI 해커톤"}
-              location={lang==='ENG' ? "Jeonju University, South Korea" : "대한민국 전주대"}
-              dates="August 18-19, 2025"
-              details={getDetails(quantum_ENG, quantum_KOR, quantum_media)}
-              isExpanded={expandedSections.engagements.entries.quantumAIHackathon}
-              onClick={() => toggleEntry('engagements', 'quantumAIHackathon')}
-            /> */}
-          </div>
-        )}
-      </section>
-
       {/* ===== Projects ===== */}
       <section className="Project-section">
         <h2 onClick={() => toggleSection('projects')}>{t[lang].projects}</h2>
@@ -1001,6 +960,48 @@ function App() {
           </div>
         )}
       </section>
+
+      {/* ===== Engagements ===== */}
+      <section className="Engagement-section">
+        <h2 onClick={() => toggleSection('engagements')}>{t[lang].engagements}</h2>
+        {expandedSections.engagements.expanded && (
+          <div className="section-content">
+            <Entry
+              title="J-AGRI Exhibition, Tokyo"
+              location={lang==='ENG' ? "Tokyo, Japan" : "일본 도쿄"}
+              dates="October 9-11, 2024"
+              details={getDetails(jAgri_ENG, jAgri_KOR, jAgri_media)}
+              isExpanded={expandedSections.engagements.entries.jAgri}
+              onClick={() => toggleEntry('engagements', 'jAgri')}
+            />
+            <Entry
+              title="FAVA 2024 - 23rd Federation of Asian Veterinary Associations Congress"
+              location={lang==='ENG' ? "Daejeon, South Korea" : "대한민국 대전"}
+              dates="October 25-27, 2024"
+              details={getDetails(fava_ENG, fava_KOR, fava_media)}
+              isExpanded={expandedSections.engagements.entries.fava2024}
+              onClick={() => toggleEntry('engagements', 'fava2024')}
+            />
+            <Entry
+              title="CES 2025 Exhibition"
+              location={lang==='ENG' ? "Las Vegas, USA" : "미국 라스베이거스"}
+              dates="January 2025"
+              details={getDetails(ces_ENG, ces_KOR, ces_media)}
+              isExpanded={expandedSections.engagements.entries.ces2025}
+              onClick={() => toggleEntry('engagements', 'ces2025')}
+            />
+            {/* <Entry
+              title={lang==='ENG' ? "2025 Quantum AI Hackathon" : "2025 퀀텀 AI 해커톤"}
+              location={lang==='ENG' ? "Jeonju University, South Korea" : "대한민국 전주대"}
+              dates="August 18-19, 2025"
+              details={getDetails(quantum_ENG, quantum_KOR, quantum_media)}
+              isExpanded={expandedSections.engagements.entries.quantumAIHackathon}
+              onClick={() => toggleEntry('engagements', 'quantumAIHackathon')}
+            /> */}
+          </div>
+        )}
+      </section>
+
 
       {/* ===== Achievements ===== */}
       <section className="Achievements-section">
