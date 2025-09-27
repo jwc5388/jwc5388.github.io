@@ -683,21 +683,6 @@ function App() {
       </header>
 
 
-      {/* ===== Skills (아이콘 카드) ===== */}
-      <section className="Skills-section">
-        <h2 onClick={() => toggleSection('skills')}>{t[lang].skills}</h2>
-        {expandedSections.skills.expanded && (
-          <div className="section-content">
-            <div className="skills-grid">
-              {skillsData[lang].map((g, i) => (
-                <SkillGroup key={i} title={g.title} items={g.items} />
-              ))}
-            </div>
-          </div>
-        )}
-      </section>
-
-
       {/* ===== Education ===== */}
       <section className="Education-section">
         <h2 onClick={() => toggleSection('education')}>{t[lang].education}</h2>
@@ -1071,6 +1056,23 @@ function App() {
           </div>
         )}
       </section>
+
+
+      {/* ===== Skills (아이콘 카드) ===== */}
+      <section className="Skills-section">
+        <h2 onClick={() => toggleSection('skills')}>{t[lang].skills}</h2>
+        {expandedSections.skills.expanded && (
+          <div className="section-content">
+            <div className="skills-grid">
+              {skillsData[lang].map((g, i) => (
+                <SkillGroup key={i} title={g.title} items={g.items} />
+              ))}
+            </div>
+          </div>
+        )}
+      </section>
+
+
 
       
 
