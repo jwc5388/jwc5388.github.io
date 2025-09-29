@@ -732,7 +732,7 @@ function App() {
                   ? [
                       "Participated in the AI Transformation program hosted by IBM and RedHat.",
                       "Hands-on learning with TensorFlow, Keras, and PyTorch; built and experimented with DNN, CNN, RNN, and NLP models.",
-                      "Studied and applied insights from AI disserations, including Attention Is All You Need, Semantic Structure in Large Language Model Embeddings, and BERT.",
+                      "Studied and applied insights from AI disserations, including Attention Is All You Need, Semantic Structure in Large Language Model Embeddings, GPT 1,2,3 and BERT.",
                       "Learned advanced LLM applications directly from IBM developers, focusing on RAG and Prompt Engineering.",
                       "Actively participated in multiple AI-related competitions: Dacon challenges, hackathons, and collaborative projects.",
                       "Currently leading the final IBM presentation project: developing a Legal AI Assistant powered by LLM."
