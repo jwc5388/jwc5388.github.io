@@ -732,7 +732,7 @@ function App() {
                   ? [
                       "Participated in the AI Transformation program hosted by IBM and RedHat.",
                       "Hands-on learning with TensorFlow, Keras, and PyTorch; built and experimented with DNN, CNN, RNN, and NLP models.",
-                      "Studied and applied insights from AI disserations, including *Attention Is All You Need*, YOLO, and BERT.",
+                      "Studied and applied insights from AI disserations, including Attention Is All You Need, Semantic Structure in Large Language Model Embeddings, and BERT.",
                       "Learned advanced LLM applications directly from IBM developers, focusing on RAG and Prompt Engineering.",
                       "Actively participated in multiple AI-related competitions: Dacon challenges, hackathons, and collaborative projects.",
                       "Currently leading the final IBM presentation project: developing a Legal AI Assistant powered by LLM."
@@ -740,7 +740,7 @@ function App() {
                   : [
                       "IBM/RedHat 주관 AI Transformation 프로그램 참여.",
                       "TensorFlow, Keras, PyTorch를 활용해 DNN, CNN, RNN, NLP 모델 학습 및 실습.",
-                      "Attention Is All You Need, YOLO, BERT 등 주요 논문을 학습하고 적용.",
+                      "Attention Is All You Need, Semantic Structure in Large Language Model Embeddings, YOLO, BERT 등 주요 논문을 학습하고 적용.",
                       "현직 IBM 개발자에게 LLM(RAG, Prompt Engineering) 심화 강의 수강.",
                       "Dacon 대회, 해커톤 등 다수의 AI 관련 대회에 적극적으로 참가.",
                       "과정 최종 단계로 IBM 발표용 팀 프로젝트 진행 중: 법률 AI Assistant LLM 개발."
