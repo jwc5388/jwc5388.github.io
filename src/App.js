@@ -347,23 +347,29 @@ function App() {
     "Implementing advanced prompt engineering techniques (zero-shot, few-shot, role-based, CoT) to improve response accuracy and context awareness in legal reasoning.",
     "Optimizing through high-quality preprocessing: cleaning, normalizing, and chunking legal texts to align the assistant with domain-specific terminology and reasoning.",
     "Designing a pipeline that integrates legal document chunking, vector embeddings (bge-m3), and FAISS-based semantic search, with Llama-3-8B as the core reasoning and generation engine. Extended this by building end-to-end implementation with 1024-dimensional embeddings, ChromaDB indexing, FastAPI serving, and AWS EC2/Docker deployment.",
-    "Developing the system in an agent-based architecture, enabling modular orchestration of tasks such as retrieval, reasoning, document drafting, and strategic simulation.",
+    "Architecting the system with LangChain-based Agent orchestration, enabling modular coordination of retrieval, reasoning, document drafting, and strategy simulation.",
+    "Applying Multi-Context Processing (MCP) to aggregate heterogeneous contexts (statutes, precedents, prior queries, user constraints) and enable integrated legal reasoning across sources.",
+    "Tool routing with LangChain Agents: dynamic selection of retrievers, re-rankers, calculators, and citation formatters based on task intent and intermediate observations.",
+    "Memory design for session-level personalization: caching retrieved authorities, maintaining working assumptions, and reusing verified citations across multi-turn interactions.",
     "Building a robust evaluation framework to measure factual consistency, legal validity, and user trust in AI-generated responses.",
-    "Advanced prompting to upgrade legal intelligent research and strategy simulation: Chain-of-Thought (CoT) for step-wise reasoning; Role-based prompting (plaintiff, defendant, bench) for strategic simulations; ReAct (Reason + Act) to alternate retrieval and reasoning.",
-    "Iterative RAG workflow: statutes/precedents retrieval → structured reasoning → follow-up retrieval → conclusion with explicit citations.",
+    "Advanced prompting to upgrade intelligent legal research and strategy simulation: Chain-of-Thought for step-wise reasoning; role-based prompting (plaintiff, defendant, bench) for perspective shifting; ReAct (Reason + Act) to alternate retrieval and reasoning.",
+    "Iterative RAG workflow: statutes/precedents retrieval → structured reasoning → follow-up retrieval (gap-filling) → conclusion with explicit citations and source attributions.",
     "Primary data provenance: full-text Korean statutes and precedents approved for use from the National Law Information System (Korea), extracted and normalized into a clean text corpus."
   ];
 
   const law_KOR = [
     "LLM(Llama-3-8B)과 Retrieval-Augmented Generation(RAG)을 결합해 법률 질의에 특화된 법률 AI 어시스턴트 개발.",
     "제로샷·퓨샷·역할 기반·CoT 등 고급 프롬프트 엔지니어링을 적용하여 법률 추론의 정확도와 맥락 인지를 향상.",
-    "법령 텍스트를 정제·정규화·청킹하여 도메인 특화 용어와 추론 방식에 맞춘 고품질 전처리로 성능 최적화.",
-    "문서 청킹/임베딩(bge-m3)/FAISS 시맨틱 검색 파이프라인을 설계하고, 핵심 추론·생성 엔진으로 Llama-3-8B를 활용. 여기에 1024차원 임베딩 생성, ChromaDB 인덱싱, FastAPI 서빙, AWS EC2·Docker 배포까지 엔드투엔드 구현을 확장하여 경험을 쌓음.",
-    "Retrieval·추론·문서 작성·전략 시뮬레이션 등 개별 작업을 모듈화하여 조율할 수 있는 에이전트 기반 아키텍처로 개발.",
-    "사실 일치성·법적 타당성·신뢰도 평가 프레임워크 구축.",
-    "추론 강화(CoT)·역할 기반 프롬프팅(원고·피고·재판부)·ReAct(검색과 추론의 교대)를 적용하여 법률 지능형 리서치와 전략 시뮬레이션을 고도화.",
-    "RAG 반복 흐름: 법령/판례 검색 → 구조화된 추론 → 추가 검색 → 근거(출처) 명시 결론 도출.",
-    "데이터 출처: 국가법령정보시스템 승인 후 법령/판례 본문을 텍스트로 추출·정규화하여 코퍼스로 구축."
+    "법령·판례 텍스트를 정제·정규화·청킹하여 도메인 특화 용어와 추론 방식에 맞춘 고품질 전처리로 성능 최적화.",
+    "문서 청킹/임베딩(bge-m3)/FAISS 시맨틱 검색 파이프라인을 설계하고, 핵심 추론·생성 엔진으로 Llama-3-8B를 활용. 여기에 1024차원 임베딩 생성, ChromaDB 인덱싱, FastAPI 서빙, AWS EC2·Docker 배포까지 엔드투엔드 구현.",
+    "LangChain 기반 에이전트 오케스트레이션으로 Retrieval·추론·문서 작성·전략 시뮬레이션 등 모듈을 유연하게 조율.",
+    "Multi-Context Processing(MCP) 구조를 적용하여 법령·판례·질의 이력·사용자 제약 등 이질적 컨텍스트를 병렬로 수집·통합해 일관된 법리 추론을 수행.",
+    "LangChain 에이전트의 툴 라우팅을 통해 태스크 의도와 중간 관찰값에 따라 리트리버·리랭커·계산기·인용 포맷터 등을 동적으로 선택.",
+    "세션 메모리 설계로 다회차 상호작용에서 검증된 인용과 작업 가정을 재사용하고, 사용자 맞춤형 문서 흐름을 유지.",
+    "사실 일치성·법적 타당성·사용자 신뢰도를 측정하는 평가 프레임워크를 구축하고, 결과를 기반으로 프롬프트·리트리버·리랭커를 지속 개선.",
+    "추론 강화(CoT)·역할 기반 프롬프팅(원고·피고·재판부)·ReAct(Reason + Act)로 검색과 추론을 교대로 수행하여 리서치와 전략 시뮬레이션을 고도화.",
+    "RAG 반복 흐름: 법령/판례 검색 → 구조화된 추론 → 추가 검색(정보 공백 보완) → 근거(출처) 명시 결론 도출.",
+    "데이터 출처: 국가법령정보시스템의 승인된 본문 데이터를 활용해 정제·정규화된 한국어 법률 코퍼스 구축."
   ];
 
   const therapy_ENG = [
