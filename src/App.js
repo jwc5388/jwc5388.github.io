@@ -798,14 +798,14 @@ function App() {
               isExpanded={expandedSections.experience.entries.aiAlgorithm}
               onClick={() => toggleEntry('experience', 'aiAlgorithm')}
             />
-            <Entry
+            {/* <Entry
               title={work_web_title}
               location={lang==='ENG' ? "Seoul, South Korea" : "대한민국 서울"}
               dates="February 2024 - Present"
               details={lang==='ENG' ? work_web_details_ENG : work_web_details_KOR}
               isExpanded={expandedSections.experience.entries.webDeveloper}
               onClick={() => toggleEntry('experience', 'webDeveloper')}
-            />
+            /> */}
             <Entry
               title={work_app_title}
               location={lang==='ENG' ? "Jeju Island, South Korea" : "대한민국 제주"}
