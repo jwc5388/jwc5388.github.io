@@ -324,22 +324,28 @@ function App() {
   const pj_sense1_ENG = [
     'Developed a machine learning-based AI algorithm for canine heart rate estimation using Long Short-Term Memory (LSTM) models.',
     'Designed and implemented signal processing techniques to analyze ballistocardiogram (BCG) data for heart rate detection.',
+    'Applied Python-based Fourier Transform and Wavelet Decomposition to remove noise and extract meaningful heart-rate frequency components from raw BCG signals.',
+    'Verified algorithm performance improvement through statistical analysis using Python and NumPy.',
     'Built a deep learning pipeline using TensorFlow and Keras to enhance real-time heart rate monitoring accuracy.',
     'Applied unsupervised learning for IJK peak detection, reducing dependency on ECG signals for heart rate analysis.',
     'Incorporated mathematical modeling of physiological signals to extract domain-specific features, capturing the periodicity of IJK peaks.',
     'Enhanced preprocessing pipeline by applying advanced noise reduction techniques, improving signal-to-noise ratio and robustness of model input features.',
+    'Improved heart rate measurement accuracy from unstable readings caused by canine trembling or motion to 96% accuracy after applying the AI algorithm.',
     'Collaborated with hardware engineers and production teams to optimize data acquisition and improve signal quality.',
     'Contributed to the development of Sense1 Vet, an AI-powered wearable device for veterinary health monitoring.',
   ];
   const pj_sense1_KOR = [
     'TensorFlow/Keras LSTM으로 개 심박 추정 AI 알고리즘을 개발.',
-    'BCG 데이터의 심박 검출을 위한 신호처리 기법을 설계/구현.',
-    '실시간 정확도 향상을 위한 딥러닝 파이프라인 구축.',
-    'ECG 의존도 감소를 위해 IJK 피크 비지도 검출 적용.',
-    'IJK 주기성 등 생체신호 수학 모델링으로 도메인 피처 구성.',
-    '고급 노이즈 제거로 전처리 개선(SNR/견고성 향상).',
-    '하드웨어/생산팀과 협업하여 데이터 수집·품질 최적화.',
-    '수의 웨어러블 헬스 모니터링 디바이스 Sense1 Vet 개발에 기여.',
+    'BCG 데이터의 심박 검출을 위한 신호처리 기법을 설계 및 구현.',
+    'Python 기반 푸리에 변환과 웨이블릿 변환으로 원시 신호의 노이즈를 제거하고 의미 있는 심박 주파수 성분을 추출.',
+    'Python과 NumPy를 활용한 통계 분석으로 알고리즘 성능 개선 효과를 검증.',
+    '실시간 심박 모니터링 정확도 향상을 위한 딥러닝 파이프라인을 구축.',
+    'ECG 의존도를 줄이기 위해 IJK 피크 비지도 검출 알고리즘을 적용.',
+    'IJK 주기성 등 생체신호의 수학적 모델링으로 도메인 피처를 구성.',
+    '고급 노이즈 제거 기법을 적용해 전처리 파이프라인을 개선하고 신호 대 잡음비와 입력 특성의 견고성을 향상.',
+    'AI 알고리즘 적용 전에는 강아지의 떨림이나 움직임으로 인해 심박 측정이 불안정했으나, 적용 후 정확도를 96%까지 향상.',
+    '하드웨어 및 생산팀과 협업하여 데이터 수집 효율과 신호 품질을 최적화.',
+    '수의 헬스 모니터링 웨어러블 디바이스 Sense1 Vet 개발에 기여.',
   ];
 
   const law_ENG = [
