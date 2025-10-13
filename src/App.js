@@ -321,6 +321,8 @@ function App() {
       <img src={senseoneImage5} alt="SenseOne Project 5" style={{ height: '400px', borderRadius: '8px' }} />
     </div>
   );
+
+  
   const pj_sense1_ENG = [
     'Developed a machine learning-based AI algorithm for canine heart rate estimation using Long Short-Term Memory (LSTM) models.',
     'Designed and implemented signal processing techniques to analyze ballistocardiogram (BCG) data for heart rate detection.',
