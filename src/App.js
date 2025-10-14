@@ -23,9 +23,10 @@ import senseoneImage2 from './assets/images/senseone2.png';
 import senseoneImage3 from './assets/images/senseone3.png';
 import senseoneImage4 from './assets/images/senseone4.png';
 import senseoneImage5 from './assets/images/senseone5.png';
-import lawAIImage1 from './assets/images/lawai1.png'
-import lawAIImage2 from './assets/images/lawai2.png'
-import lawAIImage3 from './assets/images/lawai3.png'
+import lawAIImage1 from './assets/images/lawai1.png';
+import lawAIImage2 from './assets/images/lawai2.png';
+import lawAIImage3 from './assets/images/lawai3.png';
+import lawAIImage4 from './assets/images/lawai4.png';
 import royalUrImage1 from './assets/images/royalur1.png';
 import royalUrImage2 from './assets/images/royalur2.png';
 import sudokuImage1 from './assets/images/sudoku1.png';
@@ -356,6 +357,7 @@ function App() {
   const lawai_media = (
     <div key="lawai-images" style={{ display:'flex', overflowX:'auto', whiteSpace:'nowrap', gap:'10px', padding:'10px 0' }}>
       <img src={lawAIImage1} alt="LAW-AI Project 1" style={{ height: '400px', borderRadius: '8px' }} />
+      <img src={lawAIImage4} alt="LAW-AI Project 4" style={{ height: '400px', borderRadius: '8px' }} />
       <img src={lawAIImage2} alt="LAW-AI Project 2" style={{ height: '400px', borderRadius: '8px' }} />
       <img src={lawAIImage3} alt="LAW-AI Project 3" style={{ height: '400px', borderRadius: '8px' }} />
     </div>
