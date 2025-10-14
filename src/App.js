@@ -27,6 +27,7 @@ import lawAIImage1 from './assets/images/lawai1.png';
 import lawAIImage2 from './assets/images/lawai2.png';
 import lawAIImage3 from './assets/images/lawai3.png';
 import lawAIImage4 from './assets/images/lawai4.png';
+import lawAIImage5 from './assets/images/lawai5.png';
 import royalUrImage1 from './assets/images/royalur1.png';
 import royalUrImage2 from './assets/images/royalur2.png';
 import sudokuImage1 from './assets/images/sudoku1.png';
@@ -360,6 +361,7 @@ function App() {
       <img src={lawAIImage4} alt="LAW-AI Project 4" style={{ height: '400px', borderRadius: '8px' }} />
       <img src={lawAIImage2} alt="LAW-AI Project 2" style={{ height: '400px', borderRadius: '8px' }} />
       <img src={lawAIImage3} alt="LAW-AI Project 3" style={{ height: '400px', borderRadius: '8px' }} />
+      <img src={lawAIImage5} alt="LAW-AI Project 5" style={{ height: '400px', borderRadius: '8px' }} />
     </div>
   );
 
