@@ -23,6 +23,9 @@ import senseoneImage2 from './assets/images/senseone2.png';
 import senseoneImage3 from './assets/images/senseone3.png';
 import senseoneImage4 from './assets/images/senseone4.png';
 import senseoneImage5 from './assets/images/senseone5.png';
+import lawAIImage1 from './assets/images/lawai1.png'
+import lawAIImage2 from './assets/images/lawai2.png'
+import lawAIImage3 from './assets/images/lawai3.png'
 import royalUrImage1 from './assets/images/royalur1.png';
 import royalUrImage2 from './assets/images/royalur2.png';
 import sudokuImage1 from './assets/images/sudoku1.png';
@@ -349,6 +352,14 @@ function App() {
     '하드웨어 및 생산팀과 협업하여 데이터 수집 효율과 신호 품질을 최적화.',
     '수의 헬스 모니터링 웨어러블 디바이스 Sense1 Vet 개발에 기여.',
   ];
+
+  const lawai_media = (
+    <div key="lawai-images" style={{ display:'flex', overflowX:'auto', whiteSpace:'nowrap', gap:'10px', padding:'10px 0' }}>
+      <img src={lawAIImage1} alt="LAW-AI Project 1" style={{ height: '400px', borderRadius: '8px' }} />
+      <img src={lawAIImage2} alt="LAW-AI Project 2" style={{ height: '400px', borderRadius: '8px' }} />
+      <img src={lawAIImage3} alt="LAW-AI Project 3" style={{ height: '400px', borderRadius: '8px' }} />
+    </div>
+  );
 
   const law_ENG = [
     "Developing a Legal AI Assistant that combines LLM (Llama-3-8B) with Retrieval-Augmented Generation (RAG) to specialize in legal queries.",
@@ -907,7 +918,8 @@ function App() {
               title="[IBM x RedHat] Law-AI"
               location={lang==='ENG' ? "IBM Final Group Project" : "IBM 파이널 그룹 프로젝트"}
               dates={lang==='ENG' ? "2025 ~ Present" : "2025 ~ 진행중"}
-              details={lang==='ENG' ? law_ENG : law_KOR}
+              // details={lang==='ENG' ? law_ENG : law_KOR}
+              details={getDetails(law_ENG, law_KOR, lawai_media)}
               isExpanded={expandedSections.projects.entries.lawIntelligence}
               onClick={() => toggleEntry('projects', 'lawIntelligence')}
             />
