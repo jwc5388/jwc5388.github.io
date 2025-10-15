@@ -355,7 +355,7 @@ function App() {
     '수의 헬스 모니터링 웨어러블 디바이스 Sense1 Vet 개발에 기여.',
   ];
 
-  
+
   const lawai_media = (
     <div key="lawai-images" style={{ display:'flex', overflowX:'auto', whiteSpace:'nowrap', gap:'10px', padding:'10px 0' }}>
       <img src={lawAIImage1} alt="LAW-AI Project 1" style={{ height: '400px', borderRadius: '8px' }} />
