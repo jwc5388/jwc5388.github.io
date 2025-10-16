@@ -366,6 +366,7 @@ function App() {
     </div>
   );
 
+  
   const law_ENG = [
     "Developing a Legal AI Assistant that combines LLM (Llama-3-8B) with Retrieval-Augmented Generation (RAG) to specialize in legal queries.",
     "Implementing advanced prompt engineering techniques (zero-shot, few-shot, role-based, CoT) to improve response accuracy and context awareness in legal reasoning.",
