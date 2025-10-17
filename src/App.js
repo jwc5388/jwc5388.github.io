@@ -379,6 +379,7 @@ function App() {
     "Iterative RAG workflow: statutes/precedents retrieval → structured reasoning → follow-up retrieval (gap-filling) → conclusion with explicit citations and source attributions.",
     "Primary data provenance: full-text Korean statutes and precedents approved for use from the National Law Information System (Korea), extracted and normalized into a clean text corpus."
   ];
+  
 
   const law_KOR = [
     "LLM(Llama-3-8B)과 Retrieval-Augmented Generation(RAG)을 결합해 법률 질의에 특화된 법률 AI 어시스턴트 개발.",
