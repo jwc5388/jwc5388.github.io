@@ -327,7 +327,6 @@ function App() {
     </div>
   );
 
-  
   const pj_sense1_ENG = [
     'Developed a machine learning-based AI algorithm for canine heart rate estimation using Long Short-Term Memory (LSTM) models.',
     'Designed and implemented signal processing techniques to analyze ballistocardiogram (BCG) data for heart rate detection.',
@@ -366,7 +365,7 @@ function App() {
     </div>
   );
 
-  
+
   const law_ENG = [
     "Developing a Legal AI Assistant that combines LLM (Llama-3-8B) with Retrieval-Augmented Generation (RAG) to specialize in legal queries.",
     "Implementing advanced prompt engineering techniques (zero-shot, few-shot, role-based, CoT) to improve response accuracy and context awareness in legal reasoning.",
