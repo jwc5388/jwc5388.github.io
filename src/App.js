@@ -380,7 +380,6 @@ function App() {
     "Primary data provenance: full-text Korean statutes and precedents approved for use from the National Law Information System (Korea), extracted and normalized into a clean text corpus."
   ];
   
-  
   const law_KOR = [
     "LLM(Llama-3-8B)과 Retrieval-Augmented Generation(RAG)을 결합해 법률 질의에 특화된 법률 AI 어시스턴트 개발.",
     "제로샷·퓨샷·역할 기반·CoT 등 고급 프롬프트 엔지니어링을 적용하여 법률 추론의 정확도와 맥락 인지를 향상.",
