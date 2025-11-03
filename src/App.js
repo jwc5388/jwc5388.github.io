@@ -340,6 +340,8 @@ function App() {
     'Collaborated with hardware engineers and production teams to optimize data acquisition and improve signal quality.',
     'Contributed to the development of Sense1 Vet, an AI-powered wearable device for veterinary health monitoring.',
   ];
+
+  
   const pj_sense1_KOR = [
     'TensorFlow/Keras LSTM으로 개 심박 추정 AI 알고리즘을 개발.',
     'BCG 데이터의 심박 검출을 위한 신호처리 기법을 설계 및 구현.',
