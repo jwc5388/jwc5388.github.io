@@ -1,6 +1,4 @@
-// import logo from './logo.svg';
 import './App.css';
-import Mybutton from './components/Buttons.js'
 import React, { useState } from 'react';
 import Entry from './Entry';
 import degreeImage from './assets/images/graduation.jpg';
@@ -73,8 +71,8 @@ import {
   SiReact, SiFlutter,
   SiPytorch, SiTensorflow, SiKeras, SiNumpy, SiPandas,
   SiMysql, SiMongodb, SiPostgresql,
-  SiGit, SiJira, SiConfluence, SiSlack,
-  SiFigma, SiAdobeillustrator, SiOpenai, SiDocker
+  SiGit, SiJira, SiSlack,
+  SiFigma, SiOpenai, SiDocker
 } from 'react-icons/si';
 
 import { FaJava } from 'react-icons/fa';
@@ -132,8 +130,6 @@ function App() {
     experience: {expanded: false, entries: {}},
     education: {expanded: false, entries: {}},
     skills: {expanded:false},
-    volunteer: {expanded:false},
-    caresixContent: {expanded:false},
     engagements: {expanded: false, entries: {}},
     projects: {expanded: false, entries: {}},
     achievements: {expanded: false, entries: {}},
@@ -179,17 +175,6 @@ function App() {
     '고급 노이즈 제거로 전처리 강화(SNR 향상, 입력 피처 견고성 개선).'
   ];
 
-  const work_web_title = lang === 'ENG' ? "Web Developer, CareSix Co., LTD" : "웹 개발자, 케어식스";
-  const work_web_details_ENG = [
-    'Developed a web-based dog recognition platform using TypeScript with React, integrating a backend algorithm for dog identification.',
-    'Designed and built a hospital management system for veterinary hospitals and pet tracking.',
-    'Integrated AWS RDS for secure data management and scalability.',
-  ];
-  const work_web_details_KOR = [
-    'TypeScript/React 기반 반려견 인식 웹 플랫폼 개발(백엔드 알고리즘 연동).',
-    '수의 병원용 관리 시스템(환자/케이지 기록 추적) 설계·구현.',
-    'AWS RDS 연동으로 보안·확장성 보장.',
-  ];
 
   const work_app_title = lang === 'ENG' ? "App Developer, CareSix Co., LTD" : "앱 개발자, 케어식스";
   const work_app_details_ENG = [
@@ -396,22 +381,6 @@ function App() {
     "데이터 출처: 국가법령정보시스템의 승인된 본문 데이터를 활용해 정제·정규화된 한국어 법률 코퍼스 구축."
   ];
 
-  const therapy_ENG = [
-    "Developing a therapy-oriented AI assistant integrating Speech-to-Text (STT) and Text-to-Speech (TTS) pipelines to enable natural conversational interfaces.",
-    "Built the front-end with React Native for cross-platform mobile deployment, focusing on real-time responsiveness and accessibility.",
-    "Leveraged IBM Watsonx for model selection and orchestration, ensuring scalable integration of domain-specific LLMs.",
-    "Implemented Retrieval-Augmented Generation (RAG) to ground therapeutic responses on validated resources and knowledge bases.",
-    "Applied advanced prompt engineering and tuning strategies to adapt model outputs for counseling and therapy-like scenarios.",
-    "Designed a robust evaluation pipeline measuring response empathy, factual consistency, and therapeutic appropriateness."
-  ];
-  const therapy_KOR = [
-    "STT/TTS 파이프라인을 통합해 자연스러운 대화형 인터페이스를 제공하는 테라피 지향 AI 어시스턴트 개발.",
-    "React Native 기반 크로스플랫폼 모바일 프론트엔드 구현(실시간 응답성/접근성 중점).",
-    "IBM Watsonx로 모델 선정/오케스트레이션을 수행, 도메인 LLM의 확장 가능 통합 보장.",
-    "검증된 자료/지식베이스에 기반한 RAG 구현으로 응답 신뢰도 확보.",
-    "상담 시나리오 적합성을 높이기 위한 고급 프롬프트 튜닝 적용.",
-    "공감·사실성·치료 적합성 지표로 평가 파이프라인 설계."
-  ];
 
   // ===== Other Projects (이미지 포함) =====
   const eliza_media = (
@@ -548,33 +517,8 @@ function App() {
     "동료들과 양자 ML/최적화의 실사용 사례를 탐구.",
   ];
 
-  const ach_quantum_ENG = [
-    'Ranked 1st in the qualifying round with a coding-based Fashion-MNIST quantum computing challenge.',
-    'Advanced to the finals; awarded the Excellence Prize for innovative application of quantum AI methods.',
-  ];
-  const ach_quantum_KOR = [
-    '패션-MNIST 양자 과제로 예선 1위, 본선 진출.',
-    '양자 AI 응용 혁신성으로 우수상 수상.',
-  ];
-
-  const ach_kaggle_ENG = [
-    'Achieved Top 3% using an EDA → feature engineering → ensemble pipeline (GBDT + stacking).',
-    'Ensured reproducibility and leaderboard stability with robust seeding and well-designed K-Fold validation.',
-  ];
-  const ach_kaggle_KOR = [
-    'EDA → 피처 엔지니어링 → 앙상블(GBDT+스태킹) 파이프라인으로 상위 3% 달성.',
-    '시드 고정/K-Fold 설계로 재현성·리더보드 안정성 확보.',
-  ];
 
   
-  const ach_ces_ENG = [
-    'Led the wearable animal health monitoring project for live demos and partner engagements.',
-    'Crafted technical/product storytelling, demo flow, and coordinated global partner meetings.',
-  ];
-  const ach_ces_KOR = [
-    '웨어러블 동물 헬스 모니터링 프로젝트 리드(라이브 데모/파트너 밋업).',
-    '기술/제품 스토리텔링과 데모 동선 설계, 글로벌 파트너 미팅 주도.',
-  ];
 
   // ===== Skills 컴포넌트 & 데이터 =====
   const SkillItem = ({ Icon, label }) => (
@@ -778,7 +722,6 @@ function App() {
                 // 이미지 블록
                 <div key="ibm-images" style={{ display:'flex', overflowX:'auto', whiteSpace:'nowrap', gap:'10px', padding:'10px 0' }}>
                   <img src={ibmImage1} alt="IBM x RedHat 1" style={{ height: '400px', borderRadius: '8px' }} />
-                  {/* <img src={ibmImage2} alt="IBM x RedHat 2" style={{ height: '400px', borderRadius: '8px' }} /> */}
                 </div>
               ]}
               isExpanded={expandedSections.education.entries.ibmAxAcademy}
@@ -790,9 +733,9 @@ function App() {
               dates=""
               details={[
                 <div key="judo-images" style={{ display:'flex', overflowX:'auto', whiteSpace:'nowrap', gap:'10px', padding:'10px 0' }}>
-                  <img src={judoImage1} alt="Judo Image 1" style={{ height: '400px', borderRadius: '8px' }} />
-                  <img src={judoImage2} alt="Judo Image 2" style={{ height: '400px', borderRadius: '8px' }} />
-                  <img src={judoImage3} alt="Judo Image 3" style={{ height: '400px', borderRadius: '8px' }} />
+                  <img src={judoImage1} alt="Judo 1" style={{ height: '400px', borderRadius: '8px' }} />
+                  <img src={judoImage2} alt="Judo 2" style={{ height: '400px', borderRadius: '8px' }} />
+                  <img src={judoImage3} alt="Judo 3" style={{ height: '400px', borderRadius: '8px' }} />
                 </div>
               ]}
               isExpanded={expandedSections.education.entries.judo}
@@ -822,14 +765,6 @@ function App() {
               isExpanded={expandedSections.experience.entries.aiAlgorithm}
               onClick={() => toggleEntry('experience', 'aiAlgorithm')}
             />
-            {/* <Entry
-              title={work_web_title}
-              location={lang==='ENG' ? "Seoul, South Korea" : "대한민국 서울"}
-              dates="February 2024 - Present"
-              details={lang==='ENG' ? work_web_details_ENG : work_web_details_KOR}
-              isExpanded={expandedSections.experience.entries.webDeveloper}
-              onClick={() => toggleEntry('experience', 'webDeveloper')}
-            /> */}
             <Entry
               title={work_app_title}
               location={lang==='ENG' ? "Jeju Island, South Korea" : "대한민국 제주"}
@@ -929,14 +864,6 @@ function App() {
               onClick={() => toggleEntry('projects', 'lawIntelligence')}
             />
 
-            {/* <Entry
-              title="[IBM x RedHat] Therapy-Intelligence"
-              location={lang==='ENG' ? "IBM x RedHat Innovation Project" : "IBM x RedHat 이노베이션 프로젝트"}
-              dates={lang==='ENG' ? "2025 ~ Present" : "2025 ~ 진행중"}
-              details={lang==='ENG' ? therapy_ENG : therapy_KOR}
-              isExpanded={expandedSections.projects.entries.therapyIntelligence}
-              onClick={() => toggleEntry('projects', 'therapyIntelligence')}
-            /> */}
 
             {/* Other Projects – 클릭으로 펼침 */}
             <h3
@@ -1021,14 +948,6 @@ function App() {
               isExpanded={expandedSections.engagements.entries.ces2025}
               onClick={() => toggleEntry('engagements', 'ces2025')}
             />
-            {/* <Entry
-              title={lang==='ENG' ? "2025 Quantum AI Hackathon" : "2025 퀀텀 AI 해커톤"}
-              location={lang==='ENG' ? "Jeonju University, South Korea" : "대한민국 전주대"}
-              dates="August 18-19, 2025"
-              details={getDetails(quantum_ENG, quantum_KOR, quantum_media)}
-              isExpanded={expandedSections.engagements.entries.quantumAIHackathon}
-              onClick={() => toggleEntry('engagements', 'quantumAIHackathon')}
-            /> */}
           </div>
         )}
       </section>
@@ -1045,8 +964,8 @@ function App() {
               location={lang==='ENG' ? "Jeonju University, South Korea" : "대한민국 전주대"}
               dates="August 18-19, 2025"
               details={getDetails(quantum_ENG, quantum_KOR, quantum_media)}
-              isExpanded={expandedSections.engagements.entries.quantumAIHackathon}
-              onClick={() => toggleEntry('engagements', 'quantumAIHackathon')}
+              isExpanded={expandedSections.achievements.entries.quantumAIHackathon}
+              onClick={() => toggleEntry('achievements', 'quantumAIHackathon')}
             />
 
 
@@ -1055,36 +974,20 @@ function App() {
               location={lang==='ENG' ? "South Korea" : "대한민국"}
               dates="August 2025"
               details={getDetails(hackathon_ENG, hackathon_KOR, hackathon_media)}
-              isExpanded={expandedSections.engagements.entries.kdigitalHackathon}
-              onClick={() => toggleEntry('engagements', 'kdigitalHackathon')}
+              isExpanded={expandedSections.achievements.entries.kdigitalHackathon}
+              onClick={() => toggleEntry('achievements', 'kdigitalHackathon')}
             />
 
-            {/* <Entry
-              title={lang==='ENG' ? "Kaggle Competition – Top 3%" : "Kaggle Competition – 상위 3%"}
-              location="Global (Online)"
-              dates="2024"
-              details={lang==='ENG' ? ach_kaggle_ENG : ach_kaggle_KOR}
-              isExpanded={expandedSections.achievements.entries.kaggleTop3}
-              onClick={() => toggleEntry('achievements', 'kaggleTop3')}
-            /> */}
 
             <Entry
               title={lang==='ENG' ? "Dacon AI Competitions" : "Dacon AI 대회"}
               location={lang==='ENG' ? "Korea (Online)" : "대한민국 (온라인)"}
               dates="May 2025-Present"
               details={getDetails(ach_dacon_ENG, ach_dacon_KOR, dacon)}
-              isExpanded={expandedSections.engagements.entries.daconCompetitions}
-              onClick={() => toggleEntry('engagements', 'daconCompetitions')}
+              isExpanded={expandedSections.achievements.entries.daconCompetitions}
+              onClick={() => toggleEntry('achievements', 'daconCompetitions')}
             />
 
-            {/* <Entry
-              title={lang==='ENG' ? "CES Innovation Awards – Project Lead Participation" : "CES Innovation Awards – 프로젝트 리드 참여"}
-              location={lang==='ENG' ? "Las Vegas, USA" : "미국 라스베이거스"}
-              dates="2025"
-              details={lang==='ENG' ? ach_ces_ENG : ach_ces_KOR}
-              isExpanded={expandedSections.achievements.entries.cesInnovation}
-              onClick={() => toggleEntry('achievements', 'cesInnovation')}
-            /> */}
           </div>
         )}
       </section>
@@ -1105,10 +1008,8 @@ function App() {
       </section>
 
 
-
       
 
-      {/* Volunteer 섹션은 주석 상태 */}
     </div>
   );
 }
