@@ -209,6 +209,35 @@ section {
   font-weight: 600;
 }
 
+.profile-summary {
+  max-width: 680px;
+  margin: 0 auto 12px;
+  padding: 0 20px;
+  text-align: left;
+  font-size: calc(9px + 0.8vmin);
+  line-height: 1.7;
+  color: #1f2937;
+}
+
+.profile-skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  max-width: 680px;
+  margin: 0 auto 12px;
+  padding: 0 20px;
+  list-style: none;
+}
+
+.profile-skills li {
+  padding: 2px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 999px;
+  font-size: calc(8px + 0.6vmin);
+  color: #374151;
+}
+
 .profile-highlights {
   max-width: 680px;
   margin: 0 auto;
