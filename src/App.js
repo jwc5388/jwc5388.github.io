@@ -151,8 +151,8 @@ function App() {
       KOR: "고객 현장에서 LLM·VLM 시스템을 정의하고, 만들고, 배포하는 AI 엔지니어",
     },
     summary: {
-      ENG: "AI Engineer with a BSc in Mathematics and Computer Science from the University of St Andrews. Over roughly 1.5 years at Korea Deep Learning and CareSix, I have turned clients' manual workflows into well-defined problems, built document-automation (LLM/VLM), OCR, generative-video and biosignal systems to solve them, and deployed them with Docker on client servers, including air-gapped ones. I generalized a KIE pipeline built for one client (document-template classification and automatic extraction-schema definition) into PPASS, a shared base module that was then customized for each client. I measure results against client ground truth, such as audit ledgers.",
-      KOR: "세인트앤드루스 대학교에서 수학·컴퓨터과학을 전공한 AI 엔지니어입니다. 한국딥러닝과 케어식스에서 약 1년 반 동안 고객의 수작업을 풀 수 있는 문제로 정의하고, LLM·VLM 문서 자동화·OCR·생성형 영상·생체신호 시스템을 만들어 Docker로 고객 서버와 폐쇄망에 배포해 왔습니다. 한 고객사를 위해 만든 KIE 파이프라인(문서 틀 분류, 추출 스키마 자동 정의)을 사내 공통 기본 모듈 PPASS로 일반화해 고객사마다 맞춤 적용했고, 성과는 고객 검수 대장 같은 정답 데이터 기준의 숫자로 증명합니다.",
+      ENG: "AI Engineer who defines client problems on site, then builds and deploys the LLM/VLM systems that solve them. My joint degree in Mathematics and Computer Science at the University of St Andrews, with a dissertation in each field, shapes how I work: I build a trustworthy evaluation and trace where errors actually come from, rather than stopping at a model that runs. Over roughly 1.5 years at Korea Deep Learning and CareSix, I have built document-automation (LLM/VLM), OCR, generative-video and biosignal systems and deployed them with Docker on client servers, including air-gapped ones. I also generalized a KIE pipeline built for one client (document-template classification and automatic extraction-schema definition) into PPASS, a shared base module that was then customized for each client.",
+      KOR: "고객 현장의 문제를 정의하고, 이를 푸는 LLM·VLM 시스템을 만들어 배포까지 책임지는 AI 엔지니어입니다. 세인트앤드루스 대학교에서 수학과 컴퓨터과학을 함께 전공하며 두 분야에서 각각 학위논문을 썼고, 그 덕분에 모델이 돌아가는 데서 멈추지 않고 믿을 수 있는 평가 기준을 먼저 세우고 오류의 원인을 끝까지 검증합니다. 한국딥러닝과 케어식스에서 약 1년 반 동안 LLM·VLM 문서 자동화·OCR·생성형 영상·생체신호 시스템을 만들어 Docker로 고객 서버와 폐쇄망에 배포해 왔고, 한 고객사를 위해 만든 KIE 파이프라인(문서 틀 분류, 추출 스키마 자동 정의)을 사내 공통 기본 모듈 PPASS로 일반화해 고객사마다 맞춤 적용했습니다.",
     },
     skills: ["LLM / VLM", "KIE · OCR", "RAG · LangChain", "Docker", "FastAPI", "vLLM", "PyTorch", "Python"],
     highlights: {
@@ -1138,6 +1138,101 @@ function App() {
         )}
       </section>
 
+      {/* ===== Education ===== */}
+      <section className="Education-section">
+        <h2 onClick={() => toggleSection('education')}>{t[lang].education}</h2>
+        {expandedSections.education.expanded && (
+          <div className="section-content">
+            <Entry
+              title={lang==='ENG' ? "University of St Andrews, St Andrews, Scotland" : "세인트앤드루스 대학교, 스코틀랜드"}
+              location={lang==='ENG' ? "Bachelor of Science in Mathematics and Computer Science" : "수학·컴퓨터과학 학사"}
+              dates={lang==='ENG' ? "September 2019 ~ June 2024" : "2019.09 ~ 2024.06"}
+              details={[
+                <div key="dissertation1" className="download-link">
+                  <button
+                    type="button"
+                    onClick={(e) => { e.stopPropagation(); window.open(dissertation1, '_blank', 'noopener'); }}
+                    style={{ background:'transparent', border:0, padding:0, cursor:'pointer' }}
+                  >
+                    <img src={dissImage} alt="Open Dissertation 1" className="download-icon" />
+                  </button>
+                  <span>{lang==='ENG' ? "Computer Science Dissertation" : "컴퓨터과학 학위논문"}</span>
+                </div>,
+                <div key="dissertation2" className="download-link">
+                  <button
+                    type="button"
+                    onClick={(e) => { e.stopPropagation(); window.open(dissertation2, '_blank', 'noopener'); }}
+                    style={{ background:'transparent', border:0, padding:0, cursor:'pointer' }}
+                  >
+                    <img src={dissImage} alt="Open Dissertation 2" className="download-icon" />
+                  </button>
+                  <span>{lang==='ENG' ? "Mathematics Dissertation" : "수학 학위논문"}</span>
+                </div>,
+                <div key="graduation-images" style={{ display:'flex', overflowX:'auto', whiteSpace:'nowrap', gap:'10px', padding:'10px 0' }}>
+                  <img src={dissertationImage1} alt="dissertation1" style={{ height: '400px', borderRadius: '8px' }} />
+                  <img src={dissertationImage2} alt="dissertation2" style={{ height: '400px', borderRadius: '8px' }} />
+                  <img src={degreeImage} alt="Graduation" style={{ height: '400px', borderRadius: '8px' }} />
+                </div>
+              ]}
+              isExpanded={expandedSections.education.entries.degree}
+              onClick={() => toggleEntry('education', 'degree')}
+            />
+
+            <Entry
+              title="[IBM x RedHat] AI Transformation - AX Academy"
+              location="IBM x RedHat"
+              dates={lang==='ENG' ? "April 2025 ~ October 2025" : "2025.04 ~ 2025.10"}
+              details={[
+                ...(lang==='ENG'
+                  ? [
+                      "Participated in the AI Transformation program hosted by IBM and RedHat.",
+                      "Hands-on learning with TensorFlow, Keras, and PyTorch; built and experimented with DNN, CNN, RNN, and NLP models.",
+                      "Studied and applied key AI research papers, including Attention Is All You Need, GPT-1/2/3 and BERT.",
+                      "Learned advanced LLM applications directly from IBM developers, focusing on RAG and prompt engineering.",
+                      "Actively participated in multiple AI-related competitions: Dacon challenges, hackathons, and collaborative projects.",
+                      "Led the team for the final IBM project: a legal AI assistant powered by an LLM and RAG."
+                    ]
+                  : [
+                      "IBM/RedHat 주관 AI Transformation 프로그램 참여.",
+                      "TensorFlow, Keras, PyTorch를 활용해 DNN, CNN, RNN, NLP 모델 학습 및 실습.",
+                      "Attention Is All You Need, Semantic Structure in Large Language Model Embeddings, YOLO, BERT 등 주요 논문을 학습하고 적용.",
+                      "현직 IBM 개발자에게 LLM(RAG, Prompt Engineering) 심화 강의 수강.",
+                      "Dacon 대회, 해커톤 등 다수의 AI 관련 대회에 적극적으로 참가.",
+                      "과정 최종 IBM 발표 프로젝트를 팀장으로 이끌어 LLM·RAG 기반 법률 AI Assistant 개발."
+                    ]),
+                // 이미지 블록
+                <div key="ibm-images" style={{ display:'flex', overflowX:'auto', whiteSpace:'nowrap', gap:'10px', padding:'10px 0' }}>
+                  <img src={ibmImage1} alt="IBM x RedHat 1" style={{ height: '400px', borderRadius: '8px' }} />
+                </div>
+              ]}
+              isExpanded={expandedSections.education.entries.ibmAxAcademy}
+              onClick={() => toggleEntry('education', 'ibmAxAcademy')}
+            />
+            <Entry
+              title={lang==='ENG' ? "St Andrews Judo Club / Registered as member of Judo Scotland" : "세인트앤드루스 유도부 / Judo Scotland 등록 회원"}
+              location=""
+              dates=""
+              details={[
+                <div key="judo-images" style={{ display:'flex', overflowX:'auto', whiteSpace:'nowrap', gap:'10px', padding:'10px 0' }}>
+                  <img src={judoImage1} alt="Judo 1" style={{ height: '400px', borderRadius: '8px' }} />
+                  <img src={judoImage2} alt="Judo 2" style={{ height: '400px', borderRadius: '8px' }} />
+                  <img src={judoImage3} alt="Judo 3" style={{ height: '400px', borderRadius: '8px' }} />
+                </div>
+              ]}
+              isExpanded={expandedSections.education.entries.judo}
+              onClick={() => toggleEntry('education', 'judo')}
+            />
+            <Entry
+              title={lang==='ENG' ? "Committee member of St Andrews Korean Society" : "세인트앤드루스 한인회 운영진"}
+              location={lang==='ENG' ? "Treasurer for St Andrews Korean Society" : "한인회 회계 담당"}
+              details={[]}
+              isExpanded={expandedSections.education.entries.society}
+              onClick={() => toggleEntry('education', 'society')}
+            />
+          </div>
+        )}
+      </section>
+
       {/* ===== Projects ===== */}
       <section className="Project-section">
         <h2 onClick={() => toggleSection('projects')}>{t[lang].projects}</h2>
@@ -1358,100 +1453,6 @@ function App() {
         )}
       </section>
 
-      {/* ===== Education ===== */}
-      <section className="Education-section">
-        <h2 onClick={() => toggleSection('education')}>{t[lang].education}</h2>
-        {expandedSections.education.expanded && (
-          <div className="section-content">
-            <Entry
-              title={lang==='ENG' ? "University of St Andrews, St Andrews, Scotland" : "세인트앤드루스 대학교, 스코틀랜드"}
-              location={lang==='ENG' ? "Bachelor of Science in Mathematics and Computer Science" : "수학·컴퓨터과학 학사"}
-              dates={lang==='ENG' ? "September 2019 ~ June 2024" : "2019.09 ~ 2024.06"}
-              details={[
-                <div key="dissertation1" className="download-link">
-                  <button
-                    type="button"
-                    onClick={(e) => { e.stopPropagation(); window.open(dissertation1, '_blank', 'noopener'); }}
-                    style={{ background:'transparent', border:0, padding:0, cursor:'pointer' }}
-                  >
-                    <img src={dissImage} alt="Open Dissertation 1" className="download-icon" />
-                  </button>
-                  <span>{lang==='ENG' ? "Computer Science Dissertation" : "컴퓨터과학 학위논문"}</span>
-                </div>,
-                <div key="dissertation2" className="download-link">
-                  <button
-                    type="button"
-                    onClick={(e) => { e.stopPropagation(); window.open(dissertation2, '_blank', 'noopener'); }}
-                    style={{ background:'transparent', border:0, padding:0, cursor:'pointer' }}
-                  >
-                    <img src={dissImage} alt="Open Dissertation 2" className="download-icon" />
-                  </button>
-                  <span>{lang==='ENG' ? "Mathematics Dissertation" : "수학 학위논문"}</span>
-                </div>,
-                <div key="graduation-images" style={{ display:'flex', overflowX:'auto', whiteSpace:'nowrap', gap:'10px', padding:'10px 0' }}>
-                  <img src={dissertationImage1} alt="dissertation1" style={{ height: '400px', borderRadius: '8px' }} />
-                  <img src={dissertationImage2} alt="dissertation2" style={{ height: '400px', borderRadius: '8px' }} />
-                  <img src={degreeImage} alt="Graduation" style={{ height: '400px', borderRadius: '8px' }} />
-                </div>
-              ]}
-              isExpanded={expandedSections.education.entries.degree}
-              onClick={() => toggleEntry('education', 'degree')}
-            />
-
-            <Entry
-              title="[IBM x RedHat] AI Transformation - AX Academy"
-              location="IBM x RedHat"
-              dates={lang==='ENG' ? "April 2025 ~ October 2025" : "2025.04 ~ 2025.10"}
-              details={[
-                ...(lang==='ENG'
-                  ? [
-                      "Participated in the AI Transformation program hosted by IBM and RedHat.",
-                      "Hands-on learning with TensorFlow, Keras, and PyTorch; built and experimented with DNN, CNN, RNN, and NLP models.",
-                      "Studied and applied key AI research papers, including Attention Is All You Need, GPT-1/2/3 and BERT.",
-                      "Learned advanced LLM applications directly from IBM developers, focusing on RAG and prompt engineering.",
-                      "Actively participated in multiple AI-related competitions: Dacon challenges, hackathons, and collaborative projects.",
-                      "Led the team for the final IBM project: a legal AI assistant powered by an LLM and RAG."
-                    ]
-                  : [
-                      "IBM/RedHat 주관 AI Transformation 프로그램 참여.",
-                      "TensorFlow, Keras, PyTorch를 활용해 DNN, CNN, RNN, NLP 모델 학습 및 실습.",
-                      "Attention Is All You Need, Semantic Structure in Large Language Model Embeddings, YOLO, BERT 등 주요 논문을 학습하고 적용.",
-                      "현직 IBM 개발자에게 LLM(RAG, Prompt Engineering) 심화 강의 수강.",
-                      "Dacon 대회, 해커톤 등 다수의 AI 관련 대회에 적극적으로 참가.",
-                      "과정 최종 IBM 발표 프로젝트를 팀장으로 이끌어 LLM·RAG 기반 법률 AI Assistant 개발."
-                    ]),
-                // 이미지 블록
-                <div key="ibm-images" style={{ display:'flex', overflowX:'auto', whiteSpace:'nowrap', gap:'10px', padding:'10px 0' }}>
-                  <img src={ibmImage1} alt="IBM x RedHat 1" style={{ height: '400px', borderRadius: '8px' }} />
-                </div>
-              ]}
-              isExpanded={expandedSections.education.entries.ibmAxAcademy}
-              onClick={() => toggleEntry('education', 'ibmAxAcademy')}
-            />
-            <Entry
-              title={lang==='ENG' ? "St Andrews Judo Club / Registered as member of Judo Scotland" : "세인트앤드루스 유도부 / Judo Scotland 등록 회원"}
-              location=""
-              dates=""
-              details={[
-                <div key="judo-images" style={{ display:'flex', overflowX:'auto', whiteSpace:'nowrap', gap:'10px', padding:'10px 0' }}>
-                  <img src={judoImage1} alt="Judo 1" style={{ height: '400px', borderRadius: '8px' }} />
-                  <img src={judoImage2} alt="Judo 2" style={{ height: '400px', borderRadius: '8px' }} />
-                  <img src={judoImage3} alt="Judo 3" style={{ height: '400px', borderRadius: '8px' }} />
-                </div>
-              ]}
-              isExpanded={expandedSections.education.entries.judo}
-              onClick={() => toggleEntry('education', 'judo')}
-            />
-            <Entry
-              title={lang==='ENG' ? "Committee member of St Andrews Korean Society" : "세인트앤드루스 한인회 운영진"}
-              location={lang==='ENG' ? "Treasurer for St Andrews Korean Society" : "한인회 회계 담당"}
-              details={[]}
-              isExpanded={expandedSections.education.entries.society}
-              onClick={() => toggleEntry('education', 'society')}
-            />
-          </div>
-        )}
-      </section>
 
 
       
