@@ -205,6 +205,7 @@ section {
 /* ---- 상단 요약 (tagline / highlights / resume) ---- */
 .profile-tagline {
   margin: 24px 0 8px;
+  padding: 0 16px;
   font-size: calc(10px + 1.2vmin);
   font-weight: 600;
 }

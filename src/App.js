@@ -85,11 +85,11 @@ function App() {
     ENG: {
       headerTitle: "Jae Woo Chang's Portfolio",
       work: "Work Experience",
-      engagements: "Professional Engagements",
-      projects: "Project Engagements",
+      engagements: "Exhibitions & Events",
+      projects: "Projects",
       otherProjects: "Other Projects",
       achievements: "Achievements / Awards",
-      education: "Education/Qualification",
+      education: "Education & Training",
       skills: "Skills",
       companyAbout: "What Company is CareSix?",
       futureOfVet: "Future of Veterinary Care",
@@ -111,11 +111,11 @@ function App() {
     KOR: {
       headerTitle: "장재우 포트폴리오",
       work: "경력",
-      engagements: "대외활동",
+      engagements: "전시·행사",
       projects: "프로젝트",
       otherProjects: "기타 프로젝트",
       achievements: "수상 / 성과",
-      education: "학력/자격",
+      education: "학력·교육",
       skills: "보유기술",
       companyAbout: "CareSix는 어떤 회사?",
       futureOfVet: "수의학의 미래",
@@ -252,7 +252,7 @@ function App() {
       },
       results: {
         ENG: "Exact match 85.23% → 89.49% (+4.26 pp) and CER 7.52% → 5.09% on 158,898 test samples · handwriting +5.49 pp · handwriting goldenset 68.63% → 77.33% · trained the weights deployed to a ** Capital project",
-        KOR: "테스트 158,898개 기준 정확도 85.23% → 89.49% (+4.26 pp), CER 7.52% → 5.09% · 필기체 +5.49%p · 필기체 골든셋 68.63% → 77.33% · **캐피탈 프로젝트 배포 가중치 학습",
+        KOR: "테스트 158,898개 기준 정확도 85.23% → 89.49% (+4.26%p), CER 7.52% → 5.09% · 필기체 +5.49%p · 필기체 골든셋 68.63% → 77.33% · **캐피탈 프로젝트 배포 가중치 학습",
       },
       lessons: {
         ENG: "Ablation showed the synthetic handwriting data added only ~0.2 pp — the gain came from data curation and the training recipe, so further generation was stopped before scaling it up",
@@ -293,7 +293,7 @@ function App() {
         ENG: "Heart-rate readings from the wearable's BCG sensor became unreliable whenever the dog trembled or moved, and an ECG reference is not available in everyday use.",
         KOR: "웨어러블 BCG 센서의 심박 측정이 강아지가 떨거나 움직이면 불안정해졌고, 일상 사용 환경에서는 기준이 될 ECG 신호도 없었음.",
       },
-      team: { ENG: '', KOR: '' },
+      team: { ENG: 'Solo on the algorithm, working with the hardware and production teams', KOR: '알고리즘 단독, 하드웨어·생산팀과 협업' },
       role: { ENG: 'AI/ML Engineer — sole developer of the heart-rate algorithm', KOR: 'AI/ML 엔지니어 — 심박 알고리즘 단독 개발' },
       contribution: {
         ENG: '100% — owned the full pipeline end to end: BCG signal processing, model design and training, and validation',
@@ -319,6 +319,10 @@ function App() {
       contribution: {
         ENG: 'Led the team and built the core AI: developed the RAG system and designed the LangChain pipeline',
         KOR: '팀을 이끌며 핵심 AI를 직접 구현: RAG 개발 및 LangChain 파이프라인 설계·구성',
+      },
+      model: {
+        ENG: 'Llama-3-8B · RAG (bge-m3 embeddings, FAISS / ChromaDB) · LangChain agents · FastAPI · AWS EC2 · Docker',
+        KOR: 'Llama-3-8B · RAG (bge-m3 임베딩, FAISS·ChromaDB) · LangChain 에이전트 · FastAPI · AWS EC2 · Docker',
       },
       results: {
         ENG: 'Delivered the working system and presented it at the final presentation that concluded the IBM x RedHat program',
@@ -616,12 +620,12 @@ function App() {
   const jAgri_ENG = [
     'Represented HRG as Lead Manager, showcasing the 2025 CES Innovation Awards-winning project: the first-ever wearable cow health monitor.',
     'Engaged with industry leaders, shared insights, and connected with experts in agricultural technology.',
-    'Demonstrated innovative approaches to livestock health monitoring, receiving significant industry recognition.',
+    'Demonstrated wearable livestock health-monitoring technology to industry visitors.',
   ];
   const jAgri_KOR = [
     'HRG 리드 매니저로 참가, 2025 CES 혁신상 수상 프로젝트(세계 최초 착용형 소 헬스 모니터) 전시.',
     '애그테크 업계 리더들과 네트워킹 및 기술 인사이트 공유.',
-    '가축 헬스 모니터링의 혁신적 접근 시연, 업계 주목.',
+    '착용형 가축 헬스 모니터링 기술을 업계 방문객에게 시연.',
   ];
 
   const fava_media = (
@@ -656,7 +660,7 @@ function App() {
   const ces_KOR = [
     'CES 2025 Venetian Suite 29-225 전시 초청.',
     '수의 테크/웨어러블 헬스 모니터링 최신 기술 시연.',
-    '글로벌 테크 리더들과 네트워킹을 통해 헬스케어 한계 확장.',
+    '글로벌 테크 리더·혁신가들과 동물 헬스케어 분야 네트워킹.',
   ];
 
   // --- Hackathon section (updated) ---
@@ -1042,101 +1046,6 @@ function App() {
       </header>
 
 
-      {/* ===== Education ===== */}
-      <section className="Education-section">
-        <h2 onClick={() => toggleSection('education')}>{t[lang].education}</h2>
-        {expandedSections.education.expanded && (
-          <div className="section-content">
-            <Entry
-              title={lang==='ENG' ? "University of St Andrews, St Andrews, Scotland" : "세인트앤드루스 대학교, 스코틀랜드"}
-              location={lang==='ENG' ? "Bachelor of Science in Mathematics and Computer Science" : "수학·컴퓨터과학 학사"}
-              dates={lang==='ENG' ? "September 2019 - June 2024" : "2019년 9월 - 2024년 6월"}
-              details={[
-                <div key="dissertation1" className="download-link">
-                  <button
-                    type="button"
-                    onClick={(e) => { e.stopPropagation(); window.open(dissertation1, '_blank', 'noopener'); }}
-                    style={{ background:'transparent', border:0, padding:0, cursor:'pointer' }}
-                  >
-                    <img src={dissImage} alt="Open Dissertation 1" className="download-icon" />
-                  </button>
-                  <span>{lang==='ENG' ? "Computer Science Dissertation" : "컴퓨터과학 학위논문"}</span>
-                </div>,
-                <div key="dissertation2" className="download-link">
-                  <button
-                    type="button"
-                    onClick={(e) => { e.stopPropagation(); window.open(dissertation2, '_blank', 'noopener'); }}
-                    style={{ background:'transparent', border:0, padding:0, cursor:'pointer' }}
-                  >
-                    <img src={dissImage} alt="Open Dissertation 2" className="download-icon" />
-                  </button>
-                  <span>{lang==='ENG' ? "Mathematics Dissertation" : "수학 학위논문"}</span>
-                </div>,
-                <div key="graduation-images" style={{ display:'flex', overflowX:'auto', whiteSpace:'nowrap', gap:'10px', padding:'10px 0' }}>
-                  <img src={dissertationImage1} alt="dissertation1" style={{ height: '400px', borderRadius: '8px' }} />
-                  <img src={dissertationImage2} alt="dissertation2" style={{ height: '400px', borderRadius: '8px' }} />
-                  <img src={degreeImage} alt="Graduation" style={{ height: '400px', borderRadius: '8px' }} />
-                </div>
-              ]}
-              isExpanded={expandedSections.education.entries.degree}
-              onClick={() => toggleEntry('education', 'degree')}
-            />
-
-            <Entry
-              title="[IBM x RedHat] AI Transformation - AX Academy"
-              location="IBM x RedHat"
-              dates={lang==='ENG' ? "April 2025 ~ October 2025" : "2025.04 ~ 2025.10"}
-              details={[
-                ...(lang==='ENG'
-                  ? [
-                      "Participated in the AI Transformation program hosted by IBM and RedHat.",
-                      "Hands-on learning with TensorFlow, Keras, and PyTorch; built and experimented with DNN, CNN, RNN, and NLP models.",
-                      "Studied and applied key AI research papers, including Attention Is All You Need, GPT-1/2/3 and BERT.",
-                      "Learned advanced LLM applications directly from IBM developers, focusing on RAG and prompt engineering.",
-                      "Actively participated in multiple AI-related competitions: Dacon challenges, hackathons, and collaborative projects.",
-                      "Led the team for the final IBM project: a legal AI assistant powered by an LLM and RAG."
-                    ]
-                  : [
-                      "IBM/RedHat 주관 AI Transformation 프로그램 참여.",
-                      "TensorFlow, Keras, PyTorch를 활용해 DNN, CNN, RNN, NLP 모델 학습 및 실습.",
-                      "Attention Is All You Need, Semantic Structure in Large Language Model Embeddings, YOLO, BERT 등 주요 논문을 학습하고 적용.",
-                      "현직 IBM 개발자에게 LLM(RAG, Prompt Engineering) 심화 강의 수강.",
-                      "Dacon 대회, 해커톤 등 다수의 AI 관련 대회에 적극적으로 참가.",
-                      "과정 최종 IBM 발표 프로젝트를 팀장으로 이끌어 LLM·RAG 기반 법률 AI Assistant 개발."
-                    ]),
-                // 이미지 블록
-                <div key="ibm-images" style={{ display:'flex', overflowX:'auto', whiteSpace:'nowrap', gap:'10px', padding:'10px 0' }}>
-                  <img src={ibmImage1} alt="IBM x RedHat 1" style={{ height: '400px', borderRadius: '8px' }} />
-                </div>
-              ]}
-              isExpanded={expandedSections.education.entries.ibmAxAcademy}
-              onClick={() => toggleEntry('education', 'ibmAxAcademy')}
-            />
-            <Entry
-              title={lang==='ENG' ? "St Andrews Judo Club / Registered as member of Judo Scotland" : "세인트앤드루스 유도부 / Judo Scotland 등록 회원"}
-              location=""
-              dates=""
-              details={[
-                <div key="judo-images" style={{ display:'flex', overflowX:'auto', whiteSpace:'nowrap', gap:'10px', padding:'10px 0' }}>
-                  <img src={judoImage1} alt="Judo 1" style={{ height: '400px', borderRadius: '8px' }} />
-                  <img src={judoImage2} alt="Judo 2" style={{ height: '400px', borderRadius: '8px' }} />
-                  <img src={judoImage3} alt="Judo 3" style={{ height: '400px', borderRadius: '8px' }} />
-                </div>
-              ]}
-              isExpanded={expandedSections.education.entries.judo}
-              onClick={() => toggleEntry('education', 'judo')}
-            />
-            <Entry
-              title={lang==='ENG' ? "Committee member of St Andrews Korean Society" : "세인트앤드루스 한인회 운영진"}
-              location={lang==='ENG' ? "Treasurer for St Andrews Korean Society" : "한인회 회계 담당"}
-              details={[]}
-              isExpanded={expandedSections.education.entries.society}
-              onClick={() => toggleEntry('education', 'society')}
-            />
-          </div>
-        )}
-      </section>
-
       {/* ===== Work Experience ===== */}
       <section className="Experience-section">
         <h2 onClick={() => toggleSection('experience')}>{t[lang].work}</h2>
@@ -1145,7 +1054,7 @@ function App() {
             <Entry
               title={work_kdl_title}
               location={lang==='ENG' ? "Gangnam, Seoul, South Korea" : "대한민국 서울 강남"}
-              dates={lang==='ENG' ? "November 2025 - Present" : "2025.11 ~ 현재"}
+              dates={lang==='ENG' ? "November 2025 ~ Present" : "2025.11 ~ 현재"}
               details={lang==='ENG' ? work_kdl_details_ENG : work_kdl_details_KOR}
               isExpanded={expandedSections.experience.entries.koreaDeepLearning}
               onClick={() => toggleEntry('experience', 'koreaDeepLearning')}
@@ -1153,7 +1062,7 @@ function App() {
             <Entry
               title={work_ai_title}
               location={lang==='ENG' ? "Seoul, South Korea" : "대한민국 서울"}
-              dates={lang==='ENG' ? "September 2024 - April 2025" : "2024.09 ~ 2025.04"}
+              dates={lang==='ENG' ? "September 2024 ~ April 2025" : "2024.09 ~ 2025.04"}
               details={lang==='ENG' ? work_ai_details_ENG : work_ai_details_KOR}
               isExpanded={expandedSections.experience.entries.aiAlgorithm}
               onClick={() => toggleEntry('experience', 'aiAlgorithm')}
@@ -1161,7 +1070,7 @@ function App() {
             <Entry
               title={work_app_title}
               location={lang==='ENG' ? "Jeju Island, South Korea" : "대한민국 제주"}
-              dates={lang==='ENG' ? "June 2023 - August 2023" : "2023.06 ~ 2023.08"}
+              dates={lang==='ENG' ? "June 2023 ~ August 2023" : "2023.06 ~ 2023.08"}
               details={lang==='ENG' ? work_app_details_ENG : work_app_details_KOR}
               isExpanded={expandedSections.experience.entries.appdeveloper}
               onClick={() => toggleEntry('experience', 'appdeveloper')}
@@ -1169,7 +1078,7 @@ function App() {
             <Entry
               title={work_math_title}
               location={lang==='ENG' ? "Jeju Island, South Korea" : "대한민국 제주"}
-              dates={lang==='ENG' ? "May 2022 - August 2022" : "2022.05 ~ 2022.08"}
+              dates={lang==='ENG' ? "May 2022 ~ August 2022" : "2022.05 ~ 2022.08"}
               details={lang==='ENG' ? work_math_details_ENG : work_math_details_KOR}
               isExpanded={expandedSections.experience.entries.mathematician}
               onClick={() => toggleEntry('experience', 'mathematician')}
@@ -1187,8 +1096,8 @@ function App() {
                     <div style={{ paddingBottom: '20px' }}>
                       <p>
                         {lang==='ENG'
-                          ? "The AI collar developed by CareSix revolutionizes veterinary care by monitoring pets' health in real time."
-                          : "CareSix의 AI 목걸이는 반려동물의 건강을 실시간 모니터링하여 수의 진료를 혁신합니다."}
+                          ? "The AI collar developed by CareSix monitors pets' health in real time."
+                          : "CareSix의 AI 목걸이는 반려동물의 건강을 실시간으로 모니터링합니다."}
                       </p>
                       <img src={cotonsImage1} alt="CareSix AI Collar" style={{ height: '400px', borderRadius: '8px' }} />
                     </div>
@@ -1212,8 +1121,8 @@ function App() {
                     <div>
                       <p>
                         {lang==='ENG'
-                          ? "CareSix is at the forefront of pet healthcare technology. Learn more on their "
-                          : "CareSix는 반려동물 헬스케어 테크를 선도합니다. 더 보려면 "}
+                          ? "CareSix is a pet healthcare technology company. Learn more on their "
+                          : "CareSix는 반려동물 헬스케어 테크 기업입니다. 더 보려면 "}
                         <a href="https://cotons.ai" target="_blank" rel="noopener noreferrer">
                           {t[lang].officialSite}
                         </a>.
@@ -1445,6 +1354,101 @@ function App() {
                 <SkillGroup key={i} title={g.title} items={g.items} />
               ))}
             </div>
+          </div>
+        )}
+      </section>
+
+      {/* ===== Education ===== */}
+      <section className="Education-section">
+        <h2 onClick={() => toggleSection('education')}>{t[lang].education}</h2>
+        {expandedSections.education.expanded && (
+          <div className="section-content">
+            <Entry
+              title={lang==='ENG' ? "University of St Andrews, St Andrews, Scotland" : "세인트앤드루스 대학교, 스코틀랜드"}
+              location={lang==='ENG' ? "Bachelor of Science in Mathematics and Computer Science" : "수학·컴퓨터과학 학사"}
+              dates={lang==='ENG' ? "September 2019 ~ June 2024" : "2019.09 ~ 2024.06"}
+              details={[
+                <div key="dissertation1" className="download-link">
+                  <button
+                    type="button"
+                    onClick={(e) => { e.stopPropagation(); window.open(dissertation1, '_blank', 'noopener'); }}
+                    style={{ background:'transparent', border:0, padding:0, cursor:'pointer' }}
+                  >
+                    <img src={dissImage} alt="Open Dissertation 1" className="download-icon" />
+                  </button>
+                  <span>{lang==='ENG' ? "Computer Science Dissertation" : "컴퓨터과학 학위논문"}</span>
+                </div>,
+                <div key="dissertation2" className="download-link">
+                  <button
+                    type="button"
+                    onClick={(e) => { e.stopPropagation(); window.open(dissertation2, '_blank', 'noopener'); }}
+                    style={{ background:'transparent', border:0, padding:0, cursor:'pointer' }}
+                  >
+                    <img src={dissImage} alt="Open Dissertation 2" className="download-icon" />
+                  </button>
+                  <span>{lang==='ENG' ? "Mathematics Dissertation" : "수학 학위논문"}</span>
+                </div>,
+                <div key="graduation-images" style={{ display:'flex', overflowX:'auto', whiteSpace:'nowrap', gap:'10px', padding:'10px 0' }}>
+                  <img src={dissertationImage1} alt="dissertation1" style={{ height: '400px', borderRadius: '8px' }} />
+                  <img src={dissertationImage2} alt="dissertation2" style={{ height: '400px', borderRadius: '8px' }} />
+                  <img src={degreeImage} alt="Graduation" style={{ height: '400px', borderRadius: '8px' }} />
+                </div>
+              ]}
+              isExpanded={expandedSections.education.entries.degree}
+              onClick={() => toggleEntry('education', 'degree')}
+            />
+
+            <Entry
+              title="[IBM x RedHat] AI Transformation - AX Academy"
+              location="IBM x RedHat"
+              dates={lang==='ENG' ? "April 2025 ~ October 2025" : "2025.04 ~ 2025.10"}
+              details={[
+                ...(lang==='ENG'
+                  ? [
+                      "Participated in the AI Transformation program hosted by IBM and RedHat.",
+                      "Hands-on learning with TensorFlow, Keras, and PyTorch; built and experimented with DNN, CNN, RNN, and NLP models.",
+                      "Studied and applied key AI research papers, including Attention Is All You Need, GPT-1/2/3 and BERT.",
+                      "Learned advanced LLM applications directly from IBM developers, focusing on RAG and prompt engineering.",
+                      "Actively participated in multiple AI-related competitions: Dacon challenges, hackathons, and collaborative projects.",
+                      "Led the team for the final IBM project: a legal AI assistant powered by an LLM and RAG."
+                    ]
+                  : [
+                      "IBM/RedHat 주관 AI Transformation 프로그램 참여.",
+                      "TensorFlow, Keras, PyTorch를 활용해 DNN, CNN, RNN, NLP 모델 학습 및 실습.",
+                      "Attention Is All You Need, Semantic Structure in Large Language Model Embeddings, YOLO, BERT 등 주요 논문을 학습하고 적용.",
+                      "현직 IBM 개발자에게 LLM(RAG, Prompt Engineering) 심화 강의 수강.",
+                      "Dacon 대회, 해커톤 등 다수의 AI 관련 대회에 적극적으로 참가.",
+                      "과정 최종 IBM 발표 프로젝트를 팀장으로 이끌어 LLM·RAG 기반 법률 AI Assistant 개발."
+                    ]),
+                // 이미지 블록
+                <div key="ibm-images" style={{ display:'flex', overflowX:'auto', whiteSpace:'nowrap', gap:'10px', padding:'10px 0' }}>
+                  <img src={ibmImage1} alt="IBM x RedHat 1" style={{ height: '400px', borderRadius: '8px' }} />
+                </div>
+              ]}
+              isExpanded={expandedSections.education.entries.ibmAxAcademy}
+              onClick={() => toggleEntry('education', 'ibmAxAcademy')}
+            />
+            <Entry
+              title={lang==='ENG' ? "St Andrews Judo Club / Registered as member of Judo Scotland" : "세인트앤드루스 유도부 / Judo Scotland 등록 회원"}
+              location=""
+              dates=""
+              details={[
+                <div key="judo-images" style={{ display:'flex', overflowX:'auto', whiteSpace:'nowrap', gap:'10px', padding:'10px 0' }}>
+                  <img src={judoImage1} alt="Judo 1" style={{ height: '400px', borderRadius: '8px' }} />
+                  <img src={judoImage2} alt="Judo 2" style={{ height: '400px', borderRadius: '8px' }} />
+                  <img src={judoImage3} alt="Judo 3" style={{ height: '400px', borderRadius: '8px' }} />
+                </div>
+              ]}
+              isExpanded={expandedSections.education.entries.judo}
+              onClick={() => toggleEntry('education', 'judo')}
+            />
+            <Entry
+              title={lang==='ENG' ? "Committee member of St Andrews Korean Society" : "세인트앤드루스 한인회 운영진"}
+              location={lang==='ENG' ? "Treasurer for St Andrews Korean Society" : "한인회 회계 담당"}
+              details={[]}
+              isExpanded={expandedSections.education.entries.society}
+              onClick={() => toggleEntry('education', 'society')}
+            />
           </div>
         )}
       </section>
