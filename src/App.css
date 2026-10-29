@@ -201,3 +201,74 @@ section {
 }
 
 .lang-btn.active { color: #fff; }
+
+/* ---- 상단 요약 (tagline / highlights / resume) ---- */
+.profile-tagline {
+  margin: 24px 0 8px;
+  font-size: calc(10px + 1.2vmin);
+  font-weight: 600;
+}
+
+.profile-highlights {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: left;
+  font-size: calc(9px + 0.8vmin);
+  line-height: 1.6;
+  color: #374151;
+}
+
+.resume-btn {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 10px 18px;
+  border-radius: 9999px;
+  background: #111827;
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.resume-btn:hover { background: #000; }
+
+/* ---- Entry 메타 (팀 / 역할 / 기여 / 성과 / 링크) ---- */
+.entry-meta {
+  margin: 8px 0 12px;
+  padding: 12px 14px;
+  border: 1px solid #e8eaef;
+  border-radius: 12px;
+  background: #fafcff;
+  font-size: .95rem;
+}
+
+.entry-meta-row {
+  display: flex;
+  gap: 12px;
+  padding: 3px 0;
+}
+
+.entry-meta-label {
+  flex: 0 0 110px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.entry-meta-value { color: #374151; }
+
+.entry-meta-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.entry-meta-links a {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .entry-meta-row { flex-direction: column; gap: 0; }
+  .entry-meta-label { flex: none; }
+}

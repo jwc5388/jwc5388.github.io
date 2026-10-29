@@ -2,7 +2,9 @@ import React from 'react';
 import './App.css'; // Ensure you have proper styling in App.css
 import { useState } from 'react';
 
-function Entry({ title, location, dates, details, imageSrc, isExpanded, onClick }) {
+// meta: [{ label, value }] — 팀/역할/기여/성과 등 (빈 값은 App에서 걸러서 전달)
+// links: [{ label, href }]
+function Entry({ title, location, dates, details, imageSrc, isExpanded, onClick, meta = [], links = [] }) {
   const [expandedDetails, setExpandedDetails] = useState({});
 
   const toggleDetail = (index) => {
@@ -22,6 +24,23 @@ function Entry({ title, location, dates, details, imageSrc, isExpanded, onClick 
         <div className="entry-details">
           {location && <p>{location}</p>}
           {dates && <p>{dates}</p>}
+          {(meta.length > 0 || links.length > 0) && (
+            <div className="entry-meta">
+              {meta.map(({ label, value }) => (
+                <div className="entry-meta-row" key={label}>
+                  <span className="entry-meta-label">{label}</span>
+                  <span className="entry-meta-value">{value}</span>
+                </div>
+              ))}
+              {links.length > 0 && (
+                <div className="entry-meta-links">
+                  {links.map(({ label, href }) => (
+                    <a key={href} href={href} target="_blank" rel="noopener noreferrer">{label}</a>
+                  ))}
+                </div>
+              )}
+            </div>
+          )}
           <ul>
             {details.map((detail, index) => (
               <li key={index}>
