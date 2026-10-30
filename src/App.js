@@ -234,8 +234,8 @@ function App() {
     },
     kdlGaugeReading: {
       problem: {
-        ENG: "Analog gauges on site had to be read by people in person, so they could not be monitored continuously; the goal was to read gauge state automatically from the CCTV cameras already installed.",
-        KOR: "현장의 아날로그 계기판은 사람이 직접 보고 값을 확인해야 해서 상시 모니터링이 어려웠음. 이미 설치된 CCTV 영상만으로 계기판 상태를 자동으로 읽어내는 것이 목표.",
+        ENG: "Analog gauges at manufacturing sites had to be read by people in person, so they could not be monitored continuously; the goal was to read gauge state automatically from the CCTV cameras already installed.",
+        KOR: "제조 현장의 아날로그 계기판은 사람이 직접 보고 값을 확인해야 해서 상시 모니터링이 어려웠음. 이미 설치된 CCTV 영상만으로 계기판 상태를 자동으로 읽어내는 것이 목표.",
       },
       team: {
         ENG: "Solo",
@@ -506,7 +506,7 @@ function App() {
     "Quality and process document extraction API for an automotive parts manufacturer: 7 document types, 93.49% accuracy on the client's audit ledger.",
     "Generative video augmentation (wildfire, flood) from real CCTV stills to train disaster-detection models.",
     "R&D on the recognizer of the company's two-stage OCR (detector → recognizer) for Korean handwriting: +4.26 pp exact match, weights deployed to a ** Capital project.",
-    "Real-time analog gauge reading from CCTV with a two-stage YOLO26 pipeline (detection → OBB): gauge mAP50-95 0.992, needle 0.949, deployed as a Docker API.",
+    "Government-funded manufacturing innovation project — real-time analog gauge reading from CCTV with a two-stage YOLO26 pipeline (detection → OBB): gauge mAP50-95 0.992, needle 0.949, deployed as a Docker API.",
   ];
   const work_kdl_details_KOR = [
     "기업 고객용 LLM·VLM 문서 자동화 시스템을 개발하고 Docker로 폐쇄망 GPU 서버에 납품.",
@@ -515,7 +515,7 @@ function App() {
     "자동차 부품 제조사 품질·공정 문서 추출 API: 문서 7종, 고객 검수 대장 기준 정확도 93.49%.",
     "실제 CCTV 사진 기반 재난(산불·침수) 영상 생성 증강으로 재난 탐지 모델 학습 데이터 구축.",
     "사내 2-stage OCR(Detector → Recognizer)의 한국어 필기체 Recognizer 연구: 정확도 +4.26%p, **캐피탈 프로젝트에 가중치 배포.",
-    "CCTV 아날로그 계기판 실시간 판독(2단계 YOLO26 Detection → OBB): 계기판 mAP50-95 0.992, 바늘 0.949, Docker API로 실서비스 배포.",
+    "정부과제(제조혁신) — CCTV 아날로그 계기판 실시간 판독(2단계 YOLO26 Detection → OBB): 계기판 mAP50-95 0.992, 바늘 0.949, Docker API로 실서비스 배포.",
   ];
 
   // ===== Projects – Korea Deep Learning =====
@@ -573,7 +573,7 @@ function App() {
   ];
 
   const kdl_gauge_ENG = [
-    "Built a real-time two-stage pipeline that reads analog gauges from on-site CCTV (1920×1080): YOLO26x detects the gauge (960 px), the gauge is cropped to about 60×60 px, and YOLO26x-OBB detects the needle's position and rotation (128 px).",
+    "Built a real-time two-stage pipeline that reads analog gauges from factory CCTV (1920×1080): YOLO26x detects the gauge (960 px), the gauge is cropped to about 60×60 px, and YOLO26x-OBB detects the needle's position and rotation (128 px).",
     "Instead of searching the full FHD frame for a thin needle, cropped the gauge first and found the needle on a small input, securing both accuracy and inference speed.",
     "Designed and ran a semi-automatic labeling loop — a small hand-labeled set in X-AnyLabeling → first YOLO model → auto-labeling and review → final training — to build 10,834 gauge and 9,594 needle images alone.",
     "Mixed about 7,000 on-site CCTV frames with a public gauge dataset for variety in gauge types, and built the needle set from Stage 1 crops so training matched the real inference input.",
@@ -582,7 +582,7 @@ function App() {
     "Deployed the API server with Docker Compose on an allocated NVIDIA GPU, with a /health check, restart: unless-stopped for automatic recovery, and ports and container names in env files for per-environment deployment.",
   ];
   const kdl_gauge_KOR = [
-    "산업 현장 CCTV(1920×1080)에서 아날로그 계기판을 실시간으로 판독하는 2단계 파이프라인 구축: YOLO26x로 계기판 검출(960px) → 약 60×60px로 잘라 YOLO26x-OBB로 바늘의 위치·회전 방향 검출(128px).",
+    "제조 현장 CCTV(1920×1080)에서 아날로그 계기판을 실시간으로 판독하는 2단계 파이프라인 구축: YOLO26x로 계기판 검출(960px) → 약 60×60px로 잘라 YOLO26x-OBB로 바늘의 위치·회전 방향 검출(128px).",
     "FHD 프레임 전체에서 가는 바늘을 바로 찾는 대신, 계기판만 잘라 작은 입력에서 바늘을 찾게 해 정확도와 추론 속도를 함께 확보.",
     "반자동 라벨링 루프 설계·운영: X-AnyLabeling 소량 수동 라벨 → 1차 YOLO 학습 → 오토라벨링·검수 → 최종 학습으로 계기판 10,834장·바늘 9,594장 데이터셋을 1인 구축.",
     "현장 CCTV 프레임 약 7,000장에 공개 계기판 데이터셋을 섞어 계기판 형태의 다양성을 확보하고, 바늘 데이터는 Stage 1 결과로 잘라낸 이미지로 만들어 실제 추론과 같은 입력 분포로 학습.",
@@ -1340,7 +1340,7 @@ function App() {
 
             <Entry
               title={lang==='ENG' ? "Real-Time Analog Gauge Reading from CCTV" : "CCTV 기반 아날로그 계기판 실시간 판독"}
-              location={lang==='ENG' ? "Korea Deep Learning · Computer vision, deployed to production" : "한국딥러닝 · 컴퓨터 비전, 실서비스 배포"}
+              location={lang==='ENG' ? "Korea Deep Learning · Government-funded manufacturing innovation project, deployed to production" : "한국딥러닝 · 정부과제(제조혁신), 실서비스 배포"}
               dates={lang==='ENG' ? "January 2026 ~ March 2026" : "2026.01 ~ 2026.03"}
               details={lang==='ENG' ? kdl_gauge_ENG : kdl_gauge_KOR}
               {...getMeta('kdlGaugeReading')}
