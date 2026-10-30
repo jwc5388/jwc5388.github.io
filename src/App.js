@@ -151,8 +151,8 @@ function App() {
       KOR: "고객 현장에서 LLM·VLM 시스템을 정의하고, 만들고, 배포하는 AI 엔지니어",
     },
     summary: {
-      ENG: "AI Engineer who defines client problems on site, then builds and deploys the LLM/VLM systems that solve them. My joint degree in Mathematics and Computer Science at the University of St Andrews, with a dissertation in each field, shapes how I work: I build a trustworthy evaluation and trace where errors actually come from, rather than stopping at a model that runs. Over roughly 1.5 years at Korea Deep Learning and CareSix, I have built document-automation (LLM/VLM), OCR, generative-video and biosignal systems and deployed them with Docker on client servers, including air-gapped ones. I also generalized a KIE pipeline built for one client (document-template classification and automatic extraction-schema definition) into PPASS, a shared base module that was then customized for each client.",
-      KOR: "고객 현장의 문제를 정의하고, 이를 푸는 LLM·VLM 시스템을 만들어 배포까지 책임지는 AI 엔지니어입니다. 세인트앤드루스 대학교에서 수학과 컴퓨터과학을 함께 전공하며 두 분야에서 각각 학위논문을 썼고, 그 덕분에 모델이 돌아가는 데서 멈추지 않고 믿을 수 있는 평가 기준을 먼저 세우고 오류의 원인을 끝까지 검증합니다. 한국딥러닝과 케어식스에서 약 1년 반 동안 LLM·VLM 문서 자동화·OCR·생성형 영상·생체신호 시스템을 만들어 Docker로 고객 서버와 폐쇄망에 배포해 왔고, 한 고객사를 위해 만든 KIE 파이프라인(문서 틀 분류, 추출 스키마 자동 정의)을 사내 공통 기본 모듈 PPASS로 일반화해 고객사마다 맞춤 적용했습니다.",
+      ENG: "AI Engineer who defines client problems on site, then builds and deploys the LLM/VLM systems that solve them. My joint degree in Mathematics and Computer Science at the University of St Andrews, with a dissertation in each field, shapes how I work: I build a trustworthy evaluation and trace where errors actually come from, rather than stopping at a model that runs. Over roughly 1.5 years at Korea Deep Learning and CareSix, I have built document-automation (LLM/VLM), OCR, object-detection, generative-video and biosignal systems and deployed them with Docker on client servers, including air-gapped ones. I also generalized a KIE pipeline built for one client (document-template classification and automatic extraction-schema definition) into PPASS, a shared base module that was then customized for each client.",
+      KOR: "고객 현장의 문제를 정의하고, 이를 푸는 LLM·VLM 시스템을 만들어 배포까지 책임지는 AI 엔지니어입니다. 세인트앤드루스 대학교에서 수학과 컴퓨터과학을 함께 전공하며 두 분야에서 각각 학위논문을 썼고, 그 덕분에 모델이 돌아가는 데서 멈추지 않고 믿을 수 있는 평가 기준을 먼저 세우고 오류의 원인을 끝까지 검증합니다. 한국딥러닝과 케어식스에서 약 1년 반 동안 LLM·VLM 문서 자동화·OCR·객체 검출·생성형 영상·생체신호 시스템을 만들어 Docker로 고객 서버와 폐쇄망에 배포해 왔고, 한 고객사를 위해 만든 KIE 파이프라인(문서 틀 분류, 추출 스키마 자동 정의)을 사내 공통 기본 모듈 PPASS로 일반화해 고객사마다 맞춤 적용했습니다.",
     },
     skills: ["LLM / VLM", "KIE · OCR", "RAG · LangChain", "Docker", "FastAPI", "vLLM", "PyTorch", "Python"],
     highlights: {
@@ -229,6 +229,37 @@ function App() {
       lessons: {
         ENG: "Most remaining errors (~210 cells) are LLM judgment calls on how much text to copy — knowing where rules must stop mattered as much as raising accuracy",
         KOR: "남은 오답(약 210칸) 대부분은 '어느 칸 글을 얼마나 옮길지'라는 LLM 판단 문제 — 정확도를 올리는 것만큼 규칙으로 밀면 안 되는 지점을 아는 게 중요했음",
+      },
+      links: [],
+    },
+    kdlGaugeReading: {
+      problem: {
+        ENG: "Analog gauges on site had to be read by people in person, so they could not be monitored continuously; the goal was to read gauge state automatically from the CCTV cameras already installed.",
+        KOR: "현장의 아날로그 계기판은 사람이 직접 보고 값을 확인해야 해서 상시 모니터링이 어려웠음. 이미 설치된 CCTV 영상만으로 계기판 상태를 자동으로 읽어내는 것이 목표.",
+      },
+      team: {
+        ENG: "Solo",
+        KOR: "1인",
+      },
+      role: {
+        ENG: "Data collection and labeling, model design and training, deployment",
+        KOR: "데이터 구축(라벨링 포함), 모델 설계·학습, 배포",
+      },
+      contribution: {
+        ENG: "100% — owned everything from data collection and labeling to model training and the Docker API deployment",
+        KOR: "100% — 데이터 수집·라벨링부터 모델 학습, Docker 기반 API 배포까지 전 과정 단독 수행",
+      },
+      model: {
+        ENG: "Two-stage: YOLO26x detection (gauge, 960 px) → YOLO26x-OBB (needle, 128 px) · Python · PyTorch · Ultralytics · X-AnyLabeling · Docker Compose on NVIDIA GPU",
+        KOR: "2단계: YOLO26x Detection (계기판, 960px) → YOLO26x-OBB (바늘, 128px) · Python · PyTorch · Ultralytics · X-AnyLabeling · Docker Compose (NVIDIA GPU)",
+      },
+      results: {
+        ENG: "Gauge detection mAP50-95 0.992 · needle detection mAP50-95 0.949 (OBB, vs 0.930 with standard boxes) · 10,834 gauge + 9,594 needle images labeled solo · deployed to production",
+        KOR: "계기판 검출 mAP50-95 0.992 · 바늘 검출 mAP50-95 0.949 (OBB, 일반 박스 0.930 대비) · 계기판 10,834장 + 바늘 9,594장 1인 구축 · 실서비스 배포",
+      },
+      lessons: {
+        ENG: "Splitting a tiny-object problem into two stages let each model focus on one job, and choosing a label format that carries what the reading needs (the needle angle, via OBB) helped both accuracy and post-processing",
+        KOR: "작은 객체를 2단계로 나눠 각 모델이 자기 문제에만 집중하게 하고, 판독에 필요한 정보(각도)를 담는 라벨 표현(OBB)을 고르는 것이 성능과 후처리 모두에 유리했음",
       },
       links: [],
     },
@@ -471,6 +502,7 @@ function App() {
     "Quality and process document extraction API for an automotive parts manufacturer: 7 document types, 93.49% accuracy on the client's audit ledger.",
     "Generative video augmentation (wildfire, flood) from real CCTV stills to train disaster-detection models.",
     "R&D on the recognizer of the company's two-stage OCR (detector → recognizer) for Korean handwriting: +4.26 pp exact match, weights deployed to a ** Capital project.",
+    "Real-time analog gauge reading from CCTV with a two-stage YOLO26 pipeline (detection → OBB): gauge mAP50-95 0.992, needle 0.949, deployed as a Docker API.",
   ];
   const work_kdl_details_KOR = [
     "기업 고객용 LLM·VLM 문서 자동화 시스템을 개발하고 Docker로 폐쇄망 GPU 서버에 납품.",
@@ -479,6 +511,7 @@ function App() {
     "자동차 부품 제조사 품질·공정 문서 추출 API: 문서 7종, 고객 검수 대장 기준 정확도 93.49%.",
     "실제 CCTV 사진 기반 재난(산불·침수) 영상 생성 증강으로 재난 탐지 모델 학습 데이터 구축.",
     "사내 2-stage OCR(Detector → Recognizer)의 한국어 필기체 Recognizer 연구: 정확도 +4.26%p, **캐피탈 프로젝트에 가중치 배포.",
+    "CCTV 아날로그 계기판 실시간 판독(2단계 YOLO26 Detection → OBB): 계기판 mAP50-95 0.992, 바늘 0.949, Docker API로 실서비스 배포.",
   ];
 
   // ===== Projects – Korea Deep Learning =====
@@ -533,6 +566,25 @@ function App() {
     "합성 필기체 생성: MX-Font(필기체 38종, ascender/descender 정렬 단어 합성) → Gemini 이미지 생성(이름·주소·어려운 케이스), ablation과 gain/drop 케이스 분석으로 실제 효과 검증.",
     "필기체 615만 / 인쇄체 545만, 총 1,160만 장으로 데이터를 구성해 PARSeq fine-tuning: 테스트 14종 중 13종 1위, **캐피탈 프로젝트 배포 가중치 학습.",
     "PARSeq 인코더를 고정하고 attention pooling을 붙인 필기체/인쇄체 분류기 개발(정확도 85%).",
+  ];
+
+  const kdl_gauge_ENG = [
+    "Built a real-time two-stage pipeline that reads analog gauges from on-site CCTV (1920×1080): YOLO26x detects the gauge (960 px), the gauge is cropped to about 60×60 px, and YOLO26x-OBB detects the needle's position and rotation (128 px).",
+    "Instead of searching the full FHD frame for a thin needle, cropped the gauge first and found the needle on a small input, securing both accuracy and inference speed.",
+    "Designed and ran a semi-automatic labeling loop — a small hand-labeled set in X-AnyLabeling → first YOLO model → auto-labeling and review → final training — to build 10,834 gauge and 9,594 needle images alone.",
+    "Mixed about 7,000 on-site CCTV frames with a public gauge dataset for variety in gauge types, and built the needle set from Stage 1 crops so training matched the real inference input.",
+    "Gauge detection reached mAP50-95 0.992 (precision and recall 0.987), trained with cosine LR, AMP, early stopping and resumable checkpoints.",
+    "Compared standard boxes and oriented boxes (OBB) for the needle under identical settings with ±180° rotation augmentation: OBB raised mAP50-95 from 0.930 to 0.949 and outputs the needle angle directly, so it was adopted.",
+    "Deployed the API server with Docker Compose on an allocated NVIDIA GPU, with a /health check, restart: unless-stopped for automatic recovery, and ports and container names in env files for per-environment deployment.",
+  ];
+  const kdl_gauge_KOR = [
+    "산업 현장 CCTV(1920×1080)에서 아날로그 계기판을 실시간으로 판독하는 2단계 파이프라인 구축: YOLO26x로 계기판 검출(960px) → 약 60×60px로 잘라 YOLO26x-OBB로 바늘의 위치·회전 방향 검출(128px).",
+    "FHD 프레임 전체에서 가는 바늘을 바로 찾는 대신, 계기판만 잘라 작은 입력에서 바늘을 찾게 해 정확도와 추론 속도를 함께 확보.",
+    "반자동 라벨링 루프 설계·운영: X-AnyLabeling 소량 수동 라벨 → 1차 YOLO 학습 → 오토라벨링·검수 → 최종 학습으로 계기판 10,834장·바늘 9,594장 데이터셋을 1인 구축.",
+    "현장 CCTV 프레임 약 7,000장에 공개 계기판 데이터셋을 섞어 계기판 형태의 다양성을 확보하고, 바늘 데이터는 Stage 1 결과로 잘라낸 이미지로 만들어 실제 추론과 같은 입력 분포로 학습.",
+    "계기판 검출 mAP50-95 0.992 (Precision·Recall 0.987), cosine LR·AMP·early stopping·체크포인트 재개 학습 적용.",
+    "바늘 검출을 같은 조건에서 일반 박스와 회전 박스(OBB)로 비교(회전 ±180° 증강): OBB가 mAP50-95 0.930 → 0.949로 높고 판독에 쓸 각도를 직접 출력해 최종 채택.",
+    "Docker Compose로 GPU를 할당한 API 서버 배포: /health 헬스체크, restart: unless-stopped 자동 복구, 포트·컨테이너명 env 분리로 환경별 배포.",
   ];
 
   const kdl_video_ENG = [
@@ -1280,6 +1332,16 @@ function App() {
               {...getMeta('kdlOcrResearch')}
               isExpanded={expandedSections.projects.entries.kdlOcrResearch}
               onClick={() => toggleEntry('projects', 'kdlOcrResearch')}
+            />
+
+            <Entry
+              title={lang==='ENG' ? "Real-Time Analog Gauge Reading from CCTV" : "CCTV 기반 아날로그 계기판 실시간 판독"}
+              location={lang==='ENG' ? "Korea Deep Learning · Computer vision, deployed to production" : "한국딥러닝 · 컴퓨터 비전, 실서비스 배포"}
+              dates={lang==='ENG' ? "January 2026 ~ March 2026" : "2026.01 ~ 2026.03"}
+              details={lang==='ENG' ? kdl_gauge_ENG : kdl_gauge_KOR}
+              {...getMeta('kdlGaugeReading')}
+              isExpanded={expandedSections.projects.entries.kdlGaugeReading}
+              onClick={() => toggleEntry('projects', 'kdlGaugeReading')}
             />
 
             <Entry
