@@ -62,8 +62,7 @@ import dissertation1 from './assets/files/CSDissertation.pdf';
 import dissertation2 from './assets/files/MathDissertation.pdf';
 import dissertationImage1 from './assets/images/dissertation1.png';
 import dissertationImage2 from './assets/images/dissertation2.png';
-import productionapk from './assets/files/cotons-production-gateway.apk';
-import { FaEnvelope, FaPhone, FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaEnvelope, FaLinkedin, FaGithub } from 'react-icons/fa';
 
 // ===== 스킬 아이콘 =====
 import {
@@ -95,7 +94,6 @@ function App() {
       futureOfVet: "Future of Veterinary Care",
       companyMore: "More about the company",
       officialSite: "official website",
-      downloadApk: "Download app APK",
       mainProjects: "Main Projects",
       resume: "Download Resume (PDF)",
       metaProblem: "Problem",
@@ -121,7 +119,6 @@ function App() {
       futureOfVet: "수의학의 미래",
       companyMore: "회사 더보기",
       officialSite: "공식 웹사이트",
-      downloadApk: "앱 APK 다운로드",
       mainProjects: "주요 프로젝트",
       resume: "이력서 다운로드 (PDF)",
       metaProblem: "문제",
@@ -623,23 +620,11 @@ function App() {
 
   const work_app_title = lang === 'ENG' ? "App Developer, CareSix Co., LTD" : "앱 개발자, 케어식스";
   const work_app_details_ENG = [
-    <div key="detail-1">
-      Developed a production-grade application in Kotlin for the Sense1 Vet model, actively used in the device manufacturing and deployment process. 
-      The app automated mapping of NFC tags, QR codes, and barcodes into a structured CSV format, ensuring traceability and quality control. -
-      <a href={productionapk} download style={{ marginLeft: '8px', textDecoration: 'underline', color: '#007BFF' }}>
-        {t[lang].downloadApk}
-      </a>
-    </div>,
+    'Developed a production-grade application in Kotlin for the Sense1 Vet model, actively used in the device manufacturing and deployment process. The app automated mapping of NFC tags, QR codes, and barcodes into a structured CSV format, ensuring traceability and quality control.',
     'Built a Bluetooth-enabled app (Cotons AI) in Flutter for capturing BCG signals, 6-axis sensor data, and temperature readings.',
   ];
   const work_app_details_KOR = [
-    <div key="detail-1">
-      Kotlin으로 Sense1 Vet 양산/배포 공정에 실제 사용되는 프로덕션급 앱을 개발. 
-      NFC/QR/바코드 매핑을 자동화하여 CSV로 내보내고, 추적 가능성과 품질 관리를 보장. -
-      <a href={productionapk} download style={{ marginLeft: '8px', textDecoration: 'underline', color: '#007BFF' }}>
-        {t[lang].downloadApk}
-      </a>
-    </div>,
+    'Kotlin으로 Sense1 Vet 양산/배포 공정에 실제 사용되는 프로덕션급 앱을 개발. NFC/QR/바코드 매핑을 자동화하여 CSV로 내보내고, 추적 가능성과 품질 관리를 보장.',
     'Flutter(블루투스 연동)로 BCG/6축 센서/온도 데이터 수집 앱(Cotons AI) 개발.',
   ];
 
@@ -1072,9 +1057,6 @@ function App() {
         <div className="contact-icons">
           <a href="mailto:peter.jaewoochang@gmail.com" aria-label="Email">
             <FaEnvelope size={30} style={{ margin: '0 15px', color: '#000' }} />
-          </a>
-          <a href="tel:+821074465388" aria-label="Phone">
-            <FaPhone size={30} style={{ margin: '0 15px', color: '#000' }} />
           </a>
           <a href="https://github.com/jwc5388" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
             <FaGithub size={30} style={{ margin: '0 15px', color: '#000' }} />
