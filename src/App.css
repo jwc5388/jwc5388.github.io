@@ -39,6 +39,34 @@ section {
   transition: transform 0.3s ease;
 }
 
+.entry-heading h3 {
+  margin-bottom: 2px;
+}
+
+.entry-sub {
+  margin: 0 0 4px;
+  font-size: 0.9em;
+  color: #6b7280;
+}
+
+.section-title {
+  cursor: pointer;
+}
+
+.section-title::after {
+  content: '\25BC';
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 0.6em;
+  vertical-align: middle;
+  transform: rotate(-90deg);
+  transition: transform 0.3s ease;
+}
+
+.section-title.open::after {
+  transform: none;
+}
+
 .arrow.expanded {
   transform: rotate(180deg); /* Rotate the arrow when expanded */
 }

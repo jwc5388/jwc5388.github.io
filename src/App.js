@@ -462,12 +462,16 @@ function App() {
   };
 
   const [expandedSections, setExpandedSections] = useState({
-    experience: {expanded: false, entries: {}},
-    education: {expanded: false, entries: {}},
-    skills: {expanded:false},
-    engagements: {expanded: false, entries: {}},
-    projects: {expanded: true, entries: {}},
-    achievements: {expanded: false, entries: {}},
+    // 핵심(경력·주요 프로젝트)은 펼쳐 두고, 부가 정보(기타 프로젝트·전시·사진)는 접어 둠
+    experience: {expanded: true, entries: {koreaDeepLearning: true, aiAlgorithm: true, appdeveloper: true, mathematician: true}},
+    education: {expanded: true, entries: {}},
+    skills: {expanded: true},
+    engagements: {expanded: true, entries: {}},
+    projects: {expanded: true, entries: {
+      kdlProductPlanning: true, kdlDocExtraction: true, kdlDisasterVideo: true,
+      kdlOcrResearch: true, kdlGaugeReading: true, sense1Vet: true, lawIntelligence: true,
+    }},
+    achievements: {expanded: true, entries: {}},
   });
 
   const toggleSection = (section) => {
@@ -1100,7 +1104,7 @@ function App() {
 
       {/* ===== Work Experience ===== */}
       <section className="Experience-section">
-        <h2 onClick={() => toggleSection('experience')}>{t[lang].work}</h2>
+        <h2 className={`section-title ${expandedSections.experience.expanded ? 'open' : ''}`} onClick={() => toggleSection('experience')}>{t[lang].work}</h2>
         {expandedSections.experience.expanded && (
           <div className="section-content">
             <Entry
@@ -1192,7 +1196,7 @@ function App() {
 
       {/* ===== Education ===== */}
       <section className="Education-section">
-        <h2 onClick={() => toggleSection('education')}>{t[lang].education}</h2>
+        <h2 className={`section-title ${expandedSections.education.expanded ? 'open' : ''}`} onClick={() => toggleSection('education')}>{t[lang].education}</h2>
         {expandedSections.education.expanded && (
           <div className="section-content">
             <Entry
@@ -1287,7 +1291,7 @@ function App() {
 
       {/* ===== Projects ===== */}
       <section className="Project-section">
-        <h2 onClick={() => toggleSection('projects')}>{t[lang].projects}</h2>
+        <h2 className={`section-title ${expandedSections.projects.expanded ? 'open' : ''}`} onClick={() => toggleSection('projects')}>{t[lang].projects}</h2>
         {expandedSections.projects.expanded && (
           <div className="section-content">
 
@@ -1426,7 +1430,7 @@ function App() {
 
       {/* ===== Engagements ===== */}
       <section className="Engagement-section">
-        <h2 onClick={() => toggleSection('engagements')}>{t[lang].engagements}</h2>
+        <h2 className={`section-title ${expandedSections.engagements.expanded ? 'open' : ''}`} onClick={() => toggleSection('engagements')}>{t[lang].engagements}</h2>
         {expandedSections.engagements.expanded && (
           <div className="section-content">
             <Entry
@@ -1460,7 +1464,7 @@ function App() {
 
       {/* ===== Achievements ===== */}
       <section className="Achievements-section">
-        <h2 onClick={() => toggleSection('achievements')}>{t[lang].achievements}</h2>
+        <h2 className={`section-title ${expandedSections.achievements.expanded ? 'open' : ''}`} onClick={() => toggleSection('achievements')}>{t[lang].achievements}</h2>
         {expandedSections.achievements.expanded && (
           <div className="section-content">
 
@@ -1503,7 +1507,7 @@ function App() {
 
       {/* ===== Skills (아이콘 카드) ===== */}
       <section className="Skills-section">
-        <h2 onClick={() => toggleSection('skills')}>{t[lang].skills}</h2>
+        <h2 className={`section-title ${expandedSections.skills.expanded ? 'open' : ''}`} onClick={() => toggleSection('skills')}>{t[lang].skills}</h2>
         {expandedSections.skills.expanded && (
           <div className="section-content">
             <div className="skills-grid">

@@ -17,13 +17,16 @@ function Entry({ title, location, dates, details, imageSrc, isExpanded, onClick,
   return (
     <div className="entry">
       <div className="entry-header" onClick={onClick}>
-        <h3>{title}</h3>
+        <div className="entry-heading">
+          <h3>{title}</h3>
+          {(location || dates) && (
+            <p className="entry-sub">{[location, dates].filter(Boolean).join(' · ')}</p>
+          )}
+        </div>
         <span className={`arrow ${isExpanded ? 'expanded' : ''}`}>&#x25BC;</span>
       </div>
       {isExpanded && (
         <div className="entry-details">
-          {location && <p>{location}</p>}
-          {dates && <p>{dates}</p>}
           {(meta.length > 0 || links.length > 0) && (
             <div className="entry-meta">
               {meta.map(({ label, value }) => (
