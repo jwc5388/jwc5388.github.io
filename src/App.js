@@ -265,7 +265,7 @@ function App() {
         ENG: "The deployed recognizer read only 68.63% of real handwritten form fields exactly, often confusing look-alike characters (0/ㅇ/O, ㄷ/ㄹ, l/ㅣ/1), and there was no trustworthy benchmark for real handwriting to measure improvements against.",
         KOR: "배포 중이던 Recognizer는 실제 고객 서식의 필기체를 정확히 읽는 비율이 68.63%에 그쳤고, 0/ㅇ/O, ㄷ/ㄹ, l/ㅣ/1 같은 닮은 글자를 자주 혼동. 개선을 측정할 믿을 만한 실제 필기체 평가셋도 없었음.",
       },
-      team: { ENG: "", KOR: "" },
+      team: { ENG: "2 people", KOR: "2명" },
       role: {
         ENG: "Recognizer research — data, training, evaluation and architecture experiments",
         KOR: "Recognizer 연구 — 데이터, 학습, 평가, 아키텍처 실험",
