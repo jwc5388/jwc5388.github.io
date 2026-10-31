@@ -154,8 +154,8 @@ function App() {
   const profile = {
     // 1) 한 줄 직함  2) 요약(학력 → 경력·전문 분야 → 일하는 방식)  3) 핵심 기술  4) 대표 성과(수치)
     tagline: {
-      ENG: "AI Engineer who takes LLM/VLM systems from a client's problem to deployment on the client's own servers",
-      KOR: "고객의 문제 정의부터 고객 서버 배포까지, LLM·VLM 시스템을 끝까지 책임지는 AI 엔지니어",
+      ENG: '',
+      KOR: '',
     },
     summary: {
       ENG: "AI Engineer who takes LLM/VLM systems from a client's problem to deployment on the client's own servers. My Mathematics and Computer Science degree from the University of St Andrews shaped how I work: build a trustworthy evaluation first, then trace where errors come from. At Korea Deep Learning and CareSix, I have shipped document-AI, OCR, vision and generative-video systems with Docker to on-prem and air-gapped servers. I led Shinhan Vietnam Finance's PoC as PM and sole developer, and generalized a single-client KIE pipeline into PPASS, a reusable base module.",
