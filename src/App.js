@@ -43,6 +43,9 @@ import auraIdIamge7 from './assets/images/auraid7.png';
 import elizaImage1 from './assets/images/eliza1.png';
 import elizaImage2 from './assets/images/eliza2.png';
 import elizaImage3 from './assets/images/eliza3.png';
+import shinhanImage1 from './assets/images/shinhan1.jpg';
+import shinhanImage2 from './assets/images/shinhan2.jpg';
+import shinhanImage3 from './assets/images/shinhan3.jpg';
 import quantumImage1 from './assets/images/quantum1.jpeg';
 import quantumImage2 from './assets/images/quantum2.jpeg';
 import quantumImage3 from './assets/images/quantum3.jpeg';
@@ -160,20 +163,22 @@ function App() {
     skills: ["LLM / VLM", "KIE · OCR", "RAG · LangChain", "LLM Evaluation", "Docker", "On-prem Deployment", "FastAPI", "vLLM", "PyTorch", "Python"],
     highlights: {
       ENG: [
-        "Delivered an LLM/VLM document-extraction API to an automotive parts maker's air-gapped server over 6 releases, reaching 93.49% accuracy on the client's 3,920-cell audit ledger",
+        "Delivered an LLM/VLM document-extraction API to automotive parts maker Seoyon E-Hwa's air-gapped server over 6 releases, reaching 93.49% accuracy on the client's 3,920-cell audit ledger",
         "Generalized a single-client KIE pipeline into PPASS, a reusable base module customized for each new client",
         "Tracked 30+ client requirements by ID and priority, and resolved an IP-restriction security request the same day",
+        "Global Shinhan InnoBoost 2026 (Vietnam): our document-AI PoC placed in the top 8 and won the Open Innovation Reward, then led to Korea Deep Learning's first overseas revenue",
         "Built a real-time CCTV gauge-reading system solo for a government-funded manufacturing project, from data labeling to a Docker GPU API in production (gauge mAP50-95 0.992, needle 0.949)",
-        "Raised handwriting OCR exact-match accuracy by 4.26 pp (85.23% → 89.49%) through R&D; the trained weights were deployed in a ** Capital project",
+        "Raised handwriting OCR exact-match accuracy by 4.26 pp (85.23% → 89.49%) through R&D; the trained weights were deployed in a Hyundai Capital project",
         "Independently researched and built an LSTM-based BCG heart-rate algorithm for dogs, reaching 96% accuracy (CareSix)",
         "Toss NEXT ML Challenge: 30th of 2,206 participants, earning a résumé-screening pass · Excellence Prize, Quantum AI Hackathon",
       ],
       KOR: [
-        "자동차 부품 제조사 폐쇄망 서버에 LLM·VLM 문서 추출 API 6차 납품: 고객 검수 대장 3,920칸 기준 정확도 93.49%",
+        "자동차 부품 제조사 서연이화의 폐쇄망 서버에 LLM·VLM 문서 추출 API 6차 납품: 고객 검수 대장 3,920칸 기준 정확도 93.49%",
         "한 고객사용 KIE 파이프라인을 공통 기본 모듈 PPASS로 일반화해 고객사마다 맞춤 적용",
         "고객 요구사항 30여 건을 ID·우선순위로 관리해 반영, IP 제한 보안 요청은 당일 처리",
+        "글로벌 신한 이노부스트 2026(베트남): 문서 AI PoC로 상위 8개사 선정·오픈이노베이션 리워드 수상, 실제 사업으로 이어져 한국딥러닝 첫 해외 매출 달성",
         "정부과제(제조혁신) CCTV 계기판 실시간 판독 시스템을 데이터 라벨링부터 Docker GPU API 실서비스 배포까지 1인 구축 (계기판 mAP50-95 0.992, 바늘 0.949)",
-        "필기체 OCR R&D로 정확도 4.26%p 향상(85.23% → 89.49%), 학습한 가중치를 **캐피탈 프로젝트에 배포",
+        "필기체 OCR R&D로 정확도 4.26%p 향상(85.23% → 89.49%), 학습한 가중치를 현대캐피탈 프로젝트에 배포",
         "LSTM 기반 반려견 BCG 심박 알고리즘을 단독으로 연구·개발해 정확도 96% 달성 (케어식스)",
         "토스 NEXT ML Challenge 2,206명 중 30위(서류 면제) · 퀀텀 AI 해커톤 우수상",
       ],
@@ -199,11 +204,13 @@ function App() {
         title: { ENG: 'Awards', KOR: '수상내역' },
         items: {
           ENG: [
+            'Global Shinhan InnoBoost 2026 (Top 8 · Open Innovation Reward)',
             '2025 Quantum AI Hackathon (Excellence Prize, 1st in qualifier)',
             'Toss NEXT ML Challenge (30th of 2,206, résumé-screening pass)',
             'Boost up AI 2025 Drug Discovery (37th of 1,289, solo)',
           ],
           KOR: [
+            '글로벌 신한 이노부스트 2026 (상위 8개사 · 오픈이노베이션 리워드)',
             '2025 퀀텀 AI 해커톤 (우수상, 예선 1위)',
             '토스 NEXT ML Challenge (2,206명 중 30위, 서류 면제)',
             'Boost up AI 2025 신약 개발 경진대회 (1,289명 중 37위, 개인)',
@@ -337,8 +344,8 @@ function App() {
         KOR: "2-stage OCR (텍스트 Detector → Recognizer) · Recognizer 비교: PARSeq, PP-OCRv5, SVTRv2 · PyTorch · PaddleOCR · MX-Font, Gemini 이미지 생성 (합성 데이터)",
       },
       results: {
-        ENG: "Exact match 85.23% → 89.49% (+4.26 pp) and CER 7.52% → 5.09% on 158,898 test samples · handwriting +5.49 pp · handwriting goldenset 68.63% → 77.33% · trained the weights deployed to a ** Capital project",
-        KOR: "테스트 158,898개 기준 정확도 85.23% → 89.49% (+4.26%p), CER 7.52% → 5.09% · 필기체 +5.49%p · 필기체 골든셋 68.63% → 77.33% · **캐피탈 프로젝트 배포 가중치 학습",
+        ENG: "Exact match 85.23% → 89.49% (+4.26 pp) and CER 7.52% → 5.09% on 158,898 test samples · handwriting +5.49 pp · handwriting goldenset 68.63% → 77.33% · trained the weights deployed to a Hyundai Capital project",
+        KOR: "테스트 158,898개 기준 정확도 85.23% → 89.49% (+4.26%p), CER 7.52% → 5.09% · 필기체 +5.49%p · 필기체 골든셋 68.63% → 77.33% · 현대캐피탈 프로젝트 배포 가중치 학습",
       },
       lessons: {
         ENG: "Ablation showed the synthetic handwriting data added only ~0.2 pp — the gain came from data curation and the training recipe, so further generation was stopped before scaling it up",
@@ -448,6 +455,20 @@ function App() {
       results: { ENG: '', KOR: '' },
       links: [],
     },
+    shinhanInnoboost: {
+      problem: {
+        ENG: "Shinhan Financial Group's open-innovation program in Vietnam, where startups run a PoC with Shinhan's Vietnamese business and the strongest are selected for Demo Day and follow-on business.",
+        KOR: "신한금융그룹의 베트남 오픈이노베이션 프로그램 — 참가 기업이 신한 베트남 사업과 PoC를 진행하고, 성과가 좋은 기업을 데모데이와 후속 사업으로 선발.",
+      },
+      team: { ENG: 'Korea Deep Learning team', KOR: '한국딥러닝 팀' },
+      role: { ENG: '', KOR: '' },
+      contribution: { ENG: '', KOR: '' },
+      results: {
+        ENG: "Top 8 of the participating companies · Open Innovation Reward (VND 200,000,000) · the PoC became an actual business deal, Korea Deep Learning's first overseas revenue",
+        KOR: "참가 기업 중 상위 8개사 · 오픈이노베이션 리워드(VND 200,000,000) · PoC가 실제 사업으로 이어져 한국딥러닝 첫 해외 매출",
+      },
+      links: [],
+    },
     quantumAIHackathon: {
       team: { ENG: '4 members', KOR: '4명' },
       role: { ENG: '', KOR: '' },
@@ -531,7 +552,7 @@ function App() {
       kdlProductPlanning: true, kdlDocExtraction: true, kdlDisasterVideo: true,
       kdlOcrResearch: true, kdlGaugeReading: true, sense1Vet: true, lawIntelligence: true,
     }},
-    achievements: {expanded: true, entries: {}},
+    achievements: {expanded: true, entries: {shinhanInnoboost: true}},
   });
 
   const toggleSection = (section) => {
@@ -562,25 +583,27 @@ function App() {
   const work_kdl_details_ENG = [
     "Work directly with enterprise clients from requirements to delivery: build LLM/VLM document-automation systems and ship them with Docker to offline, on-prem GPU servers in iterative releases.",
     "Generalized a KIE pipeline (document-template classification, automatic extraction-schema definition) built for one client into PPASS, a shared base module customized for each client.",
-    "Product-planning document automation for ** Electronics: PPT → master spec sheet → product roadmap, with human-in-the-loop review.",
-    "Quality and process document extraction API for an automotive parts manufacturer: 7 document types, 93.49% accuracy on the client's audit ledger.",
+    "Product-planning document automation for LG Electronics: PPT → master spec sheet → product roadmap, with human-in-the-loop review.",
+    "Quality and process document extraction API for Seoyon E-Hwa (automotive parts): 7 document types, 93.49% accuracy on the client's audit ledger.",
     "Generative video augmentation (wildfire, flood) from real CCTV stills to train disaster-detection models.",
-    "R&D on the recognizer of the company's two-stage OCR (detector → recognizer) for Korean handwriting: +4.26 pp exact match, weights deployed to a ** Capital project.",
+    "R&D on the recognizer of the company's two-stage OCR (detector → recognizer) for Korean handwriting: +4.26 pp exact match, weights deployed to a Hyundai Capital project.",
+    "Global Shinhan InnoBoost 2026 (Shinhan Financial Group, Vietnam): the document-AI PoC placed in the top 8 participating companies, exhibited at Demo Day and won the Open Innovation Reward; it led to an actual business deal — the company's first overseas revenue.",
     "Government-funded manufacturing innovation project — real-time analog gauge reading from CCTV with a two-stage YOLO26 pipeline (detection → OBB): gauge mAP50-95 0.992, needle 0.949, deployed as a Docker API.",
   ];
   const work_kdl_details_KOR = [
     "기업 고객과 직접 소통하며 요구사항 정의부터 납품까지 수행: LLM·VLM 문서 자동화 시스템을 개발하고 Docker로 폐쇄망 GPU 서버에 차수별 납품.",
     "한 고객사용 KIE 파이프라인(문서 틀 분류, 추출 스키마 자동 정의)을 사내 공통 기본 모듈 PPASS로 일반화해 고객사마다 맞춤 적용.",
-    "**전자 상품기획 문서 자동화: PPT → 마스터 스펙시트 → 제품 로드맵, 사람 검수(HITL) 포함.",
-    "자동차 부품 제조사 품질·공정 문서 추출 API: 문서 7종, 고객 검수 대장 기준 정확도 93.49%.",
+    "LG전자 상품기획 문서 자동화: PPT → 마스터 스펙시트 → 제품 로드맵, 사람 검수(HITL) 포함.",
+    "서연이화(자동차 부품) 품질·공정 문서 추출 API: 문서 7종, 고객 검수 대장 기준 정확도 93.49%.",
     "실제 CCTV 사진 기반 재난(산불·침수) 영상 생성 증강으로 재난 탐지 모델 학습 데이터 구축.",
-    "사내 2-stage OCR(Detector → Recognizer)의 한국어 필기체 Recognizer 연구: 정확도 +4.26%p, **캐피탈 프로젝트에 가중치 배포.",
+    "사내 2-stage OCR(Detector → Recognizer)의 한국어 필기체 Recognizer 연구: 정확도 +4.26%p, 현대캐피탈 프로젝트에 가중치 배포.",
+    "글로벌 신한 이노부스트 2026(신한금융그룹, 베트남): 문서 AI PoC로 참가 기업 중 상위 8개사에 선정돼 데모데이 부스 참가, 오픈이노베이션 리워드 수상 — 실제 사업으로 이어져 회사의 첫 해외 매출 달성.",
     "정부과제(제조혁신) — CCTV 아날로그 계기판 실시간 판독(2단계 YOLO26 Detection → OBB): 계기판 mAP50-95 0.992, 바늘 0.949, Docker API로 실서비스 배포.",
   ];
 
   // ===== Projects – Korea Deep Learning =====
   const kdl_planning_ENG = [
-    "Automated ** Electronics' manual flow — product-planning review decks (PPT) → master spec sheet (Excel) → product roadmap — with LLM/VLM extraction, rule-based mapping and a human-in-the-loop review console used by the client's planners.",
+    "Automated LG Electronics' manual flow — product-planning review decks (PPT) → master spec sheet (Excel) → product roadmap — with LLM/VLM extraction, rule-based mapping and a human-in-the-loop review console used by the client's planners.",
     "Merged values from several sources by priority (deck body > in-deck spec table > embedded Excel), flagging conflicts with per-source evidence; fixed multi-model documents so 1,225 of 1,232 cells fill automatically.",
     "Wrote into large Excel files by patching sheet XML directly, keeping original formatting and avoiding the bloat openpyxl caused (a 1.5MB file growing past 1GB).",
     "Generated product roadmaps by fixing lanes from PPT coordinates and reading only quarters with a VLM, with rule-based date normalization and carry-over of schedules from the previous roadmap.",
@@ -588,7 +611,7 @@ function App() {
     "Shipped an offline installer (install / update / rollback / backup) for an air-gapped server without sudo, ran the demo server, and delivered 30+ client requirements tracked by ID and priority — including a same-day IP-restriction security request.",
   ];
   const kdl_planning_KOR = [
-    "**전자 상품기획팀이 수작업으로 하던 '검토의뢰서(PPT) → 마스터 스펙시트(Excel) → 제품 로드맵' 과정을 LLM·VLM 추출 + 규칙 매핑 + 사람 검수(HITL) 콘솔로 자동화, 고객 실무자가 실제 사용.",
+    "LG전자 상품기획팀이 수작업으로 하던 '검토의뢰서(PPT) → 마스터 스펙시트(Excel) → 제품 로드맵' 과정을 LLM·VLM 추출 + 규칙 매핑 + 사람 검수(HITL) 콘솔로 자동화, 고객 실무자가 실제 사용.",
     "여러 원천(본문 > 본문 스펙표 > 첨부 엑셀)을 우선순위로 병합하고 충돌은 근거와 함께 검수로 올림, 다중 모델 문서 1,232칸 중 1,225칸 자동 채움.",
     "시트 XML을 직접 패치해 대형 엑셀의 서식을 유지하고, openpyxl 저장 시 1.5MB 파일이 1GB 넘게 부풀던 문제 제거.",
     "로드맵 생성: 레인은 PPT 좌표로 확정하고 분기만 VLM으로 판독, 날짜는 규칙으로 정규화하고 이전 로드맵의 일정·상태를 이어받음.",
@@ -597,7 +620,7 @@ function App() {
   ];
 
   const kdl_extract_ENG = [
-    "Built an extraction API that turns 20 years of an automotive parts manufacturer's quality and process documents (thousands of Excel/PPT/PDF files in Korean, English and Chinese) into DB-ready data across 7 document types; delivered to the client's offline GPU server.",
+    "Built an extraction API that turns 20 years of automotive parts maker Seoyon E-Hwa's quality and process documents (thousands of Excel/PPT/PDF files in Korean, English and Chinese) into DB-ready data across 7 document types; delivered to the client's offline GPU server.",
     "Deterministic first: 5 Excel types are parsed from cell borders, merges and styles without an LLM, so results are identical every run; LLMs only for free-form reports and images.",
     "Built a grader that exactly reproduces the client's audit-ledger accuracy, plus an LLM/parser response cache to separate code effects from model noise; no change shipped if any correct cell regressed.",
     "Recovered attachment names by parsing OLE binaries and reading text inside icon images: 244 → 1,182.",
@@ -605,7 +628,7 @@ function App() {
     "Replaced model-based source highlighting (15–41% accurate) in the review UI with rule-based word-coordinate matching: 97.1% of table cells matched.",
   ];
   const kdl_extract_KOR = [
-    "자동차 부품 제조사의 20년 치 품질·공정 문서(엑셀·PPT·PDF 수천 건, 국·영·중 혼재)를 DB 적재용 데이터로 뽑는 추출 API 개발, 문서 7종 지원, 고객 폐쇄망 GPU 서버에 납품.",
+    "자동차 부품 제조사 서연이화의 20년 치 품질·공정 문서(엑셀·PPT·PDF 수천 건, 국·영·중 혼재)를 DB 적재용 데이터로 뽑는 추출 API 개발, 문서 7종 지원, 고객 폐쇄망 GPU 서버에 납품.",
     "결정론 우선: 엑셀 계열 5종은 LLM 없이 셀 테두리·병합·서식으로 구조를 복원해 실행마다 같은 결과, LLM은 자유 양식 대책서와 그림에만 사용.",
     "고객 검수 대장 정확도를 그대로 재현하는 채점기와 LLM·파서 응답 캐시로 '코드 효과'와 '모델 잡음'을 분리, 정답 칸이 하나라도 깨지면 반영하지 않음.",
     "OLE 바이너리를 직접 해석하고 아이콘 그림 속 글자를 판독해 첨부 파일명 244 → 1,182개 확보.",
@@ -619,7 +642,7 @@ function App() {
     "Built a 15,808-sample handwriting goldenset from real client forms with every label re-checked by hand: samples without valid ground truth (printed form labels) excluded, fully struck-out text excluded, and each sample tagged by difficulty (boundary: ambiguous like 이/01/OI; hard: genuinely bad handwriting), noise, strike-through and text type/length so errors can be sliced.",
     "Analyzed errors by confusion pair (0/ㅇ/O, ㄷ/ㄹ, l/ㅣ/1) and jamo level; found and fixed a metric bug that undercounted final-consonant accuracy.",
     "Generated synthetic handwriting — MX-Font with 38 styles and ascender/descender-aware word composition, then Gemini image generation for names, addresses and hard cases — and measured its real effect with ablations and gain/drop case analysis.",
-    "Fine-tuned PARSeq on a curated 11.6M-sample mix (6.15M handwriting / 5.45M printed): best on 13 of 14 test datasets, and trained the weights deployed to a ** Capital project.",
+    "Fine-tuned PARSeq on a curated 11.6M-sample mix (6.15M handwriting / 5.45M printed): best on 13 of 14 test datasets, and trained the weights deployed to a Hyundai Capital project.",
     "Built a handwriting/printed classifier on the frozen PARSeq encoder with attention pooling (85% accuracy).",
   ];
   const kdl_ocr_KOR = [
@@ -628,7 +651,7 @@ function App() {
     "실제 고객 서식에서 필기체 골든셋 15,808개 구축, 모든 라벨을 직접 재검수: 정답이 없는 샘플(인쇄된 서식 문구)과 전체를 두 줄로 지운 텍스트는 제외, 난이도(boundary: 이/01/OI처럼 애매한 글자, hard: 실제 악필)·노이즈·취소선·문자 유형·길이로 태깅해 오류를 구간별로 분석 가능하게 설계.",
     "헷갈리는 글자 쌍(0/ㅇ/O, ㄷ/ㄹ, l/ㅣ/1)과 초성·중성·종성 단위로 오류 분석, 종성 정확도를 낮게 계산하던 지표 버그 발견·수정.",
     "합성 필기체 생성: MX-Font(필기체 38종, ascender/descender 정렬 단어 합성) → Gemini 이미지 생성(이름·주소·어려운 케이스), ablation과 gain/drop 케이스 분석으로 실제 효과 검증.",
-    "필기체 615만 / 인쇄체 545만, 총 1,160만 장으로 데이터를 구성해 PARSeq fine-tuning: 테스트 14종 중 13종 1위, **캐피탈 프로젝트 배포 가중치 학습.",
+    "필기체 615만 / 인쇄체 545만, 총 1,160만 장으로 데이터를 구성해 PARSeq fine-tuning: 테스트 14종 중 13종 1위, 현대캐피탈 프로젝트 배포 가중치 학습.",
     "PARSeq 인코더를 고정하고 attention pooling을 붙인 필기체/인쇄체 분류기 개발(정확도 85%).",
   ];
 
@@ -977,6 +1000,26 @@ function App() {
       <img src={quantumImage3} alt="Quantum AI Hackathon 3" style={{ height: '400px', borderRadius: '8px' }} />
     </div>
   );
+  const shinhan_ENG = [
+    "Ran a document-AI PoC with Shinhan's business in Vietnam through Global Shinhan InnoBoost 2026, Shinhan Financial Group's open-innovation program.",
+    "Selected among the top 8 participating companies and exhibited at Shinhan Future's Lab Demo Day 2026, demonstrating DEEP Agent extracting fields from Vietnamese ID cards in real time.",
+    "Won the Global Shinhan InnoBoost Open Innovation Reward (VND 200,000,000).",
+    "The PoC led to an actual business deal, Korea Deep Learning's first overseas revenue.",
+  ];
+  const shinhan_KOR = [
+    "신한금융그룹의 오픈이노베이션 프로그램 '글로벌 신한 이노부스트 2026'에서 신한 베트남 사업과 문서 AI PoC 진행.",
+    "참가 기업 중 상위 8개사에 선정돼 신한 퓨처스랩 데모데이 2026에 부스 참가, DEEP Agent로 베트남 신분증 정보 추출을 실시간 시연.",
+    "글로벌 신한 이노부스트 오픈이노베이션 리워드(VND 200,000,000) 수상.",
+    "PoC가 실제 사업으로 이어져 한국딥러닝의 첫 해외 매출 달성.",
+  ];
+  const shinhan_media = (
+    <div key="shinhan-images" style={{ display:'flex', overflowX:'auto', whiteSpace:'nowrap', gap:'10px', padding:'10px 0' }}>
+      <img src={shinhanImage1} alt="Global Shinhan InnoBoost 2026 award ceremony" style={{ height: '400px', borderRadius: '8px' }} />
+      <img src={shinhanImage2} alt="Korea Deep Learning booth at Demo Day 2026" style={{ height: '400px', borderRadius: '8px' }} />
+      <img src={shinhanImage3} alt="Shinhan Future's Lab Demo Day 2026" style={{ height: '400px', borderRadius: '8px' }} />
+    </div>
+  );
+
   const quantum_ENG = [
     "Ranked 1st in the AI Factory preliminaries by solving a Fashion-MNIST quantum computing challenge.",
     "In the two-day overnight finals on real quantum hardware, combined quantum algorithms with AI methods and won the Excellence Prize.",
@@ -1110,7 +1153,7 @@ function App() {
   const mainProjects = [
     {
       num: 1, id: 'proj-1', key: 'kdlProductPlanning', org: 'company', fields: ['LLM', 'VLM'],
-      title: { ENG: '(** Electronics) Product-Planning Document Automation', KOR: '(**전자) 상품기획 문서 자동화' },
+      title: { ENG: '(LG Electronics) Product-Planning Document Automation', KOR: '(LG전자) 상품기획 문서 자동화' },
       location: { ENG: 'Korea Deep Learning · AX project', KOR: '한국딥러닝 · AX 프로젝트' },
       dates: { ENG: 'July 2026 ~ Present', KOR: '2026.07 ~ 진행중' },
       details: lang === 'ENG' ? kdl_planning_ENG : kdl_planning_KOR,
@@ -1129,7 +1172,7 @@ function App() {
     },
     {
       num: 2, id: 'proj-2', key: 'kdlDocExtraction', org: 'company', fields: ['LLM', 'VLM'],
-      title: { ENG: '(Automotive Parts Maker) Quality & Process Document Extraction API', KOR: '(자동차 부품 제조사) 품질·공정 문서 DB화 추출 API' },
+      title: { ENG: '(Seoyon E-Hwa) Quality & Process Document Extraction API', KOR: '(서연이화) 품질·공정 문서 DB화 추출 API' },
       location: { ENG: 'Korea Deep Learning · delivered to an air-gapped server', KOR: '한국딥러닝 · 폐쇄망 서버 납품' },
       dates: { ENG: 'August 2026 ~ October 2026', KOR: '2026.08 ~ 2026.10' },
       details: lang === 'ENG' ? kdl_extract_ENG : kdl_extract_KOR,
@@ -1167,7 +1210,7 @@ function App() {
     },
     {
       num: 4, id: 'proj-4', key: 'kdlOcrResearch', org: 'company', fields: ['CV', 'OCR'],
-      title: { ENG: '(** Capital) Korean Handwriting OCR Recognizer R&D', KOR: '(**캐피탈) 한국어 필기체 OCR Recognizer 연구' },
+      title: { ENG: '(Hyundai Capital) Korean Handwriting OCR Recognizer R&D', KOR: '(현대캐피탈) 한국어 필기체 OCR Recognizer 연구' },
       location: { ENG: 'Korea Deep Learning · R&D, weights deployed to the client project', KOR: '한국딥러닝 · R&D, 고객 프로젝트에 가중치 배포' },
       dates: { ENG: 'January 2026 ~ April 2026', KOR: '2026.01 ~ 2026.04' },
       details: lang === 'ENG' ? kdl_ocr_ENG : kdl_ocr_KOR,
@@ -1615,6 +1658,16 @@ function App() {
         <h2 className={`section-title ${expandedSections.achievements.expanded ? 'open' : ''}`} onClick={() => toggleSection('achievements')}>{t[lang].achievements}</h2>
         {expandedSections.achievements.expanded && (
           <div className="section-content">
+
+            <Entry
+              title={lang==='ENG' ? "Global Shinhan InnoBoost 2026 – Top 8 · Open Innovation Reward" : "글로벌 신한 이노부스트 2026 – 상위 8개사 · 오픈이노베이션 리워드"}
+              location={lang==='ENG' ? "Shinhan Financial Group · Vietnam (Korea Deep Learning)" : "신한금융그룹 · 베트남 (한국딥러닝)"}
+              dates={lang==='ENG' ? "September 2026 (Demo Day)" : "2026.09 (데모데이)"}
+              details={getDetails(shinhan_ENG, shinhan_KOR, shinhan_media)}
+              {...getMeta('shinhanInnoboost')}
+              isExpanded={expandedSections.achievements.entries.shinhanInnoboost}
+              onClick={() => toggleEntry('achievements', 'shinhanInnoboost')}
+            />
 
             <Entry
               title={lang==='ENG' ? "2025 Quantum AI Hackathon" : "2025 퀀텀 AI 해커톤"}
