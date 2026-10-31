@@ -187,13 +187,13 @@ function App() {
             '2019.09 ~ 2024.06 : University of St Andrews, BSc Mathematics and Computer Science',
             '2024.09 ~ 2025.04 : CareSix, AI/ML Engineer',
             '2025.04 ~ 2025.10 : IBM x RedHat AI Transformation – AX Academy',
-            '2025.11 ~ : Korea Deep Learning, AI Engineer (current)',
+            '2025.11 ~ : Korea Deep Learning, ML Engineer (current)',
           ],
           KOR: [
             '2019.09 ~ 2024.06 : 세인트앤드루스 대학교 수학·컴퓨터과학 학사',
             '2024.09 ~ 2025.04 : 케어식스 AI/ML 엔지니어',
             '2025.04 ~ 2025.10 : IBM x RedHat AI Transformation – AX Academy',
-            '2025.11 ~ : 한국딥러닝 AI 엔지니어 재직 중',
+            '2025.11 ~ : 한국딥러닝 ML 엔지니어 재직 중',
           ],
         },
       },
@@ -591,7 +591,7 @@ function App() {
   };
 
   // ====== Work ======
-  const work_kdl_title = lang === 'ENG' ? "AI Engineer, Korea Deep Learning" : "AI 엔지니어, 한국딥러닝";
+  const work_kdl_title = lang === 'ENG' ? "ML Engineer, Korea Deep Learning" : "ML 엔지니어, 한국딥러닝";
   const work_kdl_details_ENG = [
     "Work directly with enterprise clients from requirements to delivery: build LLM/VLM document-automation systems and ship them with Docker to offline, on-prem GPU servers in iterative releases.",
     "Generalized a KIE pipeline (document-template classification, automatic extraction-schema definition) built for one client into PPASS, a shared base module customized for each client.",
