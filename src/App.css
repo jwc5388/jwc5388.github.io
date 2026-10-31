@@ -545,3 +545,19 @@ section {
   .project-index-group { flex-direction: column; gap: 2px; }
   .project-index-field { flex: none; }
 }
+
+/* ---- 세로 간격 (섹션·항목 사이 여백) ---- */
+section h2.section-title { margin: 0 0 24px; }
+
+.entry { padding: 4px 0; }
+.entry + .entry { margin-top: 28px; }
+
+.entry-details > ul > li { margin-bottom: 8px; line-height: 1.65; }
+
+.profile-glance { margin-top: 20px; margin-bottom: 28px; }
+.profile-summary { margin-bottom: 20px; }
+.profile-skills { margin-bottom: 24px; }
+.profile-highlights li { margin-bottom: 6px; }
+
+.project-index { margin-bottom: 32px; }
+.project-index-group { padding: 6px 0; }

@@ -186,11 +186,13 @@ function App() {
           ENG: [
             '2019.09 ~ 2024.06 : University of St Andrews, BSc Mathematics and Computer Science',
             '2024.09 ~ 2025.04 : CareSix, AI/ML Engineer',
+            '2025.04 ~ 2025.10 : IBM x RedHat AI Transformation – AX Academy',
             '2025.11 ~ : Korea Deep Learning, AI Engineer (current)',
           ],
           KOR: [
             '2019.09 ~ 2024.06 : 세인트앤드루스 대학교 수학·컴퓨터과학 학사',
             '2024.09 ~ 2025.04 : 케어식스 AI/ML 엔지니어',
+            '2025.04 ~ 2025.10 : IBM x RedHat AI Transformation – AX Academy',
             '2025.11 ~ : 한국딥러닝 AI 엔지니어 재직 중',
           ],
         },
@@ -216,13 +218,11 @@ function App() {
         title: { ENG: 'Activities', KOR: '대내외 활동' },
         items: {
           ENG: [
-            'IBM x RedHat AI Transformation – AX Academy (2025.04 ~ 10)',
             'Exhibited at CES 2025, J-AGRI Tokyo and FAVA 2024 (CareSix)',
             '2025 K-Digital Training AI Hackathon (Road Guardian)',
             'St Andrews Korean Society committee (Treasurer)',
           ],
           KOR: [
-            'IBM x RedHat AI Transformation – AX Academy (2025.04 ~ 10)',
             'CES 2025 · J-AGRI 도쿄 · FAVA 2024 전시 참가 (케어식스)',
             '2025 K-디지털 트레이닝 AI 해커톤 (Road Guardian)',
             '세인트앤드루스 한인회 운영진 (회계)',
@@ -1412,7 +1412,7 @@ function App() {
               onClick={() => toggleEntry('experience', 'mathematician')}
             />
 
-            {/* Company about */}
+            {/* Company about — 비중이 낮아 숨김 (다시 쓰려면 주석 해제)
             <Entry
               title={t[lang].companyAbout}
               location={lang==='ENG' ? "Jeju Island, South Korea" : "대한민국 제주"}
@@ -1462,6 +1462,7 @@ function App() {
               isExpanded={expandedSections.experience.entries.caresix}
               onClick={() => toggleEntry('experience', 'caresix')}
             />
+            */}
           </div>
         )}
       </section>
