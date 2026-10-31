@@ -1199,6 +1199,13 @@ function App() {
       },
     },
     {
+      id: 'proj-4', key: 'kdlOcrResearch', org: 'company', fields: ['CV', 'OCR'],
+      title: { ENG: '(Hyundai Capital) Korean Handwriting OCR Recognizer R&D', KOR: '(현대캐피탈) 한국어 필기체 OCR Recognizer 연구' },
+      location: { ENG: 'Korea Deep Learning · R&D, weights deployed to the client project', KOR: '한국딥러닝 · R&D, 고객 프로젝트에 가중치 배포' },
+      dates: { ENG: 'January 2026 ~ April 2026', KOR: '2026.01 ~ 2026.04' },
+      details: lang === 'ENG' ? kdl_ocr_ENG : kdl_ocr_KOR,
+    },
+    {
       id: 'proj-2', key: 'kdlDocExtraction', org: 'company', fields: ['LLM', 'VLM'],
       title: { ENG: '(Seoyon E-Hwa) Quality & Process Document Extraction API', KOR: '(서연이화) 품질·공정 문서 DB화 추출 API' },
       location: { ENG: 'Korea Deep Learning · delivered to an air-gapped server', KOR: '한국딥러닝 · 폐쇄망 서버 납품' },
@@ -1237,13 +1244,6 @@ function App() {
       },
     },
     {
-      id: 'proj-4', key: 'kdlOcrResearch', org: 'company', fields: ['CV', 'OCR'],
-      title: { ENG: '(Hyundai Capital) Korean Handwriting OCR Recognizer R&D', KOR: '(현대캐피탈) 한국어 필기체 OCR Recognizer 연구' },
-      location: { ENG: 'Korea Deep Learning · R&D, weights deployed to the client project', KOR: '한국딥러닝 · R&D, 고객 프로젝트에 가중치 배포' },
-      dates: { ENG: 'January 2026 ~ April 2026', KOR: '2026.01 ~ 2026.04' },
-      details: lang === 'ENG' ? kdl_ocr_ENG : kdl_ocr_KOR,
-    },
-    {
       id: 'proj-5', key: 'kdlDisasterVideo', org: 'company', fields: ['GenAI', 'VLM'],
       title: { ENG: 'Disaster CCTV Video Augmentation (Wildfire · Flood)', KOR: '재난 CCTV 영상 증강 (산불·침수)' },
       location: { ENG: 'Korea Deep Learning · generative AI pipeline', KOR: '한국딥러닝 · 생성형 AI 파이프라인' },
@@ -1271,7 +1271,7 @@ function App() {
   const allProjects = [...mainProjects, ...sideProjects];
   const projectGroups = [
     { label: { ENG: 'LLM · VLM', KOR: 'LLM · VLM' }, ids: ['proj-shinhan', 'proj-1', 'proj-2', 'side-law'] },
-    { label: { ENG: 'CV · OCR', KOR: 'CV · OCR' }, ids: ['proj-3', 'proj-4'] },
+    { label: { ENG: 'CV · OCR', KOR: 'CV · OCR' }, ids: ['proj-4', 'proj-3'] },
     { label: { ENG: 'Generative AI', KOR: '생성형 AI' }, ids: ['proj-5'] },
     { label: { ENG: 'Signal · DL', KOR: '신호처리 · DL' }, ids: ['proj-6'] },
   ];
