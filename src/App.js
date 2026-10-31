@@ -46,6 +46,8 @@ import elizaImage3 from './assets/images/eliza3.png';
 import gaugeImage1 from './assets/images/gauge1.jpg';
 import lgaxImage1 from './assets/images/lgax1.jpg';
 import lgaxImage2 from './assets/images/lgax2.jpg';
+import shinhanApp1 from './assets/images/shinhanApp1.jpg';
+import shinhanApp2 from './assets/images/shinhanApp2.jpg';
 import shinhanImage0 from './assets/images/shinhan0.jpg';
 import shinhanImage1 from './assets/images/shinhan1.jpg';
 import shinhanImage2 from './assets/images/shinhan2.jpg';
@@ -1069,6 +1071,8 @@ function App() {
   ];
   const shinhan_media = (
     <div key="shinhan-images" style={{ display:'flex', overflowX:'auto', whiteSpace:'nowrap', gap:'10px', padding:'10px 0' }}>
+      <img src={shinhanApp2} alt="DEEP Agent validation results: name match, ID front-back match, balance and monthly income checks" style={{ height: '400px', borderRadius: '8px' }} />
+      <img src={shinhanApp1} alt="DEEP Agent review screen with extracted CCCD fields" style={{ height: '400px', borderRadius: '8px' }} />
       <img src={shinhanImage0} alt="Global Shinhan InnoBoost 2026 award" style={{ height: '400px', borderRadius: '8px' }} />
       <img src={shinhanImage1} alt="Global Shinhan InnoBoost 2026 award ceremony" style={{ height: '400px', borderRadius: '8px' }} />
       <img src={shinhanImage2} alt="Korea Deep Learning booth at Demo Day 2026" style={{ height: '400px', borderRadius: '8px' }} />
