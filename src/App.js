@@ -166,14 +166,14 @@ function App() {
       ENG: [
         "Led Shinhan Vietnam Finance's loan-document PoC as PM and sole developer: top 8 at Global Shinhan InnoBoost 2026, Open Innovation Reward, and Korea Deep Learning's first overseas revenue",
         "Delivered a document-extraction API to Seoyon E-Hwa's air-gapped server over 6 releases: 93.49% accuracy on the client's 3,920-cell audit ledger",
-        "Generalized a single-client KIE pipeline into PPASS, a reusable base module customized for each new client",
+        "Generalized Korea Deep Learning's single-client KIE pipeline into PPASS, a reusable base module customized for each new client",
         "Raised handwriting OCR exact-match accuracy by 4.26 pp (85.23% → 89.49%); the weights were deployed in a Hyundai Capital project",
         "Built a real-time CCTV gauge-reading system solo for a government manufacturing project, from labeling to a production Docker API (mAP50-95 0.992 / 0.949)",
       ],
       KOR: [
         "신한베트남파이낸스 대출 서류 PoC를 PM 겸 단독 개발로 수행: 글로벌 신한 이노부스트 2026 상위 8개사, 오픈이노베이션 리워드, 한국딥러닝 첫 해외 매출",
         "서연이화 폐쇄망 서버에 문서 추출 API 6차 납품: 고객 검수 대장 3,920칸 기준 정확도 93.49%",
-        "한 고객사용 KIE 파이프라인을 공통 기본 모듈 PPASS로 일반화해 고객사마다 맞춤 적용",
+        "한국딥러닝의 단일 고객사용 KIE 파이프라인을 공통 기본 모듈 PPASS로 일반화해 고객사마다 맞춤 적용",
         "필기체 OCR 정확도 4.26%p 향상(85.23% → 89.49%), 학습한 가중치를 현대캐피탈 프로젝트에 배포",
         "정부과제(제조혁신) CCTV 계기판 실시간 판독 시스템을 라벨링부터 Docker API 실서비스 배포까지 1인 구축 (mAP50-95 0.992 / 0.949)",
       ],
