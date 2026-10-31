@@ -242,8 +242,8 @@ function App() {
   const projectMeta = {
     kdlProductPlanning: {
       problem: {
-        ENG: "Planners re-typed specs by hand from review decks in mixed formats (slide text, tables, embedded Excel; up to 8 models per deck) into large region-specific master spec sheets, then redrew product roadmaps manually.",
-        KOR: "상품기획 실무자가 형식이 제각각인 검토의뢰서(슬라이드 글·표·첨부 엑셀, 한 문서에 모델 최대 8개)의 스펙을 지역별 대형 마스터 스펙시트에 손으로 옮기고, 제품 로드맵도 수작업으로 그리고 있었음.",
+        ENG: "LG Electronics planners copied specs from review decks into master spec sheets by hand, then drew product roadmaps by hand too. One deck could cover up to 8 models, spread across slides, tables and attached Excel files.",
+        KOR: "LG전자 상품기획팀은 검토의뢰서(PPT)의 스펙을 마스터 스펙시트에 손으로 옮겨 적고, 제품 로드맵도 직접 그렸습니다. 문서 하나에 모델이 최대 8개, 형식도 슬라이드·표·첨부 엑셀로 제각각이었습니다.",
       },
       team: { ENG: "Small team — teammates on frontend; all AI development by me", KOR: "소규모 팀 — 프론트엔드는 팀원, AI 개발은 전부 본인" },
       role: {
@@ -266,8 +266,8 @@ function App() {
     },
     kdlDocExtraction: {
       problem: {
-        ENG: "20 years of quality and process knowledge sat in thousands of free-form Excel/PPT/PDF files (Korean, English, Chinese, some scanned) that could not be searched; the client needed DB-ready data on an offline server, at accuracy verified against its own audit ledger.",
-        KOR: "20년 치 품질·공정 지식이 양식이 제각각인 엑셀·PPT·PDF 수천 건(국·영·중, 스캔 포함)에 묶여 검색이 불가능했음. 고객은 폐쇄망 서버에서, 자체 검수 대장으로 검증된 정확도의 DB 적재용 데이터를 요구.",
+        ENG: "Seoyon E-Hwa had 20 years of quality and process know-how scattered across thousands of Excel, PPT and PDF files that nobody could search. They wanted it turned into database-ready data on an offline server, with accuracy proven against their own audit ledger.",
+        KOR: "서연이화의 20년 치 품질·공정 노하우가 엑셀·PPT·PDF 수천 건에 흩어져 있어 검색이 안 됐습니다. 이를 폐쇄망 서버에서 DB에 넣을 수 있는 데이터로 바꾸고, 고객 검수 대장 기준으로 정확도를 증명해야 했습니다.",
       },
       team: { ENG: "Solo", KOR: "단독" },
       role: {
@@ -294,8 +294,8 @@ function App() {
     },
     kdlGaugeReading: {
       problem: {
-        ENG: "Analog gauges at manufacturing sites had to be read by people in person, so they could not be monitored continuously; the goal was to read gauge state automatically from the CCTV cameras already installed.",
-        KOR: "제조 현장의 아날로그 계기판은 사람이 직접 보고 값을 확인해야 해서 상시 모니터링이 어려웠음. 이미 설치된 CCTV 영상만으로 계기판 상태를 자동으로 읽어내는 것이 목표.",
+        ENG: "Someone had to walk up to each analog gauge to read it, so nobody could watch them around the clock. The goal was to read the gauges automatically from the CCTV cameras already on site.",
+        KOR: "현장의 아날로그 계기판은 사람이 직접 가서 봐야 해서 24시간 지켜볼 수 없었습니다. 이미 달려 있는 CCTV로 계기판 값을 자동으로 읽는 게 목표였습니다.",
       },
       team: {
         ENG: "Solo",
@@ -325,8 +325,8 @@ function App() {
     },
     kdlOcrResearch: {
       problem: {
-        ENG: "The deployed recognizer read only 68.63% of real handwritten form fields exactly, often confusing look-alike characters (0/ㅇ/O, ㄷ/ㄹ, l/ㅣ/1), and there was no trustworthy benchmark for real handwriting to measure improvements against.",
-        KOR: "배포 중이던 Recognizer는 실제 고객 서식의 필기체를 정확히 읽는 비율이 68.63%에 그쳤고, 0/ㅇ/O, ㄷ/ㄹ, l/ㅣ/1 같은 닮은 글자를 자주 혼동. 개선을 측정할 믿을 만한 실제 필기체 평가셋도 없었음.",
+        ENG: "The OCR model in production read only 68.63% of real handwritten form fields correctly and often mixed up look-alike characters such as 0/ㅇ/O. There was also no reliable handwriting test set to measure progress against.",
+        KOR: "운영 중인 OCR 모델은 실제 손글씨 서식을 68.63%만 정확히 읽었고, 0/ㅇ/O처럼 비슷한 글자를 자주 헷갈렸습니다. 개선 정도를 잴 만한 실제 손글씨 평가셋도 없었습니다.",
       },
       team: { ENG: "2 people", KOR: "2명" },
       role: {
@@ -353,8 +353,8 @@ function App() {
     },
     kdlDisasterVideo: {
       problem: {
-        ENG: "Detection models need footage of wildfires and floods at the moment they start, but real CCTV rarely captures the onset; the client needed natural, progressing disaster videos generated from real CCTV stills, at volume, within 9 days.",
-        KOR: "탐지 모델에는 산불·침수가 '시작되는 순간'의 영상이 필요하지만 실제 CCTV에는 거의 없음. 고객은 실제 CCTV 사진을 기반으로 자연스럽게 진행되는 재난 영상을 9일 안에 대량으로 요구.",
+        ENG: "Wildfire and flood detectors need footage of the moment a disaster starts, and real CCTV almost never captures it. The client wanted a large batch of realistic videos made from their own CCTV stills, within 9 days.",
+        KOR: "산불·침수 탐지 모델을 학습하려면 재난이 막 시작되는 장면이 필요한데, 실제 CCTV에는 거의 남아 있지 않습니다. 고객은 자기 CCTV 사진으로 자연스러운 재난 영상을 9일 안에 대량으로 만들어 달라고 했습니다.",
       },
       team: { ENG: "Solo", KOR: "단독" },
       role: {
@@ -381,8 +381,8 @@ function App() {
     },
     sense1Vet: {
       problem: {
-        ENG: "Heart-rate readings from the wearable's BCG sensor became unreliable whenever the dog trembled or moved, and an ECG reference is not available in everyday use.",
-        KOR: "웨어러블 BCG 센서의 심박 측정이 강아지가 떨거나 움직이면 불안정해졌고, 일상 사용 환경에서는 기준이 될 ECG 신호도 없었음.",
+        ENG: "The collar's heart-rate reading broke down whenever the dog shivered or moved, and at home there is no ECG to check it against.",
+        KOR: "강아지가 떨거나 움직이면 목걸이의 심박 측정값이 크게 흔들렸고, 집에서는 비교할 ECG도 없었습니다.",
       },
       team: { ENG: 'Solo on the algorithm, working with the hardware and production teams', KOR: '알고리즘 단독, 하드웨어·생산팀과 협업' },
       role: { ENG: 'AI/ML Engineer — sole developer of the heart-rate algorithm', KOR: 'AI/ML 엔지니어 — 심박 알고리즘 단독 개발' },
@@ -402,8 +402,8 @@ function App() {
     },
     lawIntelligence: {
       problem: {
-        ENG: "General-purpose LLMs answer Korean legal questions without grounding in actual statutes and precedents, so their citations cannot be verified.",
-        KOR: "범용 LLM은 실제 법령·판례에 근거하지 않고 한국 법률 질문에 답해, 인용의 출처를 검증할 수 없었음.",
+        ENG: "General chatbots answer Korean legal questions without pointing to real laws or court cases, so there is no way to check where an answer came from.",
+        KOR: "일반 챗봇은 실제 법령·판례 없이 법률 질문에 답해서, 답의 근거를 확인할 수 없었습니다.",
       },
       team: { ENG: '5 members', KOR: '5명' },
       role: { ENG: 'Team Lead', KOR: '팀장' },
@@ -455,8 +455,8 @@ function App() {
     },
     shinhanVietnam: {
       problem: {
-        ENG: "At Shinhan Vietnam Finance (SVFC), loan underwriters checked applicants' national ID cards (CCCD) against their bank statements by eye and re-typed the values by hand — slow, with omissions and typos. The PoC goal: one upload that classifies, extracts and validates the documents and returns a first-pass screening result (valid/invalid, reason, problem fields), with the final decision left to the underwriter.",
-        KOR: "신한베트남파이낸스(SVFC) 대출 심사역이 신청자의 시민증(CCCD)과 은행거래명세서 값을 눈으로 대조하고 손으로 옮겨 적어 느리고 누락·오타가 발생. PoC 목표: 업로드 한 번으로 분류·추출·검증까지 자동화해 1차 스크리닝 결과(유효/무효, 사유, 문제 필드)를 제공하고 최종 판단은 심사역이 하는 구조.",
+        ENG: "Loan underwriters at Shinhan Vietnam Finance compared each applicant's ID card and bank statement by eye and typed the numbers in by hand. It was slow, and mistakes slipped through. The PoC goal: upload the documents once and get a first screening result with reasons, while the underwriter still makes the final call.",
+        KOR: "신한베트남파이낸스 대출 심사역은 신청자의 신분증과 은행거래명세서를 눈으로 비교하고 숫자를 손으로 옮겨 적었습니다. 느리고 실수도 잦았습니다. 서류를 한 번 올리면 이유와 함께 1차 심사 결과가 나오고, 최종 판단은 심사역이 하도록 만드는 게 PoC 목표였습니다.",
       },
       team: {
         ENG: "Korea Deep Learning — I ran the PoC as PM and sole developer, on top of the in-house IDP platform (PPASS)",
@@ -496,8 +496,8 @@ function App() {
     },
     kdigitalHackathon: {
       problem: {
-        ENG: "Reporting reckless driving meant finding the right dashcam clip yourself and typing the plate, location and violation by hand.",
-        KOR: "난폭운전을 신고하려면 블랙박스 영상을 직접 찾아 차량번호·위치·위반 유형을 손으로 입력해야 했음.",
+        ENG: "To report reckless driving, you had to dig up the dashcam clip yourself and type in the plate number, place and violation.",
+        KOR: "난폭운전을 신고하려면 블랙박스 영상을 직접 찾아서 차량번호·장소·위반 내용을 일일이 입력해야 했습니다.",
       },
       team: { ENG: '6 members (Team Road Guardian)', KOR: '6명 (팀 Road Guardian)' },
       role: { ENG: 'Object-detection model & data', KOR: '객체 인식 모델·데이터 담당' },
