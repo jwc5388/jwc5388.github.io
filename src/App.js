@@ -113,6 +113,9 @@ function App() {
       metaContribution: "Contribution",
       metaModel: "Tech Stack",
       metaWork: "What I Built",
+      metaRoleTeam: "Role & Team",
+      showDetails: "Show details",
+      hideDetails: "Hide details",
       metaLessons: "Takeaways & Limitations",
       metaResults: "Key Results",
       collapseUp: "▴",
@@ -141,6 +144,9 @@ function App() {
       metaContribution: "기여도",
       metaModel: "기술 스택",
       metaWork: "프로젝트 수행",
+      metaRoleTeam: "역할 · 팀",
+      showDetails: "상세 보기",
+      hideDetails: "상세 접기",
       metaLessons: "배운 점 · 한계",
       metaResults: "주요 성과",
       collapseUp: "▴",
@@ -555,7 +561,15 @@ function App() {
       overview: [row(t[lang].metaProblem, m.problem)].filter((r) => r.value),
       meta,
       links: m.links,
-      labels: { work: t[lang].metaWork },
+      card: {
+        overview: m.problem?.[lang], results: m.results?.[lang], team: m.team?.[lang], role: m.role?.[lang],
+        contribution: m.contribution?.[lang], stack, lessons: m.lessons?.[lang],
+      },
+      labels: {
+        overview: t[lang].metaProblem, work: t[lang].metaWork, results: t[lang].metaResults,
+        role: t[lang].metaRoleTeam, stack: t[lang].metaModel, contribution: t[lang].metaContribution,
+        lessons: t[lang].metaLessons, showDetails: t[lang].showDetails, hideDetails: t[lang].hideDetails,
+      },
     };
   };
 
@@ -636,12 +650,6 @@ function App() {
     "sudo 없는 폐쇄망 서버용 설치 번들(install/update/rollback/backup) 제작, 데모 서버 운영, 고객 요구사항 30여 건을 ID·우선순위로 관리해 반영(IP 제한 보안 요청 당일 처리).",
   ];
 
-  const lgax_media = (
-    <div key="lgax-images" style={{ display:'flex', overflowX:'auto', whiteSpace:'nowrap', gap:'10px', padding:'10px 0' }}>
-      <img src={lgaxImage1} alt="Master spec sheet screen in the deployed LG Electronics service (client values blurred)" style={{ height: '400px', borderRadius: '8px' }} />
-      <img src={lgaxImage2} alt="Generated product roadmap screen (roadmap content blurred)" style={{ height: '400px', borderRadius: '8px' }} />
-    </div>
-  );
 
   const kdl_extract_ENG = [
     "Built an extraction API that turns 20 years of automotive parts maker Seoyon E-Hwa's quality and process documents (thousands of Excel/PPT/PDF files in Korean, English and Chinese) into DB-ready data across 7 document types; delivered to the client's offline GPU server.",
@@ -698,11 +706,6 @@ function App() {
     "Docker Compose로 GPU를 할당한 API 서버 배포: /health 헬스체크, restart: unless-stopped 자동 복구, 포트·컨테이너명 env 분리로 환경별 배포.",
   ];
 
-  const gauge_media = (
-    <div key="gauge-images" style={{ display:'flex', overflowX:'auto', whiteSpace:'nowrap', gap:'10px', padding:'10px 0' }}>
-      <img src={gaugeImage1} alt="CCTV frame with detected gauges and needle angles" style={{ height: '400px', borderRadius: '8px' }} />
-    </div>
-  );
 
   const kdl_video_ENG = [
     "Built a generative pipeline that turns real wildfire-watch and urban-flood CCTV stills into 'disaster starting and spreading' training videos: FLUX.2 draws the start state, Wan2.2 animates it, RIFE interpolates to 10 s.",
@@ -852,15 +855,6 @@ function App() {
   ];
 
   // ===== Projects – Main =====
-  const sense1_media = (
-    <div key="sense1vet-images" style={{ display:'flex', overflowX:'auto', whiteSpace:'nowrap', gap:'10px', padding:'10px 0' }}>
-      <img src={senseoneImage1} alt="SenseOne Project 1" style={{ height: '400px', borderRadius: '8px' }} />
-      <img src={senseoneImage2} alt="SenseOne Project 2" style={{ height: '400px', borderRadius: '8px' }} />
-      <img src={senseoneImage3} alt="SenseOne Project 3" style={{ height: '400px', borderRadius: '8px' }} />
-      <img src={senseoneImage4} alt="SenseOne Project 4" style={{ height: '400px', borderRadius: '8px' }} />
-      <img src={senseoneImage5} alt="SenseOne Project 5" style={{ height: '400px', borderRadius: '8px' }} />
-    </div>
-  );
 
   const pj_sense1_ENG = [
     "Built canine heart-rate estimation from ballistocardiogram (BCG) signals with an LSTM (TensorFlow / Keras), owning the pipeline end to end.",
@@ -878,15 +872,6 @@ function App() {
   ];
 
 
-  const lawai_media = (
-    <div key="lawai-images" style={{ display:'flex', overflowX:'auto', whiteSpace:'nowrap', gap:'10px', padding:'10px 0' }}>
-      <img src={lawAIImage1} alt="LAW-AI Project 1" style={{ height: '400px', borderRadius: '8px' }} />
-      <img src={lawAIImage4} alt="LAW-AI Project 4" style={{ height: '400px', borderRadius: '8px' }} />
-      <img src={lawAIImage2} alt="LAW-AI Project 2" style={{ height: '400px', borderRadius: '8px' }} />
-      <img src={lawAIImage3} alt="LAW-AI Project 3" style={{ height: '400px', borderRadius: '8px' }} />
-      <img src={lawAIImage5} alt="LAW-AI Project 5" style={{ height: '400px', borderRadius: '8px' }} />
-    </div>
-  );
 
 
   const law_ENG = [
@@ -1069,16 +1054,6 @@ function App() {
     "단위 테스트 24건과 베트남 은행 템플릿 14종 × 합성 CCCD 200건 테스트셋으로 품질 확보, 고객 UAT 피드백을 반영해 수정.",
     "글로벌 신한 이노부스트 2026 상위 8개사 선정, 데모데이 부스에서 DEEP Agent 실시간 시연, 오픈이노베이션 리워드(VND 200,000,000) 수상 — PoC가 실제 사업으로 이어져 한국딥러닝 첫 해외 매출 달성.",
   ];
-  const shinhan_media = (
-    <div key="shinhan-images" style={{ display:'flex', overflowX:'auto', whiteSpace:'nowrap', gap:'10px', padding:'10px 0' }}>
-      <img src={shinhanApp2} alt="DEEP Agent validation results: name match, ID front-back match, balance and monthly income checks" style={{ height: '400px', borderRadius: '8px' }} />
-      <img src={shinhanApp1} alt="DEEP Agent review screen with extracted CCCD fields" style={{ height: '400px', borderRadius: '8px' }} />
-      <img src={shinhanImage0} alt="Global Shinhan InnoBoost 2026 award" style={{ height: '400px', borderRadius: '8px' }} />
-      <img src={shinhanImage1} alt="Global Shinhan InnoBoost 2026 award ceremony" style={{ height: '400px', borderRadius: '8px' }} />
-      <img src={shinhanImage2} alt="Korea Deep Learning booth at Demo Day 2026" style={{ height: '400px', borderRadius: '8px' }} />
-      <img src={shinhanImage3} alt="Shinhan Future's Lab Demo Day 2026" style={{ height: '400px', borderRadius: '8px' }} />
-    </div>
-  );
 
   const quantum_ENG = [
     "Ranked 1st in the AI Factory preliminaries by solving a Fashion-MNIST quantum computing challenge.",
@@ -1212,11 +1187,17 @@ function App() {
   ];
   const mainProjects = [
     {
+      badge: { ENG: 'Contribution 100%', KOR: '기여도 100%' },
+      summary: {
+        ENG: ["PM and sole developer: client communication from kickoff to final assessment, plus all design", "Upload → page classification → VLM extraction → 7 deterministic checks with reasons", "Balance, reference-number and income checks for statements; MRZ and ID-number checks for CCCD", "Every prompt rule backed by code; Korean / English / Vietnamese UI", "Docker deployment, plus rulebook, hardware sizing and user guide for the client"],
+        KOR: ["PM 겸 단독 개발: 킥오프부터 최종 평가까지 고객사 소통과 설계 전부", "업로드 → 페이지 분류 → VLM 추출 → 결정론적 검증 7종(사유 포함)", "명세서 잔액·참조번호·소득 검증, 신분증 MRZ·ID 번호 체계 검증", "모든 프롬프트 규칙에 코드 백스톱, 한·영·베 3개 국어 UI", "Docker 배포, 룰북·HW 사이징·사용자 가이드 작성"],
+      },
+      media: [{ src: shinhanApp2, caption: { ENG: "Validation results", KOR: "검증 결과 화면" } }, { src: shinhanApp1, caption: { ENG: "Extraction review", KOR: "추출 결과 검수 화면" } }, { src: shinhanImage0, caption: { ENG: "Award", KOR: "수상" } }, { src: shinhanImage1, caption: { ENG: "Top startups", KOR: "상위 기업 시상" } }, { src: shinhanImage2, caption: { ENG: "Demo Day booth", KOR: "데모데이 부스" } }, { src: shinhanImage3, caption: { ENG: "Demo Day 2026", KOR: "데모데이 2026" } }],
       id: 'proj-shinhan', key: 'shinhanVietnam', org: 'company', fields: ['VLM', 'OCR'],
       title: { ENG: '(Shinhan Vietnam Finance) Shinhan Open Innovation Vietnam – Loan Document Extraction & Validation PoC', KOR: '(신한베트남파이낸스) 신한 오픈이노베이션 베트남 – 대출 서류 자동 추출·검수 PoC' },
       location: { ENG: 'Korea Deep Learning · PM & sole developer · first overseas revenue', KOR: '한국딥러닝 · PM 겸 단독 개발 · 회사 첫 해외 매출' },
       dates: { ENG: 'June 2026 ~ September 2026 (kickoff 06.09, final assessment 08.24, Demo Day 09)', KOR: '2026.06 ~ 2026.09 (킥오프 06.09, 최종 평가 08.24, 데모데이 09)' },
-      details: getDetails(shinhanPj_ENG, shinhanPj_KOR, shinhan_media),
+      details: lang === 'ENG' ? shinhanPj_ENG : shinhanPj_KOR,
       compare: {
         ENG: {
           title: "Underwriters' loan-document check: before vs after",
@@ -1231,11 +1212,17 @@ function App() {
       },
     },
     {
+      badge: { ENG: 'Contribution 100%', KOR: '기여도 100%' },
+      summary: {
+        ENG: ["LLM/VLM automation: review deck → master spec sheet → product roadmap", "Merged values by source priority; conflicts go to human review with evidence", "Patched Excel XML directly to keep formatting (a 1.5MB file no longer grows past 1GB)", "FP8 serving: 40% less memory, 19% faster, same accuracy", "Offline installer for an air-gapped server; 30+ client requirements delivered"],
+        KOR: ["검토의뢰서 → 마스터 스펙시트 → 제품 로드맵을 LLM·VLM으로 자동화", "원천별 우선순위로 병합, 충돌은 근거와 함께 사람 검수로", "엑셀 XML 직접 패치로 서식 유지 (1.5MB 파일이 1GB로 부풀던 문제 해결)", "FP8 서빙: 메모리 40% 절감, 응답 19% 단축, 정확도 유지", "폐쇄망 설치 번들 제작, 고객 요구사항 30여 건 반영"],
+      },
+      media: [{ src: lgaxImage1, caption: { ENG: "Deployed service: master spec sheet", KOR: "실제 배포 화면: 마스터 스펙시트" } }, { src: lgaxImage2, caption: { ENG: "Generated product roadmap", KOR: "로드맵 자동 생성 화면" } }],
       id: 'proj-1', key: 'kdlProductPlanning', org: 'company', fields: ['LLM', 'VLM'],
       title: { ENG: '(LG Electronics) Product-Planning Document Automation', KOR: '(LG전자) 상품기획 문서 자동화' },
       location: { ENG: 'Korea Deep Learning · AX project', KOR: '한국딥러닝 · AX 프로젝트' },
       dates: { ENG: 'July 2026 ~ Present', KOR: '2026.07 ~ 진행중' },
-      details: getDetails(kdl_planning_ENG, kdl_planning_KOR, lgax_media),
+      details: lang === 'ENG' ? kdl_planning_ENG : kdl_planning_KOR,
       compare: {
         ENG: {
           title: "Planners' workflow: before vs after",
@@ -1250,6 +1237,12 @@ function App() {
       },
     },
     {
+      badge: { ENG: 'Contribution 85%', KOR: '기여도 85%' },
+      summary: {
+        ENG: ["Compared recognizer architectures: PARSeq, PP-OCRv5, SVTRv2", "Auto-labeled ~80k handwriting samples from client ROI boxes", "Built a 15,808-sample handwriting goldenset tagged by difficulty", "Error analysis by look-alike character pairs; fixed a metric bug", "Fine-tuned PARSeq on 11.6M samples: best on 13 of 14 test sets"],
+        KOR: ["Recognizer 아키텍처 비교: PARSeq, PP-OCRv5, SVTRv2", "고객 ROI 박스로 필기체 약 8만 장 오토라벨링", "실제 서식 기반 필기체 골든셋 15,808개 구축, 난이도별 태깅", "헷갈리는 글자 쌍 단위 오류 분석, 지표 버그 수정", "1,160만 장으로 PARSeq fine-tuning: 테스트 14종 중 13종 1위"],
+      },
+      media: [],
       id: 'proj-4', key: 'kdlOcrResearch', org: 'company', fields: ['CV', 'OCR'],
       title: { ENG: '(Hyundai Capital) Korean Handwriting OCR Recognizer R&D', KOR: '(현대캐피탈) 한국어 필기체 OCR Recognizer 연구' },
       location: { ENG: 'Korea Deep Learning · R&D, weights deployed to the client project', KOR: '한국딥러닝 · R&D, 고객 프로젝트에 가중치 배포' },
@@ -1257,6 +1250,12 @@ function App() {
       details: lang === 'ENG' ? kdl_ocr_ENG : kdl_ocr_KOR,
     },
     {
+      badge: { ENG: 'Contribution 100%', KOR: '기여도 100%' },
+      summary: {
+        ENG: ["Extraction API for 7 document types (Excel / PPT / PDF; Korean, English, Chinese)", "Rule-based parsing for 5 Excel types; LLM only for free-form reports and images", "Grader that reproduces the client's audit ledger; no change ships if a correct cell breaks", "Two-model agreement check to filter out hallucinated tables", "Review UI source highlighting: 15–41% → 97.1% matched"],
+        KOR: ["문서 7종 추출 API (엑셀·PPT·PDF, 국·영·중)", "엑셀 5종은 LLM 없이 규칙 파싱, LLM은 자유 양식·그림에만", "고객 검수 대장을 그대로 재현하는 채점기, 정답 칸이 깨지면 반영 안 함", "두 모델 판독 일치도로 지어낸 표 걸러내기", "검수 UI 원문 위치 표시 15~41% → 97.1%"],
+      },
+      media: [],
       id: 'proj-2', key: 'kdlDocExtraction', org: 'company', fields: ['LLM', 'VLM'],
       title: { ENG: '(Seoyon E-Hwa) Quality & Process Document Extraction API', KOR: '(서연이화) 품질·공정 문서 DB화 추출 API' },
       location: { ENG: 'Korea Deep Learning · delivered to an air-gapped server', KOR: '한국딥러닝 · 폐쇄망 서버 납품' },
@@ -1276,11 +1275,17 @@ function App() {
       },
     },
     {
+      badge: { ENG: 'Contribution 100%', KOR: '기여도 100%' },
+      summary: {
+        ENG: ["Two-stage detection: gauge → crop → needle as an oriented box", "Semi-automatic labeling loop: ~20k images labeled solo", "Compared standard vs oriented boxes and adopted the oriented box", "Deployed as a Docker GPU API with health checks and auto-restart"],
+        KOR: ["2단계 검출: 계기판 검출 → 크롭 → 바늘 회전 박스", "반자동 라벨링 루프로 약 2만 장 1인 구축", "일반 박스 vs 회전 박스 비교 후 회전 박스 채택", "Docker GPU API로 실서비스 배포 (헬스체크·자동 복구)"],
+      },
+      media: [{ src: gaugeImage1, caption: { ENG: "Real CCTV reading result", KOR: "실제 CCTV 판독 결과" } }],
       id: 'proj-3', key: 'kdlGaugeReading', org: 'company', fields: ['CV'],
       title: { ENG: '(Government-Funded Manufacturing Innovation) Real-Time Analog Gauge Reading from CCTV', KOR: '(정부과제·제조혁신) CCTV 기반 아날로그 계기판 실시간 판독' },
       location: { ENG: 'Korea Deep Learning · deployed to production', KOR: '한국딥러닝 · 실서비스 배포' },
       dates: { ENG: 'January 2026 ~ March 2026', KOR: '2026.01 ~ 2026.03' },
-      details: getDetails(kdl_gauge_ENG, kdl_gauge_KOR, gauge_media),
+      details: lang === 'ENG' ? kdl_gauge_ENG : kdl_gauge_KOR,
       compare: {
         ENG: {
           title: 'Needle detection: standard box vs oriented box (same settings)',
@@ -1295,6 +1300,12 @@ function App() {
       },
     },
     {
+      badge: { ENG: 'Contribution 100%', KOR: '기여도 100%' },
+      summary: {
+        ENG: ["Image edit → image-to-video → frame interpolation (FLUX.2, Wan2.2, RIFE)", "Drew each stage's start state first, so videos grow naturally without sudden jumps", "Automated QA: OpenCV measurements plus a calibrated VLM", "4-GPU queue with resident models (model load ~9 min → 0)"],
+        KOR: ["이미지 편집 → 영상 생성 → 프레임 보간 (FLUX.2, Wan2.2, RIFE)", "단계별 시작 상태를 먼저 그려 첫 프레임 급변 제거", "OpenCV 측정 + 정답셋으로 보정한 VLM 자동 검수", "GPU 4장 큐, 모델 상주로 요청당 로딩 약 9분 → 0"],
+      },
+      media: [],
       id: 'proj-5', key: 'kdlDisasterVideo', org: 'company', fields: ['GenAI', 'VLM'],
       title: { ENG: 'Disaster CCTV Video Augmentation (Wildfire · Flood)', KOR: '재난 CCTV 영상 증강 (산불·침수)' },
       location: { ENG: 'Korea Deep Learning · generative AI pipeline', KOR: '한국딥러닝 · 생성형 AI 파이프라인' },
@@ -1302,20 +1313,31 @@ function App() {
       details: lang === 'ENG' ? kdl_video_ENG : kdl_video_KOR,
     },
     {
+      badge: { ENG: 'Contribution 100%', KOR: '기여도 100%' },
+      summary: {
+        ENG: ["LSTM heart-rate model on BCG signals (TensorFlow / Keras)", "FFT and wavelet denoising; IJK peak periodicity as features", "Unsupervised peak detection to reduce dependence on ECG", "Worked with hardware and production teams on signal quality"],
+        KOR: ["BCG 신호 기반 LSTM 심박 모델 (TensorFlow / Keras)", "FFT·웨이블릿 노이즈 제거, IJK 피크 주기성을 피처로", "비지도 피크 검출로 ECG 의존도 감소", "하드웨어·생산팀과 신호 품질 개선"],
+      },
+      media: [{ src: senseoneImage1, caption: { ENG: "Sense1 Vet", KOR: "Sense1 Vet" } }, { src: senseoneImage2, caption: { ENG: "", KOR: "" } }, { src: senseoneImage3, caption: { ENG: "", KOR: "" } }, { src: senseoneImage4, caption: { ENG: "", KOR: "" } }, { src: senseoneImage5, caption: { ENG: "", KOR: "" } }],
       id: 'proj-6', key: 'sense1Vet', org: 'company', fields: ['DL', 'Signal'],
       title: { ENG: '(CareSix) Sense1 Vet Heart-Rate Algorithm', KOR: '(케어식스) Sense1 Vet 심박 알고리즘' },
       location: { ENG: 'CareSix Co., LTD · wearable for dogs', KOR: '케어식스 · 반려견 웨어러블' },
       dates: { ENG: 'September 2024 ~ February 2025', KOR: '2024.09 ~ 2025.02' },
-      details: getDetails(pj_sense1_ENG, pj_sense1_KOR, sense1_media),
+      details: lang === 'ENG' ? pj_sense1_ENG : pj_sense1_KOR,
     },
   ];
   const sideProjects = [
     {
+      summary: {
+        ENG: ["Led a team of 5 and built the core AI", "RAG over Korean statutes and precedents (bge-m3, FAISS / ChromaDB)", "LangChain agent pipeline served with FastAPI on AWS EC2"],
+        KOR: ["5명 팀장, 핵심 AI 직접 구현", "한국 법령·판례 기반 RAG (bge-m3, FAISS·ChromaDB)", "LangChain 에이전트 파이프라인, FastAPI·AWS EC2 서빙"],
+      },
+      media: [{ src: lawAIImage1, caption: { ENG: "Law-AI", KOR: "Law-AI" } }, { src: lawAIImage4, caption: { ENG: "", KOR: "" } }, { src: lawAIImage2, caption: { ENG: "", KOR: "" } }, { src: lawAIImage3, caption: { ENG: "", KOR: "" } }, { src: lawAIImage5, caption: { ENG: "", KOR: "" } }],
       id: 'side-law', key: 'lawIntelligence', org: 'program', fields: ['LLM', 'RAG'],
       title: { ENG: '[IBM x RedHat] Law-AI', KOR: '[IBM x RedHat] Law-AI' },
       location: { ENG: 'IBM final group project', KOR: 'IBM 파이널 그룹 프로젝트' },
       dates: { ENG: '2025 ~ October 2025', KOR: '2025 ~ 2025.10' },
-      details: getDetails(law_ENG, law_KOR, lawai_media),
+      details: lang === 'ENG' ? law_ENG : law_KOR,
     },
   ];
   mainProjects.forEach((pj, i) => { pj.num = i + 1; });
@@ -1619,6 +1641,9 @@ function App() {
                 details={pj.details}
                 tags={projectTags(pj)}
                 compare={pj.compare?.[lang]}
+                summary={pj.summary?.[lang]}
+                badge={pj.badge?.[lang]}
+                media={(pj.media || []).map((m) => ({ src: m.src, caption: m.caption[lang] }))}
                 {...getMeta(pj.key)}
                 isExpanded={expandedSections.projects.entries[pj.key]}
                 onClick={() => toggleEntry('projects', pj.key)}
@@ -1635,6 +1660,9 @@ function App() {
                 dates={pj.dates[lang]}
                 details={pj.details}
                 tags={projectTags(pj)}
+                summary={pj.summary?.[lang]}
+                badge={pj.badge?.[lang]}
+                media={(pj.media || []).map((m) => ({ src: m.src, caption: m.caption[lang] }))}
                 {...getMeta(pj.key)}
                 isExpanded={expandedSections.projects.entries[pj.key]}
                 onClick={() => toggleEntry('projects', pj.key)}
