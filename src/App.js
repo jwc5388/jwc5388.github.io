@@ -167,7 +167,7 @@ function App() {
         "Delivered an LLM/VLM document-extraction API to automotive parts maker Seoyon E-Hwa's air-gapped server over 6 releases, reaching 93.49% accuracy on the client's 3,920-cell audit ledger",
         "Generalized a single-client KIE pipeline into PPASS, a reusable base module customized for each new client",
         "Tracked 30+ client requirements by ID and priority, and resolved an IP-restriction security request the same day",
-        "Global Shinhan InnoBoost 2026 (Vietnam): our document-AI PoC placed in the top 8 and won the Open Innovation Reward, then led to Korea Deep Learning's first overseas revenue",
+        "As PM and sole developer, built the loan-document extraction and 7-check validation system for Shinhan Vietnam Finance's PoC (Global Shinhan InnoBoost 2026): top 8, Open Innovation Reward, and Korea Deep Learning's first overseas revenue",
         "Built a real-time CCTV gauge-reading system solo for a government-funded manufacturing project, from data labeling to a Docker GPU API in production (gauge mAP50-95 0.992, needle 0.949)",
         "Raised handwriting OCR exact-match accuracy by 4.26 pp (85.23% → 89.49%) through R&D; the trained weights were deployed in a Hyundai Capital project",
         "Independently researched and built an LSTM-based BCG heart-rate algorithm for dogs, reaching 96% accuracy (CareSix)",
@@ -177,7 +177,7 @@ function App() {
         "자동차 부품 제조사 서연이화의 폐쇄망 서버에 LLM·VLM 문서 추출 API 6차 납품: 고객 검수 대장 3,920칸 기준 정확도 93.49%",
         "한 고객사용 KIE 파이프라인을 공통 기본 모듈 PPASS로 일반화해 고객사마다 맞춤 적용",
         "고객 요구사항 30여 건을 ID·우선순위로 관리해 반영, IP 제한 보안 요청은 당일 처리",
-        "글로벌 신한 이노부스트 2026(베트남): 문서 AI PoC로 상위 8개사 선정·오픈이노베이션 리워드 수상, 실제 사업으로 이어져 한국딥러닝 첫 해외 매출 달성",
+        "신한베트남파이낸스 PoC(글로벌 신한 이노부스트 2026)를 PM 겸 단독 개발로 수행, 대출 서류 추출·자동 검증 7종 시스템 구축: 상위 8개사·오픈이노베이션 리워드 수상, 한국딥러닝 첫 해외 매출로 연결",
         "정부과제(제조혁신) CCTV 계기판 실시간 판독 시스템을 데이터 라벨링부터 Docker GPU API 실서비스 배포까지 1인 구축 (계기판 mAP50-95 0.992, 바늘 0.949)",
         "필기체 OCR R&D로 정확도 4.26%p 향상(85.23% → 89.49%), 학습한 가중치를 현대캐피탈 프로젝트에 배포",
         "LSTM 기반 반려견 BCG 심박 알고리즘을 단독으로 연구·개발해 정확도 96% 달성 (케어식스)",
@@ -258,8 +258,8 @@ function App() {
         KOR: "AI 개발 100%: LLM·VLM 추출·매핑 파이프라인, 로드맵 생성, FP8 평가·모델 서빙, 폐쇄망 설치 번들, 데모 서버 운영, 고객 요구사항 30여 건 대응",
       },
       model: {
-        ENG: "Qwen3.5-9B on vLLM (FP8) · FastAPI · React/TypeScript · direct OOXML patching · Docker Compose",
-        KOR: "Qwen3.5-9B (vLLM, FP8) · FastAPI · React/TypeScript · OOXML 직접 패치 · Docker Compose",
+        ENG: "9B VLM on vLLM (FP8) · FastAPI · React/TypeScript · direct OOXML patching · Docker Compose",
+        KOR: "9B VLM (vLLM, FP8) · FastAPI · React/TypeScript · OOXML 직접 패치 · Docker Compose",
       },
       results: {
         ENG: "8-model document: 1,225 of 1,232 cells auto-filled · FP8: 40% less memory, 19% faster, no accuracy loss (85.2% → 85.5%)",
@@ -369,8 +369,8 @@ function App() {
         KOR: "100% — 생성 파이프라인, 자동 검수, 다중 GPU 운영, 저작툴까지 단독 수행",
       },
       model: {
-        ENG: "FLUX.2-dev (image edit) → Wan2.2-I2V-A14B (image-to-video, 720p) → RIFE 4.7 (interpolation) · Qwen3-VL-8B + OpenCV (QA) · FastAPI",
-        KOR: "FLUX.2-dev (이미지 편집) → Wan2.2-I2V-A14B (이미지→영상, 720p) → RIFE 4.7 (프레임 보간) · Qwen3-VL-8B + OpenCV (검수) · FastAPI",
+        ENG: "FLUX.2-dev (image edit) → Wan2.2-I2V-A14B (image-to-video, 720p) → RIFE 4.7 (interpolation) · 8B VLM + OpenCV (QA) · FastAPI",
+        KOR: "FLUX.2-dev (이미지 편집) → Wan2.2-I2V-A14B (이미지→영상, 720p) → RIFE 4.7 (프레임 보간) · 8B VLM + OpenCV (검수) · FastAPI",
       },
       results: {
         ENG: "In 9 days: ~190 wildfire and ~150 flood videos passed QA · 572 of 1,768 staged videos auto-selected · ~30 attempts/hour on 4 GPUs",
@@ -458,19 +458,32 @@ function App() {
     },
     shinhanVietnam: {
       problem: {
-        ENG: "Through Shinhan Financial Group's open-innovation program in Vietnam, Korea Deep Learning ran a PoC of its document AI with Shinhan's Vietnamese business; companies were ranked on their PoC results, and the best were selected for Demo Day and follow-on business.",
-        KOR: "신한금융그룹의 베트남 오픈이노베이션 프로그램에서 한국딥러닝 문서 AI로 신한 베트남 사업과 PoC 진행 — PoC 성과로 참가 기업을 평가해 상위 기업을 데모데이와 후속 사업으로 선발.",
+        ENG: "At Shinhan Vietnam Finance (SVFC), loan underwriters checked applicants' national ID cards (CCCD) against their bank statements by eye and re-typed the values by hand — slow, with omissions and typos. The PoC goal: one upload that classifies, extracts and validates the documents and returns a first-pass screening result (valid/invalid, reason, problem fields), with the final decision left to the underwriter.",
+        KOR: "신한베트남파이낸스(SVFC) 대출 심사역이 신청자의 시민증(CCCD)과 은행거래명세서 값을 눈으로 대조하고 손으로 옮겨 적어 느리고 누락·오타가 발생. PoC 목표: 업로드 한 번으로 분류·추출·검증까지 자동화해 1차 스크리닝 결과(유효/무효, 사유, 문제 필드)를 제공하고 최종 판단은 심사역이 하는 구조.",
       },
-      team: { ENG: 'Korea Deep Learning team', KOR: '한국딥러닝 팀' },
-      role: { ENG: '', KOR: '' },
-      contribution: { ENG: '', KOR: '' },
+      team: {
+        ENG: "Korea Deep Learning — I ran the PoC as PM and sole developer, on top of the in-house IDP platform (PPASS)",
+        KOR: "한국딥러닝 — 사내 IDP 플랫폼(PPASS) 위에서 PM 겸 단독 개발로 수행",
+      },
+      role: {
+        ENG: "PM and sole developer — client communication, requirements and design, classification and extraction, all validation logic, result UI, deployment and client documents",
+        KOR: "PM 겸 단독 개발 — 고객사 소통, 요구사항 정의·설계, 분류·추출, 검수 자동화 로직 전부, 결과 화면, 배포, 고객 제출 문서",
+      },
+      contribution: {
+        ENG: "100% — from client communication and design to all Vietnam PoC code (backend 25 commits / +3,556 lines, frontend 43 commits / +2,890 lines) and every client deliverable",
+        KOR: "100% — 고객사 소통·설계부터 베트남 PoC 코드 전부(백엔드 25커밋·+3,556줄, 프론트엔드 43커밋·+2,890줄)와 고객 제출 문서 전부",
+      },
       model: {
-        ENG: "DEEP Agent (Korea Deep Learning's document AI) · document extraction and cross-checking",
-        KOR: 'DEEP Agent (한국딥러닝 문서 AI) · 문서 정보 추출·교차 검증',
+        ENG: "27B VLM on vLLM · FastAPI · Next.js 16 / React 19 / TypeScript · MongoDB · SeaweedFS · Docker Compose · GitHub Actions (self-hosted)",
+        KOR: "27B VLM (vLLM) · FastAPI · Next.js 16 / React 19 / TypeScript · MongoDB · SeaweedFS · Docker Compose · GitHub Actions (self-hosted)",
       },
       results: {
-        ENG: "Top 8 of the participating companies · Open Innovation Reward (VND 200,000,000) · the PoC became an actual business deal, Korea Deep Learning's first overseas revenue",
-        KOR: "참가 기업 중 상위 8개사 · 오픈이노베이션 리워드(VND 200,000,000) · PoC가 실제 사업으로 이어져 한국딥러닝 첫 해외 매출",
+        ENG: "Top 8 of the participating companies · Open Innovation Reward (VND 200,000,000) · the PoC became an actual business deal, Korea Deep Learning's first overseas revenue · all 5 SoW scenarios covered by 7 automated checks · tested by the client's underwriters in UAT",
+        KOR: "참가 기업 중 상위 8개사 · 오픈이노베이션 리워드(VND 200,000,000) · PoC가 실제 사업으로 이어져 한국딥러닝 첫 해외 매출 · SoW 시나리오 5개를 자동 검증 7종으로 구현 · 고객 심사역 UAT 진행",
+      },
+      lessons: {
+        ENG: "'The VLM only reads; deterministic code decides' — every prompt rule got a code backstop, because prompts are a weak guarantee. Limits stated honestly: image-forgery forensics was scoped out and replaced with logical-consistency checks, and an automated accuracy report against the 92% target was not built (UAT was evaluated manually)",
+        KOR: "'VLM은 읽기만, 판단은 결정론적 코드가' — 프롬프트는 약한 보장이라 모든 프롬프트 규칙에 코드 백스톱을 둠. 한계: 이미지 위변조 포렌식은 범위에서 제외하고 논리 일관성 검증으로 대체했고, 92% 목표 대비 자동 정확도 리포트는 만들지 못함(UAT는 수동 평가)",
       },
       links: [],
     },
@@ -592,7 +605,7 @@ function App() {
     "Quality and process document extraction API for Seoyon E-Hwa (automotive parts): 7 document types, 93.49% accuracy on the client's audit ledger.",
     "Generative video augmentation (wildfire, flood) from real CCTV stills to train disaster-detection models.",
     "R&D on the recognizer of the company's two-stage OCR (detector → recognizer) for Korean handwriting: +4.26 pp exact match, weights deployed to a Hyundai Capital project.",
-    "Global Shinhan InnoBoost 2026 (Shinhan Financial Group, Vietnam): the document-AI PoC placed in the top 8 participating companies, exhibited at Demo Day and won the Open Innovation Reward; it led to an actual business deal — the company's first overseas revenue.",
+    "Shinhan Vietnam Finance PoC (Global Shinhan InnoBoost 2026): as PM and sole developer, led client communication and design and built the loan-document classification, extraction and 7-check validation system end to end; it placed in the top 8, won the Open Innovation Reward and led to an actual business deal — the company's first overseas revenue.",
     "Government-funded manufacturing innovation project — real-time analog gauge reading from CCTV with a two-stage YOLO26 pipeline (detection → OBB): gauge mAP50-95 0.992, needle 0.949, deployed as a Docker API.",
   ];
   const work_kdl_details_KOR = [
@@ -602,7 +615,7 @@ function App() {
     "서연이화(자동차 부품) 품질·공정 문서 추출 API: 문서 7종, 고객 검수 대장 기준 정확도 93.49%.",
     "실제 CCTV 사진 기반 재난(산불·침수) 영상 생성 증강으로 재난 탐지 모델 학습 데이터 구축.",
     "사내 2-stage OCR(Detector → Recognizer)의 한국어 필기체 Recognizer 연구: 정확도 +4.26%p, 현대캐피탈 프로젝트에 가중치 배포.",
-    "글로벌 신한 이노부스트 2026(신한금융그룹, 베트남): 문서 AI PoC로 참가 기업 중 상위 8개사에 선정돼 데모데이 부스 참가, 오픈이노베이션 리워드 수상 — 실제 사업으로 이어져 회사의 첫 해외 매출 달성.",
+    "신한베트남파이낸스 PoC(글로벌 신한 이노부스트 2026): PM 겸 단독 개발로 고객사 소통·설계를 맡고 대출 서류 분류·추출·자동 검증 7종 시스템을 처음부터 끝까지 개발 — 상위 8개사 선정, 오픈이노베이션 리워드 수상, 실제 사업으로 이어져 회사의 첫 해외 매출 달성.",
     "정부과제(제조혁신) — CCTV 아날로그 계기판 실시간 판독(2단계 YOLO26 Detection → OBB): 계기판 mAP50-95 0.992, 바늘 0.949, Docker API로 실서비스 배포.",
   ];
 
@@ -1007,10 +1020,10 @@ function App() {
   );
   // 수상 섹션용 (간략)
   const shinhan_ENG = [
-    "Top 8 of the participating companies and Open Innovation Reward (VND 200,000,000) for Korea Deep Learning's document-AI PoC; the PoC led to the company's first overseas revenue.",
+    "Top 8 of the participating companies and Open Innovation Reward (VND 200,000,000) for the Shinhan Vietnam Finance loan-document PoC I developed; the PoC led to Korea Deep Learning's first overseas revenue.",
   ];
   const shinhan_KOR = [
-    "한국딥러닝 문서 AI PoC로 참가 기업 중 상위 8개사 선정, 오픈이노베이션 리워드(VND 200,000,000) 수상 — PoC가 회사의 첫 해외 매출로 이어짐.",
+    "직접 개발한 신한베트남파이낸스 대출 서류 PoC로 참가 기업 중 상위 8개사 선정, 오픈이노베이션 리워드(VND 200,000,000) 수상 — PoC가 한국딥러닝 첫 해외 매출로 이어짐.",
   ];
   const shinhan_award_media = (
     <div key="shinhan-award-image" style={{ padding:'10px 0' }}>
@@ -1019,18 +1032,30 @@ function App() {
   );
   // 프로젝트 섹션용 (상세)
   const shinhanPj_ENG = [
-    "Ran a PoC of Korea Deep Learning's document AI with Shinhan's business in Vietnam through Global Shinhan InnoBoost 2026, Shinhan Financial Group's open-innovation program.",
-    "Demonstrated DEEP Agent live at the Demo Day booth: reading Vietnamese ID cards from photos and scans and returning structured fields — name, ID number, date of birth, sex, place of origin, place of residence and expiry date — in seconds.",
-    "Placed in the top 8 participating companies on the PoC results and exhibited at Shinhan Future's Lab Demo Day 2026.",
-    "Won the Global Shinhan InnoBoost Open Innovation Reward (VND 200,000,000).",
-    "The PoC turned into an actual business deal — Korea Deep Learning's first overseas revenue.",
+    "Ran the PoC as PM and sole developer: led client communication with SVFC from kickoff (06.09) through the SoW (06.30), integration testing, UAT with the client's underwriters and the final assessment (08.24), and owned the system design.",
+    "Built SVFC's loan-document screening system: upload bank statements and CCCD ID cards (multiple files merged into one page sequence) → page classification → schema-based field extraction → 7 automated checks, returning pass / warn / fail with the reason and the exact fields to the underwriter.",
+    "Turned the SoW and client Q&A into implementable checks — when the client asked for image-forgery forensics (font, color, compositing traces), scoped it out and replaced it with logical-consistency checks (front-back MRZ match, ID-number scheme), stating the limit in the user guide.",
+    "Bank statements: balance reconciliation (opening + credits − debits = closing, ±1, sums recomputed from transaction rows), reference-number ↔ date logic (YYMMDD, Julian YYDDD, monotonic increase) to catch inserted rows, and monthly salary / bonus income with the matching evidence.",
+    "ID cards: CCCD front ↔ back MRZ cross-check with ICAO 9303 check digits, Vietnamese ID-number scheme (birth year, century-gender code) and legal renewal ages (14/25/40/60), plus name match between statement holder and ID, ignoring Vietnamese tones.",
+    "'The VLM only reads; code decides': every prompt rule has a deterministic backstop (totals recomputed, closing balance from the last row, FT/SAL/IB reference numbers by regex, forward-filled dates), and corrected values are written back so the UI, JSON export and validation cards always match.",
+    "Handled Vietnamese locale details: VND thousands separators vs decimals, tone-insensitive matching, OCR-broken 'lương', and telling the bonus word 'thưởng' from the common name 'Thưởng'.",
+    "Built the result UI (Next.js 16 / React 19): 7 validation cards, detailed extraction table, JSON download, server-paginated history that reopens past runs with the original file, 300 dpi preview, and a Korean / English / Vietnamese UI (180 keys).",
+    "Deployed the demo with Docker Compose via a self-hosted GitHub Actions runner on NCP, and wrote the client deliverables: validation rulebook, solution architecture & hardware sizing for SVFC's on-prem server, and a 12-page English user guide.",
+    "Secured quality with 24 unit tests and a 200-case synthetic test set across 14 Vietnamese bank templates, and shipped fixes from the client's UAT feedback.",
+    "Placed in the top 8 at Global Shinhan InnoBoost 2026, demonstrated DEEP Agent live at the Demo Day booth and won the Open Innovation Reward (VND 200,000,000); the PoC turned into an actual business deal — Korea Deep Learning's first overseas revenue.",
   ];
   const shinhanPj_KOR = [
-    "신한금융그룹 오픈이노베이션 프로그램 '글로벌 신한 이노부스트 2026'에서 한국딥러닝 문서 AI로 신한 베트남 사업과 PoC 진행.",
-    "데모데이 부스에서 DEEP Agent 실시간 시연: 베트남 신분증 사진·스캔본을 읽어 이름·신분증 번호·생년월일·성별·출신지·거주지·만료일을 수 초 만에 구조화된 항목으로 추출.",
-    "PoC 성과로 참가 기업 중 상위 8개사에 선정돼 신한 퓨처스랩 데모데이 2026 부스 참가.",
-    "글로벌 신한 이노부스트 오픈이노베이션 리워드(VND 200,000,000) 수상.",
-    "PoC가 실제 사업으로 이어져 한국딥러닝의 첫 해외 매출 달성.",
+    "PM 겸 단독 개발로 PoC 수행: 킥오프(06.09) → SoW 확정(06.30) → 통합 테스트 → 고객 심사역 UAT → 최종 평가(08.24)까지 SVFC와의 소통을 직접 맡고 시스템 설계 전부 담당.",
+    "SVFC 대출 서류 스크리닝 시스템 구축: 은행거래명세서·시민증(CCCD) 업로드(여러 파일을 하나의 페이지 시퀀스로 통합) → 페이지 분류 → 스키마 기반 필드 추출 → 자동 검증 7종 → 심사역에게 pass/warn/fail과 사유·문제 필드 제공.",
+    "SoW와 고객 Q&A를 구현 가능한 검증 항목으로 정리 — 고객이 요구한 이미지 위변조 포렌식(폰트·색·합성 흔적)은 범위에서 제외하고 논리 일관성 검증(앞뒷면 MRZ 대조, ID 번호 체계)으로 대체, 한계는 사용자 가이드에 명시.",
+    "은행명세서: 잔액 정합성(기초 + 입금 − 출금 = 기말, 허용 오차 ±1, 합계는 거래행에서 재계산), 참조번호 ↔ 거래일 논리 검증(YYMMDD·Julian YYDDD·단조 증가)으로 끼워 넣은 행 탐지, 급여·상여 성격 입금만 월별 합산하고 매칭 근거 반환.",
+    "신분증: CCCD 앞면 ↔ 뒷면 MRZ 대조와 ICAO 9303 체크디지트, 베트남 ID 번호 체계(출생연도·세기·성별 코드)와 법정 갱신 연령(14/25/40/60세) 검증, 명세서 예금주와 신분증 이름을 성조 무시로 대조.",
+    "'VLM은 읽기만, 판단은 코드가': 모든 프롬프트 규칙에 결정론적 백스톱(합계 재계산, 마지막 거래행 기말잔액, FT/SAL/IB 참조번호 정규식 추출, 거래일 forward-fill)을 두고, 보정값을 원본 필드에 다시 써 UI·JSON·검증 카드가 항상 같은 값을 보이게 함.",
+    "베트남 로케일 처리: VND 천단위 구분자와 소수점 구분, 성조 무시 비교, OCR로 깨진 'lương', 상여 'thưởng'과 흔한 이름 'Thưởng' 구분.",
+    "결과 화면 개발(Next.js 16 / React 19): 검증 카드 7종, 상세 추출 표, JSON 다운로드, 서버 페이지네이션 히스토리(원본과 함께 과거 결과 재오픈), 300dpi 프리뷰, 한·영·베 3개 국어 UI(180키).",
+    "Docker Compose + NCP self-hosted GitHub Actions 러너로 데모 배포, 고객 제출 문서 작성: 검증 로직 룰북, SVFC 온프레미스 서버 기준 솔루션 아키텍처·HW 사이징, 영문 사용자 가이드 12쪽.",
+    "단위 테스트 24건과 베트남 은행 템플릿 14종 × 합성 CCCD 200건 테스트셋으로 품질 확보, 고객 UAT 피드백을 반영해 수정.",
+    "글로벌 신한 이노부스트 2026 상위 8개사 선정, 데모데이 부스에서 DEEP Agent 실시간 시연, 오픈이노베이션 리워드(VND 200,000,000) 수상 — PoC가 실제 사업으로 이어져 한국딥러닝 첫 해외 매출 달성.",
   ];
   const shinhan_media = (
     <div key="shinhan-images" style={{ display:'flex', overflowX:'auto', whiteSpace:'nowrap', gap:'10px', padding:'10px 0' }}>
@@ -1174,10 +1199,22 @@ function App() {
   const mainProjects = [
     {
       id: 'proj-shinhan', key: 'shinhanVietnam', org: 'company', fields: ['VLM', 'OCR'],
-      title: { ENG: '(Shinhan Financial Group) Shinhan Open Innovation Vietnam – Document AI PoC', KOR: '(신한금융그룹) 신한 오픈이노베이션 베트남 – 문서 AI PoC' },
-      location: { ENG: 'Korea Deep Learning · Global Shinhan InnoBoost 2026', KOR: '한국딥러닝 · 글로벌 신한 이노부스트 2026' },
-      dates: { ENG: '~ September 2026 (Demo Day)', KOR: '~ 2026.09 (데모데이)' },
+      title: { ENG: '(Shinhan Vietnam Finance) Shinhan Open Innovation Vietnam – Loan Document Extraction & Validation PoC', KOR: '(신한베트남파이낸스) 신한 오픈이노베이션 베트남 – 대출 서류 자동 추출·검수 PoC' },
+      location: { ENG: 'Korea Deep Learning · PM & sole developer · first overseas revenue', KOR: '한국딥러닝 · PM 겸 단독 개발 · 회사 첫 해외 매출' },
+      dates: { ENG: 'June 2026 ~ September 2026 (kickoff 06.09, final assessment 08.24, Demo Day 09)', KOR: '2026.06 ~ 2026.09 (킥오프 06.09, 최종 평가 08.24, 데모데이 09)' },
       details: getDetails(shinhanPj_ENG, shinhanPj_KOR, shinhan_media),
+      compare: {
+        ENG: {
+          title: "Underwriters' loan-document check: before vs after",
+          before: { label: 'Before (manual)', steps: ['Compare ID card and bank statement by eye', 'Re-type values by hand', 'Judge validity'] },
+          after: { label: 'After (DEEP Agent)', steps: ['Upload statement + CCCD', 'Page classification', 'VLM field extraction', '7 deterministic checks', 'pass / warn / fail + reason'], result: 'The underwriter makes only the final decision' },
+        },
+        KOR: {
+          title: '심사역 대출 서류 확인: 기존 vs 변경',
+          before: { label: '기존 (수작업)', steps: ['신분증·명세서 눈으로 대조', '값을 손으로 옮겨 적기', '유효성 판단'] },
+          after: { label: '변경 (DEEP Agent)', steps: ['명세서 + CCCD 업로드', '페이지 분류', 'VLM 필드 추출', '결정론적 검증 7종', 'pass / warn / fail + 사유'], result: '심사역은 최종 판단만' },
+        },
+      },
     },
     {
       id: 'proj-1', key: 'kdlProductPlanning', org: 'company', fields: ['LLM', 'VLM'],
