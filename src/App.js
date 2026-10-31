@@ -158,22 +158,22 @@ function App() {
       KOR: '',
     },
     summary: {
-      ENG: "AI Engineer who takes LLM/VLM systems from a client's problem to deployment on the client's own servers. My Mathematics and Computer Science degree from the University of St Andrews shaped how I work: build a trustworthy evaluation first, then trace where errors come from. At Korea Deep Learning and CareSix, I have shipped document-AI, OCR, vision and generative-video systems with Docker to on-prem and air-gapped servers. I led Shinhan Vietnam Finance's PoC as PM and sole developer, and generalized a single-client KIE pipeline into PPASS, a reusable base module.",
-      KOR: "고객의 문제 정의부터 고객 서버 배포까지 LLM·VLM 시스템을 책임지는 AI 엔지니어입니다. 세인트앤드루스 대학교에서 수학과 컴퓨터과학을 전공하며, 믿을 수 있는 평가 기준을 먼저 세우고 오류의 원인을 끝까지 추적하는 방식이 몸에 뱄습니다. 한국딥러닝과 케어식스에서 문서 AI·OCR·비전·생성형 영상 시스템을 Docker로 고객 서버와 폐쇄망에 배포했고, 신한베트남파이낸스 PoC를 PM 겸 단독 개발로 이끌었으며, 한 고객사용 KIE 파이프라인을 공통 모듈 PPASS로 일반화했습니다.",
+      ENG: "AI Engineer who takes LLM/VLM systems from a client's problem to deployment on the client's own servers. My Mathematics and Computer Science degree from the University of St Andrews shaped how I work: build a trustworthy evaluation first, then trace where errors come from. At Korea Deep Learning and CareSix, I have shipped document-AI, OCR, vision and generative-video systems with Docker to on-prem and air-gapped servers. I led Shinhan Vietnam Finance's PoC as PM and sole developer, and productized a single-client KIE pipeline into PPASS, an IDP platform with a modular backend I designed.",
+      KOR: "고객의 문제 정의부터 고객 서버 배포까지 LLM·VLM 시스템을 책임지는 AI 엔지니어입니다. 세인트앤드루스 대학교에서 수학과 컴퓨터과학을 전공하며, 믿을 수 있는 평가 기준을 먼저 세우고 오류의 원인을 끝까지 추적하는 방식이 몸에 뱄습니다. 한국딥러닝과 케어식스에서 문서 AI·OCR·비전·생성형 영상 시스템을 Docker로 고객 서버와 폐쇄망에 배포했고, 신한베트남파이낸스 PoC를 PM 겸 단독 개발로 이끌었으며, 한 고객사용 KIE 파이프라인을 제품화해 모듈화 설계한 IDP 플랫폼 PPASS로 만들었습니다.",
     },
     skills: ["LLM / VLM", "KIE · OCR", "RAG · LangChain", "LLM Evaluation", "Docker", "On-prem Deployment", "FastAPI", "vLLM", "PyTorch", "Python"],
     highlights: {
       ENG: [
         "Led Shinhan Vietnam Finance's loan-document PoC as PM and sole developer: top 8 at Global Shinhan InnoBoost 2026, Open Innovation Reward, and Korea Deep Learning's first overseas revenue",
         "Delivered a document-extraction API to Seoyon E-Hwa's air-gapped server over 6 releases: 93.49% accuracy on the client's 3,920-cell audit ledger",
-        "Generalized Korea Deep Learning's single-client KIE pipeline into PPASS, a reusable base module customized for each new client",
+        "Productized Korea Deep Learning's single-client KIE pipeline into PPASS, an IDP platform with a modular backend I designed: classification, automatic schema definition, OCR and layout models plug in or out, and settings such as DPI change per client without code rewrites",
         "Raised handwriting OCR exact-match accuracy by 4.26 pp (85.23% → 89.49%); the weights were deployed in a Hyundai Capital project",
         "Built a real-time CCTV gauge-reading system solo for a government manufacturing project, from labeling to a production Docker API (mAP50-95 0.992 / 0.949)",
       ],
       KOR: [
         "신한베트남파이낸스 대출 서류 PoC를 PM 겸 단독 개발로 수행: 글로벌 신한 이노부스트 2026 상위 8개사, 오픈이노베이션 리워드, 한국딥러닝 첫 해외 매출",
         "서연이화 폐쇄망 서버에 문서 추출 API 6차 납품: 고객 검수 대장 3,920칸 기준 정확도 93.49%",
-        "한국딥러닝의 단일 고객사용 KIE 파이프라인을 공통 기본 모듈 PPASS로 일반화해 고객사마다 맞춤 적용",
+        "한국딥러닝의 단일 고객사용 KIE 파이프라인을 제품화해 IDP 플랫폼 PPASS로 백엔드 모듈화 설계: 분류·자동 스키마 정의·OCR·레이아웃 모델을 붙이고 떼고, DPI 같은 설정도 고객사마다 쉽게 바꿀 수 있게 구성",
         "필기체 OCR 정확도 4.26%p 향상(85.23% → 89.49%), 학습한 가중치를 현대캐피탈 프로젝트에 배포",
         "정부과제(제조혁신) CCTV 계기판 실시간 판독 시스템을 라벨링부터 Docker API 실서비스 배포까지 1인 구축 (mAP50-95 0.992 / 0.949)",
       ],
@@ -594,7 +594,7 @@ function App() {
   const work_kdl_title = lang === 'ENG' ? "ML Engineer, Korea Deep Learning" : "ML 엔지니어, 한국딥러닝";
   const work_kdl_details_ENG = [
     "Work directly with enterprise clients from requirements to delivery: build LLM/VLM document-automation systems and ship them with Docker to offline, on-prem GPU servers in iterative releases.",
-    "Generalized a KIE pipeline (document-template classification, automatic extraction-schema definition) built for one client into PPASS, a shared base module customized for each client.",
+    "Productized a KIE pipeline built for one client into PPASS, the company's IDP platform, and designed its modular backend: document-template classification, automatic extraction-schema definition, OCR and layout models are separate modules that plug in or out, and settings such as rendering DPI are easy to change per client.",
     "Product-planning document automation for LG Electronics: PPT → master spec sheet → product roadmap, with human-in-the-loop review.",
     "Quality and process document extraction API for Seoyon E-Hwa (automotive parts): 7 document types, 93.49% accuracy on the client's audit ledger.",
     "Generative video augmentation (wildfire, flood) from real CCTV stills to train disaster-detection models.",
@@ -604,7 +604,7 @@ function App() {
   ];
   const work_kdl_details_KOR = [
     "기업 고객과 직접 소통하며 요구사항 정의부터 납품까지 수행: LLM·VLM 문서 자동화 시스템을 개발하고 Docker로 폐쇄망 GPU 서버에 차수별 납품.",
-    "한 고객사용 KIE 파이프라인(문서 틀 분류, 추출 스키마 자동 정의)을 사내 공통 기본 모듈 PPASS로 일반화해 고객사마다 맞춤 적용.",
+    "한 고객사용 KIE 파이프라인을 제품화해 사내 IDP 플랫폼 PPASS로 만들고 백엔드를 모듈화 설계: 문서 틀 분류·추출 스키마 자동 정의·OCR·레이아웃 모델을 독립 모듈로 나눠 붙이고 뗄 수 있게 하고, 렌더링 DPI 같은 설정도 고객사마다 쉽게 수정 가능.",
     "LG전자 상품기획 문서 자동화: PPT → 마스터 스펙시트 → 제품 로드맵, 사람 검수(HITL) 포함.",
     "서연이화(자동차 부품) 품질·공정 문서 추출 API: 문서 7종, 고객 검수 대장 기준 정확도 93.49%.",
     "실제 CCTV 사진 기반 재난(산불·침수) 영상 생성 증강으로 재난 탐지 모델 학습 데이터 구축.",
