@@ -43,6 +43,7 @@ import auraIdIamge7 from './assets/images/auraid7.png';
 import elizaImage1 from './assets/images/eliza1.png';
 import elizaImage2 from './assets/images/eliza2.png';
 import elizaImage3 from './assets/images/eliza3.png';
+import shinhanImage0 from './assets/images/shinhan0.jpg';
 import shinhanImage1 from './assets/images/shinhan1.jpg';
 import shinhanImage2 from './assets/images/shinhan2.jpg';
 import shinhanImage3 from './assets/images/shinhan3.jpg';
@@ -455,14 +456,18 @@ function App() {
       results: { ENG: '', KOR: '' },
       links: [],
     },
-    shinhanInnoboost: {
+    shinhanVietnam: {
       problem: {
-        ENG: "Shinhan Financial Group's open-innovation program in Vietnam, where startups run a PoC with Shinhan's Vietnamese business and the strongest are selected for Demo Day and follow-on business.",
-        KOR: "신한금융그룹의 베트남 오픈이노베이션 프로그램 — 참가 기업이 신한 베트남 사업과 PoC를 진행하고, 성과가 좋은 기업을 데모데이와 후속 사업으로 선발.",
+        ENG: "Through Shinhan Financial Group's open-innovation program in Vietnam, Korea Deep Learning ran a PoC of its document AI with Shinhan's Vietnamese business; companies were ranked on their PoC results, and the best were selected for Demo Day and follow-on business.",
+        KOR: "신한금융그룹의 베트남 오픈이노베이션 프로그램에서 한국딥러닝 문서 AI로 신한 베트남 사업과 PoC 진행 — PoC 성과로 참가 기업을 평가해 상위 기업을 데모데이와 후속 사업으로 선발.",
       },
       team: { ENG: 'Korea Deep Learning team', KOR: '한국딥러닝 팀' },
       role: { ENG: '', KOR: '' },
       contribution: { ENG: '', KOR: '' },
+      model: {
+        ENG: "DEEP Agent (Korea Deep Learning's document AI) · document extraction and cross-checking",
+        KOR: 'DEEP Agent (한국딥러닝 문서 AI) · 문서 정보 추출·교차 검증',
+      },
       results: {
         ENG: "Top 8 of the participating companies · Open Innovation Reward (VND 200,000,000) · the PoC became an actual business deal, Korea Deep Learning's first overseas revenue",
         KOR: "참가 기업 중 상위 8개사 · 오픈이노베이션 리워드(VND 200,000,000) · PoC가 실제 사업으로 이어져 한국딥러닝 첫 해외 매출",
@@ -549,7 +554,7 @@ function App() {
     skills: {expanded: true},
     engagements: {expanded: true, entries: {}},
     projects: {expanded: true, entries: {
-      kdlProductPlanning: true, kdlDocExtraction: true, kdlDisasterVideo: true,
+      shinhanVietnam: true, kdlProductPlanning: true, kdlDocExtraction: true, kdlDisasterVideo: true,
       kdlOcrResearch: true, kdlGaugeReading: true, sense1Vet: true, lawIntelligence: true,
     }},
     achievements: {expanded: true, entries: {shinhanInnoboost: true}},
@@ -1000,20 +1005,36 @@ function App() {
       <img src={quantumImage3} alt="Quantum AI Hackathon 3" style={{ height: '400px', borderRadius: '8px' }} />
     </div>
   );
+  // 수상 섹션용 (간략)
   const shinhan_ENG = [
-    "Ran a document-AI PoC with Shinhan's business in Vietnam through Global Shinhan InnoBoost 2026, Shinhan Financial Group's open-innovation program.",
-    "Selected among the top 8 participating companies and exhibited at Shinhan Future's Lab Demo Day 2026, demonstrating DEEP Agent extracting fields from Vietnamese ID cards in real time.",
-    "Won the Global Shinhan InnoBoost Open Innovation Reward (VND 200,000,000).",
-    "The PoC led to an actual business deal, Korea Deep Learning's first overseas revenue.",
+    "Top 8 of the participating companies and Open Innovation Reward (VND 200,000,000) for Korea Deep Learning's document-AI PoC; the PoC led to the company's first overseas revenue.",
   ];
   const shinhan_KOR = [
-    "신한금융그룹의 오픈이노베이션 프로그램 '글로벌 신한 이노부스트 2026'에서 신한 베트남 사업과 문서 AI PoC 진행.",
-    "참가 기업 중 상위 8개사에 선정돼 신한 퓨처스랩 데모데이 2026에 부스 참가, DEEP Agent로 베트남 신분증 정보 추출을 실시간 시연.",
+    "한국딥러닝 문서 AI PoC로 참가 기업 중 상위 8개사 선정, 오픈이노베이션 리워드(VND 200,000,000) 수상 — PoC가 회사의 첫 해외 매출로 이어짐.",
+  ];
+  const shinhan_award_media = (
+    <div key="shinhan-award-image" style={{ padding:'10px 0' }}>
+      <img src={shinhanImage0} alt="Global Shinhan InnoBoost 2026 award" style={{ height: '400px', borderRadius: '8px' }} />
+    </div>
+  );
+  // 프로젝트 섹션용 (상세)
+  const shinhanPj_ENG = [
+    "Ran a PoC of Korea Deep Learning's document AI with Shinhan's business in Vietnam through Global Shinhan InnoBoost 2026, Shinhan Financial Group's open-innovation program.",
+    "Demonstrated DEEP Agent live at the Demo Day booth: reading Vietnamese ID cards from photos and scans and returning structured fields — name, ID number, date of birth, sex, place of origin, place of residence and expiry date — in seconds.",
+    "Placed in the top 8 participating companies on the PoC results and exhibited at Shinhan Future's Lab Demo Day 2026.",
+    "Won the Global Shinhan InnoBoost Open Innovation Reward (VND 200,000,000).",
+    "The PoC turned into an actual business deal — Korea Deep Learning's first overseas revenue.",
+  ];
+  const shinhanPj_KOR = [
+    "신한금융그룹 오픈이노베이션 프로그램 '글로벌 신한 이노부스트 2026'에서 한국딥러닝 문서 AI로 신한 베트남 사업과 PoC 진행.",
+    "데모데이 부스에서 DEEP Agent 실시간 시연: 베트남 신분증 사진·스캔본을 읽어 이름·신분증 번호·생년월일·성별·출신지·거주지·만료일을 수 초 만에 구조화된 항목으로 추출.",
+    "PoC 성과로 참가 기업 중 상위 8개사에 선정돼 신한 퓨처스랩 데모데이 2026 부스 참가.",
     "글로벌 신한 이노부스트 오픈이노베이션 리워드(VND 200,000,000) 수상.",
     "PoC가 실제 사업으로 이어져 한국딥러닝의 첫 해외 매출 달성.",
   ];
   const shinhan_media = (
     <div key="shinhan-images" style={{ display:'flex', overflowX:'auto', whiteSpace:'nowrap', gap:'10px', padding:'10px 0' }}>
+      <img src={shinhanImage0} alt="Global Shinhan InnoBoost 2026 award" style={{ height: '400px', borderRadius: '8px' }} />
       <img src={shinhanImage1} alt="Global Shinhan InnoBoost 2026 award ceremony" style={{ height: '400px', borderRadius: '8px' }} />
       <img src={shinhanImage2} alt="Korea Deep Learning booth at Demo Day 2026" style={{ height: '400px', borderRadius: '8px' }} />
       <img src={shinhanImage3} alt="Shinhan Future's Lab Demo Day 2026" style={{ height: '400px', borderRadius: '8px' }} />
@@ -1152,7 +1173,14 @@ function App() {
   ];
   const mainProjects = [
     {
-      num: 1, id: 'proj-1', key: 'kdlProductPlanning', org: 'company', fields: ['LLM', 'VLM'],
+      id: 'proj-shinhan', key: 'shinhanVietnam', org: 'company', fields: ['VLM', 'OCR'],
+      title: { ENG: '(Shinhan Financial Group) Shinhan Open Innovation Vietnam – Document AI PoC', KOR: '(신한금융그룹) 신한 오픈이노베이션 베트남 – 문서 AI PoC' },
+      location: { ENG: 'Korea Deep Learning · Global Shinhan InnoBoost 2026', KOR: '한국딥러닝 · 글로벌 신한 이노부스트 2026' },
+      dates: { ENG: '~ September 2026 (Demo Day)', KOR: '~ 2026.09 (데모데이)' },
+      details: getDetails(shinhanPj_ENG, shinhanPj_KOR, shinhan_media),
+    },
+    {
+      id: 'proj-1', key: 'kdlProductPlanning', org: 'company', fields: ['LLM', 'VLM'],
       title: { ENG: '(LG Electronics) Product-Planning Document Automation', KOR: '(LG전자) 상품기획 문서 자동화' },
       location: { ENG: 'Korea Deep Learning · AX project', KOR: '한국딥러닝 · AX 프로젝트' },
       dates: { ENG: 'July 2026 ~ Present', KOR: '2026.07 ~ 진행중' },
@@ -1171,7 +1199,7 @@ function App() {
       },
     },
     {
-      num: 2, id: 'proj-2', key: 'kdlDocExtraction', org: 'company', fields: ['LLM', 'VLM'],
+      id: 'proj-2', key: 'kdlDocExtraction', org: 'company', fields: ['LLM', 'VLM'],
       title: { ENG: '(Seoyon E-Hwa) Quality & Process Document Extraction API', KOR: '(서연이화) 품질·공정 문서 DB화 추출 API' },
       location: { ENG: 'Korea Deep Learning · delivered to an air-gapped server', KOR: '한국딥러닝 · 폐쇄망 서버 납품' },
       dates: { ENG: 'August 2026 ~ October 2026', KOR: '2026.08 ~ 2026.10' },
@@ -1190,7 +1218,7 @@ function App() {
       },
     },
     {
-      num: 3, id: 'proj-3', key: 'kdlGaugeReading', org: 'company', fields: ['CV'],
+      id: 'proj-3', key: 'kdlGaugeReading', org: 'company', fields: ['CV'],
       title: { ENG: '(Government-Funded Manufacturing Innovation) Real-Time Analog Gauge Reading from CCTV', KOR: '(정부과제·제조혁신) CCTV 기반 아날로그 계기판 실시간 판독' },
       location: { ENG: 'Korea Deep Learning · deployed to production', KOR: '한국딥러닝 · 실서비스 배포' },
       dates: { ENG: 'January 2026 ~ March 2026', KOR: '2026.01 ~ 2026.03' },
@@ -1209,21 +1237,21 @@ function App() {
       },
     },
     {
-      num: 4, id: 'proj-4', key: 'kdlOcrResearch', org: 'company', fields: ['CV', 'OCR'],
+      id: 'proj-4', key: 'kdlOcrResearch', org: 'company', fields: ['CV', 'OCR'],
       title: { ENG: '(Hyundai Capital) Korean Handwriting OCR Recognizer R&D', KOR: '(현대캐피탈) 한국어 필기체 OCR Recognizer 연구' },
       location: { ENG: 'Korea Deep Learning · R&D, weights deployed to the client project', KOR: '한국딥러닝 · R&D, 고객 프로젝트에 가중치 배포' },
       dates: { ENG: 'January 2026 ~ April 2026', KOR: '2026.01 ~ 2026.04' },
       details: lang === 'ENG' ? kdl_ocr_ENG : kdl_ocr_KOR,
     },
     {
-      num: 5, id: 'proj-5', key: 'kdlDisasterVideo', org: 'company', fields: ['GenAI', 'VLM'],
+      id: 'proj-5', key: 'kdlDisasterVideo', org: 'company', fields: ['GenAI', 'VLM'],
       title: { ENG: 'Disaster CCTV Video Augmentation (Wildfire · Flood)', KOR: '재난 CCTV 영상 증강 (산불·침수)' },
       location: { ENG: 'Korea Deep Learning · generative AI pipeline', KOR: '한국딥러닝 · 생성형 AI 파이프라인' },
       dates: { ENG: 'October 2026 (9 days)', KOR: '2026.10 (9일)' },
       details: lang === 'ENG' ? kdl_video_ENG : kdl_video_KOR,
     },
     {
-      num: 6, id: 'proj-6', key: 'sense1Vet', org: 'company', fields: ['DL', 'Signal'],
+      id: 'proj-6', key: 'sense1Vet', org: 'company', fields: ['DL', 'Signal'],
       title: { ENG: '(CareSix) Sense1 Vet Heart-Rate Algorithm', KOR: '(케어식스) Sense1 Vet 심박 알고리즘' },
       location: { ENG: 'CareSix Co., LTD · wearable for dogs', KOR: '케어식스 · 반려견 웨어러블' },
       dates: { ENG: 'September 2024 ~ February 2025', KOR: '2024.09 ~ 2025.02' },
@@ -1239,9 +1267,10 @@ function App() {
       details: getDetails(law_ENG, law_KOR, lawai_media),
     },
   ];
+  mainProjects.forEach((pj, i) => { pj.num = i + 1; });
   const allProjects = [...mainProjects, ...sideProjects];
   const projectGroups = [
-    { label: { ENG: 'LLM · VLM', KOR: 'LLM · VLM' }, ids: ['proj-1', 'proj-2', 'side-law'] },
+    { label: { ENG: 'LLM · VLM', KOR: 'LLM · VLM' }, ids: ['proj-shinhan', 'proj-1', 'proj-2', 'side-law'] },
     { label: { ENG: 'CV · OCR', KOR: 'CV · OCR' }, ids: ['proj-3', 'proj-4'] },
     { label: { ENG: 'Generative AI', KOR: '생성형 AI' }, ids: ['proj-5'] },
     { label: { ENG: 'Signal · DL', KOR: '신호처리 · DL' }, ids: ['proj-6'] },
@@ -1663,8 +1692,7 @@ function App() {
               title={lang==='ENG' ? "Global Shinhan InnoBoost 2026 – Top 8 · Open Innovation Reward" : "글로벌 신한 이노부스트 2026 – 상위 8개사 · 오픈이노베이션 리워드"}
               location={lang==='ENG' ? "Shinhan Financial Group · Vietnam (Korea Deep Learning)" : "신한금융그룹 · 베트남 (한국딥러닝)"}
               dates={lang==='ENG' ? "September 2026 (Demo Day)" : "2026.09 (데모데이)"}
-              details={getDetails(shinhan_ENG, shinhan_KOR, shinhan_media)}
-              {...getMeta('shinhanInnoboost')}
+              details={getDetails(shinhan_ENG, shinhan_KOR, shinhan_award_media)}
               isExpanded={expandedSections.achievements.entries.shinhanInnoboost}
               onClick={() => toggleEntry('achievements', 'shinhanInnoboost')}
             />
