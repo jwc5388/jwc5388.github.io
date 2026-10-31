@@ -238,6 +238,44 @@ section {
   font-weight: 600;
 }
 
+.profile-glance {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  max-width: 900px;
+  margin: 0 auto 16px;
+  padding: 0 20px;
+  text-align: left;
+}
+
+.glance-col {
+  padding: 10px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #f9fafb;
+}
+
+.glance-col h4 {
+  margin: 0 0 6px;
+  font-size: calc(9px + 0.8vmin);
+  color: #111827;
+}
+
+.glance-col ul {
+  margin: 0;
+  padding-left: 16px;
+  font-size: calc(8px + 0.6vmin);
+  line-height: 1.6;
+  color: #374151;
+}
+
+@media (max-width: 768px) {
+  .profile-glance {
+    grid-template-columns: 1fr;
+    padding: 0 16px;
+  }
+}
+
 .profile-summary {
   max-width: 680px;
   margin: 0 auto 12px;
@@ -329,4 +367,181 @@ section {
 @media (max-width: 480px) {
   .entry-meta-row { flex-direction: column; gap: 0; }
   .entry-meta-label { flex: none; }
+}
+
+/* ---- 프로젝트 태그 (회사 / 분야) ---- */
+.entry-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 1px 8px;
+  border-radius: 4px;
+  font-size: 0.75em;
+  font-weight: 700;
+  color: #fff;
+  background: #6b7280;
+}
+
+.tag-org { background: #2563eb; }
+.tag-llm { background: #16a34a; }
+.tag-vlm { background: #7c3aed; }
+.tag-cv, .tag-ocr { background: #d97706; }
+.tag-genai { background: #db2777; }
+.tag-dl, .tag-signal { background: #0891b2; }
+.tag-rag { background: #15803d; }
+
+/* ---- 분야별 프로젝트 참여내역 (목차) ---- */
+.project-index {
+  margin: 0 0 20px;
+  padding: 12px 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #f9fafb;
+  text-align: left;
+}
+
+.project-index-title {
+  margin: 0 0 8px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.project-index-group {
+  display: flex;
+  gap: 12px;
+  padding: 4px 0;
+}
+
+.project-index-field {
+  flex: 0 0 120px;
+  font-weight: 700;
+  color: #374151;
+}
+
+.project-index-group ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.project-index-group li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  padding: 1px 0;
+}
+
+.project-index-group a {
+  color: #1f2937;
+  text-decoration: underline;
+  text-decoration-color: #cbd5e1;
+}
+
+.project-index-group a:hover { color: #2563eb; }
+
+/* ---- 기술 스택 칩 ---- */
+.stack-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.stack-chips li {
+  padding: 1px 8px;
+  border: 1px solid #c7d2fe;
+  border-radius: 4px;
+  background: #eef2ff;
+  color: #3730a3;
+  font-size: 0.9em;
+}
+
+.entry-block-label {
+  margin: 12px 0 4px;
+  font-weight: 700;
+  color: #111827;
+}
+
+/* ---- 기존 vs 변경 흐름도 ---- */
+.compare {
+  margin: 8px 0 12px;
+  padding: 12px 14px;
+  border: 1px solid #e8eaef;
+  border-radius: 12px;
+  text-align: left;
+}
+
+.compare-title {
+  margin: 0 0 8px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.compare-row {
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+
+.compare-row + .compare-row { margin-top: 8px; }
+.compare-row.before { background: #f3f4f6; }
+.compare-row.after { background: #eff6ff; }
+
+.compare-label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 0.85em;
+  font-weight: 700;
+  color: #6b7280;
+}
+
+.compare-row.after .compare-label { color: #1d4ed8; }
+
+.compare-steps {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.compare-steps li {
+  padding: 3px 8px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background: #fff;
+  font-size: 0.9em;
+}
+
+.compare-steps li { position: relative; }
+.compare-steps li + li { margin-left: 22px; }
+
+.compare-steps li + li::before {
+  content: '→';
+  position: absolute;
+  left: -17px;
+  color: #9ca3af;
+}
+
+.compare-result {
+  margin: 6px 0 0;
+  font-size: 0.9em;
+  font-weight: 700;
+  color: #374151;
+}
+
+.compare-row.after .compare-result { color: #1d4ed8; }
+
+@media (max-width: 480px) {
+  .project-index-group { flex-direction: column; gap: 2px; }
+  .project-index-field { flex: none; }
 }

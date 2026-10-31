@@ -85,8 +85,10 @@ function App() {
       headerTitle: "Jae Woo Chang's Portfolio",
       work: "Work Experience",
       engagements: "Exhibitions & Events",
-      projects: "Projects",
-      otherProjects: "Other Projects",
+      projects: "Key Projects & Results",
+      otherProjects: "Appendix: Other Projects",
+      sideProjects: "Side Projects",
+      projectIndex: "Projects by Field",
       achievements: "Achievements / Awards",
       education: "Education & Training",
       skills: "Skills",
@@ -96,13 +98,14 @@ function App() {
       officialSite: "official website",
       mainProjects: "Main Projects",
       resume: "Download Resume (PDF)",
-      metaProblem: "Problem",
+      metaProblem: "Overview",
       metaTeam: "Team",
       metaRole: "Role",
-      metaContribution: "My Contribution",
-      metaModel: "Model / Stack",
+      metaContribution: "Contribution",
+      metaModel: "Tech Stack",
+      metaWork: "What I Built",
       metaLessons: "Takeaways & Limitations",
-      metaResults: "Results",
+      metaResults: "Key Results",
       collapseUp: "▴",
       collapseDown: "▾",
     },
@@ -110,8 +113,10 @@ function App() {
       headerTitle: "장재우 포트폴리오",
       work: "경력",
       engagements: "전시·행사",
-      projects: "프로젝트",
-      otherProjects: "기타 프로젝트",
+      projects: "개발·프로젝트 주요 성과",
+      otherProjects: "부록: 기타 프로젝트",
+      sideProjects: "사이드 프로젝트",
+      projectIndex: "분야별 프로젝트 참여내역",
       achievements: "수상 / 성과",
       education: "학력·교육",
       skills: "보유기술",
@@ -121,13 +126,14 @@ function App() {
       officialSite: "공식 웹사이트",
       mainProjects: "주요 프로젝트",
       resume: "이력서 다운로드 (PDF)",
-      metaProblem: "문제",
+      metaProblem: "프로젝트 개요",
       metaTeam: "팀 구성",
       metaRole: "역할",
-      metaContribution: "내 기여",
-      metaModel: "모델 / 기술",
+      metaContribution: "기여도",
+      metaModel: "기술 스택",
+      metaWork: "프로젝트 수행",
       metaLessons: "배운 점 · 한계",
-      metaResults: "성과",
+      metaResults: "주요 성과",
       collapseUp: "▴",
       collapseDown: "▾",
     }
@@ -144,32 +150,84 @@ function App() {
   const profile = {
     // 1) 한 줄 직함  2) 요약(학력 → 경력·전문 분야 → 일하는 방식)  3) 핵심 기술  4) 대표 성과(수치)
     tagline: {
-      ENG: "AI Engineer who scopes, builds and deploys LLM/VLM systems in client environments",
-      KOR: "고객 현장에서 LLM·VLM 시스템을 정의하고, 만들고, 배포하는 AI 엔지니어",
+      ENG: "AI Engineer who takes LLM/VLM systems from a client's problem to deployment on the client's own servers",
+      KOR: "고객의 문제 정의부터 고객 서버 배포까지, LLM·VLM 시스템을 끝까지 책임지는 AI 엔지니어",
     },
     summary: {
-      ENG: "AI Engineer who defines client problems on site, then builds and deploys the LLM/VLM systems that solve them. My joint degree in Mathematics and Computer Science at the University of St Andrews, with a dissertation in each field, shapes how I work: I build a trustworthy evaluation and trace where errors actually come from, rather than stopping at a model that runs. Over roughly 1.5 years at Korea Deep Learning and CareSix, I have built document-automation (LLM/VLM), OCR, object-detection, generative-video and biosignal systems and deployed them with Docker on client servers, including air-gapped ones. I also generalized a KIE pipeline built for one client (document-template classification and automatic extraction-schema definition) into PPASS, a shared base module that was then customized for each client.",
-      KOR: "고객 현장의 문제를 정의하고, 이를 푸는 LLM·VLM 시스템을 만들어 배포까지 책임지는 AI 엔지니어입니다. 세인트앤드루스 대학교에서 수학과 컴퓨터과학을 함께 전공하며 두 분야에서 각각 학위논문을 썼고, 그 덕분에 모델이 돌아가는 데서 멈추지 않고 믿을 수 있는 평가 기준을 먼저 세우고 오류의 원인을 끝까지 검증합니다. 한국딥러닝과 케어식스에서 약 1년 반 동안 LLM·VLM 문서 자동화·OCR·객체 검출·생성형 영상·생체신호 시스템을 만들어 Docker로 고객 서버와 폐쇄망에 배포해 왔고, 한 고객사를 위해 만든 KIE 파이프라인(문서 틀 분류, 추출 스키마 자동 정의)을 사내 공통 기본 모듈 PPASS로 일반화해 고객사마다 맞춤 적용했습니다.",
+      ENG: "AI Engineer who defines client problems on site, then builds and deploys the LLM/VLM systems that solve them. My joint degree in Mathematics and Computer Science at the University of St Andrews, with a dissertation in each field, shapes how I work: I build a trustworthy evaluation and trace where errors actually come from, rather than stopping at a model that runs. Over roughly 1.5 years at Korea Deep Learning and CareSix, I have built document-automation (LLM/VLM), OCR, object-detection, generative-video and biosignal systems and deployed them with Docker on client servers, including air-gapped ones. I work directly with client teams: I track their requirements by ID and priority, measure accuracy against their own answer data, such as the client's audit ledger, and improve the system release by release. I also generalized a KIE pipeline built for one client (document-template classification and automatic extraction-schema definition) into PPASS, a shared base module that was then customized for each client.",
+      KOR: "고객 현장의 문제를 정의하고, 이를 푸는 LLM·VLM 시스템을 만들어 배포까지 책임지는 AI 엔지니어입니다. 세인트앤드루스 대학교에서 수학과 컴퓨터과학을 함께 전공하며 두 분야에서 각각 학위논문을 썼고, 그 덕분에 모델이 돌아가는 데서 멈추지 않고 믿을 수 있는 평가 기준을 먼저 세우고 오류의 원인을 끝까지 검증합니다. 한국딥러닝과 케어식스에서 약 1년 반 동안 LLM·VLM 문서 자동화·OCR·객체 검출·생성형 영상·생체신호 시스템을 만들어 Docker로 고객 서버와 폐쇄망에 배포해 왔습니다. 고객 실무진과 직접 소통하며 요구사항을 ID·우선순위로 관리하고, 고객 검수 대장 같은 고객의 정답 데이터로 정확도를 검증하며, 차수별 납품으로 개선해 왔습니다. 또 한 고객사를 위해 만든 KIE 파이프라인(문서 틀 분류, 추출 스키마 자동 정의)을 사내 공통 기본 모듈 PPASS로 일반화해 고객사마다 맞춤 적용했습니다.",
     },
-    skills: ["LLM / VLM", "KIE · OCR", "RAG · LangChain", "Docker", "FastAPI", "vLLM", "PyTorch", "Python"],
+    skills: ["LLM / VLM", "KIE · OCR", "RAG · LangChain", "LLM Evaluation", "Docker", "On-prem Deployment", "FastAPI", "vLLM", "PyTorch", "Python"],
     highlights: {
       ENG: [
-        "Delivered an LLM/VLM document-extraction API to an automotive parts maker's air-gapped server, reaching 93.49% accuracy on the client's 3,920-cell audit ledger",
+        "Delivered an LLM/VLM document-extraction API to an automotive parts maker's air-gapped server over 6 releases, reaching 93.49% accuracy on the client's 3,920-cell audit ledger",
         "Generalized a single-client KIE pipeline into PPASS, a reusable base module customized for each new client",
         "Tracked 30+ client requirements by ID and priority, and resolved an IP-restriction security request the same day",
+        "Built a real-time CCTV gauge-reading system solo for a government-funded manufacturing project, from data labeling to a Docker GPU API in production (gauge mAP50-95 0.992, needle 0.949)",
         "Raised handwriting OCR exact-match accuracy by 4.26 pp (85.23% → 89.49%) through R&D; the trained weights were deployed in a ** Capital project",
         "Independently researched and built an LSTM-based BCG heart-rate algorithm for dogs, reaching 96% accuracy (CareSix)",
         "Toss NEXT ML Challenge: 30th of 2,206 participants, earning a résumé-screening pass · Excellence Prize, Quantum AI Hackathon",
       ],
       KOR: [
-        "자동차 부품 제조사 폐쇄망 서버에 LLM·VLM 문서 추출 API 납품: 고객 검수 대장 3,920칸 기준 정확도 93.49%",
+        "자동차 부품 제조사 폐쇄망 서버에 LLM·VLM 문서 추출 API 6차 납품: 고객 검수 대장 3,920칸 기준 정확도 93.49%",
         "한 고객사용 KIE 파이프라인을 공통 기본 모듈 PPASS로 일반화해 고객사마다 맞춤 적용",
         "고객 요구사항 30여 건을 ID·우선순위로 관리해 반영, IP 제한 보안 요청은 당일 처리",
+        "정부과제(제조혁신) CCTV 계기판 실시간 판독 시스템을 데이터 라벨링부터 Docker GPU API 실서비스 배포까지 1인 구축 (계기판 mAP50-95 0.992, 바늘 0.949)",
         "필기체 OCR R&D로 정확도 4.26%p 향상(85.23% → 89.49%), 학습한 가중치를 **캐피탈 프로젝트에 배포",
         "LSTM 기반 반려견 BCG 심박 알고리즘을 단독으로 연구·개발해 정확도 96% 달성 (케어식스)",
         "토스 NEXT ML Challenge 2,206명 중 30위(서류 면제) · 퀀텀 AI 해커톤 우수상",
       ],
     },
+    // 주요 이력 한눈에 보기 (직함 바로 아래 표시)
+    glance: [
+      {
+        title: { ENG: 'Education & Experience', KOR: '학력 및 경력' },
+        items: {
+          ENG: [
+            '2019.09 ~ 2024.06 : University of St Andrews, BSc Mathematics and Computer Science',
+            '2024.09 ~ 2025.04 : CareSix, AI/ML Engineer',
+            '2025.11 ~ : Korea Deep Learning, AI Engineer (current)',
+          ],
+          KOR: [
+            '2019.09 ~ 2024.06 : 세인트앤드루스 대학교 수학·컴퓨터과학 학사',
+            '2024.09 ~ 2025.04 : 케어식스 AI/ML 엔지니어',
+            '2025.11 ~ : 한국딥러닝 AI 엔지니어 재직 중',
+          ],
+        },
+      },
+      {
+        title: { ENG: 'Awards', KOR: '수상내역' },
+        items: {
+          ENG: [
+            '2025 Quantum AI Hackathon (Excellence Prize, 1st in qualifier)',
+            'Toss NEXT ML Challenge (30th of 2,206, résumé-screening pass)',
+            'Boost up AI 2025 Drug Discovery (37th of 1,289, solo)',
+          ],
+          KOR: [
+            '2025 퀀텀 AI 해커톤 (우수상, 예선 1위)',
+            '토스 NEXT ML Challenge (2,206명 중 30위, 서류 면제)',
+            'Boost up AI 2025 신약 개발 경진대회 (1,289명 중 37위, 개인)',
+          ],
+        },
+      },
+      {
+        title: { ENG: 'Activities', KOR: '대내외 활동' },
+        items: {
+          ENG: [
+            'IBM x RedHat AI Transformation – AX Academy (2025.04 ~ 10)',
+            'Exhibited at CES 2025, J-AGRI Tokyo and FAVA 2024 (CareSix)',
+            '2025 K-Digital Training AI Hackathon (Road Guardian)',
+            'St Andrews Korean Society committee (Treasurer)',
+          ],
+          KOR: [
+            'IBM x RedHat AI Transformation – AX Academy (2025.04 ~ 10)',
+            'CES 2025 · J-AGRI 도쿄 · FAVA 2024 전시 참가 (케어식스)',
+            '2025 K-디지털 트레이닝 AI 해커톤 (Road Guardian)',
+            '세인트앤드루스 한인회 운영진 (회계)',
+          ],
+        },
+      },
+    ],
     // 이력서 PDF를 public/ 폴더에 넣고 경로 지정 (예: `${process.env.PUBLIC_URL}/resume.pdf`)
     resumeUrl: '',
   };
@@ -440,22 +498,27 @@ function App() {
     },
   };
 
-  // projectMeta[key] → Entry의 meta/links props (빈 값 제외)
+  // projectMeta[key] → Entry props (빈 값 제외)
+  // 순서: 개요 → (프로젝트 수행 bullet) → 주요 성과 → 팀·역할·기여도 → 기술 스택 → 배운 점
   const getMeta = (key) => {
     const m = projectMeta[key];
     if (!m) return {};
-    const rows = [
-      [t[lang].metaProblem, m.problem],
-      [t[lang].metaTeam, m.team],
-      [t[lang].metaRole, m.role],
-      [t[lang].metaContribution, m.contribution],
-      [t[lang].metaModel, m.model],
-      [t[lang].metaResults, m.results],
-      [t[lang].metaLessons, m.lessons],
-    ]
-      .map(([label, v]) => ({ label, value: v?.[lang] }))
-      .filter((r) => r.value);
-    return { meta: rows, links: m.links };
+    const row = (label, v) => ({ label, value: v?.[lang] });
+    const stack = m.model?.[lang];
+    const meta = [
+      row(t[lang].metaResults, m.results),
+      row(t[lang].metaTeam, m.team),
+      row(t[lang].metaRole, m.role),
+      row(t[lang].metaContribution, m.contribution),
+      stack && { label: t[lang].metaModel, value: stack, chips: stack.split(' · ') },
+      row(t[lang].metaLessons, m.lessons),
+    ].filter((r) => r && r.value);
+    return {
+      overview: [row(t[lang].metaProblem, m.problem)].filter((r) => r.value),
+      meta,
+      links: m.links,
+      labels: { work: t[lang].metaWork },
+    };
   };
 
   const [expandedSections, setExpandedSections] = useState({
@@ -497,7 +560,7 @@ function App() {
   // ====== Work ======
   const work_kdl_title = lang === 'ENG' ? "AI Engineer, Korea Deep Learning" : "AI 엔지니어, 한국딥러닝";
   const work_kdl_details_ENG = [
-    "Build LLM/VLM document-automation systems for enterprise clients and deliver them with Docker to offline, on-prem GPU servers.",
+    "Work directly with enterprise clients from requirements to delivery: build LLM/VLM document-automation systems and ship them with Docker to offline, on-prem GPU servers in iterative releases.",
     "Generalized a KIE pipeline (document-template classification, automatic extraction-schema definition) built for one client into PPASS, a shared base module customized for each client.",
     "Product-planning document automation for ** Electronics: PPT → master spec sheet → product roadmap, with human-in-the-loop review.",
     "Quality and process document extraction API for an automotive parts manufacturer: 7 document types, 93.49% accuracy on the client's audit ledger.",
@@ -506,7 +569,7 @@ function App() {
     "Government-funded manufacturing innovation project — real-time analog gauge reading from CCTV with a two-stage YOLO26 pipeline (detection → OBB): gauge mAP50-95 0.992, needle 0.949, deployed as a Docker API.",
   ];
   const work_kdl_details_KOR = [
-    "기업 고객용 LLM·VLM 문서 자동화 시스템을 개발하고 Docker로 폐쇄망 GPU 서버에 납품.",
+    "기업 고객과 직접 소통하며 요구사항 정의부터 납품까지 수행: LLM·VLM 문서 자동화 시스템을 개발하고 Docker로 폐쇄망 GPU 서버에 차수별 납품.",
     "한 고객사용 KIE 파이프라인(문서 틀 분류, 추출 스키마 자동 정의)을 사내 공통 기본 모듈 PPASS로 일반화해 고객사마다 맞춤 적용.",
     "**전자 상품기획 문서 자동화: PPT → 마스터 스펙시트 → 제품 로드맵, 사람 검수(HITL) 포함.",
     "자동차 부품 제조사 품질·공정 문서 추출 API: 문서 7종, 고객 검수 대장 기준 정확도 93.49%.",
@@ -607,14 +670,20 @@ function App() {
 
   const work_ai_title = lang === 'ENG' ? "AI/ML Engineer & Researcher, CareSix Co., LTD" : "AI/ML 엔지니어 & 리서처, 케어식스";
   const work_ai_details_ENG = [
-    "Sole developer of the LSTM-based canine heart-rate algorithm for the Sense1 Vet wearable, reaching 96% accuracy.",
-    "Built BCG signal processing (FFT, wavelet denoising) and unsupervised IJK peak detection to reduce dependence on ECG.",
-    "Worked with hardware and production teams to improve data acquisition and signal quality.",
+    "Sole developer of the LSTM-based canine heart-rate algorithm for the Sense1 Vet wearable: raised accuracy to 96% on readings that trembling and motion had made unreliable.",
+    "Built the BCG signal-processing pipeline end to end — FFT and wavelet denoising, with the periodicity of IJK peaks modeled as domain features.",
+    "Applied unsupervised IJK peak detection to reduce dependence on ECG, which is not available as a reference in everyday use.",
+    "Validated each algorithm change statistically with Python and NumPy before adopting it.",
+    "Worked with the hardware and production teams to improve data acquisition and signal quality on the device.",
+    "AURA ID: built a web dog-recognition platform (React, TypeScript) integrating Jeju National University's image-recognition model, plus a veterinary hospital management system for patient tracking and cage records on AWS RDS.",
   ];
   const work_ai_details_KOR = [
-    "Sense1 Vet 웨어러블의 LSTM 기반 반려견 심박 알고리즘 단독 개발, 정확도 96% 달성.",
-    "BCG 신호처리(FFT·웨이블릿 노이즈 제거)와 비지도 IJK 피크 검출로 ECG 의존도 감소.",
-    "하드웨어·생산팀과 협업해 데이터 수집과 신호 품질 개선.",
+    "Sense1 Vet 웨어러블의 LSTM 기반 반려견 심박 알고리즘 단독 개발: 떨림·움직임으로 불안정하던 심박 측정을 정확도 96%까지 개선.",
+    "BCG 신호처리 파이프라인 전 과정 구축: FFT·웨이블릿 노이즈 제거, IJK 피크의 주기성을 도메인 피처로 모델링.",
+    "비지도 IJK 피크 검출로, 일상 사용 환경에서는 기준 신호로 쓸 수 없는 ECG에 대한 의존도 감소.",
+    "알고리즘 변경마다 Python·NumPy로 통계 검증을 거친 뒤 반영.",
+    "하드웨어·생산팀과 협업해 기기의 데이터 수집과 신호 품질 개선.",
+    "AURA ID: 제주대학교 이미지 인식 모델을 연동한 웹 기반 반려견 인식 플랫폼(React, TypeScript)과, 환자 추적·케이지 기록을 관리하는 동물병원 관리 시스템(AWS RDS) 개발.",
   ];
 
 
@@ -1029,6 +1098,112 @@ function App() {
   };
 
   // ===== UI =====
+  // ===== 개발·프로젝트 주요 성과: 번호 · (고객사) 제목 · 태그 · 기존 vs 변경 흐름도 =====
+  const orgLabel = {
+    company: { ENG: 'Company', KOR: '회사' },
+    program: { ENG: 'Program', KOR: '교육과정' },
+  };
+  const projectTags = (pj) => [
+    { label: orgLabel[pj.org][lang], kind: 'org' },
+    ...pj.fields.map((f) => ({ label: f, kind: f.toLowerCase() })),
+  ];
+  const mainProjects = [
+    {
+      num: 1, id: 'proj-1', key: 'kdlProductPlanning', org: 'company', fields: ['LLM', 'VLM'],
+      title: { ENG: '(** Electronics) Product-Planning Document Automation', KOR: '(**전자) 상품기획 문서 자동화' },
+      location: { ENG: 'Korea Deep Learning · AX project', KOR: '한국딥러닝 · AX 프로젝트' },
+      dates: { ENG: 'July 2026 ~ Present', KOR: '2026.07 ~ 진행중' },
+      details: lang === 'ENG' ? kdl_planning_ENG : kdl_planning_KOR,
+      compare: {
+        ENG: {
+          title: "Planners' workflow: before vs after",
+          before: { label: 'Before (manual)', steps: ['Read the review deck (PPT)', 'Re-type specs into the master spec sheet', 'Redraw the product roadmap by hand'] },
+          after: { label: 'After (automated)', steps: ['PPT → LLM/VLM extraction', 'Priority merge · rule mapping', 'Human-in-the-loop review', 'Patch sheet XML', 'Generate the roadmap'], result: '1,225 of 1,232 cells auto-filled (8-model deck)' },
+        },
+        KOR: {
+          title: '상품기획 업무 흐름: 기존 vs 변경',
+          before: { label: '기존 (수작업)', steps: ['검토의뢰서(PPT) 확인', '마스터 스펙시트에 손으로 입력', '제품 로드맵 수작업 작성'] },
+          after: { label: '변경 (자동화)', steps: ['PPT → LLM·VLM 추출', '우선순위 병합 · 규칙 매핑', '사람 검수(HITL)', '시트 XML 패치', '로드맵 자동 생성'], result: '8개 모델 문서 1,232칸 중 1,225칸 자동 채움' },
+        },
+      },
+    },
+    {
+      num: 2, id: 'proj-2', key: 'kdlDocExtraction', org: 'company', fields: ['LLM', 'VLM'],
+      title: { ENG: '(Automotive Parts Maker) Quality & Process Document Extraction API', KOR: '(자동차 부품 제조사) 품질·공정 문서 DB화 추출 API' },
+      location: { ENG: 'Korea Deep Learning · delivered to an air-gapped server', KOR: '한국딥러닝 · 폐쇄망 서버 납품' },
+      dates: { ENG: 'August 2026 ~ October 2026', KOR: '2026.08 ~ 2026.10' },
+      details: lang === 'ENG' ? kdl_extract_ENG : kdl_extract_KOR,
+      compare: {
+        ENG: {
+          title: 'Source highlighting in the review UI: before vs after',
+          before: { label: 'Before', steps: ['Ask the model where each value came from'], result: '15–41% accurate' },
+          after: { label: 'After', steps: ['Word coordinates from the parser', 'Rule-based matching to table cells'], result: '97.1% of table cells matched' },
+        },
+        KOR: {
+          title: '검수 UI 원문 위치 표시: 기존 vs 변경',
+          before: { label: '기존', steps: ['모델에 값의 원문 위치를 질의'], result: '정확도 15~41%' },
+          after: { label: '변경', steps: ['파서의 낱말 좌표 추출', '표 칸과 규칙 기반 매칭'], result: '표 칸 97.1% 매칭' },
+        },
+      },
+    },
+    {
+      num: 3, id: 'proj-3', key: 'kdlGaugeReading', org: 'company', fields: ['CV'],
+      title: { ENG: '(Government-Funded Manufacturing Innovation) Real-Time Analog Gauge Reading from CCTV', KOR: '(정부과제·제조혁신) CCTV 기반 아날로그 계기판 실시간 판독' },
+      location: { ENG: 'Korea Deep Learning · deployed to production', KOR: '한국딥러닝 · 실서비스 배포' },
+      dates: { ENG: 'January 2026 ~ March 2026', KOR: '2026.01 ~ 2026.03' },
+      details: lang === 'ENG' ? kdl_gauge_ENG : kdl_gauge_KOR,
+      compare: {
+        ENG: {
+          title: 'Needle detection: standard box vs oriented box (same settings)',
+          before: { label: 'Standard box (HBB)', steps: ['FHD frame → gauge crop (Stage 1)', 'Needle as an axis-aligned box'], result: 'mAP50-95 0.930 · no angle information' },
+          after: { label: 'Oriented box (OBB, adopted)', steps: ['FHD frame → gauge crop (Stage 1)', 'Needle as an oriented box (±180° rotation aug.)'], result: 'mAP50-95 0.949 · outputs the needle angle directly' },
+        },
+        KOR: {
+          title: '바늘 검출: 일반 박스 vs 회전 박스 (같은 조건 비교)',
+          before: { label: '일반 박스 (HBB)', steps: ['FHD 프레임 → 계기판 크롭 (Stage 1)', '바늘을 일반 박스로 검출'], result: 'mAP50-95 0.930 · 각도 정보 없음' },
+          after: { label: '회전 박스 (OBB, 채택)', steps: ['FHD 프레임 → 계기판 크롭 (Stage 1)', '바늘을 회전 박스로 검출 (±180° 회전 증강)'], result: 'mAP50-95 0.949 · 바늘 각도 직접 출력' },
+        },
+      },
+    },
+    {
+      num: 4, id: 'proj-4', key: 'kdlOcrResearch', org: 'company', fields: ['CV', 'OCR'],
+      title: { ENG: '(** Capital) Korean Handwriting OCR Recognizer R&D', KOR: '(**캐피탈) 한국어 필기체 OCR Recognizer 연구' },
+      location: { ENG: 'Korea Deep Learning · R&D, weights deployed to the client project', KOR: '한국딥러닝 · R&D, 고객 프로젝트에 가중치 배포' },
+      dates: { ENG: 'January 2026 ~ April 2026', KOR: '2026.01 ~ 2026.04' },
+      details: lang === 'ENG' ? kdl_ocr_ENG : kdl_ocr_KOR,
+    },
+    {
+      num: 5, id: 'proj-5', key: 'kdlDisasterVideo', org: 'company', fields: ['GenAI', 'VLM'],
+      title: { ENG: 'Disaster CCTV Video Augmentation (Wildfire · Flood)', KOR: '재난 CCTV 영상 증강 (산불·침수)' },
+      location: { ENG: 'Korea Deep Learning · generative AI pipeline', KOR: '한국딥러닝 · 생성형 AI 파이프라인' },
+      dates: { ENG: 'October 2026 (9 days)', KOR: '2026.10 (9일)' },
+      details: lang === 'ENG' ? kdl_video_ENG : kdl_video_KOR,
+    },
+    {
+      num: 6, id: 'proj-6', key: 'sense1Vet', org: 'company', fields: ['DL', 'Signal'],
+      title: { ENG: '(CareSix) Sense1 Vet Heart-Rate Algorithm', KOR: '(케어식스) Sense1 Vet 심박 알고리즘' },
+      location: { ENG: 'CareSix Co., LTD · wearable for dogs', KOR: '케어식스 · 반려견 웨어러블' },
+      dates: { ENG: 'September 2024 ~ February 2025', KOR: '2024.09 ~ 2025.02' },
+      details: getDetails(pj_sense1_ENG, pj_sense1_KOR, sense1_media),
+    },
+  ];
+  const sideProjects = [
+    {
+      id: 'side-law', key: 'lawIntelligence', org: 'program', fields: ['LLM', 'RAG'],
+      title: { ENG: '[IBM x RedHat] Law-AI', KOR: '[IBM x RedHat] Law-AI' },
+      location: { ENG: 'IBM final group project', KOR: 'IBM 파이널 그룹 프로젝트' },
+      dates: { ENG: '2025 ~ October 2025', KOR: '2025 ~ 2025.10' },
+      details: getDetails(law_ENG, law_KOR, lawai_media),
+    },
+  ];
+  const allProjects = [...mainProjects, ...sideProjects];
+  const projectGroups = [
+    { label: { ENG: 'LLM · VLM', KOR: 'LLM · VLM' }, ids: ['proj-1', 'proj-2', 'side-law'] },
+    { label: { ENG: 'CV · OCR', KOR: 'CV · OCR' }, ids: ['proj-3', 'proj-4'] },
+    { label: { ENG: 'Generative AI', KOR: '생성형 AI' }, ids: ['proj-5'] },
+    { label: { ENG: 'Signal · DL', KOR: '신호처리 · DL' }, ids: ['proj-6'] },
+  ];
+
   return (
     <div className="App">
       <header className="App-header">
@@ -1067,6 +1242,18 @@ function App() {
         </div>
 
         {profile.tagline[lang] && <p className="profile-tagline">{profile.tagline[lang]}</p>}
+        {profile.glance.length > 0 && (
+          <div className="profile-glance">
+            {profile.glance.map((g) => (
+              <div className="glance-col" key={g.title.ENG}>
+                <h4>{g.title[lang]}</h4>
+                <ul>
+                  {g.items[lang].map((it, i) => <li key={i}>{it}</li>)}
+                </ul>
+              </div>
+            ))}
+          </div>
+        )}
         {profile.summary[lang] && <p className="profile-summary">{profile.summary[lang]}</p>}
         {profile.skills.length > 0 && (
           <ul className="profile-skills">
@@ -1277,79 +1464,58 @@ function App() {
         {expandedSections.projects.expanded && (
           <div className="section-content">
 
-            {/* Main Projects – 항상 표시 */}
-            <h3 style={{ marginTop: 0 }}>{t[lang].mainProjects}</h3>
+            {/* 분야별 프로젝트 참여내역 (목차) */}
+            <div className="project-index">
+              <p className="project-index-title">{t[lang].projectIndex}</p>
+              {projectGroups.map((g) => (
+                <div className="project-index-group" key={g.label.ENG}>
+                  <span className="project-index-field">{g.label[lang]}</span>
+                  <ul>
+                    {g.ids.map((pid) => {
+                      const pj = allProjects.find((x) => x.id === pid);
+                      return (
+                        <li key={pid}>
+                          <a href={`#${pid}`}>{pj.num ? `${pj.num}. ` : ''}{pj.title[lang]}</a>
+                          <span className={`tag tag-org`}>{orgLabel[pj.org][lang]}</span>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              ))}
+            </div>
 
-            <Entry
-              title={lang==='ENG' ? "Product-Planning Document Automation (AX)" : "상품기획 문서 자동화 (AX)"}
-              location={lang==='ENG' ? "Korea Deep Learning · ** Electronics" : "한국딥러닝 · **전자"}
-              dates={lang==='ENG' ? "July 2026 ~ Present" : "2026.07 ~ 진행중"}
-              details={lang==='ENG' ? kdl_planning_ENG : kdl_planning_KOR}
-              {...getMeta('kdlProductPlanning')}
-              isExpanded={expandedSections.projects.entries.kdlProductPlanning}
-              onClick={() => toggleEntry('projects', 'kdlProductPlanning')}
-            />
+            {mainProjects.map((pj) => (
+              <Entry
+                key={pj.id}
+                id={pj.id}
+                title={`${pj.num}. ${pj.title[lang]}`}
+                location={pj.location[lang]}
+                dates={pj.dates[lang]}
+                details={pj.details}
+                tags={projectTags(pj)}
+                compare={pj.compare?.[lang]}
+                {...getMeta(pj.key)}
+                isExpanded={expandedSections.projects.entries[pj.key]}
+                onClick={() => toggleEntry('projects', pj.key)}
+              />
+            ))}
 
-            <Entry
-              title={lang==='ENG' ? "Manufacturing Document Extraction API" : "제조 품질·공정 문서 DB화 추출 API"}
-              location={lang==='ENG' ? "Korea Deep Learning · Automotive parts manufacturer" : "한국딥러닝 · 자동차 부품 제조사"}
-              dates={lang==='ENG' ? "August 2026 ~ October 2026" : "2026.08 ~ 2026.10"}
-              details={lang==='ENG' ? kdl_extract_ENG : kdl_extract_KOR}
-              {...getMeta('kdlDocExtraction')}
-              isExpanded={expandedSections.projects.entries.kdlDocExtraction}
-              onClick={() => toggleEntry('projects', 'kdlDocExtraction')}
-            />
-
-            <Entry
-              title={lang==='ENG' ? "Disaster CCTV Video Augmentation (Wildfire · Flood)" : "재난 CCTV 영상 증강 (산불·침수)"}
-              location={lang==='ENG' ? "Korea Deep Learning · Generative AI pipeline" : "한국딥러닝 · 생성형 AI 파이프라인"}
-              dates={lang==='ENG' ? "October 2026 (9 days)" : "2026.10 (9일)"}
-              details={lang==='ENG' ? kdl_video_ENG : kdl_video_KOR}
-              {...getMeta('kdlDisasterVideo')}
-              isExpanded={expandedSections.projects.entries.kdlDisasterVideo}
-              onClick={() => toggleEntry('projects', 'kdlDisasterVideo')}
-            />
-
-            <Entry
-              title={lang==='ENG' ? "Korean Handwriting OCR Recognizer (R&D)" : "한국어 필기체 OCR Recognizer 연구 (R&D)"}
-              location={lang==='ENG' ? "Korea Deep Learning · R&D, shipped to a ** Capital project" : "한국딥러닝 · R&D, **캐피탈 프로젝트 배포"}
-              dates={lang==='ENG' ? "January 2026 ~ April 2026" : "2026.01 ~ 2026.04"}
-              details={lang==='ENG' ? kdl_ocr_ENG : kdl_ocr_KOR}
-              {...getMeta('kdlOcrResearch')}
-              isExpanded={expandedSections.projects.entries.kdlOcrResearch}
-              onClick={() => toggleEntry('projects', 'kdlOcrResearch')}
-            />
-
-            <Entry
-              title={lang==='ENG' ? "Real-Time Analog Gauge Reading from CCTV" : "CCTV 기반 아날로그 계기판 실시간 판독"}
-              location={lang==='ENG' ? "Korea Deep Learning · Government-funded manufacturing innovation project, deployed to production" : "한국딥러닝 · 정부과제(제조혁신), 실서비스 배포"}
-              dates={lang==='ENG' ? "January 2026 ~ March 2026" : "2026.01 ~ 2026.03"}
-              details={lang==='ENG' ? kdl_gauge_ENG : kdl_gauge_KOR}
-              {...getMeta('kdlGaugeReading')}
-              isExpanded={expandedSections.projects.entries.kdlGaugeReading}
-              onClick={() => toggleEntry('projects', 'kdlGaugeReading')}
-            />
-
-            <Entry
-              title={lang==='ENG' ? "Sense1 Vet AI Algorithm" : "Sense1 Vet AI 알고리즘"}
-              location={lang==='ENG' ? "CareSix Co., LTD" : "케어식스"}
-              dates={lang==='ENG' ? "September 2024 ~ February 2025" : "2024.09 ~ 2025.02"}
-              details={getDetails(pj_sense1_ENG, pj_sense1_KOR, sense1_media)}
-              {...getMeta('sense1Vet')}
-              isExpanded={expandedSections.projects.entries.sense1Vet}
-              onClick={() => toggleEntry('projects', 'sense1Vet')}
-            />
-
-            <Entry
-              title="[IBM x RedHat] Law-AI"
-              location={lang==='ENG' ? "IBM Final Group Project" : "IBM 파이널 그룹 프로젝트"}
-              dates={lang==='ENG' ? "2025 ~ October 2025" : "2025 ~ 2025.10"}
-              // details={lang==='ENG' ? law_ENG : law_KOR}
-              details={getDetails(law_ENG, law_KOR, lawai_media)}
-              {...getMeta('lawIntelligence')}
-              isExpanded={expandedSections.projects.entries.lawIntelligence}
-              onClick={() => toggleEntry('projects', 'lawIntelligence')}
-            />
+            <h3 style={{ marginTop: 24 }}>{t[lang].sideProjects}</h3>
+            {sideProjects.map((pj) => (
+              <Entry
+                key={pj.id}
+                id={pj.id}
+                title={pj.title[lang]}
+                location={pj.location[lang]}
+                dates={pj.dates[lang]}
+                details={pj.details}
+                tags={projectTags(pj)}
+                {...getMeta(pj.key)}
+                isExpanded={expandedSections.projects.entries[pj.key]}
+                onClick={() => toggleEntry('projects', pj.key)}
+              />
+            ))}
 
 
             {/* Other Projects – 클릭으로 펼침 */}
