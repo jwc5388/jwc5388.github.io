@@ -43,6 +43,9 @@ import auraIdIamge7 from './assets/images/auraid7.png';
 import elizaImage1 from './assets/images/eliza1.png';
 import elizaImage2 from './assets/images/eliza2.png';
 import elizaImage3 from './assets/images/eliza3.png';
+import gaugeImage1 from './assets/images/gauge1.jpg';
+import lgaxImage1 from './assets/images/lgax1.jpg';
+import lgaxImage2 from './assets/images/lgax2.jpg';
 import shinhanImage0 from './assets/images/shinhan0.jpg';
 import shinhanImage1 from './assets/images/shinhan1.jpg';
 import shinhanImage2 from './assets/images/shinhan2.jpg';
@@ -631,6 +634,13 @@ function App() {
     "sudo 없는 폐쇄망 서버용 설치 번들(install/update/rollback/backup) 제작, 데모 서버 운영, 고객 요구사항 30여 건을 ID·우선순위로 관리해 반영(IP 제한 보안 요청 당일 처리).",
   ];
 
+  const lgax_media = (
+    <div key="lgax-images" style={{ display:'flex', overflowX:'auto', whiteSpace:'nowrap', gap:'10px', padding:'10px 0' }}>
+      <img src={lgaxImage1} alt="Master spec sheet screen in the deployed LG Electronics service (client values blurred)" style={{ height: '400px', borderRadius: '8px' }} />
+      <img src={lgaxImage2} alt="Generated product roadmap screen (roadmap content blurred)" style={{ height: '400px', borderRadius: '8px' }} />
+    </div>
+  );
+
   const kdl_extract_ENG = [
     "Built an extraction API that turns 20 years of automotive parts maker Seoyon E-Hwa's quality and process documents (thousands of Excel/PPT/PDF files in Korean, English and Chinese) into DB-ready data across 7 document types; delivered to the client's offline GPU server.",
     "Deterministic first: 5 Excel types are parsed from cell borders, merges and styles without an LLM, so results are identical every run; LLMs only for free-form reports and images.",
@@ -685,6 +695,12 @@ function App() {
     "바늘 검출을 같은 조건에서 일반 박스와 회전 박스(OBB)로 비교(회전 ±180° 증강): OBB가 mAP50-95 0.930 → 0.949로 높고 판독에 쓸 각도를 직접 출력해 최종 채택.",
     "Docker Compose로 GPU를 할당한 API 서버 배포: /health 헬스체크, restart: unless-stopped 자동 복구, 포트·컨테이너명 env 분리로 환경별 배포.",
   ];
+
+  const gauge_media = (
+    <div key="gauge-images" style={{ display:'flex', overflowX:'auto', whiteSpace:'nowrap', gap:'10px', padding:'10px 0' }}>
+      <img src={gaugeImage1} alt="CCTV frame with detected gauges and needle angles" style={{ height: '400px', borderRadius: '8px' }} />
+    </div>
+  );
 
   const kdl_video_ENG = [
     "Built a generative pipeline that turns real wildfire-watch and urban-flood CCTV stills into 'disaster starting and spreading' training videos: FLUX.2 draws the start state, Wan2.2 animates it, RIFE interpolates to 10 s.",
@@ -1215,7 +1231,7 @@ function App() {
       title: { ENG: '(LG Electronics) Product-Planning Document Automation', KOR: '(LG전자) 상품기획 문서 자동화' },
       location: { ENG: 'Korea Deep Learning · AX project', KOR: '한국딥러닝 · AX 프로젝트' },
       dates: { ENG: 'July 2026 ~ Present', KOR: '2026.07 ~ 진행중' },
-      details: lang === 'ENG' ? kdl_planning_ENG : kdl_planning_KOR,
+      details: getDetails(kdl_planning_ENG, kdl_planning_KOR, lgax_media),
       compare: {
         ENG: {
           title: "Planners' workflow: before vs after",
@@ -1260,7 +1276,7 @@ function App() {
       title: { ENG: '(Government-Funded Manufacturing Innovation) Real-Time Analog Gauge Reading from CCTV', KOR: '(정부과제·제조혁신) CCTV 기반 아날로그 계기판 실시간 판독' },
       location: { ENG: 'Korea Deep Learning · deployed to production', KOR: '한국딥러닝 · 실서비스 배포' },
       dates: { ENG: 'January 2026 ~ March 2026', KOR: '2026.01 ~ 2026.03' },
-      details: lang === 'ENG' ? kdl_gauge_ENG : kdl_gauge_KOR,
+      details: getDetails(kdl_gauge_ENG, kdl_gauge_KOR, gauge_media),
       compare: {
         ENG: {
           title: 'Needle detection: standard box vs oriented box (same settings)',
