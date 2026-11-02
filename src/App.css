@@ -959,3 +959,10 @@ section h2.section-title {
   .pcard-label { padding: 10px 14px 0; background: #fff; }
   .pcard-value, .pcard-list, .pcard-row .stack-chips { padding-top: 4px; }
 }
+
+.pcard-thumbs .pcard-caption {
+  max-width: calc(100% - 16px);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

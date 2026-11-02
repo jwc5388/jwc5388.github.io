@@ -44,6 +44,8 @@ import elizaImage1 from './assets/images/eliza1.png';
 import elizaImage2 from './assets/images/eliza2.png';
 import elizaImage3 from './assets/images/eliza3.png';
 import gaugeImage1 from './assets/images/gauge1.jpg';
+import seoyonImage1 from './assets/images/seoyon1.jpg';
+import seoyonImage2 from './assets/images/seoyon2.jpg';
 import lgaxImage1 from './assets/images/lgax1.jpg';
 import lgaxImage2 from './assets/images/lgax2.jpg';
 import shinhanApp1 from './assets/images/shinhanApp1.jpg';
@@ -1251,7 +1253,7 @@ function App() {
         ENG: ["Extraction API for 7 document types (Excel / PPT / PDF; Korean, English, Chinese)", "Rule-based parsing for 5 Excel types; LLM only for free-form reports and images", "Grader that reproduces the client's audit ledger; no change ships if a correct cell breaks", "Two-model agreement check to filter out hallucinated tables", "Review UI source highlighting: 15–41% → 97.1% matched"],
         KOR: ["문서 7종 추출 API (엑셀·PPT·PDF, 국·영·중)", "엑셀 5종은 LLM 없이 규칙 파싱, LLM은 자유 양식·그림에만", "고객 검수 대장을 그대로 재현하는 채점기, 정답 칸이 깨지면 반영 안 함", "두 모델 판독 일치도로 지어낸 표 걸러내기", "검수 UI 원문 위치 표시 15~41% → 97.1%"],
       },
-      media: [],
+      media: [{ src: seoyonImage2, caption: { ENG: "Deployed: Excel field extraction", KOR: "실제 배포 화면: 엑셀 필드 추출" } }, { src: seoyonImage1, caption: { ENG: "FMEA PDF parsing", KOR: "FMEA PDF 표 파싱" } }],
       id: 'proj-2', key: 'kdlDocExtraction', org: 'company', fields: ['LLM', 'VLM'],
       title: { ENG: '(Seoyon E-Hwa) Quality & Process Document Extraction API', KOR: '(서연이화) 품질·공정 문서 DB화 추출 API' },
       location: { ENG: 'Korea Deep Learning · delivered to an air-gapped server', KOR: '한국딥러닝 · 폐쇄망 서버 납품' },
