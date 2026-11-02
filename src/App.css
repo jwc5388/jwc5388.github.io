@@ -682,3 +682,71 @@ section h2.section-title { margin: 0 0 24px; }
 
 /* 프로젝트 섹션은 2단 카드가 들어가므로 조금 넓게 */
 section.Project-section { max-width: 1100px; }
+
+/* ---- 대표 성과 숫자 타일 ---- */
+.profile-stats {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.stat-tile {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: #fff;
+  text-align: left;
+  text-decoration: none;
+  transition: border-color .2s ease;
+}
+
+.stat-tile:hover { border-color: #2563eb; }
+
+.stat-value {
+  font-size: calc(14px + 1vmin);
+  font-weight: 800;
+  color: #c2410c;
+  line-height: 1.1;
+}
+
+.stat-label {
+  font-size: calc(8px + 0.55vmin);
+  line-height: 1.45;
+  color: #374151;
+}
+
+@media (max-width: 768px) {
+  .profile-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); padding: 0 16px; }
+}
+
+/* ---- 경력 → 관련 프로젝트 바로가기 ---- */
+.proj-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
+.proj-links-label {
+  font-weight: 700;
+  color: #111827;
+  margin-right: 2px;
+}
+
+.proj-links a {
+  padding: 1px 10px;
+  border: 1px solid #c7d2fe;
+  border-radius: 999px;
+  background: #eef2ff;
+  color: #3730a3;
+  font-size: 0.85em;
+  text-decoration: none;
+}
+
+.proj-links a:hover { background: #e0e7ff; }

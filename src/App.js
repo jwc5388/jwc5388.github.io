@@ -189,6 +189,14 @@ function App() {
         "정부과제(제조혁신) CCTV 계기판 실시간 판독 시스템을 라벨링부터 Docker API 실서비스 배포까지 1인 구축 (mAP50-95 0.992 / 0.949)",
       ],
     },
+    // 대표 성과 숫자 타일 (누르면 해당 프로젝트로 이동)
+    stats: [
+      { id: 'proj-shinhan', value: { ENG: 'Top 8', KOR: '상위 8개사' }, label: { ENG: 'Shinhan Vietnam PoC as PM & sole developer → first overseas revenue', KOR: '신한베트남 PoC, PM 겸 단독 개발 → 회사 첫 해외 매출' } },
+      { id: 'proj-2', value: { ENG: '93.49%', KOR: '93.49%' }, label: { ENG: 'Seoyon E-Hwa extraction accuracy on the client\'s audit ledger', KOR: '서연이화 문서 추출 정확도 (고객 검수 대장 기준)' } },
+      { id: 'proj-4', value: { ENG: '+4.26 pp', KOR: '+4.26%p' }, label: { ENG: 'Hyundai Capital handwriting OCR accuracy', KOR: '현대캐피탈 필기체 OCR 정확도' } },
+      { id: 'proj-3', value: { ENG: '0.992', KOR: '0.992' }, label: { ENG: 'Gauge detection mAP50-95, in production', KOR: '계기판 검출 mAP50-95, 실서비스 배포' } },
+      { id: 'proj-1', value: { ENG: '1,225 / 1,232', KOR: '1,225 / 1,232' }, label: { ENG: 'LG Electronics spec cells filled automatically', KOR: 'LG전자 스펙시트 자동 채움 칸' } },
+    ],
     // 주요 이력 한눈에 보기 (직함 바로 아래 표시)
     glance: [
       {
@@ -612,24 +620,14 @@ function App() {
   // ====== Work ======
   const work_kdl_title = lang === 'ENG' ? "ML Engineer, Korea Deep Learning" : "ML 엔지니어, 한국딥러닝";
   const work_kdl_details_ENG = [
-    "Work directly with enterprise clients from requirements to delivery: build LLM/VLM document-automation systems and ship them with Docker to offline, on-prem GPU servers in iterative releases.",
-    "Productized a KIE pipeline built for one client into PPASS, the company's IDP platform, and designed its modular backend: document-template classification, automatic extraction-schema definition, OCR and layout models are separate modules that plug in or out, and settings such as rendering DPI are easy to change per client.",
-    "Product-planning document automation for LG Electronics: PPT → master spec sheet → product roadmap, with human-in-the-loop review.",
-    "Quality and process document extraction API for Seoyon E-Hwa (automotive parts): 7 document types, 93.49% accuracy on the client's audit ledger.",
-    "Generative video augmentation (wildfire, flood) from real CCTV stills to train disaster-detection models.",
-    "R&D on the recognizer of the company's two-stage OCR (detector → recognizer) for Korean handwriting: +4.26 pp exact match, weights deployed to a Hyundai Capital project.",
-    "Shinhan Vietnam Finance PoC (Global Shinhan InnoBoost 2026): as PM and sole developer, led client communication and design and built the loan-document classification, extraction and 7-check validation system end to end; it placed in the top 8, won the Open Innovation Reward and led to an actual business deal — the company's first overseas revenue.",
-    "Government-funded manufacturing innovation project — real-time analog gauge reading from CCTV with a two-stage YOLO26 pipeline (detection → OBB): gauge mAP50-95 0.992, needle 0.949, deployed as a Docker API.",
+    "Work directly with enterprise clients from requirements to delivery, shipping LLM/VLM systems with Docker to on-prem and air-gapped GPU servers in iterative releases.",
+    "Productized a single-client KIE pipeline into PPASS and designed its modular backend: classification, schema definition, OCR and layout models plug in or out, and settings such as DPI change per client.",
+    "Led Shinhan Vietnam Finance's PoC as PM and sole developer: top 8 at Global Shinhan InnoBoost 2026 and the company's first overseas revenue.",
   ];
   const work_kdl_details_KOR = [
-    "기업 고객과 직접 소통하며 요구사항 정의부터 납품까지 수행: LLM·VLM 문서 자동화 시스템을 개발하고 Docker로 폐쇄망 GPU 서버에 차수별 납품.",
-    "한 고객사용 KIE 파이프라인을 제품화해 사내 IDP 플랫폼 PPASS로 만들고 백엔드를 모듈화 설계: 문서 틀 분류·추출 스키마 자동 정의·OCR·레이아웃 모델을 독립 모듈로 나눠 붙이고 뗄 수 있게 하고, 렌더링 DPI 같은 설정도 고객사마다 쉽게 수정 가능.",
-    "LG전자 상품기획 문서 자동화: PPT → 마스터 스펙시트 → 제품 로드맵, 사람 검수(HITL) 포함.",
-    "서연이화(자동차 부품) 품질·공정 문서 추출 API: 문서 7종, 고객 검수 대장 기준 정확도 93.49%.",
-    "실제 CCTV 사진 기반 재난(산불·침수) 영상 생성 증강으로 재난 탐지 모델 학습 데이터 구축.",
-    "사내 2-stage OCR(Detector → Recognizer)의 한국어 필기체 Recognizer 연구: 정확도 +4.26%p, 현대캐피탈 프로젝트에 가중치 배포.",
-    "신한베트남파이낸스 PoC(글로벌 신한 이노부스트 2026): PM 겸 단독 개발로 고객사 소통·설계를 맡고 대출 서류 분류·추출·자동 검증 7종 시스템을 처음부터 끝까지 개발 — 상위 8개사 선정, 오픈이노베이션 리워드 수상, 실제 사업으로 이어져 회사의 첫 해외 매출 달성.",
-    "정부과제(제조혁신) — CCTV 아날로그 계기판 실시간 판독(2단계 YOLO26 Detection → OBB): 계기판 mAP50-95 0.992, 바늘 0.949, Docker API로 실서비스 배포.",
+    "기업 고객과 직접 소통하며 요구사항 정의부터 납품까지 수행, LLM·VLM 시스템을 Docker로 고객 서버·폐쇄망에 차수별 납품.",
+    "단일 고객사용 KIE 파이프라인을 제품화해 PPASS로 만들고 백엔드를 모듈화 설계: 분류·스키마 정의·OCR·레이아웃 모델을 붙이고 떼고, DPI 같은 설정은 고객사별로 조정.",
+    "신한베트남파이낸스 PoC를 PM 겸 단독 개발로 수행: 글로벌 신한 이노부스트 2026 상위 8개사, 회사 첫 해외 매출.",
   ];
 
   // ===== Projects – Korea Deep Learning =====
@@ -726,20 +724,14 @@ function App() {
 
   const work_ai_title = lang === 'ENG' ? "AI/ML Engineer & Researcher, CareSix Co., LTD" : "AI/ML 엔지니어 & 리서처, 케어식스";
   const work_ai_details_ENG = [
-    "Sole developer of the LSTM-based canine heart-rate algorithm for the Sense1 Vet wearable: raised accuracy to 96% on readings that trembling and motion had made unreliable.",
-    "Built the BCG signal-processing pipeline end to end — FFT and wavelet denoising, with the periodicity of IJK peaks modeled as domain features.",
-    "Applied unsupervised IJK peak detection to reduce dependence on ECG, which is not available as a reference in everyday use.",
-    "Validated each algorithm change statistically with Python and NumPy before adopting it.",
-    "Worked with the hardware and production teams to improve data acquisition and signal quality on the device.",
-    "AURA ID: built a web dog-recognition platform (React, TypeScript) integrating Jeju National University's image-recognition model, plus a veterinary hospital management system for patient tracking and cage records on AWS RDS.",
+    "Sole developer of the LSTM-based heart-rate algorithm for the Sense1 Vet dog wearable: 96% accuracy on readings that trembling and motion had made unreliable.",
+    "BCG signal processing (FFT, wavelet denoising) and unsupervised peak detection to reduce dependence on ECG; worked with hardware and production teams on signal quality.",
+    "AURA ID: web dog-recognition platform (React, TypeScript) and a veterinary hospital management system on AWS RDS.",
   ];
   const work_ai_details_KOR = [
-    "Sense1 Vet 웨어러블의 LSTM 기반 반려견 심박 알고리즘 단독 개발: 떨림·움직임으로 불안정하던 심박 측정을 정확도 96%까지 개선.",
-    "BCG 신호처리 파이프라인 전 과정 구축: FFT·웨이블릿 노이즈 제거, IJK 피크의 주기성을 도메인 피처로 모델링.",
-    "비지도 IJK 피크 검출로, 일상 사용 환경에서는 기준 신호로 쓸 수 없는 ECG에 대한 의존도 감소.",
-    "알고리즘 변경마다 Python·NumPy로 통계 검증을 거친 뒤 반영.",
-    "하드웨어·생산팀과 협업해 기기의 데이터 수집과 신호 품질 개선.",
-    "AURA ID: 제주대학교 이미지 인식 모델을 연동한 웹 기반 반려견 인식 플랫폼(React, TypeScript)과, 환자 추적·케이지 기록을 관리하는 동물병원 관리 시스템(AWS RDS) 개발.",
+    "Sense1 Vet 반려견 웨어러블의 LSTM 기반 심박 알고리즘 단독 개발: 떨림·움직임으로 불안정하던 측정을 정확도 96%까지 개선.",
+    "BCG 신호처리(FFT·웨이블릿 노이즈 제거)와 비지도 피크 검출로 ECG 의존도 감소, 하드웨어·생산팀과 신호 품질 개선.",
+    "AURA ID: 반려견 인식 웹 플랫폼(React, TypeScript)과 AWS RDS 기반 동물병원 관리 시스템 개발.",
   ];
 
 
@@ -1342,6 +1334,25 @@ function App() {
   ];
   mainProjects.forEach((pj, i) => { pj.num = i + 1; });
   const allProjects = [...mainProjects, ...sideProjects];
+  // 경력 항목 아래에 붙는 관련 프로젝트 바로가기
+  const projectShort = {
+    'proj-shinhan': { ENG: 'Shinhan Vietnam PoC', KOR: '신한베트남 PoC' },
+    'proj-1': { ENG: 'LG Electronics planning', KOR: 'LG전자 상품기획' },
+    'proj-4': { ENG: 'Hyundai Capital OCR', KOR: '현대캐피탈 OCR' },
+    'proj-2': { ENG: 'Seoyon E-Hwa extraction', KOR: '서연이화 문서 추출' },
+    'proj-3': { ENG: 'Gauge reading', KOR: '계기판 판독' },
+    'proj-5': { ENG: 'Disaster video', KOR: '재난 영상 생성' },
+    'proj-6': { ENG: 'Sense1 heart rate', KOR: 'Sense1 심박' },
+  };
+  const projectLinks = (ids) => (
+    <span className="proj-links" key="proj-links">
+      <span className="proj-links-label">{lang === 'ENG' ? 'Projects' : '관련 프로젝트'}</span>
+      {ids.map((pid) => {
+        const pj = allProjects.find((x) => x.id === pid);
+        return <a key={pid} href={`#${pid}`}>{pj.num}. {projectShort[pid][lang]}</a>;
+      })}
+    </span>
+  );
   const projectGroups = [
     { label: { ENG: 'LLM · VLM', KOR: 'LLM · VLM' }, ids: ['proj-shinhan', 'proj-1', 'proj-2', 'side-law'] },
     { label: { ENG: 'CV · OCR', KOR: 'CV · OCR' }, ids: ['proj-4', 'proj-3'] },
@@ -1405,10 +1416,15 @@ function App() {
             {profile.skills.map((sk) => <li key={sk}>{sk}</li>)}
           </ul>
         )}
-        {profile.highlights[lang].length > 0 && (
-          <ul className="profile-highlights">
-            {profile.highlights[lang].map((h, i) => <li key={i}>{h}</li>)}
-          </ul>
+        {profile.stats.length > 0 && (
+          <div className="profile-stats">
+            {profile.stats.map((st) => (
+              <a className="stat-tile" key={st.id} href={`#${st.id}`}>
+                <span className="stat-value">{st.value[lang]}</span>
+                <span className="stat-label">{st.label[lang]}</span>
+              </a>
+            ))}
+          </div>
         )}
         {profile.resumeUrl && (
           <a className="resume-btn" href={profile.resumeUrl} download>{t[lang].resume}</a>
@@ -1425,7 +1441,7 @@ function App() {
               title={work_kdl_title}
               location={lang==='ENG' ? "Gangnam, Seoul, South Korea" : "대한민국 서울 강남"}
               dates={lang==='ENG' ? "November 2025 ~ Present" : "2025.11 ~ 현재"}
-              details={lang==='ENG' ? work_kdl_details_ENG : work_kdl_details_KOR}
+              details={[...(lang==='ENG' ? work_kdl_details_ENG : work_kdl_details_KOR), projectLinks(['proj-shinhan', 'proj-1', 'proj-4', 'proj-2', 'proj-3', 'proj-5'])]}
               isExpanded={expandedSections.experience.entries.koreaDeepLearning}
               onClick={() => toggleEntry('experience', 'koreaDeepLearning')}
             />
@@ -1433,7 +1449,7 @@ function App() {
               title={work_ai_title}
               location={lang==='ENG' ? "Seoul, South Korea" : "대한민국 서울"}
               dates={lang==='ENG' ? "September 2024 ~ April 2025" : "2024.09 ~ 2025.04"}
-              details={lang==='ENG' ? work_ai_details_ENG : work_ai_details_KOR}
+              details={[...(lang==='ENG' ? work_ai_details_ENG : work_ai_details_KOR), projectLinks(['proj-6'])]}
               isExpanded={expandedSections.experience.entries.aiAlgorithm}
               onClick={() => toggleEntry('experience', 'aiAlgorithm')}
             />
