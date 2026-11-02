@@ -425,6 +425,10 @@ function App() {
         ENG: '96% accuracy — 96% of heart-rate readings judged correct, where trembling and motion previously made readings unreliable',
         KOR: '정확도 96% — 떨림·움직임으로 불안정하던 심박 측정을, 측정값의 96%가 정답으로 판정되는 수준까지 개선',
       },
+      lessons: {
+        ENG: "I fed 15 engineered cycle features to the LSTM as a 15-step sequence, but the order of those features means nothing, so an LSTM was the wrong fit. Next time: an MLP or GBM on the features, and an LSTM only over sequences of consecutive cycles",
+        KOR: "피처 15개를 길이 15짜리 순서 데이터처럼 LSTM에 넣었지만, 피처 나열 순서에는 의미가 없어 LSTM에 맞지 않는 구조였음 — 다음에는 피처는 MLP·GBM으로, LSTM은 연속된 심박 주기 시퀀스에 쓰겠음",
+      },
       links: [],
     },
     lawIntelligence: {
