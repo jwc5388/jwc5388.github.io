@@ -54,7 +54,8 @@ function CompareFlow({ compare }) {
 // media: [{ src, caption, wide }] — wide는 시간 흐름 띠처럼 가로로 긴 이미지 (카드 아래 전체 폭)
 function ProjectCard({ summary, card, compare, media, details, labels, links }) {
   const [showMore, setShowMore] = useState(false);
-  const results = card.results ? card.results.split(' · ') : [];
+  // 성과 항목은 ' · '로 나눈 뒤 첫 글자를 대문자로 (영문)
+  const results = card.results ? card.results.split(' · ').map((r) => r.charAt(0).toUpperCase() + r.slice(1)) : [];
   const strips = media.filter((m) => m.wide);
   const side = media.filter((m) => !m.wide);
   const hasVisual = compare || side.length > 0;

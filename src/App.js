@@ -180,8 +180,8 @@ function App() {
       KOR: '',
     },
     summary: {
-      ENG: "AI Engineer who takes LLM/VLM systems from a client's problem to deployment on the client's own servers. My Mathematics and Computer Science degree from the University of St Andrews shaped how I work: build a trustworthy evaluation first, then trace where errors come from. At Korea Deep Learning and CareSix, I have shipped document-AI, OCR, vision and generative-video systems with Docker to on-prem and air-gapped servers. I led Shinhan Vietnam Finance's PoC as PM and sole developer, and productized a single-client KIE pipeline into PPASS, an IDP platform with a modular backend I designed.",
-      KOR: "고객의 문제 정의부터 고객 서버 배포까지 LLM·VLM 시스템을 책임지는 AI 엔지니어입니다. 세인트앤드루스 대학교에서 수학과 컴퓨터과학을 전공하며, 믿을 수 있는 평가 기준을 먼저 세우고 오류의 원인을 끝까지 추적하는 방식이 몸에 뱄습니다. 한국딥러닝과 케어식스에서 문서 AI·OCR·비전·생성형 영상 시스템을 Docker로 고객 서버와 폐쇄망에 배포했고, 신한베트남파이낸스 PoC를 PM 겸 단독 개발로 이끌었으며, 한 고객사용 KIE 파이프라인을 제품화해 모듈화 설계한 IDP 플랫폼 PPASS로 만들었습니다.",
+      ENG: "AI Engineer who builds LLM/VLM systems and deploys them on clients' own servers. My Mathematics and Computer Science degree from the University of St Andrews shaped how I work: build a trustworthy evaluation first, then trace where errors come from. At Korea Deep Learning I have shipped document-AI, OCR, vision and generative-video systems with Docker to on-prem and air-gapped servers; at CareSix I built the heart-rate algorithm for a dog wearable. I led Shinhan Vietnam Finance's PoC as PM and sole developer, and productized a single-client KIE pipeline into PPASS, an IDP platform with a modular backend I designed.",
+      KOR: "LLM·VLM 시스템을 만들어 고객사 서버에 배포하는 AI 엔지니어입니다. 세인트앤드루스 대학교에서 수학과 컴퓨터과학을 전공하며, 믿을 수 있는 평가 기준을 먼저 세우고 오류의 원인을 끝까지 추적하는 방식이 몸에 뱄습니다. 한국딥러닝에서 문서 AI·OCR·비전·생성형 영상 시스템을 Docker로 고객 서버와 폐쇄망에 배포했고, 케어식스에서는 반려견 웨어러블의 심박 알고리즘을 만들었습니다. 신한베트남파이낸스 PoC는 PM 겸 단독 개발로 이끌었고, 한 고객사용 KIE 파이프라인은 제품화해 모듈화 설계한 IDP 플랫폼 PPASS로 만들었습니다.",
     },
     skills: ["LLM / VLM", "KIE · OCR", "RAG · LangChain", "LLM Evaluation", "Docker", "On-prem Deployment", "FastAPI", "vLLM", "PyTorch", "Python"],
     highlights: {
@@ -204,7 +204,7 @@ function App() {
     stats: [
       { id: 'proj-shinhan', value: { ENG: 'Top 8', KOR: '상위 8개사' }, label: { ENG: 'Shinhan Vietnam PoC as PM & sole developer → first overseas revenue', KOR: '신한베트남 PoC, PM 겸 단독 개발 → 회사 첫 해외 매출' } },
       { id: 'proj-2', value: { ENG: '93.49%', KOR: '93.49%' }, label: { ENG: 'Seoyon E-Hwa extraction accuracy on the client\'s audit ledger', KOR: '서연이화 문서 추출 정확도 (고객 검수 대장 기준)' } },
-      { id: 'proj-4', value: { ENG: '+4.26 pp', KOR: '+4.26%p' }, label: { ENG: 'Hyundai Capital handwriting OCR accuracy', KOR: '현대캐피탈 필기체 OCR 정확도' } },
+      { id: 'proj-4', value: { ENG: '+4.26 pp', KOR: '+4.26%p' }, label: { ENG: 'Hyundai Capital OCR exact-match accuracy', KOR: '현대캐피탈 OCR 완전 일치 정확도' } },
       { id: 'proj-3', value: { ENG: '0.992', KOR: '0.992' }, label: { ENG: 'Gauge detection mAP50-95, in production', KOR: '계기판 검출 mAP50-95, 실서비스 배포' } },
       { id: 'proj-1', value: { ENG: '1,225 / 1,232', KOR: '1,225 / 1,232' }, label: { ENG: 'LG Electronics spec cells filled automatically', KOR: 'LG전자 스펙시트 자동 채움 칸' } },
     ],
@@ -272,10 +272,10 @@ function App() {
         ENG: "LG Electronics planners copied specs from review decks into master spec sheets by hand, then drew product roadmaps by hand too. One deck could cover up to 8 models, spread across slides, tables and attached Excel files.",
         KOR: "LG전자 상품기획팀은 검토의뢰서(PPT)의 스펙을 마스터 스펙시트에 손으로 옮겨 적고, 제품 로드맵도 직접 그렸습니다. 문서 하나에 모델이 최대 8개, 형식도 슬라이드·표·첨부 엑셀로 제각각이었습니다.",
       },
-      team: { ENG: "Small team — teammates on frontend; all AI development by me", KOR: "소규모 팀 — 프론트엔드는 팀원, AI 개발은 전부 본인" },
+      team: { ENG: "Small team: teammates on frontend, all AI development by me", KOR: "소규모 팀: 프론트엔드는 팀원, AI 개발은 전부 본인" },
       role: {
-        ENG: "Sole AI developer — extraction, mapping, roadmap generation, model serving and on-prem deployment",
-        KOR: "AI 개발 단독 담당 — 추출, 매핑, 로드맵 생성, 모델 서빙, 폐쇄망 배포",
+        ENG: "Sole AI developer: extraction, mapping, roadmap generation, model serving and on-prem deployment",
+        KOR: "AI 개발 단독 담당: 추출, 매핑, 로드맵 생성, 모델 서빙, 폐쇄망 배포",
       },
       contribution: {
         ENG: "100% of the AI development: LLM/VLM extraction and mapping pipeline, roadmap generation, FP8 evaluation and model serving, offline installer, demo-server operations and 30+ client requirements",
@@ -302,8 +302,8 @@ function App() {
         KOR: "추출 파이프라인 설계·구현, 정확도 검수 체계, 배포 패키징",
       },
       contribution: {
-        ENG: "100% — sole developer of all 7 extraction types, the accuracy-verification harness, the review UI matching and on-prem releases",
-        KOR: "100% — 문서 7종 추출, 정확도 검수 체계, 검수 UI 위치 매칭, 폐쇄망 납품까지 단독 수행",
+        ENG: "100%: sole developer of all 7 extraction types, the accuracy-verification harness, the review UI matching and on-prem releases",
+        KOR: "100%: 문서 7종 추출, 정확도 검수 체계, 검수 UI 위치 매칭, 폐쇄망 납품까지 단독 수행",
       },
       model: {
         ENG: "Python · FastAPI · MinerU-based document parser + vision LLM on vLLM · LibreOffice · Docker · Next.js (review UI)",
@@ -314,8 +314,8 @@ function App() {
         KOR: "품질 대책서 정확도 90.84% → 93.49% (고객 검수 대장 3,920칸) · 공정설계 검수 불일치 389 → 3건 · 6차 납품",
       },
       lessons: {
-        ENG: "Most remaining errors (~210 cells) are LLM judgment calls on how much text to copy — knowing where rules must stop mattered as much as raising accuracy",
-        KOR: "남은 오답(약 210칸) 대부분은 '어느 칸 글을 얼마나 옮길지'라는 LLM 판단 문제 — 정확도를 올리는 것만큼 규칙으로 밀면 안 되는 지점을 아는 게 중요했음",
+        ENG: "Most of the ~210 remaining wrong cells come down to the LLM deciding how much text to copy, which more rules would not fix",
+        KOR: "남은 오답 약 210칸은 대부분 LLM이 글을 어디까지 옮길지 판단하는 문제라, 규칙을 더 늘려서는 풀리지 않는 부분",
       },
       links: [],
     },
@@ -333,8 +333,8 @@ function App() {
         KOR: "데이터 구축(라벨링 포함), 모델 설계·학습, 배포",
       },
       contribution: {
-        ENG: "100% — owned everything from data collection and labeling to model training and the Docker API deployment",
-        KOR: "100% — 데이터 수집·라벨링부터 모델 학습, Docker 기반 API 배포까지 전 과정 단독 수행",
+        ENG: "100%: owned everything from data collection and labeling to model training and the Docker API deployment",
+        KOR: "100%: 데이터 수집·라벨링부터 모델 학습, Docker 기반 API 배포까지 전 과정 단독 수행",
       },
       model: {
         ENG: "Two-stage: YOLO26x detection (gauge, 960 px) → YOLO26x-OBB (needle, 128 px) · Python · PyTorch · Ultralytics · X-AnyLabeling · Docker Compose on NVIDIA GPU",
@@ -345,8 +345,8 @@ function App() {
         KOR: "계기판 검출 mAP50-95 0.992 · 바늘 검출 mAP50-95 0.949 (OBB, 일반 박스 0.930 대비) · 계기판 10,834장 + 바늘 9,594장 1인 구축 · 실서비스 배포",
       },
       lessons: {
-        ENG: "Splitting a tiny-object problem into two stages let each model focus on one job, and choosing a label format that carries what the reading needs (the needle angle, via OBB) helped both accuracy and post-processing",
-        KOR: "작은 객체를 2단계로 나눠 각 모델이 자기 문제에만 집중하게 하고, 판독에 필요한 정보(각도)를 담는 라벨 표현(OBB)을 고르는 것이 성능과 후처리 모두에 유리했음",
+        ENG: "Splitting a tiny-object problem into two stages let each model do one job, and the OBB label carries the needle angle the reading needs, which helped both accuracy and post-processing",
+        KOR: "작은 객체를 2단계로 나눠 각 모델이 자기 문제에만 집중하게 하고, 판독에 필요한 각도를 담는 OBB 라벨을 골라 성능과 후처리 모두 개선",
       },
       links: [],
     },
@@ -357,8 +357,8 @@ function App() {
       },
       team: { ENG: "2 people", KOR: "2명" },
       role: {
-        ENG: "Recognizer research — data, training, evaluation and architecture experiments",
-        KOR: "Recognizer 연구 — 데이터, 학습, 평가, 아키텍처 실험",
+        ENG: "Recognizer research: data, training, evaluation and architecture experiments",
+        KOR: "Recognizer 연구: 데이터, 학습, 평가, 아키텍처 실험",
       },
       contribution: {
         ENG: "85% of the recognizer research",
@@ -373,8 +373,8 @@ function App() {
         KOR: "테스트 158,898개 기준 정확도 85.23% → 89.49% (+4.26%p), CER 7.52% → 5.09% · 필기체 +5.49%p · 필기체 골든셋 68.63% → 77.33% · 현대캐피탈 프로젝트 배포 가중치 학습",
       },
       lessons: {
-        ENG: "Ablation showed the synthetic handwriting data added only ~0.2 pp — the gain came from data curation and the training recipe, so further generation was stopped before scaling it up",
-        KOR: "ablation 결과 합성 필기체 데이터의 기여는 약 0.2%p — 향상은 데이터 큐레이션과 학습 레시피에서 나왔음을 확인하고, 합성 데이터 추가 생성을 확대 전에 중단",
+        ENG: "An ablation showed synthetic handwriting added only ~0.2 pp. The gain came from data curation and the training recipe, so I stopped generating more before scaling it up",
+        KOR: "ablation 결과 합성 필기체 데이터의 기여는 약 0.2%p. 향상은 데이터 큐레이션과 학습 레시피에서 나왔기 때문에 합성 데이터 추가 생성은 확대 전에 중단",
       },
       links: [],
     },
@@ -389,8 +389,8 @@ function App() {
         KOR: "파이프라인 설계·구현·운영, 프롬프트·품질 기준 설계, 고객 피드백 대응",
       },
       contribution: {
-        ENG: "100% — sole developer of the generation pipeline, automated QA, multi-GPU operation and authoring tool",
-        KOR: "100% — 생성 파이프라인, 자동 검수, 다중 GPU 운영, 저작툴까지 단독 수행",
+        ENG: "100%: sole developer of the generation pipeline, automated QA, multi-GPU operation and authoring tool",
+        KOR: "100%: 생성 파이프라인, 자동 검수, 다중 GPU 운영, 저작툴까지 단독 수행",
       },
       model: {
         ENG: "FLUX.2-dev (image edit) → Wan2.2-I2V-A14B (image-to-video, 720p) → RIFE 4.7 (interpolation) · 8B VLM + OpenCV (QA) · FastAPI",
@@ -401,8 +401,8 @@ function App() {
         KOR: "산불 190여 건·침수 150여 건 검수 통과 · 단계별 영상 1,768건 중 572건 자동 선별 · GPU 4장 기준 시간당 약 30건",
       },
       lessons: {
-        ENG: "Generative models follow a described state well but not the speed of change — putting the start state in the image and the change in the prompt was the key",
-        KOR: "생성 모델은 '상태'는 잘 따르지만 '변화 속도'는 잘 못 따름 — 시작 상태는 이미지로, 변화는 문장으로 분리한 설계가 핵심",
+        ENG: "Generative models follow a described state well but not the speed of change, so I put the start state in the image and only the change in the prompt",
+        KOR: "생성 모델은 묘사한 상태는 잘 따르지만 변화 속도는 잘 못 따라서, 시작 상태는 이미지로 주고 프롬프트에는 변화만 기술",
       },
       links: [],
     },
@@ -412,22 +412,22 @@ function App() {
         KOR: "강아지가 떨거나 움직이면 목걸이의 심박 측정값이 크게 흔들렸고, 집에서는 비교할 ECG도 없었습니다.",
       },
       team: { ENG: 'Solo on the algorithm, working with the hardware and production teams', KOR: '알고리즘 단독, 하드웨어·생산팀과 협업' },
-      role: { ENG: 'AI/ML Engineer — sole developer of the heart-rate algorithm', KOR: 'AI/ML 엔지니어 — 심박 알고리즘 단독 개발' },
+      role: { ENG: 'AI/ML Engineer, sole developer of the heart-rate algorithm', KOR: 'AI/ML 엔지니어, 심박 알고리즘 단독 개발' },
       contribution: {
-        ENG: '100% — owned the full pipeline end to end: BCG signal processing, model design and training, and validation',
-        KOR: '100% — BCG 신호처리, 모델 설계·학습, 검증까지 전 과정 단독 수행',
+        ENG: '100%: owned the full pipeline end to end: BCG signal processing, model design and training, and validation',
+        KOR: '100%: BCG 신호처리, 모델 설계·학습, 검증까지 전 과정 단독 수행',
       },
       model: {
-        ENG: 'LSTM (TensorFlow / Keras) on FFT + wavelet-denoised BCG signals, with unsupervised IJK peak detection',
-        KOR: 'FFT·웨이블릿으로 노이즈 제거한 BCG 신호 기반 LSTM (TensorFlow / Keras) + 비지도 IJK 피크 검출',
+        ENG: 'LSTM (TensorFlow / Keras) · FFT · wavelet denoising · IJK peak detection · SHAP · Python / NumPy',
+        KOR: 'LSTM (TensorFlow / Keras) · FFT · 웨이블릿 노이즈 제거 · IJK 피크 검출 · SHAP · Python / NumPy',
       },
       results: {
-        ENG: '96% accuracy — 96% of heart-rate readings judged correct, where trembling and motion previously made readings unreliable',
-        KOR: '정확도 96% — 떨림·움직임으로 불안정하던 심박 측정을, 측정값의 96%가 정답으로 판정되는 수준까지 개선',
+        ENG: '96% accuracy on readings that trembling and motion had made unreliable',
+        KOR: '떨림·움직임으로 불안정하던 심박 측정을 정확도 96%까지 개선',
       },
       lessons: {
         ENG: "I fed 15 engineered cycle features to the LSTM as a 15-step sequence, but the order of those features means nothing, so an LSTM was the wrong fit. Next time: an MLP or GBM on the features, and an LSTM only over sequences of consecutive cycles",
-        KOR: "피처 15개를 길이 15짜리 순서 데이터처럼 LSTM에 넣었지만, 피처 나열 순서에는 의미가 없어 LSTM에 맞지 않는 구조였음 — 다음에는 피처는 MLP·GBM으로, LSTM은 연속된 심박 주기 시퀀스에 쓰겠음",
+        KOR: "피처 15개를 길이 15짜리 순서 데이터처럼 LSTM에 넣었지만, 피처 나열 순서에는 의미가 없어 LSTM에 맞지 않는 구조. 다음에는 피처는 MLP·GBM으로, LSTM은 연속된 심박 주기 시퀀스에 사용",
       },
       links: [],
     },
@@ -490,16 +490,16 @@ function App() {
         KOR: "신한베트남파이낸스 대출 심사역은 신청자의 신분증과 은행거래명세서를 눈으로 비교하고 숫자를 손으로 옮겨 적었습니다. 느리고 실수도 잦았습니다. 서류를 한 번 올리면 이유와 함께 1차 심사 결과가 나오고, 최종 판단은 심사역이 하도록 만드는 게 PoC 목표였습니다.",
       },
       team: {
-        ENG: "Korea Deep Learning — I ran the PoC as PM and sole developer, on top of the in-house IDP platform (PPASS)",
-        KOR: "한국딥러닝 — 사내 IDP 플랫폼(PPASS) 위에서 PM 겸 단독 개발로 수행",
+        ENG: "Korea Deep Learning: ran the PoC as PM and sole developer on top of the in-house IDP platform (PPASS)",
+        KOR: "한국딥러닝: 사내 IDP 플랫폼(PPASS) 위에서 PM 겸 단독 개발로 수행",
       },
       role: {
-        ENG: "PM and sole developer — client communication, requirements and design, classification and extraction, all validation logic, result UI, deployment and client documents",
-        KOR: "PM 겸 단독 개발 — 고객사 소통, 요구사항 정의·설계, 분류·추출, 검수 자동화 로직 전부, 결과 화면, 배포, 고객 제출 문서",
+        ENG: "PM and sole developer: client communication, requirements and design, classification and extraction, all validation logic, result UI, deployment and client documents",
+        KOR: "PM 겸 단독 개발: 고객사 소통, 요구사항 정의·설계, 분류·추출, 검수 자동화 로직 전부, 결과 화면, 배포, 고객 제출 문서",
       },
       contribution: {
-        ENG: "100% — from client communication and design to all Vietnam PoC code (backend 25 commits / +3,556 lines, frontend 43 commits / +2,890 lines) and every client deliverable",
-        KOR: "100% — 고객사 소통·설계부터 베트남 PoC 코드 전부(백엔드 25커밋·+3,556줄, 프론트엔드 43커밋·+2,890줄)와 고객 제출 문서 전부",
+        ENG: "100%: from client communication and design to all Vietnam PoC code (backend 25 commits / +3,556 lines, frontend 43 commits / +2,890 lines) and every client deliverable",
+        KOR: "100%: 고객사 소통·설계부터 베트남 PoC 코드 전부(백엔드 25커밋·+3,556줄, 프론트엔드 43커밋·+2,890줄)와 고객 제출 문서 전부",
       },
       model: {
         ENG: "27B VLM on vLLM · FastAPI · Next.js 16 / React 19 / TypeScript · MongoDB · SeaweedFS · Docker Compose · GitHub Actions (self-hosted)",
@@ -510,8 +510,8 @@ function App() {
         KOR: "참가 기업 중 상위 8개사 · 오픈이노베이션 리워드(VND 200,000,000) · PoC가 실제 사업으로 이어져 한국딥러닝 첫 해외 매출 · SoW 시나리오 5개를 자동 검증 7종으로 구현 · 고객 심사역 UAT 진행",
       },
       lessons: {
-        ENG: "'The VLM only reads; deterministic code decides' — every prompt rule got a code backstop, because prompts are a weak guarantee. Limits stated honestly: image-forgery forensics was scoped out and replaced with logical-consistency checks, and an automated accuracy report against the 92% target was not built (UAT was evaluated manually)",
-        KOR: "'VLM은 읽기만, 판단은 결정론적 코드가' — 프롬프트는 약한 보장이라 모든 프롬프트 규칙에 코드 백스톱을 둠. 한계: 이미지 위변조 포렌식은 범위에서 제외하고 논리 일관성 검증으로 대체했고, 92% 목표 대비 자동 정확도 리포트는 만들지 못함(UAT는 수동 평가)",
+        ENG: "The VLM only reads and code makes every decision, because a prompt alone is a weak guarantee. Limits: image-forgery forensics was scoped out in favor of logical-consistency checks, and no automated accuracy report against the 92% target was built (UAT was evaluated manually)",
+        KOR: "VLM은 읽기만 하고 판단은 전부 코드가 하도록 설계. 프롬프트만으로는 보장이 약하기 때문. 한계: 이미지 위변조 포렌식은 범위에서 빼고 논리 일관성 검증으로 대체했고, 92% 목표 대비 자동 정확도 리포트는 없음(UAT는 수동 평가)",
       },
       links: [],
     },
@@ -520,8 +520,8 @@ function App() {
       role: { ENG: '', KOR: '' },
       contribution: { ENG: '', KOR: '' },
       results: {
-        ENG: '1st in the preliminaries; Excellence Prize (₩750,000) in the finals — the 3rd-highest award, given to 2 teams',
-        KOR: '예선 1위, 본선 우수상(상금 75만 원) — 대상·최우수상 다음 등급, 2팀 수상',
+        ENG: '1st in the preliminaries; Excellence Prize (₩750,000) in the finals, the 3rd-highest award, given to 2 teams',
+        KOR: '예선 1위, 본선 우수상(상금 75만 원, 대상·최우수상 다음 등급, 2팀 수상)',
       },
       links: [],
     },
@@ -549,17 +549,17 @@ function App() {
     daconCompetitions: {
       team: { ENG: 'Toss: team of 4', KOR: '토스: 4인 팀' },
       role: {
-        ENG: 'Toss: owned the full pipeline — feature preprocessing, model training and inference',
+        ENG: 'Toss: owned the full pipeline (feature preprocessing, model training and inference)',
         KOR: '토스: 피처 전처리 → 모델 학습 → 추론 전 과정 담당',
       },
       contribution: { ENG: '', KOR: '' },
       model: {
-        ENG: 'Toss CTR: ensemble of three gradient-boosting models — XGBoost, LightGBM, CatBoost',
+        ENG: 'Toss CTR: an XGBoost + LightGBM + CatBoost ensemble',
         KOR: '토스 CTR: 부스팅 모델 3종(XGBoost, LightGBM, CatBoost) 앙상블',
       },
       results: {
         ENG: 'Toss NEXT ML Challenge: finished 30th of 2,206 participants, earning a résumé-screening pass for Toss hiring',
-        KOR: '토스 NEXT ML Challenge 참가자 2,206명 중 최종 30위 — 토스 채용 서류전형 면제',
+        KOR: '토스 NEXT ML Challenge 참가자 2,206명 중 최종 30위, 토스 채용 서류전형 면제',
       },
       links: [],
     },
@@ -647,12 +647,12 @@ function App() {
 
   // ===== Projects – Korea Deep Learning =====
   const kdl_planning_ENG = [
-    "Automated LG Electronics' manual flow — product-planning review decks (PPT) → master spec sheet (Excel) → product roadmap — with LLM/VLM extraction, rule-based mapping and a human-in-the-loop review console used by the client's planners.",
+    "Automated LG Electronics' manual flow from product-planning review decks (PPT) to the master spec sheet (Excel) and product roadmap, with LLM/VLM extraction, rule-based mapping and a human-in-the-loop review console used by the client's planners.",
     "Merged values from several sources by priority (deck body > in-deck spec table > embedded Excel), flagging conflicts with per-source evidence; fixed multi-model documents so 1,225 of 1,232 cells fill automatically.",
     "Wrote into large Excel files by patching sheet XML directly, keeping original formatting and avoiding the bloat openpyxl caused (a 1.5MB file growing past 1GB).",
     "Generated product roadmaps by fixing lanes from PPT coordinates and reading only quarters with a VLM, with rule-based date normalization and carry-over of schedules from the previous roadmap.",
     "Evaluated FP8 vs bf16 on a 28-document set with a re-written, unbiased answer key: same accuracy, 40% less memory, 19% faster.",
-    "Shipped an offline installer (install / update / rollback / backup) for an air-gapped server without sudo, ran the demo server, and delivered 30+ client requirements tracked by ID and priority — including a same-day IP-restriction security request.",
+    "Shipped an offline installer (install / update / rollback / backup) for an air-gapped server without sudo, ran the demo server, and delivered 30+ client requirements tracked by ID and priority, including a same-day IP-restriction security request.",
   ];
   const kdl_planning_KOR = [
     "LG전자 상품기획팀이 수작업으로 하던 '검토의뢰서(PPT) → 마스터 스펙시트(Excel) → 제품 로드맵' 과정을 LLM·VLM 추출 + 규칙 매핑 + 사람 검수(HITL) 콘솔로 자동화, 고객 실무자가 실제 사용.",
@@ -676,7 +676,7 @@ function App() {
     "자동차 부품 제조사 서연이화의 20년 치 품질·공정 문서(엑셀·PPT·PDF 수천 건, 국·영·중 혼재)를 DB 적재용 데이터로 뽑는 추출 API 개발, 문서 7종 지원, 고객 폐쇄망 GPU 서버에 납품.",
     "결정론 우선: 엑셀 계열 5종은 LLM 없이 셀 테두리·병합·서식으로 구조를 복원해 실행마다 같은 결과, LLM은 자유 양식 대책서와 그림에만 사용.",
     "고객 검수 대장 정확도를 그대로 재현하는 채점기와 LLM·파서 응답 캐시로 '코드 효과'와 '모델 잡음'을 분리, 정답 칸이 하나라도 깨지면 반영하지 않음.",
-    "OLE 바이너리를 직접 해석하고 아이콘 그림 속 글자를 판독해 첨부 파일명 244 → 1,182개 확보.",
+    "OLE 바이너리를 직접 해석하고 아이콘 그림 속 글자를 판독해 첨부 파일명 244 → 1,182개 복원.",
     "작은 그림 OCR은 두 모델의 판독 일치도(3글자 묶음 50% 이상)로만 채택해 지어낸 표(0~0.16)와 진짜 표(0.57~1.0)를 분리.",
     "검수 UI의 원문 위치 표시를 모델 질의(15~41%)에서 낱말 좌표 규칙 매칭으로 바꿔 표 칸 97.1% 매칭.",
   ];
@@ -686,7 +686,7 @@ function App() {
     "Built an auto-labeling pipeline from client ROI boxes and ground truth (box-center-in-ROI, then exact → space-free substring matching): about 80k handwriting labels without manual review.",
     "Built a 15,808-sample handwriting goldenset from real client forms with every label re-checked by hand: samples without valid ground truth (printed form labels) excluded, fully struck-out text excluded, and each sample tagged by difficulty (boundary: ambiguous like 이/01/OI; hard: genuinely bad handwriting), noise, strike-through and text type/length so errors can be sliced.",
     "Analyzed errors by confusion pair (0/ㅇ/O, ㄷ/ㄹ, l/ㅣ/1) and jamo level; found and fixed a metric bug that undercounted final-consonant accuracy.",
-    "Generated synthetic handwriting — MX-Font with 38 styles and ascender/descender-aware word composition, then Gemini image generation for names, addresses and hard cases — and measured its real effect with ablations and gain/drop case analysis.",
+    "Generated synthetic handwriting with MX-Font (38 styles, ascender/descender-aware word composition) and Gemini image generation for names, addresses and hard cases, then measured its real effect with ablations and gain/drop case analysis.",
     "Fine-tuned PARSeq on a curated 11.6M-sample mix (6.15M handwriting / 5.45M printed): best on 13 of 14 test datasets, and trained the weights deployed to a Hyundai Capital project.",
     "Built a handwriting/printed classifier on the frozen PARSeq encoder with attention pooling (85% accuracy).",
   ];
@@ -703,7 +703,7 @@ function App() {
   const kdl_gauge_ENG = [
     "Built a real-time two-stage pipeline that reads analog gauges from factory CCTV (1920×1080): YOLO26x detects the gauge (960 px), the gauge is cropped to about 60×60 px, and YOLO26x-OBB detects the needle's position and rotation (128 px).",
     "Instead of searching the full FHD frame for a thin needle, cropped the gauge first and found the needle on a small input, securing both accuracy and inference speed.",
-    "Designed and ran a semi-automatic labeling loop — a small hand-labeled set in X-AnyLabeling → first YOLO model → auto-labeling and review → final training — to build 10,834 gauge and 9,594 needle images alone.",
+    "Designed and ran a semi-automatic labeling loop (a small hand-labeled set in X-AnyLabeling → first YOLO model → auto-labeling and review → final training) to build 10,834 gauge and 9,594 needle images alone.",
     "Mixed about 7,000 on-site CCTV frames with a public gauge dataset for variety in gauge types, and built the needle set from Stage 1 crops so training matched the real inference input.",
     "Gauge detection reached mAP50-95 0.992 (precision and recall 0.987), trained with cosine LR, AMP, early stopping and resumable checkpoints.",
     "Compared standard boxes and oriented boxes (OBB) for the needle under identical settings with ±180° rotation augmentation: OBB raised mAP50-95 from 0.930 to 0.949 and outputs the needle angle directly, so it was adopted.",
@@ -711,9 +711,9 @@ function App() {
   ];
   const kdl_gauge_KOR = [
     "제조 현장 CCTV(1920×1080)에서 아날로그 계기판을 실시간으로 판독하는 2단계 파이프라인 구축: YOLO26x로 계기판 검출(960px) → 약 60×60px로 잘라 YOLO26x-OBB로 바늘의 위치·회전 방향 검출(128px).",
-    "FHD 프레임 전체에서 가는 바늘을 바로 찾는 대신, 계기판만 잘라 작은 입력에서 바늘을 찾게 해 정확도와 추론 속도를 함께 확보.",
+    "FHD 프레임 전체에서 가는 바늘을 바로 찾는 대신, 계기판만 잘라 작은 입력에서 바늘을 찾게 해 정확도와 추론 속도를 모두 개선.",
     "반자동 라벨링 루프 설계·운영: X-AnyLabeling 소량 수동 라벨 → 1차 YOLO 학습 → 오토라벨링·검수 → 최종 학습으로 계기판 10,834장·바늘 9,594장 데이터셋을 1인 구축.",
-    "현장 CCTV 프레임 약 7,000장에 공개 계기판 데이터셋을 섞어 계기판 형태의 다양성을 확보하고, 바늘 데이터는 Stage 1 결과로 잘라낸 이미지로 만들어 실제 추론과 같은 입력 분포로 학습.",
+    "현장 CCTV 프레임 약 7,000장에 공개 계기판 데이터셋을 섞어 계기판 형태를 다양하게 늘리고, 바늘 데이터는 Stage 1 결과로 잘라낸 이미지로 만들어 실제 추론과 같은 입력 분포로 학습.",
     "계기판 검출 mAP50-95 0.992 (Precision·Recall 0.987), cosine LR·AMP·early stopping·체크포인트 재개 학습 적용.",
     "바늘 검출을 같은 조건에서 일반 박스와 회전 박스(OBB)로 비교(회전 ±180° 증강): OBB가 mAP50-95 0.930 → 0.949로 높고 판독에 쓸 각도를 직접 출력해 최종 채택.",
     "Docker Compose로 GPU를 할당한 API 서버 배포: /health 헬스체크, restart: unless-stopped 자동 복구, 포트·컨테이너명 env 분리로 환경별 배포.",
@@ -752,22 +752,22 @@ function App() {
 
   const work_app_title = lang === 'ENG' ? "App Developer, CareSix Co., LTD" : "앱 개발자, 케어식스";
   const work_app_details_ENG = [
-    'Developed a production-grade application in Kotlin for the Sense1 Vet model, actively used in the device manufacturing and deployment process. The app automated mapping of NFC tags, QR codes, and barcodes into a structured CSV format, ensuring traceability and quality control.',
-    'Built a Bluetooth-enabled app (Cotons AI) in Flutter for capturing BCG signals, 6-axis sensor data, and temperature readings.',
+    'Built a Kotlin app used on the Sense1 Vet production line: it maps each device\'s NFC tag, QR code and barcode into a CSV so every unit can be traced.',
+    'Built Cotons AI, a Flutter Bluetooth app that records BCG, 6-axis motion and temperature data.',
   ];
   const work_app_details_KOR = [
-    'Kotlin으로 Sense1 Vet 양산/배포 공정에 실제 사용되는 프로덕션급 앱을 개발. NFC/QR/바코드 매핑을 자동화하여 CSV로 내보내고, 추적 가능성과 품질 관리를 보장.',
-    'Flutter(블루투스 연동)로 BCG/6축 센서/온도 데이터 수집 앱(Cotons AI) 개발.',
+    'Sense1 Vet 생산 라인에서 쓰는 Kotlin 앱 개발: 기기별 NFC 태그·QR·바코드를 CSV로 매핑해 제품마다 이력 추적.',
+    'BCG·6축 센서·체온 데이터를 블루투스로 수집하는 Flutter 앱(Cotons AI) 개발.',
   ];
 
   const work_math_title = lang === 'ENG' ? "Mathematician, CareSix Co., LTD" : "수학 리서처, 케어식스";
   const work_math_details_ENG = [
-    'Implemented a Fourier transform in Python to filter noise from BCG measurements, improving signal clarity.',
-    'Conducted statistical analysis using Python and NumPy to validate algorithm effectiveness.',
+    'Filtered noise from BCG measurements with a Fourier transform in Python.',
+    'Checked whether algorithm changes actually helped with statistical tests in Python and NumPy.',
   ];
   const work_math_details_KOR = [
-    'Python 기반 푸리에 변환으로 BCG 노이즈 제거, 신호 명료도 향상.',
-    'Python/NumPy 통계 분석으로 알고리즘 효과 검증.',
+    'Python 푸리에 변환으로 BCG 측정 노이즈 제거.',
+    'Python·NumPy 통계 분석으로 알고리즘 개선 효과 검증.',
   ];
 
   // Company info
@@ -791,14 +791,12 @@ function App() {
     </div>
   );
   const jAgri_ENG = [
-    'Represented HRG as Lead Manager, showcasing the 2025 CES Innovation Awards-winning project: the first-ever wearable cow health monitor.',
-    'Engaged with industry leaders, shared insights, and connected with experts in agricultural technology.',
-    'Demonstrated wearable livestock health-monitoring technology to industry visitors.',
+    'Attended for HRG as Lead Manager and demonstrated a wearable cattle health monitor, a CES 2025 Innovation Awards winner, to visitors.',
+    'Talked with agtech companies and experts about livestock health monitoring.',
   ];
   const jAgri_KOR = [
-    'HRG 리드 매니저로 참가, 2025 CES 혁신상 수상 프로젝트(세계 최초 착용형 소 헬스 모니터) 전시.',
-    '애그테크 업계 리더들과 네트워킹 및 기술 인사이트 공유.',
-    '착용형 가축 헬스 모니터링 기술을 업계 방문객에게 시연.',
+    'HRG 리드 매니저로 참가해 CES 2025 혁신상 수상작인 착용형 소 건강 모니터를 방문객에게 시연.',
+    '애그테크 기업·전문가와 가축 건강 모니터링 기술 교류.',
   ];
 
   const fava_media = (
@@ -808,14 +806,12 @@ function App() {
     </div>
   );
   const fava_ENG = [
-    'Represented CareSix, connecting with veterinary professionals and industry innovators across Asia.',
-    'Showcased award-winning devices, including the Sense1 Pro dog wearable and the Sense1 Guardian, both receiving positive feedback from doctors and professionals.',
-    'Engaged in discussions about advancing veterinary technology and animal healthcare solutions.',
+    'Ran the CareSix booth and demonstrated the Sense1 Pro dog wearable and the Sense1 Guardian to vets from across Asia.',
+    'Both devices drew positive feedback from the vets who tried them.',
   ];
   const fava_KOR = [
-    'CareSix 대표로 참가, 아시아 수의사/업계 혁신가들과 교류.',
-    'Sense1 Pro/Guardian 등 수상 디바이스 전시, 의료진으로부터 긍정적 피드백 확보.',
-    '수의 테크와 동물 헬스케어 솔루션 발전에 대한 논의 참여.',
+    '케어식스 부스에서 Sense1 Pro(반려견 웨어러블)와 Sense1 Guardian을 아시아 각국 수의사에게 시연.',
+    '두 제품 모두 체험한 수의사들에게 긍정적인 반응.',
   ];
 
   const ces_media = (
@@ -827,13 +823,11 @@ function App() {
   );
   const ces_ENG = [
     'Exhibited at CES 2025 by invitation (Venetian Suite 29-225).',
-    'Showcased the latest advances in veterinary technology and wearable animal-health monitoring devices.',
-    'Networked with global tech leaders and innovators in animal healthcare.',
+    'Demonstrated CareSix\'s wearable animal-health monitors to visitors.',
   ];
   const ces_KOR = [
-    'CES 2025 Venetian Suite 29-225 전시 초청.',
-    '수의 테크/웨어러블 헬스 모니터링 최신 기술 시연.',
-    '글로벌 테크 리더·혁신가들과 동물 헬스케어 분야 네트워킹.',
+    'CES 2025 초청 전시 (Venetian Suite 29-225).',
+    '케어식스의 동물 헬스 웨어러블을 방문객에게 시연.',
   ];
 
   // --- Hackathon section (updated) ---
@@ -848,17 +842,17 @@ function App() {
   );
 
   const hackathon_ENG = [
-    "K-Digital Training AI Hackathon – built a reckless-driving detection system (dashcam video).",
-    "Trained a customized YOLOv8 (Ultralytics) for vehicle detection; a ViT classified driving behaviors from consecutive frames, and OCR read license plates.",
-    "Behaviors detected: aggressive cut-in (unsafe lane insertion), hard braking/deceleration, overspeeding, etc.",
-    "Mobile app flow: plate number, location, and offense type are auto-filled from inference; user adds details and submits a report.",
+    "Team project: a system that turns dashcam video into a ready-to-file reckless-driving report.",
+    "My part: trained the vehicle detector (customized YOLOv8, Ultralytics) and preprocessed the team's dataset.",
+    "The system also used a ViT to classify driving behavior from consecutive frames (cut-ins, hard braking, speeding) and OCR to read plates.",
+    "The app fills in the plate number, location and violation type; the user adds details and files the report.",
   ];
 
   const hackathon_KOR = [
-    "K-디지털 트레이닝 AI 해커톤 – 대시캠 영상 기반 ‘난폭운전 감지 시스템’ 개발.",
-    "커스텀 YOLOv8(Ultralytics)로 차량을 인식하고, ViT로 연속 프레임의 난폭운전 행동을 분류, OCR로 번호판 인식.",
-    "탐지 항목: 무리한 끼어들기, 급정지/급제동, 과속 등 난폭운전 유형.",
-    "앱 연동: 차량번호·위치·위반유형을 자동 추출해 포맷에 채워주고, 사용자가 상세 입력 후 신고 제출 가능.",
+    "팀 프로젝트: 블랙박스 영상으로 난폭운전 신고서를 자동으로 채워 주는 시스템.",
+    "담당: 차량 검출 모델(커스텀 YOLOv8, Ultralytics) 학습과 팀 데이터셋 전처리.",
+    "시스템은 ViT로 연속 프레임의 운전 행동(끼어들기, 급제동, 과속)을 분류하고, OCR로 번호판을 인식.",
+    "앱이 차량번호·위치·위반 유형을 채워 주면 사용자가 내용을 보태 신고.",
   ];
 
   // ===== Projects – Main =====
@@ -875,7 +869,7 @@ function App() {
     "TensorFlow/Keras LSTM으로 BCG 신호 기반 반려견 심박 추정 알고리즘을 개발, 전 과정 단독 수행.",
     "FFT·웨이블릿 분해로 원시 BCG 노이즈를 제거하고, IJK 피크의 주기성을 수학적으로 모델링해 도메인 피처로 반영.",
     "비지도 IJK 피크 검출로 ECG 기준 신호 의존도를 줄이고, Python·NumPy 통계 분석으로 개선 효과 검증.",
-    "떨림·움직임으로 불안정하던 측정을 정확도 96%까지 개선, 하드웨어·생산팀과 신호 품질 최적화.",
+    "떨림·움직임으로 불안정하던 측정을 정확도 96%까지 개선, 하드웨어·생산팀과 신호 품질 개선.",
   ];
 
 
@@ -884,7 +878,7 @@ function App() {
   const law_ENG = [
     "Built a Korean legal AI assistant combining Llama-3-8B with RAG over statutes and precedents from the National Law Information System.",
     "Designed the retrieval pipeline: legal-text cleaning and chunking, bge-m3 embeddings (1024-d), FAISS / ChromaDB search; served with FastAPI on AWS EC2 and Docker.",
-    "Orchestrated retrieval, reasoning and drafting with LangChain agents — tool routing and session memory that reuses verified citations.",
+    "Orchestrated retrieval, reasoning and drafting with LangChain agents, using tool routing and session memory that reuses verified citations.",
     "Iterative RAG with CoT, role-based (plaintiff / defendant / bench) and ReAct prompting, ending in conclusions with explicit citations.",
     "Evaluated responses qualitatively for factual consistency and legal validity.",
   ];
@@ -892,7 +886,7 @@ function App() {
   const law_KOR = [
     "국가법령정보시스템의 법령·판례를 기반으로 Llama-3-8B와 RAG를 결합한 한국어 법률 AI 어시스턴트 개발.",
     "검색 파이프라인 설계: 법률 텍스트 정제·청킹, bge-m3 임베딩(1024차원), FAISS·ChromaDB 검색, FastAPI 서빙 및 AWS EC2·Docker 배포.",
-    "LangChain 에이전트로 검색·추론·문서 작성을 조율 — 툴 라우팅, 검증된 인용을 재사용하는 세션 메모리.",
+    "LangChain 에이전트로 검색·추론·문서 작성을 조율하고, 툴 라우팅과 검증된 인용을 재사용하는 세션 메모리 구현.",
     "CoT·역할 기반(원고·피고·재판부)·ReAct 프롬프팅의 반복 RAG로 출처를 명시한 결론 도출.",
     "사실 일치성·법적 타당성 관점에서 응답을 정성 평가.",
   ];
@@ -928,14 +922,12 @@ function App() {
     </div>
   );
   const royal_ENG = [
-    'Developed a digital version of the ancient board game "Royal Game of Ur" as part of a major university project.',
-    'Implemented advanced game logic, AI opponents, and an interactive user interface to simulate strategic gameplay.',
-    'Focused on enhancing user experience through a well-designed UI and optimized game mechanics.',
+    'Built a digital version of the ancient board game "Royal Game of Ur" for a university project.',
+    'Implemented the game rules, an AI opponent and an interactive UI.',
   ];
   const royal_KOR = [
-    '고대 보드게임 “Royal Game of Ur”의 디지털 버전 개발(대학 메이저 프로젝트).',
-    '고급 게임 로직/AI 상대/인터랙티브 UI를 구현해 전략적 플레이 시뮬레이션.',
-    'UI/게임 메커닉스 최적화로 사용자 경험 강화.',
+    '고대 보드게임 “Royal Game of Ur”의 디지털 버전 개발 (대학 전공 프로젝트).',
+    '게임 규칙, AI 상대, 인터랙티브 UI 구현.',
   ];
 
   const sudoku_media = (
@@ -948,20 +940,20 @@ function App() {
     </div>
   );
   const sudoku_ENG = [
-    'Developed a collaborative Sudoku puzzle platform that allows users to create, share, and play puzzles.',
-    'Designed and built the front-end with React.js, leveraging its flexibility, performance, and rich ecosystem. Implemented lifecycle methods to resolve rendering issues.',
-    'Implemented a Node.js and Express.js backend, prioritizing speed, scalability, and security. Managed environment variables for secure authentication and database integration.',
-    'Utilized MariaDB as the relational database, implementing primary and foreign keys for structured data relationships and efficient querying.',
-    'Followed Agile development (Scrum methodology), utilizing sprints to ensure continuous progress and iterative development.',
-    'Engineered advanced Sudoku generation and validation algorithms, supporting multiple difficulty levels for an engaging user experience.',
+    'Built a collaborative Sudoku platform where users create, share and play puzzles.',
+    'Built the React front end and fixed rendering issues with lifecycle methods.',
+    'Built the Node.js / Express backend, keeping authentication and database settings in environment variables.',
+    'Modeled the data in MariaDB with primary and foreign keys.',
+    'Worked in Scrum sprints.',
+    'Wrote Sudoku generation and validation algorithms with several difficulty levels.',
   ];
   const sudoku_KOR = [
-    '사용자들이 스도쿠 퍼즐을 제작/공유/플레이할 수 있는 협업 플랫폼 개발.',
-    'React.js 프론트엔드 설계·구현(성능/생태계 활용), 라이프사이클로 렌더링 이슈 해결.',
-    'Node/Express 백엔드로 속도·확장성·보안 확보, 환경변수로 인증/DB 연동 관리.',
-    'MariaDB(관계형)로 PK/FK 모델링·효율적 질의 설계.',
-    '애자일(Scrum) 기반 스프린트로 반복적 개발/개선.',
-    '난이도 조절 가능한 생성/검증 알고리즘으로 UX 강화.',
+    '사용자가 스도쿠 퍼즐을 만들고 공유하고 풀 수 있는 협업 플랫폼 개발.',
+    'React 프론트엔드 구현, 라이프사이클 메서드로 렌더링 문제 해결.',
+    'Node.js·Express 백엔드 구현, 인증·DB 설정은 환경변수로 관리.',
+    'MariaDB에 PK·FK로 데이터 모델링.',
+    'Scrum 스프린트 단위로 개발.',
+    '난이도별 스도쿠 생성·검증 알고리즘 구현.',
   ];
 
   const aura_media = (
@@ -976,14 +968,14 @@ function App() {
     </div>
   );
   const aura_ENG = [
-    'Developed a web-based dog recognition platform using TypeScript with React, integrating an image-recognition algorithm developed by Jeju National University for accurate dog identification.',
-    'Designed and implemented a veterinary hospital management system, enabling efficient patient tracking and cage record management for veterinarians.',
-    'Integrated AWS RDS (Relational Database Service) for secure, scalable data management, ensuring seamless data retrieval and storage for both the dog recognition platform and the hospital management system.',
+    'Built a web dog-recognition platform in React and TypeScript, integrating an image-recognition algorithm from Jeju National University.',
+    'Built a veterinary hospital management system for tracking patients and cage records.',
+    'Used AWS RDS as the shared database for both the recognition platform and the hospital system.',
   ];
   const aura_KOR = [
-    'TypeScript/React 기반 반려견 인식 웹 플랫폼 개발(제주대 알고리즘 연동으로 정확도 강화).',
-    '수의사 대상 병원 관리 시스템 설계/구현(환자 추적, 케이지 기록 관리).',
-    'AWS RDS로 보안/확장성 보장, 플랫폼·병원 시스템 공용 데이터 파이프라인 구축.',
+    'React·TypeScript 반려견 인식 웹 플랫폼 개발, 제주대 이미지 인식 알고리즘 연동.',
+    '환자 추적·케이지 기록용 동물병원 관리 시스템 개발.',
+    '인식 플랫폼과 병원 시스템이 함께 쓰는 DB를 AWS RDS로 구성.',
   ];
 
   // ===== Achievements =====
@@ -998,7 +990,7 @@ function App() {
   );
   const ach_dacon_ENG = [
     "Competed across tabular, time-series, molecular (drug discovery) and LLM-based problems.",
-    "Toss NEXT ML Challenge – ad click-through-rate (CTR) prediction on tabular Parquet data (2,206 participants): in a team of 4, built the whole pipeline myself — feature preprocessing, an XGBoost + LightGBM + CatBoost ensemble, and inference — finishing 30th and earning a résumé-screening pass for Toss hiring.",
+    "Toss NEXT ML Challenge – ad click-through-rate (CTR) prediction on tabular Parquet data (2,206 participants): in a team of 4, built the whole pipeline myself (feature preprocessing, an XGBoost + LightGBM + CatBoost ensemble and inference), finishing 30th and earning a résumé-screening pass for Toss hiring.",
     "Boost up AI 2025 – drug discovery (1,289 participants): 37th, solo.",
     "2025 Power Consumption Forecasting (1,592 participants): 63rd, team of 3.",
     "Jump AI 2025 – drug discovery (1,126 participants): 65th, team of 4.",
@@ -1007,7 +999,7 @@ function App() {
 
   const ach_dacon_KOR = [
     "정형·시계열·분자 구조(신약)·LLM 기반 문제 등 다양한 유형의 대회에 참가.",
-    "토스 NEXT ML Challenge – Parquet 형식 정형 데이터로 광고 클릭 예측(CTR) 모델 개발(참가자 2,206명): 4인 팀에서 피처 전처리, XGBoost·LightGBM·CatBoost 앙상블 학습, 추론까지 전 과정을 직접 맡아 최종 30위 — 토스 채용 서류전형 면제.",
+    "토스 NEXT ML Challenge – Parquet 형식 정형 데이터로 광고 클릭 예측(CTR) 모델 개발(참가자 2,206명): 4인 팀에서 피처 전처리, XGBoost·LightGBM·CatBoost 앙상블 학습, 추론까지 전 과정을 직접 맡아 최종 30위, 토스 채용 서류전형 면제.",
     "Boost up AI 2025 신약 개발 경진대회(참가자 1,289명): 37위, 개인 참가.",
     "2025 전력사용량 예측 AI 경진대회(참가자 1,592명): 63위, 3인 팀.",
     "Jump AI 2025 제3회 AI 신약개발 경진대회(참가자 1,126명): 65위, 4인 팀.",
@@ -1027,7 +1019,7 @@ function App() {
     "Top 8 of the participating companies and Open Innovation Reward (VND 200,000,000) for the Shinhan Vietnam Finance loan-document PoC I developed; the PoC led to Korea Deep Learning's first overseas revenue.",
   ];
   const shinhan_KOR = [
-    "직접 개발한 신한베트남파이낸스 대출 서류 PoC로 참가 기업 중 상위 8개사 선정, 오픈이노베이션 리워드(VND 200,000,000) 수상 — PoC가 한국딥러닝 첫 해외 매출로 이어짐.",
+    "직접 개발한 신한베트남파이낸스 대출 서류 PoC로 참가 기업 중 상위 8개사 선정, 오픈이노베이션 리워드(VND 200,000,000) 수상. PoC가 한국딥러닝 첫 해외 매출로 이어짐.",
   ];
   const shinhan_award_media = (
     <div key="shinhan-award-image" style={{ padding:'10px 0' }}>
@@ -1038,28 +1030,28 @@ function App() {
   const shinhanPj_ENG = [
     "Ran the PoC as PM and sole developer: led client communication with SVFC from kickoff (06.09) through the SoW (06.30), integration testing, UAT with the client's underwriters and the final assessment (08.24), and owned the system design.",
     "Built SVFC's loan-document screening system: upload bank statements and CCCD ID cards (multiple files merged into one page sequence) → page classification → schema-based field extraction → 7 automated checks, returning pass / warn / fail with the reason and the exact fields to the underwriter.",
-    "Turned the SoW and client Q&A into implementable checks — when the client asked for image-forgery forensics (font, color, compositing traces), scoped it out and replaced it with logical-consistency checks (front-back MRZ match, ID-number scheme), stating the limit in the user guide.",
+    "Turned the SoW and client Q&A into checks that could actually be built. When the client asked for image-forgery forensics (font, color, compositing traces), I scoped it out, replaced it with logical-consistency checks (front-back MRZ match, ID-number scheme) and stated the limit in the user guide.",
     "Bank statements: balance reconciliation (opening + credits − debits = closing, ±1, sums recomputed from transaction rows), reference-number ↔ date logic (YYMMDD, Julian YYDDD, monotonic increase) to catch inserted rows, and monthly salary / bonus income with the matching evidence.",
     "ID cards: CCCD front ↔ back MRZ cross-check with ICAO 9303 check digits, Vietnamese ID-number scheme (birth year, century-gender code) and legal renewal ages (14/25/40/60), plus name match between statement holder and ID, ignoring Vietnamese tones.",
-    "'The VLM only reads; code decides': every prompt rule has a deterministic backstop (totals recomputed, closing balance from the last row, FT/SAL/IB reference numbers by regex, forward-filled dates), and corrected values are written back so the UI, JSON export and validation cards always match.",
+    "Kept every decision in code, not the VLM: each prompt rule has a deterministic backstop (totals recomputed, closing balance from the last row, FT/SAL/IB reference numbers by regex, forward-filled dates), and corrected values are written back so the UI, JSON export and validation cards always match.",
     "Handled Vietnamese locale details: VND thousands separators vs decimals, tone-insensitive matching, OCR-broken 'lương', and telling the bonus word 'thưởng' from the common name 'Thưởng'.",
     "Built the result UI (Next.js 16 / React 19): 7 validation cards, detailed extraction table, JSON download, server-paginated history that reopens past runs with the original file, 300 dpi preview, and a Korean / English / Vietnamese UI (180 keys).",
     "Deployed the demo with Docker Compose via a self-hosted GitHub Actions runner on NCP, and wrote the client deliverables: validation rulebook, solution architecture & hardware sizing for SVFC's on-prem server, and a 12-page English user guide.",
     "Secured quality with 24 unit tests and a 200-case synthetic test set across 14 Vietnamese bank templates, and shipped fixes from the client's UAT feedback.",
-    "Placed in the top 8 at Global Shinhan InnoBoost 2026, demonstrated DEEP Agent live at the Demo Day booth and won the Open Innovation Reward (VND 200,000,000); the PoC turned into an actual business deal — Korea Deep Learning's first overseas revenue.",
+    "Placed in the top 8 at Global Shinhan InnoBoost 2026, demonstrated DEEP Agent live at the Demo Day booth and won the Open Innovation Reward (VND 200,000,000); the PoC turned into an actual business deal and Korea Deep Learning's first overseas revenue.",
   ];
   const shinhanPj_KOR = [
     "PM 겸 단독 개발로 PoC 수행: 킥오프(06.09) → SoW 확정(06.30) → 통합 테스트 → 고객 심사역 UAT → 최종 평가(08.24)까지 SVFC와의 소통을 직접 맡고 시스템 설계 전부 담당.",
     "SVFC 대출 서류 스크리닝 시스템 구축: 은행거래명세서·시민증(CCCD) 업로드(여러 파일을 하나의 페이지 시퀀스로 통합) → 페이지 분류 → 스키마 기반 필드 추출 → 자동 검증 7종 → 심사역에게 pass/warn/fail과 사유·문제 필드 제공.",
-    "SoW와 고객 Q&A를 구현 가능한 검증 항목으로 정리 — 고객이 요구한 이미지 위변조 포렌식(폰트·색·합성 흔적)은 범위에서 제외하고 논리 일관성 검증(앞뒷면 MRZ 대조, ID 번호 체계)으로 대체, 한계는 사용자 가이드에 명시.",
+    "SoW와 고객 Q&A를 구현 가능한 검증 항목으로 정리. 고객이 요구한 이미지 위변조 포렌식(폰트·색·합성 흔적)은 범위에서 제외하고 논리 일관성 검증(앞뒷면 MRZ 대조, ID 번호 체계)으로 대체, 한계는 사용자 가이드에 명시.",
     "은행명세서: 잔액 정합성(기초 + 입금 − 출금 = 기말, 허용 오차 ±1, 합계는 거래행에서 재계산), 참조번호 ↔ 거래일 논리 검증(YYMMDD·Julian YYDDD·단조 증가)으로 끼워 넣은 행 탐지, 급여·상여 성격 입금만 월별 합산하고 매칭 근거 반환.",
     "신분증: CCCD 앞면 ↔ 뒷면 MRZ 대조와 ICAO 9303 체크디지트, 베트남 ID 번호 체계(출생연도·세기·성별 코드)와 법정 갱신 연령(14/25/40/60세) 검증, 명세서 예금주와 신분증 이름을 성조 무시로 대조.",
-    "'VLM은 읽기만, 판단은 코드가': 모든 프롬프트 규칙에 결정론적 백스톱(합계 재계산, 마지막 거래행 기말잔액, FT/SAL/IB 참조번호 정규식 추출, 거래일 forward-fill)을 두고, 보정값을 원본 필드에 다시 써 UI·JSON·검증 카드가 항상 같은 값을 보이게 함.",
+    "판단은 VLM이 아닌 코드가 하도록 모든 프롬프트 규칙에 결정론적 백스톱(합계 재계산, 마지막 거래행 기말잔액, FT/SAL/IB 참조번호 정규식 추출, 거래일 forward-fill)을 두고, 보정값을 원본 필드에 다시 써 UI·JSON·검증 카드가 항상 같은 값을 보이게 함.",
     "베트남 로케일 처리: VND 천단위 구분자와 소수점 구분, 성조 무시 비교, OCR로 깨진 'lương', 상여 'thưởng'과 흔한 이름 'Thưởng' 구분.",
     "결과 화면 개발(Next.js 16 / React 19): 검증 카드 7종, 상세 추출 표, JSON 다운로드, 서버 페이지네이션 히스토리(원본과 함께 과거 결과 재오픈), 300dpi 프리뷰, 한·영·베 3개 국어 UI(180키).",
     "Docker Compose + NCP self-hosted GitHub Actions 러너로 데모 배포, 고객 제출 문서 작성: 검증 로직 룰북, SVFC 온프레미스 서버 기준 솔루션 아키텍처·HW 사이징, 영문 사용자 가이드 12쪽.",
-    "단위 테스트 24건과 베트남 은행 템플릿 14종 × 합성 CCCD 200건 테스트셋으로 품질 확보, 고객 UAT 피드백을 반영해 수정.",
-    "글로벌 신한 이노부스트 2026 상위 8개사 선정, 데모데이 부스에서 DEEP Agent 실시간 시연, 오픈이노베이션 리워드(VND 200,000,000) 수상 — PoC가 실제 사업으로 이어져 한국딥러닝 첫 해외 매출 달성.",
+    "단위 테스트 24건과 베트남 은행 템플릿 14종 × 합성 CCCD 200건 테스트셋으로 품질 검증, 고객 UAT 피드백을 반영해 수정.",
+    "글로벌 신한 이노부스트 2026 상위 8개사 선정, 데모데이 부스에서 DEEP Agent 실시간 시연, 오픈이노베이션 리워드(VND 200,000,000) 수상. PoC가 실제 사업으로 이어져 한국딥러닝 첫 해외 매출 달성.",
   ];
 
   const quantum_ENG = [
@@ -1202,8 +1194,8 @@ function App() {
       media: [{ src: shinhanApp2, caption: { ENG: "Validation results", KOR: "검증 결과 화면" } }, { src: shinhanApp1, caption: { ENG: "Extraction review", KOR: "추출 결과 검수 화면" } }, { src: shinhanImage0, caption: { ENG: "Award", KOR: "수상" } }, { src: shinhanImage1, caption: { ENG: "Top startups", KOR: "상위 기업 시상" } }, { src: shinhanImage2, caption: { ENG: "Demo Day booth", KOR: "데모데이 부스" } }, { src: shinhanImage3, caption: { ENG: "Demo Day 2026", KOR: "데모데이 2026" } }],
       id: 'proj-shinhan', key: 'shinhanVietnam', org: 'company', fields: ['VLM', 'OCR'],
       title: { ENG: '(Shinhan Vietnam Finance) Shinhan Open Innovation Vietnam – Loan Document Extraction & Validation PoC', KOR: '(신한베트남파이낸스) 신한 오픈이노베이션 베트남 – 대출 서류 자동 추출·검수 PoC' },
-      location: { ENG: 'Korea Deep Learning · PM & sole developer · first overseas revenue', KOR: '한국딥러닝 · PM 겸 단독 개발 · 회사 첫 해외 매출' },
-      dates: { ENG: 'June 2026 ~ September 2026 (kickoff 06.09, final assessment 08.24, Demo Day 09)', KOR: '2026.06 ~ 2026.09 (킥오프 06.09, 최종 평가 08.24, 데모데이 09)' },
+      location: { ENG: 'Korea Deep Learning · PM & sole developer', KOR: '한국딥러닝 · PM 겸 단독 개발' },
+      dates: { ENG: 'June 2026 ~ September 2026', KOR: '2026.06 ~ 2026.09' },
       details: lang === 'ENG' ? shinhanPj_ENG : shinhanPj_KOR,
       compare: {
         ENG: {
@@ -1602,20 +1594,20 @@ function App() {
               details={[
                 ...(lang==='ENG'
                   ? [
-                      "Participated in the AI Transformation program hosted by IBM and RedHat.",
-                      "Hands-on learning with TensorFlow, Keras, and PyTorch; built and experimented with DNN, CNN, RNN, and NLP models.",
-                      "Studied and applied key AI research papers, including Attention Is All You Need, GPT-1/2/3 and BERT.",
-                      "Learned advanced LLM applications directly from IBM developers, focusing on RAG and prompt engineering.",
-                      "Actively participated in multiple AI-related competitions: Dacon challenges, hackathons, and collaborative projects.",
-                      "Led the team for the final IBM project: a legal AI assistant powered by an LLM and RAG."
+                      "Six-month AI Transformation program run by IBM and RedHat.",
+                      "Built DNN, CNN, RNN and NLP models in TensorFlow, Keras and PyTorch.",
+                      "Studied and applied key papers such as Attention Is All You Need and BERT.",
+                      "Learned LLM application work (RAG, prompt engineering) from IBM developers.",
+                      "Entered Dacon competitions and hackathons during the program.",
+                      "Led the final project team: Law-AI, a legal assistant built on an LLM with RAG."
                     ]
                   : [
-                      "IBM/RedHat 주관 AI Transformation 프로그램 참여.",
-                      "TensorFlow, Keras, PyTorch를 활용해 DNN, CNN, RNN, NLP 모델 학습 및 실습.",
-                      "Attention Is All You Need, Semantic Structure in Large Language Model Embeddings, YOLO, BERT 등 주요 논문을 학습하고 적용.",
-                      "현직 IBM 개발자에게 LLM(RAG, Prompt Engineering) 심화 강의 수강.",
-                      "Dacon 대회, 해커톤 등 다수의 AI 관련 대회에 적극적으로 참가.",
-                      "과정 최종 IBM 발표 프로젝트를 팀장으로 이끌어 LLM·RAG 기반 법률 AI Assistant 개발."
+                      "IBM·RedHat 주관 6개월 AI Transformation 과정.",
+                      "TensorFlow·Keras·PyTorch로 DNN·CNN·RNN·NLP 모델 구현.",
+                      "Attention Is All You Need, BERT 등 주요 논문 학습 및 적용.",
+                      "IBM 현직 개발자에게 LLM 활용(RAG·프롬프트 엔지니어링) 심화 강의 수강.",
+                      "과정 중 Dacon 대회·해커톤 참가.",
+                      "최종 프로젝트 팀장: LLM·RAG 기반 법률 AI(Law-AI) 개발."
                     ]),
                 // 이미지 블록
                 <div key="ibm-images" style={{ display:'flex', overflowX:'auto', whiteSpace:'nowrap', gap:'10px', padding:'10px 0' }}>
@@ -1848,7 +1840,7 @@ function App() {
             <Entry
               title={lang==='ENG' ? "Dacon AI Competitions" : "Dacon AI 대회"}
               location={lang==='ENG' ? "Korea (Online)" : "대한민국 (온라인)"}
-              dates={lang==='ENG' ? "May 2025-Present" : "2025.05 ~ 현재"}
+              dates={lang==='ENG' ? "May 2025 ~ Present" : "2025.05 ~ 현재"}
               details={getDetails(ach_dacon_ENG, ach_dacon_KOR, dacon)}
               {...getMeta('daconCompetitions')}
               isExpanded={expandedSections.achievements.entries.daconCompetitions}
