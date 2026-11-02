@@ -1,6 +1,7 @@
 import './App.css';
 import React, { useState } from 'react';
 import Entry from './Entry';
+import Lightbox from './Lightbox';
 import degreeImage from './assets/images/graduation.jpg';
 import judoImage1 from './assets/images/judo1.jpg';
 import judoImage2 from './assets/images/judo2.jpg';
@@ -1377,6 +1378,7 @@ function App() {
 
   return (
     <div className="App">
+      <Lightbox />
       <header className="App-header">
         {/* Language Toggle */}
         <div className="lang-toggle" aria-label="Language toggle">
