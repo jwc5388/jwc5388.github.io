@@ -46,6 +46,9 @@ import elizaImage2 from './assets/images/eliza2.png';
 import elizaImage3 from './assets/images/eliza3.png';
 import gaugeImage1 from './assets/images/gauge1.jpg';
 import seoyonImage1 from './assets/images/seoyon1.jpg';
+import hcOcrErrors from './assets/images/hcOcrErrors.jpg';
+import hcOcrForm1 from './assets/images/hcOcrForm1.jpg';
+import hcOcrForm2 from './assets/images/hcOcrForm2.jpg';
 import disasterFlowFlood from './assets/images/disasterFlowFlood.jpg';
 import disasterFlowFire from './assets/images/disasterFlowFire.jpg';
 import disasterGridFlood from './assets/images/disasterGridFlood.jpg';
@@ -1241,7 +1244,11 @@ function App() {
         ENG: ["Compared recognizer architectures: PARSeq, PP-OCRv5, SVTRv2", "Auto-labeled ~80k handwriting samples from client ROI boxes", "Built a 15,808-sample handwriting goldenset tagged by difficulty", "Error analysis by look-alike character pairs; fixed a metric bug", "Fine-tuned PARSeq on 11.6M samples: best on 13 of 14 test sets"],
         KOR: ["Recognizer 아키텍처 비교: PARSeq, PP-OCRv5, SVTRv2", "고객 ROI 박스로 필기체 약 8만 장 오토라벨링", "실제 서식 기반 필기체 골든셋 15,808개 구축, 난이도별 태깅", "헷갈리는 글자 쌍 단위 오류 분석, 지표 버그 수정", "1,160만 장으로 PARSeq fine-tuning: 테스트 14종 중 13종 1위"],
       },
-      media: [],
+      media: [
+        { src: hcOcrErrors, caption: { ENG: "Error analysis: GT vs prediction", KOR: "오답 분석: 정답 vs 예측" } },
+        { src: hcOcrForm1, caption: { ENG: "Lease form: field results", KOR: "신차리스 양식 인식" } },
+        { src: hcOcrForm2, caption: { ENG: "Installment form: full page", KOR: "신차할부 양식 전체 인식" } },
+      ],
       id: 'proj-4', key: 'kdlOcrResearch', org: 'company', fields: ['CV', 'OCR'],
       title: { ENG: '(Hyundai Capital) Korean Handwriting OCR Recognizer R&D', KOR: '(현대캐피탈) 한국어 필기체 OCR Recognizer 연구' },
       location: { ENG: 'Korea Deep Learning · R&D, weights deployed to the client project', KOR: '한국딥러닝 · R&D, 고객 프로젝트에 가중치 배포' },
