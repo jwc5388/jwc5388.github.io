@@ -787,3 +787,175 @@ section.Project-section { max-width: 1100px; }
   .stat-tile:nth-child(2n) { border-left: 1px solid #e5e7eb; }
   .stat-tile:last-child:nth-child(odd) { grid-column: 1 / -1; }
 }
+
+/* ==== 본문 섹션 다듬기 (상단과 같은 톤: 얇은 선 · 남색 소제목 · 회색 보조 텍스트) ==== */
+.App { color: #111827; -webkit-font-smoothing: antialiased; }
+
+section {
+  max-width: 920px;
+  padding: 72px 20px;
+  border-bottom: 1px solid #f0f1f3;
+}
+
+section h2.section-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 32px;
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+/* ▼ 글자 대신 얇은 꺾쇠 */
+.section-title::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  margin: 0;
+  border-right: 2px solid #9ca3af;
+  border-bottom: 2px solid #9ca3af;
+  transform: rotate(-45deg);
+}
+
+.section-title.open::after { transform: rotate(45deg) translate(-2px, -2px); }
+
+.entry-heading h3 {
+  margin: 0 0 4px;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.entry-sub { font-size: 13.5px; color: #6b7280; }
+
+.entry-header .arrow {
+  flex: 0 0 auto;
+  margin-left: 16px;
+  font-size: 11px;
+  color: #9ca3af;
+}
+
+.entry + .entry {
+  margin-top: 28px;
+  padding-top: 28px;
+  border-top: 1px solid #f0f1f3;
+}
+
+.entry-details {
+  padding-left: 0;
+  margin-top: 14px;
+  font-size: 15px;
+  color: #374151;
+}
+
+.entry-details > ul { padding-left: 20px; }
+.entry-details > ul > li::marker { color: #9ca3af; }
+
+/* 태그: 진한 배경 대신 연한 배경 + 진한 글자 */
+.tag { padding: 2px 8px; border-radius: 999px; font-weight: 600; }
+.tag-org { background: #eef2ff; color: #1e3a8a; }
+.tag-llm, .tag-rag { background: #ecfdf5; color: #047857; }
+.tag-vlm { background: #f5f3ff; color: #6d28d9; }
+.tag-cv, .tag-ocr { background: #fffbeb; color: #b45309; }
+.tag-genai { background: #fdf2f8; color: #be185d; }
+.tag-dl, .tag-signal { background: #ecfeff; color: #0e7490; }
+.contrib-badge { padding: 2px 8px; border-radius: 999px; font-weight: 600; border-color: #fed7aa; }
+
+/* 분야별 목차 */
+.project-index {
+  padding: 20px 24px;
+  border-radius: 14px;
+  background: #fff;
+}
+
+.project-index-title {
+  margin-bottom: 12px;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #1e3a8a;
+}
+
+.project-index-field { font-size: 14px; color: #6b7280; font-weight: 600; }
+.project-index-group li { font-size: 14.5px; }
+.project-index-group a { text-decoration: none; }
+.project-index-group a:hover { color: #1e3a8a; text-decoration: underline; }
+
+/* 프로젝트 카드: 남색 칸 → 연한 칸 + 남색 글자 */
+.pcard { margin-top: 18px; }
+.pcard-table { border-radius: 14px; }
+.pcard-row { border-top-color: #f0f1f3; grid-template-columns: 104px minmax(0, 1fr); }
+
+.pcard-label {
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 12px 14px;
+  background: #f8fafc;
+  color: #1e3a8a;
+  font-size: 12.5px;
+  text-align: left;
+}
+
+.pcard-value, .pcard-list { padding: 12px 14px; font-size: 14.5px; color: #374151; }
+.pcard-list { padding-left: 30px; }
+.pcard-list li::marker { color: #9ca3af; }
+.pcard-list.accent { color: #c2410c; }
+.pcard-row .stack-chips { padding: 12px 14px; }
+
+.stack-chips li {
+  padding: 2px 10px;
+  border: 0;
+  border-radius: 999px;
+  background: #f3f4f6;
+  color: #374151;
+  font-size: 13px;
+}
+
+.compare { padding: 16px 18px; border-color: #e5e7eb; border-radius: 14px; }
+.compare-row { border-radius: 10px; }
+
+.pcard-figure img { border-radius: 10px; }
+
+.pcard-caption {
+  background: rgba(17, 24, 39, 0.72);
+  font-weight: 600;
+  border-radius: 999px;
+  padding: 2px 10px;
+}
+
+.pcard-more { padding: 7px 16px; font-size: 13.5px; border-color: #e5e7eb; }
+
+/* 경력 → 프로젝트 칩 */
+.proj-links-label { font-size: 13px; color: #6b7280; font-weight: 600; }
+.proj-links a { border: 0; background: #f3f4f6; color: #1e3a8a; font-size: 13px; padding: 2px 10px; }
+.proj-links a:hover { background: #eef2ff; }
+
+/* 메타 박스 */
+.entry-meta { border-color: #e5e7eb; border-radius: 14px; background: #f8fafc; }
+
+/* 기술 섹션 */
+.skill-card { border-color: #e5e7eb; border-radius: 14px; box-shadow: none; padding: 18px 20px; }
+
+.skill-title {
+  margin-bottom: 14px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #1e3a8a;
+}
+
+.skill-items-wrap { gap: 8px; }
+.skill-item { border-color: #f0f1f3; background: #fff; border-radius: 999px; padding: 6px 12px; }
+.skill-item:hover { transform: none; box-shadow: none; background: #f8fafc; }
+.skill-label { font-size: 14px; }
+
+@media (max-width: 768px) {
+  section { padding: 52px 16px; }
+  section h2.section-title { font-size: 22px; margin-bottom: 24px; }
+  .pcard-row { grid-template-columns: 1fr; }
+  .pcard-label { padding: 10px 14px 0; background: #fff; }
+  .pcard-value, .pcard-list, .pcard-row .stack-chips { padding-top: 4px; }
+}
