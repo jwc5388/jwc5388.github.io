@@ -375,8 +375,8 @@ function App() {
     },
     kdlDisasterVideo: {
       problem: {
-        ENG: "Wildfire and flood detectors need footage of the moment a disaster starts, and real CCTV almost never captures it. The client wanted a large batch of realistic videos made from their own CCTV stills, within 9 days.",
-        KOR: "산불·침수 탐지 모델을 학습하려면 재난이 막 시작되는 장면이 필요한데, 실제 CCTV에는 거의 남아 있지 않습니다. 고객은 자기 CCTV 사진으로 자연스러운 재난 영상을 9일 안에 대량으로 만들어 달라고 했습니다.",
+        ENG: "Wildfire and flood detectors need footage of the moment a disaster starts, and real CCTV almost never captures it. The client wanted a large batch of realistic videos made from their own CCTV stills.",
+        KOR: "산불·침수 탐지 모델을 학습하려면 재난이 막 시작되는 장면이 필요한데, 실제 CCTV에는 거의 남아 있지 않습니다. 고객은 자기 CCTV 사진으로 자연스러운 재난 영상을 대량으로 만들어 달라고 했습니다.",
       },
       team: { ENG: "Solo", KOR: "단독" },
       role: {
@@ -392,8 +392,8 @@ function App() {
         KOR: "FLUX.2-dev (이미지 편집) → Wan2.2-I2V-A14B (이미지→영상, 720p) → RIFE 4.7 (프레임 보간) · 8B VLM + OpenCV (검수) · FastAPI",
       },
       results: {
-        ENG: "In 9 days: ~190 wildfire and ~150 flood videos passed QA · 572 of 1,768 staged videos auto-selected · ~30 attempts/hour on 4 GPUs",
-        KOR: "9일간 산불 190여 건·침수 150여 건 검수 통과 · 단계별 영상 1,768건 중 572건 자동 선별 · GPU 4장 기준 시간당 약 30건",
+        ENG: "~190 wildfire and ~150 flood videos passed QA · 572 of 1,768 staged videos auto-selected · ~30 attempts/hour on 4 GPUs",
+        KOR: "산불 190여 건·침수 150여 건 검수 통과 · 단계별 영상 1,768건 중 572건 자동 선별 · GPU 4장 기준 시간당 약 30건",
       },
       lessons: {
         ENG: "Generative models follow a described state well but not the speed of change — putting the start state in the image and the change in the prompt was the key",
@@ -1307,7 +1307,7 @@ function App() {
       id: 'proj-5', key: 'kdlDisasterVideo', org: 'company', fields: ['GenAI', 'VLM'],
       title: { ENG: 'Disaster CCTV Video Augmentation (Wildfire · Flood)', KOR: '재난 CCTV 영상 증강 (산불·침수)' },
       location: { ENG: 'Korea Deep Learning · generative AI pipeline', KOR: '한국딥러닝 · 생성형 AI 파이프라인' },
-      dates: { ENG: 'October 2026 (9 days)', KOR: '2026.10 (9일)' },
+      dates: { ENG: 'June 2026 ~ Present', KOR: '2026.06 ~ 진행중' },
       details: lang === 'ENG' ? kdl_video_ENG : kdl_video_KOR,
     },
     {
