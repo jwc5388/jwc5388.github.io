@@ -3,14 +3,14 @@
 }
 
 .App-header {
+  position: relative;
   background-color: white;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: black;
+  padding: 88px 20px 64px;
+  color: #111827;
+  border-bottom: 1px solid #e7e7e7;
 }
 
 .About-section,
@@ -230,103 +230,6 @@ section {
 
 .lang-btn.active { color: #fff; }
 
-/* ---- 상단 요약 (tagline / highlights / resume) ---- */
-.profile-tagline {
-  margin: 24px 0 8px;
-  padding: 0 16px;
-  font-size: calc(10px + 1.2vmin);
-  font-weight: 600;
-}
-
-.profile-glance {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-  max-width: 900px;
-  margin: 0 auto 16px;
-  padding: 0 20px;
-  text-align: left;
-}
-
-.glance-col {
-  padding: 10px 12px;
-  border: 1px solid #e5e7eb;
-  border-radius: 8px;
-  background: #f9fafb;
-}
-
-.glance-col h4 {
-  margin: 0 0 6px;
-  font-size: calc(9px + 0.8vmin);
-  color: #111827;
-}
-
-.glance-col ul {
-  margin: 0;
-  padding-left: 16px;
-  font-size: calc(8px + 0.6vmin);
-  line-height: 1.6;
-  color: #374151;
-}
-
-@media (max-width: 768px) {
-  .profile-glance {
-    grid-template-columns: 1fr;
-    padding: 0 16px;
-  }
-}
-
-.profile-summary {
-  max-width: 680px;
-  margin: 0 auto 12px;
-  padding: 0 20px;
-  text-align: left;
-  font-size: calc(9px + 0.8vmin);
-  line-height: 1.7;
-  color: #1f2937;
-}
-
-.profile-skills {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 6px;
-  max-width: 680px;
-  margin: 0 auto 12px;
-  padding: 0 20px;
-  list-style: none;
-}
-
-.profile-skills li {
-  padding: 2px 10px;
-  border: 1px solid #d1d5db;
-  border-radius: 999px;
-  font-size: calc(8px + 0.6vmin);
-  color: #374151;
-}
-
-.profile-highlights {
-  max-width: 680px;
-  margin: 0 auto;
-  padding: 0 20px;
-  text-align: left;
-  font-size: calc(9px + 0.8vmin);
-  line-height: 1.6;
-  color: #374151;
-}
-
-.resume-btn {
-  display: inline-block;
-  margin-top: 16px;
-  padding: 10px 18px;
-  border-radius: 9999px;
-  background: #111827;
-  color: #fff;
-  font-size: 14px;
-  text-decoration: none;
-}
-
-.resume-btn:hover { background: #000; }
 
 /* ---- Entry 메타 (팀 / 역할 / 기여 / 성과 / 링크) ---- */
 .entry-meta {
@@ -554,10 +457,6 @@ section h2.section-title { margin: 0 0 24px; }
 
 .entry-details > ul > li { margin-bottom: 8px; line-height: 1.65; }
 
-.profile-glance { margin-top: 20px; margin-bottom: 28px; }
-.profile-summary { margin-bottom: 20px; }
-.profile-skills { margin-bottom: 24px; }
-.profile-highlights li { margin-bottom: 6px; }
 
 .project-index { margin-bottom: 32px; }
 .project-index-group { padding: 6px 0; }
@@ -683,48 +582,6 @@ section h2.section-title { margin: 0 0 24px; }
 /* 프로젝트 섹션은 2단 카드가 들어가므로 조금 넓게 */
 section.Project-section { max-width: 1100px; }
 
-/* ---- 대표 성과 숫자 타일 ---- */
-.profile-stats {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 10px;
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.stat-tile {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  padding: 12px;
-  border: 1px solid #e5e7eb;
-  border-radius: 10px;
-  background: #fff;
-  text-align: left;
-  text-decoration: none;
-  transition: border-color .2s ease;
-}
-
-.stat-tile:hover { border-color: #2563eb; }
-
-.stat-value {
-  font-size: calc(14px + 1vmin);
-  font-weight: 800;
-  color: #c2410c;
-  line-height: 1.1;
-}
-
-.stat-label {
-  font-size: calc(8px + 0.55vmin);
-  line-height: 1.45;
-  color: #374151;
-}
-
-@media (max-width: 768px) {
-  .profile-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); padding: 0 16px; }
-}
-
 /* ---- 경력 → 관련 프로젝트 바로가기 ---- */
 .proj-links {
   display: flex;
@@ -750,3 +607,183 @@ section.Project-section { max-width: 1100px; }
 }
 
 .proj-links a:hover { background: #e0e7ff; }
+
+/* ---- 상단 (이름 / 연락처 / 한눈에 보기 / 요약 / 대표 성과) ---- */
+.App-header .lang-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.hero-name {
+  margin: 0;
+  font-size: 44px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.hero-role {
+  margin: 10px 0 0;
+  font-size: 16px;
+  color: #6b7280;
+}
+
+.contact-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.contact-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #e5e7eb;
+  border-radius: 50%;
+  color: #374151;
+  transition: color .2s ease, border-color .2s ease;
+}
+
+.contact-icons a:hover { color: #1e3a8a; border-color: #1e3a8a; }
+
+.profile-glance {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+  width: 100%;
+  max-width: 920px;
+  margin: 48px auto 0;
+  padding-top: 32px;
+  border-top: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+.glance-col h4 {
+  margin: 0 0 14px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #1e3a8a;
+}
+
+.glance-col ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.glance-col li {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #1f2937;
+}
+
+.glance-col li + li { margin-top: 12px; }
+
+.glance-date {
+  font-size: 12px;
+  color: #9ca3af;
+  font-variant-numeric: tabular-nums;
+}
+
+.profile-summary {
+  max-width: 720px;
+  margin: 40px auto 0;
+  text-align: left;
+  font-size: 16px;
+  line-height: 1.75;
+  color: #374151;
+}
+
+.profile-skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  max-width: 720px;
+  margin: 20px auto 0;
+  padding: 0;
+  list-style: none;
+}
+
+.profile-skills li {
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: #f3f4f6;
+  font-size: 13px;
+  color: #374151;
+}
+
+/* 대표 성과 숫자: 한 줄 띠, 칸 사이 세로선 */
+.profile-stats {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  width: 100%;
+  max-width: 920px;
+  margin: 44px auto 0;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.stat-tile {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 18px 16px;
+  text-align: left;
+  text-decoration: none;
+  transition: background .2s ease;
+}
+
+.stat-tile + .stat-tile { border-left: 1px solid #e5e7eb; }
+.stat-tile:hover { background: #f9fafb; }
+
+.stat-value {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  color: #c2410c;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+
+.stat-label {
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: #4b5563;
+}
+
+.resume-btn {
+  display: inline-block;
+  margin-top: 24px;
+  padding: 10px 18px;
+  border-radius: 9999px;
+  background: #111827;
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .App-header { padding: 72px 16px 48px; }
+  .App-header .lang-toggle { top: 16px; right: 16px; }
+  .hero-name { font-size: 34px; }
+  .hero-role { font-size: 15px; }
+  .profile-glance { grid-template-columns: 1fr; gap: 28px; margin-top: 36px; padding-top: 28px; }
+  .profile-summary { margin-top: 32px; font-size: 15px; }
+  .profile-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .stat-tile + .stat-tile { border-left: 0; }
+  .stat-tile { border-top: 1px solid #e5e7eb; }
+  .stat-tile:nth-child(-n+2) { border-top: 0; }
+  .stat-tile:nth-child(2n) { border-left: 1px solid #e5e7eb; }
+  .stat-tile:last-child:nth-child(odd) { grid-column: 1 / -1; }
+}

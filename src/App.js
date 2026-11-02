@@ -92,6 +92,8 @@ function App() {
   const t = {
     ENG: {
       headerTitle: "Jae Woo Chang's Portfolio",
+      name: "Jae Woo Chang",
+      role: "AI Engineer · Korea Deep Learning",
       work: "Work Experience",
       engagements: "Exhibitions & Events",
       projects: "Key Projects & Results",
@@ -123,6 +125,8 @@ function App() {
     },
     KOR: {
       headerTitle: "장재우 포트폴리오",
+      name: "장재우",
+      role: "AI 엔지니어 · 한국딥러닝",
       work: "경력",
       engagements: "전시·행사",
       projects: "개발·프로젝트 주요 성과",
@@ -1363,10 +1367,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>{t[lang].headerTitle}</h1>
-
         {/* Language Toggle */}
-        <div className="lang-toggle" aria-label="Language toggle" style={{ margin:'6px 0 10px' }}>
+        <div className="lang-toggle" aria-label="Language toggle">
           <div
             className="lang-indicator"
             style={{ transform: `translateX(${lang === 'ENG' ? '0' : '100%'})` }}
@@ -1385,16 +1387,13 @@ function App() {
           </button>
         </div>
 
+        <h1 className="hero-name">{t[lang].name}</h1>
+        <p className="hero-role">{t[lang].role}</p>
+
         <div className="contact-icons">
-          <a href="mailto:peter.jaewoochang@gmail.com" aria-label="Email">
-            <FaEnvelope size={30} style={{ margin: '0 15px', color: '#000' }} />
-          </a>
-          <a href="https://github.com/jwc5388" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-            <FaGithub size={30} style={{ margin: '0 15px', color: '#000' }} />
-          </a>
-          <a href="https://www.linkedin.com/in/jwcbillion33" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-            <FaLinkedin size={30} style={{ margin: '0 15px', color: '#000' }} />
-          </a>
+          <a href="mailto:peter.jaewoochang@gmail.com" aria-label="Email"><FaEnvelope size={17} /></a>
+          <a href="https://github.com/jwc5388" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><FaGithub size={17} /></a>
+          <a href="https://www.linkedin.com/in/jwcbillion33" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaLinkedin size={17} /></a>
         </div>
 
         {profile.tagline[lang] && <p className="profile-tagline">{profile.tagline[lang]}</p>}
@@ -1404,7 +1403,15 @@ function App() {
               <div className="glance-col" key={g.title.ENG}>
                 <h4>{g.title[lang]}</h4>
                 <ul>
-                  {g.items[lang].map((it, i) => <li key={i}>{it}</li>)}
+                  {g.items[lang].map((it, i) => {
+                    const [date, text] = it.includes(' : ') ? it.split(' : ') : ['', it];
+                    return (
+                      <li key={i}>
+                        {date && <span className="glance-date">{date}</span>}
+                        <span>{text}</span>
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
             ))}
