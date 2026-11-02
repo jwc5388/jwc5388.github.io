@@ -45,6 +45,10 @@ import elizaImage2 from './assets/images/eliza2.png';
 import elizaImage3 from './assets/images/eliza3.png';
 import gaugeImage1 from './assets/images/gauge1.jpg';
 import seoyonImage1 from './assets/images/seoyon1.jpg';
+import disasterFlowFlood from './assets/images/disasterFlowFlood.jpg';
+import disasterFlowFire from './assets/images/disasterFlowFire.jpg';
+import disasterGridFlood from './assets/images/disasterGridFlood.jpg';
+import disasterGridFire from './assets/images/disasterGridFire.jpg';
 import seoyonImage2 from './assets/images/seoyon2.jpg';
 import lgaxImage1 from './assets/images/lgax1.jpg';
 import lgaxImage2 from './assets/images/lgax2.jpg';
@@ -1303,7 +1307,12 @@ function App() {
         ENG: ["Image edit → image-to-video → frame interpolation (FLUX.2, Wan2.2, RIFE)", "Drew each stage's start state first, so videos grow naturally without sudden jumps", "Automated QA: OpenCV measurements plus a calibrated VLM", "4-GPU queue with resident models (model load ~9 min → 0)"],
         KOR: ["이미지 편집 → 영상 생성 → 프레임 보간 (FLUX.2, Wan2.2, RIFE)", "단계별 시작 상태를 먼저 그려 첫 프레임 급변 제거", "OpenCV 측정 + 정답셋으로 보정한 VLM 자동 검수", "GPU 4장 큐, 모델 상주로 요청당 로딩 약 9분 → 0"],
       },
-      media: [],
+      media: [
+        { src: disasterGridFlood, caption: { ENG: "Flood · 10 conditions from one CCTV still", KOR: "침수 · CCTV 사진 1장 × 10가지 조건" } },
+        { src: disasterGridFire, caption: { ENG: "Wildfire · 11 conditions", KOR: "산불 · 11가지 조건" } },
+        { src: disasterFlowFlood, wide: true, caption: { ENG: "Flood rising over 10 s (night): dry road → water pools in low spots → level rises → whole road flooded", KOR: "침수 차오름 10초 (야간): 마른 도로 → 낮은 곳부터 물이 고임 → 수위 상승 → 도로 전체 침수" } },
+        { src: disasterFlowFire, wide: true, caption: { ENG: "Wildfire spreading over 10 s: faint smoke → drifts with the wind → embers at the base → small flame (fixed camera)", KOR: "산불 확산 10초: 옅은 연기 → 바람 방향으로 확산 → 기저부 불씨 → 작은 불 (카메라 고정)" } },
+      ],
       id: 'proj-5', key: 'kdlDisasterVideo', org: 'company', fields: ['GenAI', 'VLM'],
       title: { ENG: 'Disaster CCTV Video Augmentation (Wildfire · Flood)', KOR: '재난 CCTV 영상 증강 (산불·침수)' },
       location: { ENG: 'Korea Deep Learning · generative AI pipeline', KOR: '한국딥러닝 · 생성형 AI 파이프라인' },
@@ -1668,7 +1677,7 @@ function App() {
                 compare={pj.compare?.[lang]}
                 summary={pj.summary?.[lang]}
                 badge={pj.badge?.[lang]}
-                media={(pj.media || []).map((m) => ({ src: m.src, caption: m.caption[lang] }))}
+                media={(pj.media || []).map((m) => ({ src: m.src, caption: m.caption[lang], wide: m.wide }))}
                 {...getMeta(pj.key)}
                 isExpanded={expandedSections.projects.entries[pj.key]}
                 onClick={() => toggleEntry('projects', pj.key)}
@@ -1687,7 +1696,7 @@ function App() {
                 tags={projectTags(pj)}
                 summary={pj.summary?.[lang]}
                 badge={pj.badge?.[lang]}
-                media={(pj.media || []).map((m) => ({ src: m.src, caption: m.caption[lang] }))}
+                media={(pj.media || []).map((m) => ({ src: m.src, caption: m.caption[lang], wide: m.wide }))}
                 {...getMeta(pj.key)}
                 isExpanded={expandedSections.projects.entries[pj.key]}
                 onClick={() => toggleEntry('projects', pj.key)}

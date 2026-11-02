@@ -966,3 +966,27 @@ section h2.section-title {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+
+/* 시간 흐름 띠 (카드 아래 전체 폭) */
+.pcard-strip { margin: 16px 0 0; }
+.pcard-strip + .pcard-strip { margin-top: 12px; }
+.pcard-strip a { display: block; }
+
+.pcard-strip img {
+  display: block;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+}
+
+.pcard-strip figcaption {
+  margin-top: 6px;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* 모바일: 띠가 너무 얇아지지 않게 높이 고정 + 가로 스크롤 */
+@media (max-width: 768px) {
+  .pcard-strip a { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .pcard-strip img { width: auto; height: 120px; max-width: none; }
+}

@@ -51,12 +51,14 @@ function CompareFlow({ compare }) {
 
 // 프로젝트 카드: 왼쪽 요약 표 + 오른쪽 그림·사진, 상세 bullet은 접어 둠
 // card: { overview, results, team, role, contribution, stack, lessons }
-// media: [{ src, caption }]
+// media: [{ src, caption, wide }] — wide는 시간 흐름 띠처럼 가로로 긴 이미지 (카드 아래 전체 폭)
 function ProjectCard({ summary, card, compare, media, details, labels, links }) {
   const [showMore, setShowMore] = useState(false);
   const results = card.results ? card.results.split(' · ') : [];
-  const hasVisual = compare || media.length > 0;
-  const [first, ...rest] = media;
+  const strips = media.filter((m) => m.wide);
+  const side = media.filter((m) => !m.wide);
+  const hasVisual = compare || side.length > 0;
+  const [first, ...rest] = side;
   return (
     <div className="pcard">
       <div className={`pcard-body ${hasVisual ? 'two-col' : ''}`}>
@@ -112,6 +114,12 @@ function ProjectCard({ summary, card, compare, media, details, labels, links }) 
           </div>
         )}
       </div>
+      {strips.map((m) => (
+        <figure className="pcard-strip" key={m.src}>
+          <a href={m.src} target="_blank" rel="noopener noreferrer"><img src={m.src} alt={m.caption} /></a>
+          {m.caption && <figcaption>{m.caption}</figcaption>}
+        </figure>
+      ))}
       <button type="button" className="pcard-more" onClick={() => setShowMore((v) => !v)}>
         {showMore ? labels.hideDetails : labels.showDetails} {showMore ? '▴' : '▾'}
       </button>
