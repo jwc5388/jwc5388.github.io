@@ -1210,3 +1210,11 @@ strong.num { font-weight: 700; color: #111827; }
   .tl-body::before { display: none; }
   .entry.timeline + .entry.timeline { border-top: 1px solid #f0f1f3; padding-top: 28px; }
 }
+
+/* ==== 카드 오른쪽 사진 열 높이 맞추기 (전체 이미지는 클릭하면 크게) ==== */
+.pcard-visual > .pcard-figure img { max-height: 200px; object-fit: cover; object-position: top; }
+.pcard-thumbs { grid-template-columns: repeat(auto-fill, minmax(92px, 1fr)); }
+.pcard-thumbs img { height: 72px; }
+/* 작은 썸네일 캡션은 잘려 보이므로 마우스를 올렸을 때만 (크게 보기에서는 항상 표시) */
+.pcard-thumbs .pcard-caption { opacity: 0; transition: opacity 0.15s ease; }
+.pcard-thumbs .pcard-figure:hover .pcard-caption { opacity: 1; }

@@ -57,7 +57,8 @@ function ProjectCard({ summary, card, compare, media, details, labels, links }) 
   const [showMore, setShowMore] = useState(false);
   // 성과 항목은 ' · '로 나눈 뒤 첫 글자를 대문자로 (영문)
   const results = card.results ? card.results.split(' · ').map((r) => r.charAt(0).toUpperCase() + r.slice(1)) : [];
-  const strips = media.filter((m) => m.wide);
+  const strips = media.filter((m) => m.wide && !m.more);
+  const moreStrips = media.filter((m) => m.wide && m.more);
   const side = media.filter((m) => !m.wide);
   const hasVisual = compare || side.length > 0;
   const [first, ...rest] = side;
@@ -81,10 +82,7 @@ function ProjectCard({ summary, card, compare, media, details, labels, links }) 
           {(card.role || card.team) && (
             <div className="pcard-row">
               <span className="pcard-label">{labels.role}</span>
-              <ul className="pcard-list">
-                {card.role && <li>{card.role}</li>}
-                {card.team && <li>{card.team}</li>}
-              </ul>
+              <p className="pcard-value">{card.role || card.team}</p>
             </div>
           )}
           {card.stack && (
@@ -128,9 +126,17 @@ function ProjectCard({ summary, card, compare, media, details, labels, links }) 
       {showMore && (
         <div className="pcard-details">
           <ul>{details.map((d, i) => <li key={i}>{emphasize(d)}</li>)}</ul>
+          {moreStrips.map((m) => (
+            <figure className="pcard-strip" key={m.src}>
+              <img src={m.src} alt={m.caption} />
+              {m.caption && <figcaption>{m.caption}</figcaption>}
+            </figure>
+          ))}
           <MetaBox
             rows={[
+              { label: labels.team, value: card.role && card.team },
               { label: labels.contribution, value: card.contribution },
+              { label: labels.stack, value: card.fullStack },
               { label: labels.lessons, value: card.lessons },
             ].filter((r) => r.value)}
             links={links}
