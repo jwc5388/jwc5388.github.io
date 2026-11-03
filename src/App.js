@@ -258,12 +258,10 @@ function App() {
           ENG: [
             'Exhibited at CES 2025, J-AGRI Tokyo and FAVA 2024 (CareSix)',
             '2025 K-Digital Training AI Hackathon (Road Guardian)',
-            'St Andrews Korean Society committee (Treasurer)',
           ],
           KOR: [
             'CES 2025 · J-AGRI 도쿄 · FAVA 2024 전시 참가 (케어식스)',
             '2025 K-디지털 트레이닝 AI 해커톤 (Road Guardian)',
-            '세인트앤드루스 한인회 운영진 (회계)',
           ],
         },
       },
@@ -1767,13 +1765,6 @@ function App() {
               ]}
               isExpanded={expandedSections.education.entries.judo}
               onClick={() => toggleEntry('education', 'judo')}
-            />
-            <Entry
-              title={lang==='ENG' ? "Committee member of St Andrews Korean Society" : "세인트앤드루스 한인회 운영진"}
-              location={lang==='ENG' ? "Treasurer for St Andrews Korean Society" : "한인회 회계 담당"}
-              details={[]}
-              isExpanded={expandedSections.education.entries.society}
-              onClick={() => toggleEntry('education', 'society')}
             />
           </div>
         )}
