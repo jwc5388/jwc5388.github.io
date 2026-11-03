@@ -821,35 +821,39 @@ function App() {
 
   const work_ai_title = lang === 'ENG' ? "AI/ML Engineer & Researcher, CareSix Co., LTD" : "AI/ML 엔지니어 & 리서처, 케어식스";
   const work_ai_details_ENG = [
-    "**Deep learning:** LSTM heart-rate model for the Sense1 Vet dog wearable, 96% accuracy on readings that trembling and motion had made unreliable",
-    "**Signal processing (BCG):** FFT, wavelet denoising and unsupervised peak detection to reduce dependence on ECG, with the hardware and production teams",
-    "**Web & cloud:** AURA ID dog-recognition platform (React, TypeScript) and a veterinary hospital system on AWS RDS",
+    "**Deep learning (LSTM):** sole developer of the heart-rate model for the Sense1 Vet dog wearable (TensorFlow / Keras), 96% accuracy on readings that trembling and motion had made unreliable",
+    "**Signal processing (BCG):** FFT and wavelet denoising, IJK-peak periodicity as features, and unsupervised peak detection to reduce dependence on ECG",
+    "**Validation:** statistical checks of every change (Python, NumPy) and SHAP feature importance",
+    "**Hardware collaboration:** worked with the hardware and production teams on signal quality",
+    "**Exhibitions:** exhibited with CareSix at J-AGRI Tokyo, FAVA 2024 and CES 2025",
   ];
   const work_ai_details_KOR = [
-    "**딥러닝:** Sense1 Vet 반려견 웨어러블의 LSTM 심박 모델, 떨림·움직임으로 불안정하던 측정을 정확도 96%까지 개선",
-    "**신호처리 (BCG):** FFT·웨이블릿 노이즈 제거, 비지도 피크 검출로 ECG 의존도 감소, 하드웨어·생산팀과 협업",
-    "**웹·클라우드:** 반려견 인식 플랫폼 AURA ID(React, TypeScript), AWS RDS 기반 동물병원 관리 시스템",
+    "**딥러닝 (LSTM):** Sense1 Vet 반려견 웨어러블 심박 모델 단독 개발(TensorFlow / Keras), 떨림·움직임으로 불안정하던 측정을 정확도 96%까지 개선",
+    "**신호처리 (BCG):** FFT·웨이블릿 노이즈 제거, IJK 피크 주기성 피처화, 비지도 피크 검출로 ECG 의존도 감소",
+    "**검증:** 개선마다 Python·NumPy 통계 검증, SHAP으로 피처 중요도 분석",
+    "**하드웨어 협업:** 하드웨어·생산팀과 신호 품질 개선",
+    "**전시:** 케어식스로 J-AGRI 도쿄, FAVA 2024, CES 2025 참가",
   ];
 
 
   const work_app_title = lang === 'ENG' ? "App Developer, CareSix Co., LTD" : "앱 개발자, 케어식스";
   const work_app_details_ENG = [
-    "**Android (Kotlin):** production-line app that maps each device's NFC tag, QR code and barcode into a CSV so every unit can be traced",
-    "**Flutter · Bluetooth:** Cotons AI app that records BCG, 6-axis motion and temperature data",
+    "**Android (Kotlin):** Sense1 Vet production-line app that maps each device's NFC tag, QR code and barcode into a CSV so every unit can be traced",
+    "**Flutter · Bluetooth:** Cotons AI app that records BCG, 6-axis motion and temperature data over Bluetooth",
   ];
   const work_app_details_KOR = [
-    "**Android (Kotlin):** 생산 라인용 앱, 기기별 NFC 태그·QR·바코드를 CSV로 매핑해 제품마다 이력 추적",
-    "**Flutter · 블루투스:** BCG·6축 센서·체온 데이터를 수집하는 Cotons AI 앱",
+    "**Android (Kotlin):** Sense1 Vet 생산 라인용 앱, 기기별 NFC 태그·QR·바코드를 CSV로 매핑해 제품마다 이력 추적",
+    "**Flutter · 블루투스:** BCG·6축 센서·체온 데이터를 블루투스로 수집하는 Cotons AI 앱",
   ];
 
   const work_math_title = lang === 'ENG' ? "Mathematician, CareSix Co., LTD" : "수학 리서처, 케어식스";
   const work_math_details_ENG = [
-    "**Signal analysis:** filtered noise from BCG measurements with a Fourier transform in Python",
-    "**Statistics:** tested whether algorithm changes actually helped (Python, NumPy)",
+    "**Signal analysis (FFT):** filtered noise from BCG measurements with a Fourier transform in Python",
+    "**Statistical testing:** checked whether each algorithm change actually helped (Python, NumPy)",
   ];
   const work_math_details_KOR = [
-    "**신호 분석:** Python 푸리에 변환으로 BCG 측정 노이즈 제거",
-    "**통계 검증:** Python·NumPy로 알고리즘 개선 효과 검증",
+    "**신호 분석 (FFT):** Python 푸리에 변환으로 BCG 측정 노이즈 제거",
+    "**통계 검증:** 알고리즘을 바꿀 때마다 실제 개선인지 Python·NumPy로 검증",
   ];
 
   // Company info
