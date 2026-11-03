@@ -1078,3 +1078,135 @@ section .entry .skill-icon img { cursor: default; }
 @media (prefers-reduced-motion: reduce) {
   .lightbox, .lightbox-figure img { animation: none; }
 }
+
+/* ==== 상단 고정 메뉴 (헤더를 지나면 나타남) ==== */
+html { scroll-behavior: smooth; }
+section[id] { scroll-margin-top: 64px; }
+
+.top-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: saturate(180%) blur(8px);
+  -webkit-backdrop-filter: saturate(180%) blur(8px);
+  border-bottom: 1px solid #eceef1;
+  transform: translateY(-100%);
+  transition: transform 0.2s ease;
+}
+.top-nav.show { transform: none; }
+
+.top-nav-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.top-nav-name {
+  flex: 0 0 auto;
+  font-weight: 800;
+  font-size: 15px;
+  color: #111827;
+  text-decoration: none;
+}
+
+.top-nav-links {
+  display: flex;
+  gap: 4px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.top-nav-links::-webkit-scrollbar { display: none; }
+
+.top-nav-links a {
+  display: block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #6b7280;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.top-nav-links a:hover { color: #111827; background: #f3f4f6; }
+.top-nav-links a.active { color: #1e3a8a; background: #eef2ff; }
+
+.top-nav-lang {
+  flex: 0 0 auto;
+  padding: 5px 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 999px;
+  background: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  color: #374151;
+  cursor: pointer;
+}
+
+/* ==== 성과 숫자 강조 ==== */
+strong.num { font-weight: 700; color: #111827; }
+.pcard-list.accent strong.num { color: inherit; }
+.entry-details { color: #1f2937; }
+.pcard-value, .pcard-list { color: #1f2937; }
+
+/* ==== 경력: 왼쪽 기간 열 + 오른쪽 내용 (타임라인) ==== */
+.entry.timeline {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  column-gap: 32px;
+}
+
+.tl-when {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-top: 3px;
+}
+.tl-dates { font-size: 13.5px; font-weight: 700; color: #1e3a8a; }
+.tl-where { font-size: 13px; color: #6b7280; }
+
+.tl-body {
+  position: relative;
+  min-width: 0;
+  padding-left: 28px;
+  border-left: 2px solid #e5e7eb;
+}
+.tl-body::before {
+  content: '';
+  position: absolute;
+  left: -7px;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #1e3a8a;
+}
+
+/* 타임라인은 선이 이어지도록 항목 사이 구분선 대신 간격만 */
+.entry.timeline + .entry.timeline { border-top: 0; margin-top: 0; padding-top: 0; }
+.entry.timeline .tl-body { padding-bottom: 36px; }
+.entry.timeline:last-child .tl-body { padding-bottom: 4px; }
+
+@media (max-width: 768px) {
+  .top-nav-inner { gap: 12px; padding: 0 12px; }
+  .top-nav-name { display: none; }
+  .top-nav-links { margin: 0; flex: 1; min-width: 0; }
+  .top-nav-links a { padding: 6px 10px; font-size: 13px; }
+
+  .entry.timeline { grid-template-columns: 1fr; }
+  /* 모바일: 선·점 없이 기간 → 제목 → 내용 순서로 쌓기 */
+  .tl-when { flex-direction: row; flex-wrap: wrap; align-items: baseline; gap: 2px 10px; padding: 0 0 6px; }
+  .tl-body { padding-left: 0; border-left: 0; }
+  .tl-body::before { display: none; }
+  .entry.timeline + .entry.timeline { border-top: 1px solid #f0f1f3; padding-top: 28px; }
+}

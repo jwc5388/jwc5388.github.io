@@ -2,6 +2,8 @@ import './App.css';
 import React, { useState } from 'react';
 import Entry from './Entry';
 import Lightbox from './Lightbox';
+import TopNav from './TopNav';
+import emphasize from './emphasize';
 import degreeImage from './assets/images/graduation.jpg';
 import judoImage1 from './assets/images/judo1.jpg';
 import judoImage2 from './assets/images/judo2.jpg';
@@ -1385,9 +1387,20 @@ function App() {
     { label: { ENG: 'Signal · DL', KOR: '신호처리 · DL' }, ids: ['proj-6'] },
   ];
 
+  // 상단 고정 메뉴 항목
+  const navItems = [
+    { id: 'sec-experience', label: lang === 'ENG' ? 'Experience' : '경력' },
+    { id: 'sec-education', label: lang === 'ENG' ? 'Education' : '학력' },
+    { id: 'sec-projects', label: lang === 'ENG' ? 'Projects' : '프로젝트' },
+    { id: 'sec-exhibitions', label: lang === 'ENG' ? 'Exhibitions' : '전시' },
+    { id: 'sec-awards', label: lang === 'ENG' ? 'Awards' : '수상' },
+    { id: 'sec-skills', label: lang === 'ENG' ? 'Skills' : '기술' },
+  ];
+
   return (
     <div className="App">
       <Lightbox />
+      <TopNav items={navItems} name={t[lang].name} lang={lang} setLang={setLang} />
       <header className="App-header">
         {/* Language Toggle */}
         <div className="lang-toggle" aria-label="Language toggle">
@@ -1439,7 +1452,7 @@ function App() {
             ))}
           </div>
         )}
-        {profile.summary[lang] && <p className="profile-summary">{profile.summary[lang]}</p>}
+        {profile.summary[lang] && <p className="profile-summary">{emphasize(profile.summary[lang])}</p>}
         {profile.skills.length > 0 && (
           <ul className="profile-skills">
             {profile.skills.map((sk) => <li key={sk}>{sk}</li>)}
@@ -1462,7 +1475,7 @@ function App() {
 
 
       {/* ===== Work Experience ===== */}
-      <section className="Experience-section">
+      <section className="Experience-section" id="sec-experience">
         <h2 className={`section-title ${expandedSections.experience.expanded ? 'open' : ''}`} onClick={() => toggleSection('experience')}>{t[lang].work}</h2>
         {expandedSections.experience.expanded && (
           <div className="section-content">
@@ -1473,6 +1486,7 @@ function App() {
               details={[...(lang==='ENG' ? work_kdl_details_ENG : work_kdl_details_KOR), projectLinks(['proj-shinhan', 'proj-1', 'proj-4', 'proj-2', 'proj-3', 'proj-5'])]}
               isExpanded={expandedSections.experience.entries.koreaDeepLearning}
               onClick={() => toggleEntry('experience', 'koreaDeepLearning')}
+              timeline
             />
             <Entry
               title={work_ai_title}
@@ -1481,6 +1495,7 @@ function App() {
               details={[...(lang==='ENG' ? work_ai_details_ENG : work_ai_details_KOR), projectLinks(['proj-6'])]}
               isExpanded={expandedSections.experience.entries.aiAlgorithm}
               onClick={() => toggleEntry('experience', 'aiAlgorithm')}
+              timeline
             />
             <Entry
               title={work_app_title}
@@ -1489,6 +1504,7 @@ function App() {
               details={lang==='ENG' ? work_app_details_ENG : work_app_details_KOR}
               isExpanded={expandedSections.experience.entries.appdeveloper}
               onClick={() => toggleEntry('experience', 'appdeveloper')}
+              timeline
             />
             <Entry
               title={work_math_title}
@@ -1497,6 +1513,7 @@ function App() {
               details={lang==='ENG' ? work_math_details_ENG : work_math_details_KOR}
               isExpanded={expandedSections.experience.entries.mathematician}
               onClick={() => toggleEntry('experience', 'mathematician')}
+              timeline
             />
 
             {/* Company about — 비중이 낮아 숨김 (다시 쓰려면 주석 해제)
@@ -1555,7 +1572,7 @@ function App() {
       </section>
 
       {/* ===== Education ===== */}
-      <section className="Education-section">
+      <section className="Education-section" id="sec-education">
         <h2 className={`section-title ${expandedSections.education.expanded ? 'open' : ''}`} onClick={() => toggleSection('education')}>{t[lang].education}</h2>
         {expandedSections.education.expanded && (
           <div className="section-content">
@@ -1650,7 +1667,7 @@ function App() {
       </section>
 
       {/* ===== Projects ===== */}
-      <section className="Project-section">
+      <section className="Project-section" id="sec-projects">
         <h2 className={`section-title ${expandedSections.projects.expanded ? 'open' : ''}`} onClick={() => toggleSection('projects')}>{t[lang].projects}</h2>
         {expandedSections.projects.expanded && (
           <div className="section-content">
@@ -1774,7 +1791,7 @@ function App() {
       </section>
 
       {/* ===== Engagements ===== */}
-      <section className="Engagement-section">
+      <section className="Engagement-section" id="sec-exhibitions">
         <h2 className={`section-title ${expandedSections.engagements.expanded ? 'open' : ''}`} onClick={() => toggleSection('engagements')}>{t[lang].engagements}</h2>
         {expandedSections.engagements.expanded && (
           <div className="section-content">
@@ -1808,7 +1825,7 @@ function App() {
 
 
       {/* ===== Achievements ===== */}
-      <section className="Achievements-section">
+      <section className="Achievements-section" id="sec-awards">
         <h2 className={`section-title ${expandedSections.achievements.expanded ? 'open' : ''}`} onClick={() => toggleSection('achievements')}>{t[lang].achievements}</h2>
         {expandedSections.achievements.expanded && (
           <div className="section-content">
@@ -1860,7 +1877,7 @@ function App() {
 
 
       {/* ===== Skills (아이콘 카드) ===== */}
-      <section className="Skills-section">
+      <section className="Skills-section" id="sec-skills">
         <h2 className={`section-title ${expandedSections.skills.expanded ? 'open' : ''}`} onClick={() => toggleSection('skills')}>{t[lang].skills}</h2>
         {expandedSections.skills.expanded && (
           <div className="section-content">

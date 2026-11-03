@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css'; // Ensure you have proper styling in App.css
 import { useState } from 'react';
+import emphasize from './emphasize';
 
 // 메타 박스 (라벨 / 값 행, chips가 있으면 칩으로 표시)
 function MetaBox({ rows, links = [] }) {
@@ -69,7 +70,7 @@ function ProjectCard({ summary, card, compare, media, details, labels, links }) 
           )}
           <div className="pcard-row">
             <span className="pcard-label">{labels.work}</span>
-            <ul className="pcard-list">{summary.map((s, i) => <li key={i}>{s}</li>)}</ul>
+            <ul className="pcard-list">{summary.map((s, i) => <li key={i}>{emphasize(s)}</li>)}</ul>
           </div>
           {results.length > 0 && (
             <div className="pcard-row">
@@ -126,7 +127,7 @@ function ProjectCard({ summary, card, compare, media, details, labels, links }) 
       </button>
       {showMore && (
         <div className="pcard-details">
-          <ul>{details.map((d, i) => <li key={i}>{d}</li>)}</ul>
+          <ul>{details.map((d, i) => <li key={i}>{emphasize(d)}</li>)}</ul>
           <MetaBox
             rows={[
               { label: labels.contribution, value: card.contribution },
@@ -146,7 +147,7 @@ function ProjectCard({ summary, card, compare, media, details, labels, links }) 
 function Entry({
   id, title, location, dates, details, imageSrc, isExpanded, onClick,
   tags = [], overview = [], meta = [], compare, links = [], labels = {},
-  summary, card, media = [], badge,
+  summary, card, media = [], badge, timeline = false,
 }) {
   const [expandedDetails, setExpandedDetails] = useState({});
 
@@ -158,11 +159,18 @@ function Entry({
   };
 
   return (
-    <div className="entry" id={id}>
+    <div className={`entry ${timeline ? 'timeline' : ''}`} id={id}>
+      {timeline && (
+        <div className="tl-when">
+          {dates && <span className="tl-dates">{dates}</span>}
+          {location && <span className="tl-where">{location}</span>}
+        </div>
+      )}
+      <div className={timeline ? 'tl-body' : undefined}>
       <div className="entry-header" onClick={onClick}>
         <div className="entry-heading">
           <h3>{title}</h3>
-          {(location || dates) && (
+          {!timeline && (location || dates) && (
             <p className="entry-sub">{[location, dates].filter(Boolean).join(' · ')}</p>
           )}
           {tags.length > 0 && (
@@ -186,7 +194,7 @@ function Entry({
             {details.map((detail, index) => (
               <li key={index}>
                 {typeof detail === 'string' || React.isValidElement(detail) ? (
-                  <span>{detail}</span>
+                  <span>{emphasize(detail)}</span>
                 ) : (
                   <div>
                     <div className="detail-header" onClick={() => toggleDetail(index)} style={{ cursor: 'pointer', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
@@ -207,6 +215,7 @@ function Entry({
           {imageSrc && <img src={imageSrc} alt="Related content" className="entry-image" />}
         </div>
       )}
+      </div>
     </div>
   );
 }
