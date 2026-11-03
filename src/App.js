@@ -183,20 +183,20 @@ function App() {
       KOR: '',
     },
     summary: {
-      ENG: "AI Engineer who builds LLM/VLM systems and deploys them on clients' own servers. My Mathematics and Computer Science degree from the University of St Andrews shaped how I work: build a trustworthy evaluation first, then trace where errors come from. At Korea Deep Learning I have shipped document-AI, OCR, vision and generative-video systems with Docker to on-prem and air-gapped servers; at CareSix I built the heart-rate algorithm for a dog wearable. I led Shinhan Vietnam Finance's PoC as PM and sole developer, and productized a single-client KIE pipeline into PPASS, an IDP platform with a modular backend I designed.",
-      KOR: "LLM·VLM 시스템을 만들어 고객사 서버에 배포하는 AI 엔지니어입니다. 세인트앤드루스 대학교에서 수학과 컴퓨터과학을 전공하며, 믿을 수 있는 평가 기준을 먼저 세우고 오류의 원인을 끝까지 추적하는 방식이 몸에 뱄습니다. 한국딥러닝에서 문서 AI·OCR·비전·생성형 영상 시스템을 Docker로 고객 서버와 폐쇄망에 배포했고, 케어식스에서는 반려견 웨어러블의 심박 알고리즘을 만들었습니다. 신한베트남파이낸스 PoC는 PM 겸 단독 개발로 이끌었고, 한 고객사용 KIE 파이프라인은 제품화해 모듈화 설계한 IDP 플랫폼 PPASS로 만들었습니다.",
+      ENG: "AI Engineer who builds LLM/VLM systems and deploys them on clients' own servers. My Mathematics and Computer Science degree from the University of St Andrews shaped how I work: build a trustworthy evaluation first, then trace where errors come from. At Korea Deep Learning I have shipped document-AI, OCR, vision and generative-video systems with Docker to on-prem and air-gapped servers; at CareSix I built the heart-rate algorithm for a dog wearable. I led Shinhan Finance Vietnam's PoC as PM and sole developer, and productized a single-client KIE pipeline into PPASS, an IDP platform with a modular backend I designed.",
+      KOR: "LLM·VLM 시스템을 만들어 고객사 서버에 배포하는 AI 엔지니어입니다. 세인트앤드루스 대학교에서 수학과 컴퓨터과학을 전공하며, 믿을 수 있는 평가 기준을 먼저 세우고 오류의 원인을 끝까지 추적하는 방식이 몸에 뱄습니다. 한국딥러닝에서 문서 AI·OCR·비전·생성형 영상 시스템을 Docker로 고객 서버와 폐쇄망에 배포했고, 케어식스에서는 반려견 웨어러블의 심박 알고리즘을 만들었습니다. 신한파이낸스 베트남 PoC는 PM 겸 단독 개발로 이끌었고, 한 고객사용 KIE 파이프라인은 제품화해 모듈화 설계한 IDP 플랫폼 PPASS로 만들었습니다.",
     },
     skills: ["LLM / VLM", "KIE · OCR", "RAG · LangChain", "LLM Evaluation", "Docker", "On-prem Deployment", "FastAPI", "vLLM", "PyTorch", "Python"],
     highlights: {
       ENG: [
-        "Led Shinhan Vietnam Finance's loan-document PoC as PM and sole developer: top 8 at Global Shinhan InnoBoost 2026, Open Innovation Reward, and Korea Deep Learning's first overseas revenue",
+        "Led Shinhan Finance Vietnam's loan-document PoC as PM and sole developer: top 8 at Global Shinhan InnoBoost 2026, Open Innovation Reward, and Korea Deep Learning's first overseas revenue",
         "Delivered a document-extraction API to Seoyon E-Hwa's air-gapped server over 6 releases: 93.49% accuracy on the client's 3,920-cell audit ledger",
         "Productized Korea Deep Learning's single-client KIE pipeline into PPASS, an IDP platform with a modular backend I designed: classification, automatic schema definition, OCR and layout models plug in or out, and settings such as DPI change per client without code rewrites",
         "Raised handwriting OCR exact-match accuracy by 4.26 pp (85.23% → 89.49%); the weights were deployed in a Hyundai Capital project",
         "Built a real-time CCTV gauge-reading system solo for a government manufacturing project, from labeling to a production Docker API (mAP50-95 0.992 / 0.949)",
       ],
       KOR: [
-        "신한베트남파이낸스 대출 서류 PoC를 PM 겸 단독 개발로 수행: 글로벌 신한 이노부스트 2026 상위 8개사, 오픈이노베이션 리워드, 한국딥러닝 첫 해외 매출",
+        "신한파이낸스 베트남 대출 서류 PoC를 PM 겸 단독 개발로 수행: 글로벌 신한 이노부스트 2026 상위 8개사, 오픈이노베이션 리워드, 한국딥러닝 첫 해외 매출",
         "서연이화 폐쇄망 서버에 문서 추출 API 6차 납품: 고객 검수 대장 3,920칸 기준 정확도 93.49%",
         "한국딥러닝의 단일 고객사용 KIE 파이프라인을 제품화해 IDP 플랫폼 PPASS로 백엔드 모듈화 설계: 분류·자동 스키마 정의·OCR·레이아웃 모델을 붙이고 떼고, DPI 같은 설정도 고객사마다 쉽게 바꿀 수 있게 구성",
         "필기체 OCR 정확도 4.26%p 향상(85.23% → 89.49%), 학습한 가중치를 현대캐피탈 프로젝트에 배포",
@@ -205,7 +205,7 @@ function App() {
     },
     // 대표 성과 숫자 타일 (누르면 해당 프로젝트로 이동)
     stats: [
-      { id: 'proj-shinhan', value: { ENG: 'Top 8', KOR: '상위 8개사' }, label: { ENG: 'Shinhan Vietnam PoC as PM & sole developer → first overseas revenue', KOR: '신한베트남 PoC, PM 겸 단독 개발 → 회사 첫 해외 매출' } },
+      { id: 'proj-shinhan', value: { ENG: 'Top 8', KOR: '상위 8개사' }, label: { ENG: 'Shinhan Finance Vietnam PoC as PM & sole developer → first overseas revenue', KOR: '신한파이낸스 베트남 PoC, PM 겸 단독 개발 → 회사 첫 해외 매출' } },
       { id: 'proj-2', value: { ENG: '93.49%', KOR: '93.49%' }, label: { ENG: 'Seoyon E-Hwa extraction accuracy on the client\'s audit ledger', KOR: '서연이화 문서 추출 정확도 (고객 검수 대장 기준)' } },
       { id: 'proj-4', value: { ENG: '+4.26 pp', KOR: '+4.26%p' }, label: { ENG: 'Hyundai Capital OCR exact-match accuracy', KOR: '현대캐피탈 OCR 완전 일치 정확도' } },
       { id: 'proj-3', value: { ENG: '0.992', KOR: '0.992' }, label: { ENG: 'Gauge detection mAP50-95, in production', KOR: '계기판 검출 mAP50-95, 실서비스 배포' } },
@@ -489,8 +489,8 @@ function App() {
     },
     shinhanVietnam: {
       problem: {
-        ENG: "Loan underwriters at Shinhan Vietnam Finance compared each applicant's ID card and bank statement by eye and typed the numbers in by hand. It was slow, and mistakes slipped through. The PoC goal: upload the documents once and get a first screening result with reasons, while the underwriter still makes the final call.",
-        KOR: "신한베트남파이낸스 대출 심사역은 신청자의 신분증과 은행거래명세서를 눈으로 비교하고 숫자를 손으로 옮겨 적었습니다. 느리고 실수도 잦았습니다. 서류를 한 번 올리면 이유와 함께 1차 심사 결과가 나오고, 최종 판단은 심사역이 하도록 만드는 게 PoC 목표였습니다.",
+        ENG: "Loan underwriters at Shinhan Finance Vietnam compared each applicant's ID card and bank statement by eye and typed the numbers in by hand. It was slow, and mistakes slipped through. The PoC goal: upload the documents once and get a first screening result with reasons, while the underwriter still makes the final call.",
+        KOR: "신한파이낸스 베트남 대출 심사역은 신청자의 신분증과 은행거래명세서를 눈으로 비교하고 숫자를 손으로 옮겨 적었습니다. 느리고 실수도 잦았습니다. 서류를 한 번 올리면 이유와 함께 1차 심사 결과가 나오고, 최종 판단은 심사역이 하도록 만드는 게 PoC 목표였습니다.",
       },
       team: {
         ENG: "Korea Deep Learning: ran the PoC as PM and sole developer on top of the in-house IDP platform (PPASS)",
@@ -640,12 +640,12 @@ function App() {
   const work_kdl_details_ENG = [
     "Work directly with enterprise clients from requirements to delivery, shipping LLM/VLM systems with Docker to on-prem and air-gapped GPU servers in iterative releases.",
     "Productized a single-client KIE pipeline into PPASS and designed its modular backend: classification, schema definition, OCR and layout models plug in or out, and settings such as DPI change per client.",
-    "Led Shinhan Vietnam Finance's PoC as PM and sole developer: top 8 at Global Shinhan InnoBoost 2026 and the company's first overseas revenue.",
+    "Led Shinhan Finance Vietnam's PoC as PM and sole developer: top 8 at Global Shinhan InnoBoost 2026 and the company's first overseas revenue.",
   ];
   const work_kdl_details_KOR = [
     "기업 고객과 직접 소통하며 요구사항 정의부터 납품까지 수행, LLM·VLM 시스템을 Docker로 고객 서버·폐쇄망에 차수별 납품.",
     "단일 고객사용 KIE 파이프라인을 제품화해 PPASS로 만들고 백엔드를 모듈화 설계: 분류·스키마 정의·OCR·레이아웃 모델을 붙이고 떼고, DPI 같은 설정은 고객사별로 조정.",
-    "신한베트남파이낸스 PoC를 PM 겸 단독 개발로 수행: 글로벌 신한 이노부스트 2026 상위 8개사, 회사 첫 해외 매출.",
+    "신한파이낸스 베트남 PoC를 PM 겸 단독 개발로 수행: 글로벌 신한 이노부스트 2026 상위 8개사, 회사 첫 해외 매출.",
   ];
 
   // ===== Projects – Korea Deep Learning =====
@@ -1019,10 +1019,10 @@ function App() {
   );
   // 수상 섹션용 (간략)
   const shinhan_ENG = [
-    "Top 8 of the participating companies and Open Innovation Reward (VND 200,000,000) for the Shinhan Vietnam Finance loan-document PoC I developed; the PoC led to Korea Deep Learning's first overseas revenue.",
+    "Top 8 of the participating companies and Open Innovation Reward (VND 200,000,000) for the Shinhan Finance Vietnam loan-document PoC I developed; the PoC led to Korea Deep Learning's first overseas revenue.",
   ];
   const shinhan_KOR = [
-    "직접 개발한 신한베트남파이낸스 대출 서류 PoC로 참가 기업 중 상위 8개사 선정, 오픈이노베이션 리워드(VND 200,000,000) 수상. PoC가 한국딥러닝 첫 해외 매출로 이어짐.",
+    "직접 개발한 신한파이낸스 베트남 대출 서류 PoC로 참가 기업 중 상위 8개사 선정, 오픈이노베이션 리워드(VND 200,000,000) 수상. PoC가 한국딥러닝 첫 해외 매출로 이어짐.",
   ];
   const shinhan_award_media = (
     <div key="shinhan-award-image" style={{ padding:'10px 0' }}>
@@ -1196,7 +1196,7 @@ function App() {
       },
       media: [{ src: shinhanApp2, caption: { ENG: "Validation results", KOR: "검증 결과 화면" } }, { src: shinhanApp1, caption: { ENG: "Extraction review", KOR: "추출 결과 검수 화면" } }, { src: shinhanImage0, caption: { ENG: "Award", KOR: "수상" } }, { src: shinhanImage1, caption: { ENG: "Top startups", KOR: "상위 기업 시상" } }, { src: shinhanImage2, caption: { ENG: "Demo Day booth", KOR: "데모데이 부스" } }, { src: shinhanImage3, caption: { ENG: "Demo Day 2026", KOR: "데모데이 2026" } }],
       id: 'proj-shinhan', key: 'shinhanVietnam', org: 'company', fields: ['VLM', 'OCR'],
-      title: { ENG: '(Shinhan Vietnam Finance) Shinhan Open Innovation Vietnam – Loan Document Extraction & Validation PoC', KOR: '(신한베트남파이낸스) 신한 오픈이노베이션 베트남 – 대출 서류 자동 추출·검수 PoC' },
+      title: { ENG: 'Shinhan Finance Vietnam · Loan Document Check PoC', KOR: '신한파이낸스 베트남 · 대출 서류 자동 검수 PoC' },
       location: { ENG: 'Korea Deep Learning · PM & sole developer', KOR: '한국딥러닝 · PM 겸 단독 개발' },
       dates: { ENG: 'June 2026 ~ September 2026', KOR: '2026.06 ~ 2026.09' },
       details: lang === 'ENG' ? shinhanPj_ENG : shinhanPj_KOR,
@@ -1221,7 +1221,7 @@ function App() {
       },
       media: [{ src: lgaxImage1, caption: { ENG: "Deployed service: master spec sheet", KOR: "실제 배포 화면: 마스터 스펙시트" } }, { src: lgaxImage2, caption: { ENG: "Generated product roadmap", KOR: "로드맵 자동 생성 화면" } }],
       id: 'proj-1', key: 'kdlProductPlanning', org: 'company', fields: ['LLM', 'VLM'],
-      title: { ENG: '(LG Electronics) Product-Planning Document Automation', KOR: '(LG전자) 상품기획 문서 자동화' },
+      title: { ENG: 'LG Electronics · Product-Planning Document Automation', KOR: 'LG전자 · 상품기획 문서 자동화' },
       location: { ENG: 'Korea Deep Learning · AX project', KOR: '한국딥러닝 · AX 프로젝트' },
       dates: { ENG: 'July 2026 ~ Present', KOR: '2026.07 ~ 진행중' },
       details: lang === 'ENG' ? kdl_planning_ENG : kdl_planning_KOR,
@@ -1250,7 +1250,7 @@ function App() {
         { src: hcOcrForm2, caption: { ENG: "Installment form: full page", KOR: "신차할부 양식 전체 인식" } },
       ],
       id: 'proj-4', key: 'kdlOcrResearch', org: 'company', fields: ['CV', 'OCR'],
-      title: { ENG: '(Hyundai Capital) Korean Handwriting OCR Recognizer R&D', KOR: '(현대캐피탈) 한국어 필기체 OCR Recognizer 연구' },
+      title: { ENG: 'Hyundai Capital · Korean Handwriting OCR', KOR: '현대캐피탈 · 한국어 필기체 OCR 연구' },
       location: { ENG: 'Korea Deep Learning · R&D, weights deployed to the client project', KOR: '한국딥러닝 · R&D, 고객 프로젝트에 가중치 배포' },
       dates: { ENG: 'January 2026 ~ April 2026', KOR: '2026.01 ~ 2026.04' },
       details: lang === 'ENG' ? kdl_ocr_ENG : kdl_ocr_KOR,
@@ -1263,7 +1263,7 @@ function App() {
       },
       media: [{ src: seoyonImage2, caption: { ENG: "Deployed: Excel field extraction", KOR: "실제 배포 화면: 엑셀 필드 추출" } }, { src: seoyonImage1, caption: { ENG: "FMEA PDF parsing", KOR: "FMEA PDF 표 파싱" } }],
       id: 'proj-2', key: 'kdlDocExtraction', org: 'company', fields: ['LLM', 'VLM'],
-      title: { ENG: '(Seoyon E-Hwa) Quality & Process Document Extraction API', KOR: '(서연이화) 품질·공정 문서 DB화 추출 API' },
+      title: { ENG: 'Seoyon E-Hwa · Quality Document Extraction API', KOR: '서연이화 · 품질·공정 문서 추출 API' },
       location: { ENG: 'Korea Deep Learning · delivered to an air-gapped server', KOR: '한국딥러닝 · 폐쇄망 서버 납품' },
       dates: { ENG: 'August 2026 ~ October 2026', KOR: '2026.08 ~ 2026.10' },
       details: lang === 'ENG' ? kdl_extract_ENG : kdl_extract_KOR,
@@ -1288,7 +1288,7 @@ function App() {
       },
       media: [{ src: gaugeImage1, caption: { ENG: "Real CCTV reading result", KOR: "실제 CCTV 판독 결과" } }],
       id: 'proj-3', key: 'kdlGaugeReading', org: 'company', fields: ['CV'],
-      title: { ENG: '(Government-Funded Manufacturing Innovation) Real-Time Analog Gauge Reading from CCTV', KOR: '(정부과제·제조혁신) CCTV 기반 아날로그 계기판 실시간 판독' },
+      title: { ENG: 'Government R&D · CCTV Analog Gauge Reading', KOR: '정부과제 · CCTV 아날로그 계기판 판독' },
       location: { ENG: 'Korea Deep Learning · deployed to production', KOR: '한국딥러닝 · 실서비스 배포' },
       dates: { ENG: 'January 2026 ~ March 2026', KOR: '2026.01 ~ 2026.03' },
       details: lang === 'ENG' ? kdl_gauge_ENG : kdl_gauge_KOR,
@@ -1318,7 +1318,7 @@ function App() {
         { src: disasterFlowFire, wide: true, caption: { ENG: "Wildfire spreading over 10 s: faint smoke → drifts with the wind → embers at the base → small flame (fixed camera)", KOR: "산불 확산 10초: 옅은 연기 → 바람 방향으로 확산 → 기저부 불씨 → 작은 불 (카메라 고정)" } },
       ],
       id: 'proj-5', key: 'kdlDisasterVideo', org: 'company', fields: ['GenAI', 'VLM'],
-      title: { ENG: 'Disaster CCTV Video Augmentation (Wildfire · Flood)', KOR: '재난 CCTV 영상 증강 (산불·침수)' },
+      title: { ENG: 'Disaster CCTV Augmentation · Wildfire & Flood', KOR: '재난 CCTV 영상 증강 · 산불·침수' },
       location: { ENG: 'Korea Deep Learning · generative AI pipeline', KOR: '한국딥러닝 · 생성형 AI 파이프라인' },
       dates: { ENG: 'June 2026 ~ Present', KOR: '2026.06 ~ 진행중' },
       details: lang === 'ENG' ? kdl_video_ENG : kdl_video_KOR,
@@ -1337,7 +1337,7 @@ function App() {
         { src: senseoneImage3, caption: { ENG: "BiLSTM model summary", KOR: "BiLSTM 모델 구조" } },
       ],
       id: 'proj-6', key: 'sense1Vet', org: 'company', fields: ['DL', 'Signal'],
-      title: { ENG: '(CareSix) Sense1 Vet Heart-Rate Algorithm', KOR: '(케어식스) Sense1 Vet 심박 알고리즘' },
+      title: { ENG: 'CareSix · Sense1 Vet Heart-Rate Algorithm', KOR: '케어식스 · Sense1 Vet 심박 알고리즘' },
       location: { ENG: 'CareSix Co., LTD · wearable for dogs', KOR: '케어식스 · 반려견 웨어러블' },
       dates: { ENG: 'September 2024 ~ February 2025', KOR: '2024.09 ~ 2025.02' },
       details: lang === 'ENG' ? pj_sense1_ENG : pj_sense1_KOR,
@@ -1351,7 +1351,7 @@ function App() {
       },
       media: [{ src: lawAIImage1, caption: { ENG: "Law-AI", KOR: "Law-AI" } }, { src: lawAIImage4, caption: { ENG: "", KOR: "" } }, { src: lawAIImage2, caption: { ENG: "", KOR: "" } }, { src: lawAIImage3, caption: { ENG: "", KOR: "" } }, { src: lawAIImage5, caption: { ENG: "", KOR: "" } }],
       id: 'side-law', key: 'lawIntelligence', org: 'program', fields: ['LLM', 'RAG'],
-      title: { ENG: '[IBM x RedHat] Law-AI', KOR: '[IBM x RedHat] Law-AI' },
+      title: { ENG: 'IBM x Red Hat · Law-AI', KOR: 'IBM x Red Hat · Law-AI' },
       location: { ENG: 'IBM final group project', KOR: 'IBM 파이널 그룹 프로젝트' },
       dates: { ENG: '2025 ~ October 2025', KOR: '2025 ~ 2025.10' },
       details: lang === 'ENG' ? law_ENG : law_KOR,
@@ -1361,7 +1361,7 @@ function App() {
   const allProjects = [...mainProjects, ...sideProjects];
   // 경력 항목 아래에 붙는 관련 프로젝트 바로가기
   const projectShort = {
-    'proj-shinhan': { ENG: 'Shinhan Vietnam PoC', KOR: '신한베트남 PoC' },
+    'proj-shinhan': { ENG: 'Shinhan Finance Vietnam PoC', KOR: '신한파이낸스 베트남 PoC' },
     'proj-1': { ENG: 'LG Electronics planning', KOR: 'LG전자 상품기획' },
     'proj-4': { ENG: 'Hyundai Capital OCR', KOR: '현대캐피탈 OCR' },
     'proj-2': { ENG: 'Seoyon E-Hwa extraction', KOR: '서연이화 문서 추출' },
