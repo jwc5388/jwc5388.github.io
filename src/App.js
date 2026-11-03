@@ -707,14 +707,22 @@ function App() {
   // ====== Work ======
   const work_kdl_title = lang === 'ENG' ? "ML Engineer, Korea Deep Learning" : "ML 엔지니어, 한국딥러닝";
   const work_kdl_details_ENG = [
-    "Work directly with enterprise clients from requirements to delivery, shipping LLM/VLM systems with Docker to on-prem and air-gapped GPU servers in iterative releases.",
-    "Built the classification, automatic schema definition and extraction-result modules and the UI of PPASS (now DeepHub), the in-house IDP platform that turned one-off KIE projects into reusable modules; 10+ client projects have shipped on it.",
-    "Led Shinhan Finance Vietnam's PoC as PM and sole developer: top 8 at Global Shinhan InnoBoost 2026 and the company's first overseas revenue.",
+    "**VLM document extraction & validation:** Shinhan Finance Vietnam loan-document PoC as PM and sole developer (top 8 at InnoBoost 2026, the company's first overseas revenue)",
+    "**IDP platform (KIE):** classification, automatic schema and extraction modules of PPASS (now DeepHub); 10+ client projects shipped on it",
+    "**LLM/VLM document automation:** Seoyon E-Hwa quality documents (93.49% on the client's audit ledger) and LG Electronics spec sheets (1,225 / 1,232 cells)",
+    "**Handwriting OCR:** recognizer fine-tuning, +4.26 pp exact match, weights deployed in a Hyundai Capital project",
+    "**Computer vision:** CCTV gauge reading with YOLO and oriented boxes (mAP50-95 0.992), in production",
+    "**Generative video:** wildfire and flood CCTV videos with FLUX.2 and Wan2.2, checked by an automated VLM QA",
+    "**Serving & deployment:** vLLM (FP8), FastAPI and Docker on clients' on-prem and air-gapped GPU servers",
   ];
   const work_kdl_details_KOR = [
-    "기업 고객과 직접 소통하며 요구사항 정의부터 납품까지 수행, LLM·VLM 시스템을 Docker로 고객 서버·폐쇄망에 차수별 납품.",
-    "고객사마다 따로 만들던 KIE 프로젝트를 모듈로 묶은 사내 IDP 플랫폼 PPASS(현 DeepHub)의 분류·자동 스키마 정의·추출 결과 모듈과 UI 개발: 이 플랫폼으로 10개 이상 프로젝트 납품.",
-    "신한파이낸스 베트남 PoC를 PM 겸 단독 개발로 수행: 글로벌 신한 이노부스트 2026 상위 8개사, 회사 첫 해외 매출.",
+    "**VLM 문서 추출·검증:** 신한파이낸스 베트남 대출 서류 PoC, PM 겸 단독 개발 (이노부스트 2026 상위 8개사, 회사 첫 해외 매출)",
+    "**IDP 플랫폼 (KIE):** PPASS(현 DeepHub)의 분류·자동 스키마·추출 모듈 개발, 10개 이상 프로젝트 납품",
+    "**LLM·VLM 문서 자동화:** 서연이화 품질 문서(고객 검수 대장 기준 93.49%), LG전자 스펙시트(1,232칸 중 1,225칸)",
+    "**필기체 OCR:** Recognizer fine-tuning으로 정확도 +4.26%p, 현대캐피탈 프로젝트에 가중치 배포",
+    "**컴퓨터 비전:** YOLO와 회전 박스로 CCTV 계기판 판독 (mAP50-95 0.992), 실서비스 배포",
+    "**생성형 영상:** FLUX.2·Wan2.2로 산불·침수 CCTV 영상 생성, VLM 자동 검수",
+    "**서빙·배포:** vLLM(FP8), FastAPI, Docker로 고객 서버·폐쇄망 GPU에 납품",
   ];
 
   // ===== Projects – Korea Deep Learning =====
@@ -813,35 +821,35 @@ function App() {
 
   const work_ai_title = lang === 'ENG' ? "AI/ML Engineer & Researcher, CareSix Co., LTD" : "AI/ML 엔지니어 & 리서처, 케어식스";
   const work_ai_details_ENG = [
-    "Sole developer of the LSTM-based heart-rate algorithm for the Sense1 Vet dog wearable: 96% accuracy on readings that trembling and motion had made unreliable.",
-    "BCG signal processing (FFT, wavelet denoising) and unsupervised peak detection to reduce dependence on ECG; worked with hardware and production teams on signal quality.",
-    "AURA ID: web dog-recognition platform (React, TypeScript) and a veterinary hospital management system on AWS RDS.",
+    "**Deep learning:** LSTM heart-rate model for the Sense1 Vet dog wearable, 96% accuracy on readings that trembling and motion had made unreliable",
+    "**Signal processing (BCG):** FFT, wavelet denoising and unsupervised peak detection to reduce dependence on ECG, with the hardware and production teams",
+    "**Web & cloud:** AURA ID dog-recognition platform (React, TypeScript) and a veterinary hospital system on AWS RDS",
   ];
   const work_ai_details_KOR = [
-    "Sense1 Vet 반려견 웨어러블의 LSTM 기반 심박 알고리즘 단독 개발: 떨림·움직임으로 불안정하던 측정을 정확도 96%까지 개선.",
-    "BCG 신호처리(FFT·웨이블릿 노이즈 제거)와 비지도 피크 검출로 ECG 의존도 감소, 하드웨어·생산팀과 신호 품질 개선.",
-    "AURA ID: 반려견 인식 웹 플랫폼(React, TypeScript)과 AWS RDS 기반 동물병원 관리 시스템 개발.",
+    "**딥러닝:** Sense1 Vet 반려견 웨어러블의 LSTM 심박 모델, 떨림·움직임으로 불안정하던 측정을 정확도 96%까지 개선",
+    "**신호처리 (BCG):** FFT·웨이블릿 노이즈 제거, 비지도 피크 검출로 ECG 의존도 감소, 하드웨어·생산팀과 협업",
+    "**웹·클라우드:** 반려견 인식 플랫폼 AURA ID(React, TypeScript), AWS RDS 기반 동물병원 관리 시스템",
   ];
 
 
   const work_app_title = lang === 'ENG' ? "App Developer, CareSix Co., LTD" : "앱 개발자, 케어식스";
   const work_app_details_ENG = [
-    'Built a Kotlin app used on the Sense1 Vet production line: it maps each device\'s NFC tag, QR code and barcode into a CSV so every unit can be traced.',
-    'Built Cotons AI, a Flutter Bluetooth app that records BCG, 6-axis motion and temperature data.',
+    "**Android (Kotlin):** production-line app that maps each device's NFC tag, QR code and barcode into a CSV so every unit can be traced",
+    "**Flutter · Bluetooth:** Cotons AI app that records BCG, 6-axis motion and temperature data",
   ];
   const work_app_details_KOR = [
-    'Sense1 Vet 생산 라인에서 쓰는 Kotlin 앱 개발: 기기별 NFC 태그·QR·바코드를 CSV로 매핑해 제품마다 이력 추적.',
-    'BCG·6축 센서·체온 데이터를 블루투스로 수집하는 Flutter 앱(Cotons AI) 개발.',
+    "**Android (Kotlin):** 생산 라인용 앱, 기기별 NFC 태그·QR·바코드를 CSV로 매핑해 제품마다 이력 추적",
+    "**Flutter · 블루투스:** BCG·6축 센서·체온 데이터를 수집하는 Cotons AI 앱",
   ];
 
   const work_math_title = lang === 'ENG' ? "Mathematician, CareSix Co., LTD" : "수학 리서처, 케어식스";
   const work_math_details_ENG = [
-    'Filtered noise from BCG measurements with a Fourier transform in Python.',
-    'Checked whether algorithm changes actually helped with statistical tests in Python and NumPy.',
+    "**Signal analysis:** filtered noise from BCG measurements with a Fourier transform in Python",
+    "**Statistics:** tested whether algorithm changes actually helped (Python, NumPy)",
   ];
   const work_math_details_KOR = [
-    'Python 푸리에 변환으로 BCG 측정 노이즈 제거.',
-    'Python·NumPy 통계 분석으로 알고리즘 개선 효과 검증.',
+    "**신호 분석:** Python 푸리에 변환으로 BCG 측정 노이즈 제거",
+    "**통계 검증:** Python·NumPy로 알고리즘 개선 효과 검증",
   ];
 
   // Company info

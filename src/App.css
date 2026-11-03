@@ -1266,3 +1266,6 @@ strong.num { font-weight: 700; color: #111827; }
 @media (max-width: 768px) { .edu-gallery img { height: 240px; } }
 .edu-gallery .pcard-caption { font-size: 11px; white-space: nowrap; }
 @media (max-width: 768px) { .edu-gallery .pcard-caption { white-space: normal; right: 8px; } }
+
+/* ==== 경력: 줄 앞 기술 키워드 ==== */
+strong.kw { font-weight: 700; color: #1e3a8a; }
