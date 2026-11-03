@@ -1218,3 +1218,42 @@ strong.num { font-weight: 700; color: #111827; }
 /* 작은 썸네일 캡션은 잘려 보이므로 마우스를 올렸을 때만 (크게 보기에서는 항상 표시) */
 .pcard-thumbs .pcard-caption { opacity: 0; transition: opacity 0.15s ease; }
 .pcard-thumbs .pcard-figure:hover .pcard-caption { opacity: 1; }
+
+/* ==== 상단 세 칸: 아이콘 제목 + 칸 사이 세로선 + 핵심 단어 굵게 ==== */
+.glance-col h4 { display: flex; align-items: center; gap: 8px; }
+.glance-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #eef2ff;
+  color: #1e3a8a;
+}
+.glance-col + .glance-col { padding-left: 32px; border-left: 1px solid #e5e7eb; }
+.glance-col li { color: #111827; }
+.glance-col li strong { font-weight: 700; color: #1e3a8a; }
+.glance-date { color: #6b7280; font-weight: 600; }
+
+/* ==== 성과 숫자: 숫자 → 고객사 → 측정 항목 세 줄, 마우스 올리면 → ==== */
+.stat-tile { position: relative; gap: 4px; padding: 18px 14px; }
+.stat-value { margin-bottom: 4px; }
+.stat-who { font-size: 12.5px; letter-spacing: -0.01em; font-weight: 700; line-height: 1.35; color: #111827; }
+.stat-label { font-size: 12.5px; line-height: 1.45; color: #6b7280; }
+.stat-go {
+  position: absolute;
+  top: 18px;
+  right: 14px;
+  font-size: 14px;
+  color: #c2410c;
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: opacity .15s ease, transform .15s ease;
+}
+.stat-tile:hover { background: #fff7ed; }
+.stat-tile:hover .stat-go { opacity: 1; transform: none; }
+
+@media (max-width: 768px) {
+  .glance-col + .glance-col { padding-left: 0; border-left: 0; padding-top: 24px; border-top: 1px solid #f0f1f3; }
+}

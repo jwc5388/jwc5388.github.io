@@ -86,7 +86,7 @@ import dissertation1 from './assets/files/CSDissertation.pdf';
 import dissertation2 from './assets/files/MathDissertation.pdf';
 import dissertationImage1 from './assets/images/dissertation1.png';
 import dissertationImage2 from './assets/images/dissertation2.png';
-import { FaEnvelope, FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaEnvelope, FaLinkedin, FaGithub, FaGraduationCap, FaTrophy, FaFlag } from 'react-icons/fa';
 
 // ===== 스킬 아이콘 =====
 import {
@@ -210,57 +210,60 @@ function App() {
     },
     // 대표 성과 숫자 타일 (누르면 해당 프로젝트로 이동)
     stats: [
-      { id: 'proj-shinhan', value: { ENG: 'Top 8', KOR: '상위 8개사' }, label: { ENG: 'Shinhan Finance Vietnam PoC as PM & sole developer → first overseas revenue', KOR: '신한파이낸스 베트남 PoC, PM 겸 단독 개발 → 회사 첫 해외 매출' } },
-      { id: 'proj-2', value: { ENG: '93.49%', KOR: '93.49%' }, label: { ENG: 'Seoyon E-Hwa extraction accuracy on the client\'s audit ledger', KOR: '서연이화 문서 추출 정확도 (고객 검수 대장 기준)' } },
-      { id: 'proj-4', value: { ENG: '+4.26 pp', KOR: '+4.26%p' }, label: { ENG: 'Hyundai Capital OCR exact-match accuracy', KOR: '현대캐피탈 OCR 완전 일치 정확도' } },
-      { id: 'proj-3', value: { ENG: '0.992', KOR: '0.992' }, label: { ENG: 'Gauge detection mAP50-95, in production', KOR: '계기판 검출 mAP50-95, 실서비스 배포' } },
-      { id: 'proj-1', value: { ENG: '1,225 / 1,232', KOR: '1,225 / 1,232' }, label: { ENG: 'LG Electronics spec cells filled automatically', KOR: 'LG전자 스펙시트 자동 채움 칸' } },
+      { id: 'proj-shinhan', value: { ENG: "Top 8", KOR: "상위 8개사" }, who: { ENG: "Shinhan Finance Vietnam", KOR: "신한파이낸스 베트남" }, label: { ENG: "InnoBoost 2026, PM & sole dev", KOR: "이노부스트 2026 단독 개발" } },
+      { id: 'proj-2', value: { ENG: "93.49%", KOR: "93.49%" }, who: { ENG: "Seoyon E-Hwa", KOR: "서연이화" }, label: { ENG: "extraction accuracy (audit ledger)", KOR: "문서 추출 정확도 (검수 대장)" } },
+      { id: 'proj-4', value: { ENG: "+4.26 pp", KOR: "+4.26%p" }, who: { ENG: "Hyundai Capital", KOR: "현대캐피탈" }, label: { ENG: "handwriting OCR exact match", KOR: "필기체 OCR 정확도 향상" } },
+      { id: 'proj-3', value: { ENG: "0.992", KOR: "0.992" }, who: { ENG: "Gauge reading", KOR: "계기판 판독" }, label: { ENG: "detection mAP50-95, in production", KOR: "검출 mAP50-95, 실서비스" } },
+      { id: 'proj-1', value: { ENG: "1,225 / 1,232", KOR: "1,225 / 1,232" }, who: { ENG: "LG Electronics", KOR: "LG전자" }, label: { ENG: "spec cells filled automatically", KOR: "스펙시트 칸 자동 채움" } },
     ],
     // 주요 이력 한눈에 보기 (직함 바로 아래 표시)
     glance: [
       {
+        icon: FaGraduationCap,
         title: { ENG: 'Education & Experience', KOR: '학력 및 경력' },
         items: {
           ENG: [
             '2019.09 ~ 2024.06 : University of St Andrews, BSc Mathematics and Computer Science',
             '2024.09 ~ 2025.04 : CareSix, AI/ML Engineer',
             '2025.04 ~ 2025.10 : IBM x RedHat AI Transformation – AX Academy',
-            '2025.11 ~ : Korea Deep Learning, ML Engineer (current)',
+            '2025.11 ~ : **Korea Deep Learning**, ML Engineer (current)',
           ],
           KOR: [
             '2019.09 ~ 2024.06 : 세인트앤드루스 대학교 수학·컴퓨터과학 학사',
             '2024.09 ~ 2025.04 : 케어식스 AI/ML 엔지니어',
             '2025.04 ~ 2025.10 : IBM x RedHat AI Transformation – AX Academy',
-            '2025.11 ~ : 한국딥러닝 ML 엔지니어 재직 중',
+            '2025.11 ~ : **한국딥러닝** ML 엔지니어 재직 중',
           ],
         },
       },
       {
+        icon: FaTrophy,
         title: { ENG: 'Awards', KOR: '수상내역' },
         items: {
           ENG: [
-            'Global Shinhan InnoBoost 2026 (Top 8 · Open Innovation Reward)',
-            '2025 Quantum AI Hackathon (Excellence Prize, 1st in qualifier)',
-            'Toss NEXT ML Challenge (30th of 2,206, résumé-screening pass)',
-            'Boost up AI 2025 Drug Discovery (37th of 1,289, solo)',
+            'Global Shinhan InnoBoost 2026 (**Top 8** · Open Innovation Reward)',
+            '2025 Quantum AI Hackathon (**Excellence Prize**, 1st in qualifier)',
+            'Toss NEXT ML Challenge (**30th of 2,206**, résumé-screening pass)',
+            'Boost up AI 2025 Drug Discovery (**37th of 1,289**, solo)',
           ],
           KOR: [
-            '글로벌 신한 이노부스트 2026 (상위 8개사 · 오픈이노베이션 리워드)',
-            '2025 퀀텀 AI 해커톤 (우수상, 예선 1위)',
-            '토스 NEXT ML Challenge (2,206명 중 30위, 서류 면제)',
-            'Boost up AI 2025 신약 개발 경진대회 (1,289명 중 37위, 개인)',
+            '글로벌 신한 이노부스트 2026 (**상위 8개사** · 오픈이노베이션 리워드)',
+            '2025 퀀텀 AI 해커톤 (**우수상**, 예선 1위)',
+            '토스 NEXT ML Challenge (**2,206명 중 30위**, 서류 면제)',
+            'Boost up AI 2025 신약 개발 경진대회 (**1,289명 중 37위**, 개인)',
           ],
         },
       },
       {
+        icon: FaFlag,
         title: { ENG: 'Activities', KOR: '대내외 활동' },
         items: {
           ENG: [
-            'Exhibited at CES 2025, J-AGRI Tokyo and FAVA 2024 (CareSix)',
+            'Exhibited at **CES 2025**, J-AGRI Tokyo and FAVA 2024 (CareSix)',
             '2025 K-Digital Training AI Hackathon (Road Guardian)',
           ],
           KOR: [
-            'CES 2025 · J-AGRI 도쿄 · FAVA 2024 전시 참가 (케어식스)',
+            '**CES 2025** · J-AGRI 도쿄 · FAVA 2024 전시 참가 (케어식스)',
             '2025 K-디지털 트레이닝 AI 해커톤 (Road Guardian)',
           ],
         },
@@ -1498,6 +1501,9 @@ function App() {
     { label: { ENG: 'Signal · DL', KOR: '신호처리 · DL' }, ids: ['proj-6'] },
   ];
 
+  // 한눈에 보기 문구의 **...** 부분을 굵게
+  const boldMarks = (text) => text.split(/\*\*(.+?)\*\*/).map((part, i) => (i % 2 ? <strong key={i}>{part}</strong> : part));
+
   // 상단 고정 메뉴 항목
   const navItems = [
     { id: 'sec-experience', label: lang === 'ENG' ? 'Experience' : '경력' },
@@ -1547,14 +1553,14 @@ function App() {
           <div className="profile-glance">
             {profile.glance.map((g) => (
               <div className="glance-col" key={g.title.ENG}>
-                <h4>{g.title[lang]}</h4>
+                <h4>{g.icon && <span className="glance-icon"><g.icon size={12} /></span>}{g.title[lang]}</h4>
                 <ul>
                   {g.items[lang].map((it, i) => {
                     const [date, text] = it.includes(' : ') ? it.split(' : ') : ['', it];
                     return (
                       <li key={i}>
                         {date && <span className="glance-date">{date}</span>}
-                        <span>{text}</span>
+                        <span>{boldMarks(text)}</span>
                       </li>
                     );
                   })}
@@ -1574,7 +1580,9 @@ function App() {
             {profile.stats.map((st) => (
               <a className="stat-tile" key={st.id} href={`#${st.id}`}>
                 <span className="stat-value">{st.value[lang]}</span>
+                {st.who && <span className="stat-who">{st.who[lang]}</span>}
                 <span className="stat-label">{st.label[lang]}</span>
+                <span className="stat-go" aria-hidden="true">→</span>
               </a>
             ))}
           </div>
