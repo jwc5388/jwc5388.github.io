@@ -59,6 +59,9 @@ import seoyonImage2 from './assets/images/seoyon2.jpg';
 import lgaxImage1 from './assets/images/lgax1.jpg';
 import lgaxImage2 from './assets/images/lgax2.jpg';
 import shinhanApp1 from './assets/images/shinhanApp1.jpg';
+import ppassClassify from './assets/images/ppass_classify.jpg';
+import ppassResult from './assets/images/ppass_result.jpg';
+import ppassUpload from './assets/images/ppass_upload.jpg';
 import shinhanApp2 from './assets/images/shinhanApp2.jpg';
 import shinhanImage0 from './assets/images/shinhan0.jpg';
 import shinhanImage1 from './assets/images/shinhan1.jpg';
@@ -185,22 +188,22 @@ function App() {
       KOR: '',
     },
     summary: {
-      ENG: "AI Engineer who builds LLM/VLM systems and deploys them on clients' own servers. My Mathematics and Computer Science degree from the University of St Andrews shaped how I work: build a trustworthy evaluation first, then trace where errors come from. At Korea Deep Learning I have shipped document-AI, OCR, vision and generative-video systems with Docker to on-prem and air-gapped servers; at CareSix I built the heart-rate algorithm for a dog wearable. I led Shinhan Finance Vietnam's PoC as PM and sole developer, and productized a single-client KIE pipeline into PPASS, an IDP platform with a modular backend I designed.",
-      KOR: "LLM·VLM 시스템을 만들어 고객사 서버에 배포하는 AI 엔지니어입니다. 세인트앤드루스 대학교에서 수학과 컴퓨터과학을 전공하며, 믿을 수 있는 평가 기준을 먼저 세우고 오류의 원인을 끝까지 추적하는 방식이 몸에 뱄습니다. 한국딥러닝에서 문서 AI·OCR·비전·생성형 영상 시스템을 Docker로 고객 서버와 폐쇄망에 배포했고, 케어식스에서는 반려견 웨어러블의 심박 알고리즘을 만들었습니다. 신한파이낸스 베트남 PoC는 PM 겸 단독 개발로 이끌었고, 한 고객사용 KIE 파이프라인은 제품화해 모듈화 설계한 IDP 플랫폼 PPASS로 만들었습니다.",
+      ENG: "AI Engineer who builds LLM/VLM systems and deploys them on clients' own servers. My Mathematics and Computer Science degree from the University of St Andrews shaped how I work: build a trustworthy evaluation first, then trace where errors come from. At Korea Deep Learning I have shipped document-AI, OCR, vision and generative-video systems with Docker to on-prem and air-gapped servers; at CareSix I built the heart-rate algorithm for a dog wearable. I led Shinhan Finance Vietnam's PoC as PM and sole developer, and built the classification, schema and extraction modules of PPASS (now DeepHub), the in-house IDP platform behind 10+ client projects.",
+      KOR: "LLM·VLM 시스템을 만들어 고객사 서버에 배포하는 AI 엔지니어입니다. 세인트앤드루스 대학교에서 수학과 컴퓨터과학을 전공하며, 믿을 수 있는 평가 기준을 먼저 세우고 오류의 원인을 끝까지 추적하는 방식이 몸에 뱄습니다. 한국딥러닝에서 문서 AI·OCR·비전·생성형 영상 시스템을 Docker로 고객 서버와 폐쇄망에 배포했고, 케어식스에서는 반려견 웨어러블의 심박 알고리즘을 만들었습니다. 신한파이낸스 베트남 PoC는 PM 겸 단독 개발로 이끌었고, 사내 IDP 플랫폼 PPASS(현 DeepHub)의 분류·스키마·추출 모듈을 만들었고, 이 플랫폼으로 10개 이상의 프로젝트가 납품됐습니다.",
     },
     skills: ["LLM / VLM", "KIE · OCR", "RAG · LangChain", "LLM Evaluation", "Docker", "On-prem Deployment", "FastAPI", "vLLM", "PyTorch", "Python"],
     highlights: {
       ENG: [
         "Led Shinhan Finance Vietnam's loan-document PoC as PM and sole developer: top 8 at Global Shinhan InnoBoost 2026, Open Innovation Reward, and Korea Deep Learning's first overseas revenue",
         "Delivered a document-extraction API to Seoyon E-Hwa's air-gapped server over 6 releases: 93.49% accuracy on the client's 3,920-cell audit ledger",
-        "Productized Korea Deep Learning's single-client KIE pipeline into PPASS, an IDP platform with a modular backend I designed: classification, automatic schema definition, OCR and layout models plug in or out, and settings such as DPI change per client without code rewrites",
+        "Built the classification, automatic schema definition and extraction-result modules and the UI of PPASS (now DeepHub), the in-house IDP platform that turned one-off KIE projects into reusable modules; 10+ client projects have shipped on it",
         "Raised handwriting OCR exact-match accuracy by 4.26 pp (85.23% → 89.49%); the weights were deployed in a Hyundai Capital project",
         "Built a real-time CCTV gauge-reading system solo for a government manufacturing project, from labeling to a production Docker API (mAP50-95 0.992 / 0.949)",
       ],
       KOR: [
         "신한파이낸스 베트남 대출 서류 PoC를 PM 겸 단독 개발로 수행: 글로벌 신한 이노부스트 2026 상위 8개사, 오픈이노베이션 리워드, 한국딥러닝 첫 해외 매출",
         "서연이화 폐쇄망 서버에 문서 추출 API 6차 납품: 고객 검수 대장 3,920칸 기준 정확도 93.49%",
-        "한국딥러닝의 단일 고객사용 KIE 파이프라인을 제품화해 IDP 플랫폼 PPASS로 백엔드 모듈화 설계: 분류·자동 스키마 정의·OCR·레이아웃 모델을 붙이고 떼고, DPI 같은 설정도 고객사마다 쉽게 바꿀 수 있게 구성",
+        "고객사마다 따로 만들던 KIE 프로젝트를 모듈로 묶은 사내 IDP 플랫폼 PPASS(현 DeepHub)의 분류·자동 스키마 정의·추출 결과 모듈과 UI 개발: 이 플랫폼으로 10개 이상 프로젝트 납품",
         "필기체 OCR 정확도 4.26%p 향상(85.23% → 89.49%), 학습한 가중치를 현대캐피탈 프로젝트에 배포",
         "정부과제(제조혁신) CCTV 계기판 실시간 판독 시스템을 라벨링부터 Docker API 실서비스 배포까지 1인 구축 (mAP50-95 0.992 / 0.949)",
       ],
@@ -489,6 +492,29 @@ function App() {
       results: { ENG: '', KOR: '' },
       links: [],
     },
+    ppassPlatform: {
+      problem: {
+        ENG: "Korea Deep Learning had built many KIE projects one client at a time, so each new client meant building classification, extraction and the review screen again. The goal: turn these parts into modules, so a new client needs configuration rather than a new build.",
+        KOR: "한국딥러닝은 KIE 프로젝트를 고객사마다 따로 만들어 왔고, 새 고객사가 생길 때마다 분류·추출·검수 화면을 다시 만들어야 했습니다. 이 기능들을 모듈로 만들어, 새 고객사는 새로 개발하지 않고 설정만으로 납품하도록 하는 것이 목표였습니다.",
+      },
+      role: {
+        ENG: "Owned the classification, automatic schema definition and extraction-result modules, plus the UI; other modules were designed by teammates",
+        KOR: "분류·자동 스키마 정의·추출 결과 모듈과 UI 담당, 나머지 모듈은 팀원이 각각 설계",
+      },
+      contribution: {
+        ENG: "50%: classification, automatic schema definition, extraction results and the UI",
+        KOR: "50%: 분류, 자동 스키마 정의, 추출 결과, UI",
+      },
+      model: {
+        ENG: "VLM on vLLM · OCR · FastAPI · Next.js / React / TypeScript · MongoDB · SeaweedFS · Docker Compose",
+        KOR: "VLM (vLLM) · OCR · FastAPI · Next.js / React / TypeScript · MongoDB · SeaweedFS · Docker Compose",
+      },
+      results: {
+        ENG: "10+ client projects delivered on the platform · still in use, renamed DeepHub · Shinhan Finance Vietnam PoC built on top of it",
+        KOR: "이 플랫폼으로 10개 이상 프로젝트 납품 · DeepHub로 이름을 바꿔 지금도 사용 중 · 신한파이낸스 베트남 PoC도 이 플랫폼 위에서 개발",
+      },
+      links: [],
+    },
     shinhanVietnam: {
       problem: {
         ENG: "Loan underwriters at Shinhan Finance Vietnam compared each applicant's ID card and bank statement by eye and typed the numbers in by hand. It was slow, and mistakes slipped through. The PoC goal: upload the documents once and get a first screening result with reasons, while the underwriter still makes the final call.",
@@ -608,7 +634,7 @@ function App() {
     skills: {expanded: true},
     engagements: {expanded: true, entries: {}},
     projects: {expanded: true, entries: {
-      shinhanVietnam: true, kdlProductPlanning: true, kdlDocExtraction: true, kdlDisasterVideo: true,
+      shinhanVietnam: true, ppassPlatform: true, kdlProductPlanning: true, kdlDocExtraction: true, kdlDisasterVideo: true,
       kdlOcrResearch: true, kdlGaugeReading: true, sense1Vet: true, lawIntelligence: true,
     }},
     achievements: {expanded: true, entries: {shinhanInnoboost: true}},
@@ -641,12 +667,12 @@ function App() {
   const work_kdl_title = lang === 'ENG' ? "ML Engineer, Korea Deep Learning" : "ML 엔지니어, 한국딥러닝";
   const work_kdl_details_ENG = [
     "Work directly with enterprise clients from requirements to delivery, shipping LLM/VLM systems with Docker to on-prem and air-gapped GPU servers in iterative releases.",
-    "Productized a single-client KIE pipeline into PPASS and designed its modular backend: classification, schema definition, OCR and layout models plug in or out, and settings such as DPI change per client.",
+    "Built the classification, automatic schema definition and extraction-result modules and the UI of PPASS (now DeepHub), the in-house IDP platform that turned one-off KIE projects into reusable modules; 10+ client projects have shipped on it.",
     "Led Shinhan Finance Vietnam's PoC as PM and sole developer: top 8 at Global Shinhan InnoBoost 2026 and the company's first overseas revenue.",
   ];
   const work_kdl_details_KOR = [
     "기업 고객과 직접 소통하며 요구사항 정의부터 납품까지 수행, LLM·VLM 시스템을 Docker로 고객 서버·폐쇄망에 차수별 납품.",
-    "단일 고객사용 KIE 파이프라인을 제품화해 PPASS로 만들고 백엔드를 모듈화 설계: 분류·스키마 정의·OCR·레이아웃 모델을 붙이고 떼고, DPI 같은 설정은 고객사별로 조정.",
+    "고객사마다 따로 만들던 KIE 프로젝트를 모듈로 묶은 사내 IDP 플랫폼 PPASS(현 DeepHub)의 분류·자동 스키마 정의·추출 결과 모듈과 UI 개발: 이 플랫폼으로 10개 이상 프로젝트 납품.",
     "신한파이낸스 베트남 PoC를 PM 겸 단독 개발로 수행: 글로벌 신한 이노부스트 2026 상위 8개사, 회사 첫 해외 매출.",
   ];
 
@@ -1032,6 +1058,20 @@ function App() {
     </div>
   );
   // 프로젝트 섹션용 (상세)
+  const ppass_ENG = [
+    "Classification: each page is matched against the saved document types, and consecutive pages of the same type are grouped into one section and extracted together.",
+    "Automatic schema definition: the fields to extract are defined automatically for a document type, and can then be edited in the schema editor.",
+    "Extraction results: a field table per page, JSON output, AI correction and download, with paging across multi-page documents.",
+    "Per-request settings in the UI: OCR on or off, field-location boxes drawn on the original (BBox), and a 0-100 confidence score per field.",
+    "Upload accepts 9 formats: PDF, images, HWP, HWPX, DOCX, XLSX, PPT, PPTX and TIF.",
+  ];
+  const ppass_KOR = [
+    "분류: 페이지마다 저장된 문서 유형과 대조해 유형을 정하고, 같은 유형이 이어지는 페이지는 한 구간으로 묶어 함께 추출.",
+    "자동 스키마 정의: 문서 유형별로 추출할 항목을 자동으로 정의하고, 스키마 에디터에서 수정.",
+    "추출 결과: 페이지별 필드 표, JSON, AI 보정, 다운로드, 여러 페이지 문서 페이지 이동.",
+    "요청별 설정 UI: OCR 켜고 끄기, 원본 위 필드 위치 박스(BBox), 항목별 0~100 신뢰도 점수.",
+    "업로드 9개 형식 지원: PDF, 이미지, HWP, HWPX, DOCX, XLSX, PPT, PPTX, TIF.",
+  ];
   const shinhanPj_ENG = [
     "Ran the PoC as PM and sole developer: led client communication with SVFC from kickoff (06.09) through the SoW (06.30), integration testing, UAT with the client's underwriters and the final assessment (08.24), and owned the system design.",
     "Built SVFC's loan-document screening system: upload bank statements and CCCD ID cards (multiple files merged into one page sequence) → page classification → schema-based field extraction → 7 automated checks, returning pass / warn / fail with the reason and the exact fields to the underwriter.",
@@ -1216,6 +1256,31 @@ function App() {
       },
     },
     {
+      badge: { ENG: 'Contribution 50%', KOR: '기여도 50%' },
+      summary: {
+        ENG: ["Built the classification, automatic schema definition and extraction-result modules, plus the UI", "Page classification against saved document types; same-type pages grouped and extracted together", "Schemas defined automatically per document type, editable in the schema editor", "Results as a field table and JSON, with AI correction and download", "Per-request toggles: OCR, field-location boxes (BBox), 0-100 confidence"],
+        KOR: ["분류·자동 스키마 정의·추출 결과 모듈과 UI 개발", "저장된 문서 유형과 대조해 페이지 분류, 같은 유형 페이지는 묶어서 추출", "문서 유형별 스키마 자동 정의, 스키마 에디터로 수정", "추출 결과를 필드 표와 JSON으로, AI 보정·다운로드 지원", "요청별 설정: OCR, 필드 위치 박스(BBox), 0~100 신뢰도"],
+      },
+      media: [{ src: ppassClassify, caption: { ENG: "Classification and extraction settings", KOR: "문서 분류·추출 설정" } }, { src: ppassResult, caption: { ENG: "Extraction results", KOR: "추출 결과" } }, { src: ppassUpload, caption: { ENG: "Upload: 9 formats", KOR: "업로드: 9개 형식" } }],
+      id: 'proj-ppass', key: 'ppassPlatform', org: 'company', fields: ['VLM', 'OCR'],
+      title: { ENG: 'PPASS (now DeepHub) · In-House IDP Platform', KOR: 'PPASS(현 DeepHub) · 사내 IDP 플랫폼' },
+      location: { ENG: 'Korea Deep Learning · classification, schema, extraction & UI', KOR: '한국딥러닝 · 분류·스키마·추출·UI 담당' },
+      dates: { ENG: 'April 2026 ~ August 2026', KOR: '2026.04 ~ 2026.08' },
+      details: lang === 'ENG' ? ppass_ENG : ppass_KOR,
+      compare: {
+        ENG: {
+          title: 'Delivering KIE to a new client: before vs after',
+          before: { label: 'Before (per client)', steps: ['New project per client', 'Rebuild classification and extraction', 'Rebuild the review screen'] },
+          after: { label: 'After (PPASS)', steps: ['Register document types', 'Auto-define schema', 'Set OCR / BBox / confidence', 'Deliver'], result: '10+ client projects delivered on it' },
+        },
+        KOR: {
+          title: '새 고객사 KIE 납품: 기존 vs 변경',
+          before: { label: '기존 (고객사별 개발)', steps: ['고객사마다 새 프로젝트', '분류·추출 다시 개발', '검수 화면 다시 개발'] },
+          after: { label: '변경 (PPASS)', steps: ['문서 유형 등록', '스키마 자동 정의', 'OCR·BBox·신뢰도 설정', '납품'], result: '이 플랫폼으로 10개 이상 납품' },
+        },
+      },
+    },
+    {
       badge: { ENG: 'Contribution 100%', KOR: '기여도 100%' },
       summary: {
         ENG: ["LLM/VLM automation: review deck → master spec sheet → product roadmap", "Merged values by source priority; conflicts go to human review with evidence", "Patched Excel XML directly to keep formatting (a 1.5MB file no longer grows past 1GB)", "FP8 serving: 40% less memory, 19% faster, same accuracy", "Offline installer for an air-gapped server; 30+ client requirements delivered"],
@@ -1364,6 +1429,7 @@ function App() {
   // 경력 항목 아래에 붙는 관련 프로젝트 바로가기
   const projectShort = {
     'proj-shinhan': { ENG: 'Shinhan Finance Vietnam PoC', KOR: '신한파이낸스 베트남 PoC' },
+    'proj-ppass': { ENG: 'PPASS platform', KOR: 'PPASS 플랫폼' },
     'proj-1': { ENG: 'LG Electronics planning', KOR: 'LG전자 상품기획' },
     'proj-4': { ENG: 'Hyundai Capital OCR', KOR: '현대캐피탈 OCR' },
     'proj-2': { ENG: 'Seoyon E-Hwa extraction', KOR: '서연이화 문서 추출' },
@@ -1381,7 +1447,7 @@ function App() {
     </span>
   );
   const projectGroups = [
-    { label: { ENG: 'LLM · VLM', KOR: 'LLM · VLM' }, ids: ['proj-shinhan', 'proj-1', 'proj-2', 'side-law'] },
+    { label: { ENG: 'LLM · VLM', KOR: 'LLM · VLM' }, ids: ['proj-shinhan', 'proj-ppass', 'proj-1', 'proj-2', 'side-law'] },
     { label: { ENG: 'CV · OCR', KOR: 'CV · OCR' }, ids: ['proj-4', 'proj-3'] },
     { label: { ENG: 'Generative AI', KOR: '생성형 AI' }, ids: ['proj-5'] },
     { label: { ENG: 'Signal · DL', KOR: '신호처리 · DL' }, ids: ['proj-6'] },
@@ -1483,7 +1549,7 @@ function App() {
               title={work_kdl_title}
               location={lang==='ENG' ? "Gangnam, Seoul, South Korea" : "대한민국 서울 강남"}
               dates={lang==='ENG' ? "November 2025 ~ Present" : "2025.11 ~ 현재"}
-              details={[...(lang==='ENG' ? work_kdl_details_ENG : work_kdl_details_KOR), projectLinks(['proj-shinhan', 'proj-1', 'proj-4', 'proj-2', 'proj-3', 'proj-5'])]}
+              details={[...(lang==='ENG' ? work_kdl_details_ENG : work_kdl_details_KOR), projectLinks(['proj-shinhan', 'proj-ppass', 'proj-1', 'proj-4', 'proj-2', 'proj-3', 'proj-5'])]}
               isExpanded={expandedSections.experience.entries.koreaDeepLearning}
               onClick={() => toggleEntry('experience', 'koreaDeepLearning')}
               timeline
