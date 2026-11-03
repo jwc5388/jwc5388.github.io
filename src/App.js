@@ -8,7 +8,6 @@ import degreeImage from './assets/images/graduation.jpg';
 import judoImage1 from './assets/images/judo1.jpg';
 import judoImage2 from './assets/images/judo2.jpg';
 import judoImage3 from './assets/images/judo3.jpg';
-import dissImage from './assets/images/dissertationlogo.jpg';
 import cotonsImage1 from './assets/images/cotons1.jpg';
 import cotonsImage2 from './assets/images/cotons2.jpg';
 import favaImage1 from './assets/images/fava1.jpeg';
@@ -82,8 +81,6 @@ import hackathon3 from './assets/images/hackathon3.png';
 import hackathon4 from './assets/images/hackathon4.png';
 import hackathon5 from './assets/images/hackathon5.png';
 import ibmImage1 from './assets/images/ibmImage1.png';
-import dissertation1 from './assets/files/CSDissertation.pdf';
-import dissertation2 from './assets/files/MathDissertation.pdf';
 import dissertationImage1 from './assets/images/dissertation1.png';
 import dissertationImage2 from './assets/images/dissertation2.png';
 import { FaEnvelope, FaLinkedin, FaGithub, FaGraduationCap, FaTrophy, FaFlag } from 'react-icons/fa';
@@ -1700,30 +1697,17 @@ function App() {
               location={lang==='ENG' ? "Bachelor of Science in Mathematics and Computer Science" : "수학·컴퓨터과학 학사"}
               dates={lang==='ENG' ? "September 2019 ~ June 2024" : "2019.09 ~ 2024.06"}
               details={[
-                <div key="dissertation1" className="download-link">
-                  <button
-                    type="button"
-                    onClick={(e) => { e.stopPropagation(); window.open(dissertation1, '_blank', 'noopener'); }}
-                    style={{ background:'transparent', border:0, padding:0, cursor:'pointer' }}
-                  >
-                    <img src={dissImage} alt="Open Dissertation 1" className="download-icon" />
-                  </button>
-                  <span>{lang==='ENG' ? "Computer Science Dissertation" : "컴퓨터과학 학위논문"}</span>
-                </div>,
-                <div key="dissertation2" className="download-link">
-                  <button
-                    type="button"
-                    onClick={(e) => { e.stopPropagation(); window.open(dissertation2, '_blank', 'noopener'); }}
-                    style={{ background:'transparent', border:0, padding:0, cursor:'pointer' }}
-                  >
-                    <img src={dissImage} alt="Open Dissertation 2" className="download-icon" />
-                  </button>
-                  <span>{lang==='ENG' ? "Mathematics Dissertation" : "수학 학위논문"}</span>
-                </div>,
-                <div key="graduation-images" style={{ display:'flex', overflowX:'auto', whiteSpace:'nowrap', gap:'10px', padding:'10px 0' }}>
-                  <img src={dissertationImage1} alt="dissertation1" style={{ height: '400px', borderRadius: '8px' }} />
-                  <img src={dissertationImage2} alt="dissertation2" style={{ height: '400px', borderRadius: '8px' }} />
-                  <img src={degreeImage} alt="Graduation" style={{ height: '400px', borderRadius: '8px' }} />
+                <div key="graduation-images" className="edu-gallery">
+                  {[
+                    { src: dissertationImage1, caption: lang==='ENG' ? 'CS dissertation: What is the Colour?' : '컴퓨터과학 학위논문: What is the Colour?' },
+                    { src: dissertationImage2, caption: lang==='ENG' ? 'Maths dissertation: Particle Orbit Theory' : '수학 학위논문: Particle Orbit Theory' },
+                    { src: degreeImage, caption: lang==='ENG' ? 'Graduation' : '졸업' },
+                  ].map((m) => (
+                    <figure className="pcard-figure" key={m.src}>
+                      <img src={m.src} alt={m.caption} />
+                      <span className="pcard-caption">{m.caption}</span>
+                    </figure>
+                  ))}
                 </div>
               ]}
               isExpanded={expandedSections.education.entries.degree}

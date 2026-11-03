@@ -1257,3 +1257,12 @@ strong.num { font-weight: 700; color: #111827; }
 @media (max-width: 768px) {
   .glance-col + .glance-col { padding-left: 0; border-left: 0; padding-top: 24px; border-top: 1px solid #f0f1f3; }
 }
+
+/* ==== 학위 섹션 사진: 사진마다 작은 캡션 ==== */
+.entry-details li:has(> span > .edu-gallery) { list-style: none; margin-left: -20px; }
+.edu-gallery { display: flex; gap: 12px; overflow-x: auto; padding: 4px 0; }
+.edu-gallery .pcard-figure { flex: 0 0 auto; margin: 0; }
+.edu-gallery img { height: 360px; width: auto; }
+@media (max-width: 768px) { .edu-gallery img { height: 240px; } }
+.edu-gallery .pcard-caption { font-size: 11px; white-space: nowrap; }
+@media (max-width: 768px) { .edu-gallery .pcard-caption { white-space: normal; right: 8px; } }
