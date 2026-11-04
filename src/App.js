@@ -35,13 +35,6 @@ import sudokuImage2 from './assets/images/sudoku2.png';
 import sudokuImage3 from './assets/images/sudoku3.png';
 import sudokuImage4 from './assets/images/sudoku4.png';
 import sudokuImage5 from './assets/images/sudoku5.png';
-import auraIdIamge1 from './assets/images/auraid1.png';
-import auraIdIamge2 from './assets/images/auraid2.png';
-import auraIdIamge3 from './assets/images/auraid3.png';
-import auraIdIamge4 from './assets/images/auraid4.png';
-import auraIdIamge5 from './assets/images/auraid5.png';
-import auraIdIamge6 from './assets/images/auraid6.png';
-import auraIdIamge7 from './assets/images/auraid7.png';
 import elizaImage1 from './assets/images/eliza1.png';
 import elizaImage2 from './assets/images/eliza2.png';
 import elizaImage3 from './assets/images/eliza3.png';
@@ -511,13 +504,6 @@ function App() {
       links: [],
     },
     sudokuGame: {
-      team: { ENG: '', KOR: '' },
-      role: { ENG: '', KOR: '' },
-      contribution: { ENG: '', KOR: '' },
-      results: { ENG: '', KOR: '' },
-      links: [],
-    },
-    auraid: {
       team: { ENG: '', KOR: '' },
       role: { ENG: '', KOR: '' },
       contribution: { ENG: '', KOR: '' },
@@ -1040,28 +1026,6 @@ function App() {
     'MariaDB에 PK·FK로 데이터 모델링.',
     'Scrum 스프린트 단위로 개발.',
     '난이도별 스도쿠 생성·검증 알고리즘 구현.',
-  ];
-
-  const aura_media = (
-    <div key="auraid-images" style={{ display:'flex', overflowX:'auto', whiteSpace:'nowrap', gap:'10px', padding:'10px 0' }}>
-      <img src={auraIdIamge1} alt="AuraId Project 1" style={{ height: '400px', borderRadius: '8px' }} />
-      <img src={auraIdIamge7} alt="AuraId Project 2" style={{ height: '400px', borderRadius: '8px' }} />
-      <img src={auraIdIamge2} alt="AuraId Project 3" style={{ height: '400px', borderRadius: '8px' }} />
-      <img src={auraIdIamge3} alt="AuraId Project 4" style={{ height: '400px', borderRadius: '8px' }} />
-      <img src={auraIdIamge4} alt="AuraId Project 5" style={{ height: '400px', borderRadius: '8px' }} />
-      <img src={auraIdIamge5} alt="AuraId Project 6" style={{ height: '400px', borderRadius: '8px' }} />
-      <img src={auraIdIamge6} alt="AuraId Project 7" style={{ height: '400px', borderRadius: '8px' }} />
-    </div>
-  );
-  const aura_ENG = [
-    'Built a web dog-recognition platform in React and TypeScript, integrating an image-recognition algorithm from Jeju National University.',
-    'Built a veterinary hospital management system for tracking patients and cage records.',
-    'Used AWS RDS as the shared database for both the recognition platform and the hospital system.',
-  ];
-  const aura_KOR = [
-    'React·TypeScript 반려견 인식 웹 플랫폼 개발, 제주대 이미지 인식 알고리즘 연동.',
-    '환자 추적·케이지 기록용 동물병원 관리 시스템 개발.',
-    '인식 플랫폼과 병원 시스템이 함께 쓰는 DB를 AWS RDS로 구성.',
   ];
 
   // ===== Achievements =====
@@ -1881,16 +1845,6 @@ function App() {
                   {...getMeta('sudokuGame')}
                   isExpanded={expandedSections.projects.entries.sudokuGame}
                   onClick={() => toggleEntry('projects', 'sudokuGame')}
-                />
-
-                <Entry
-                  title="AURA ID Website"
-                  location={lang==='ENG' ? "CareSix Co., LTD" : "케어식스"}
-                  dates={lang==='ENG' ? "February 2025 ~ April 2025" : "2025.02 ~ 2025.04"}
-                  details={getDetails(aura_ENG, aura_KOR, aura_media)}
-                  {...getMeta('auraid')}
-                  isExpanded={expandedSections.projects.entries.auraid}
-                  onClick={() => toggleEntry('projects', 'auraid')}
                 />
               </div>
             )}
