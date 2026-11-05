@@ -177,22 +177,33 @@ function App() {
       ENG: '',
       KOR: '',
     },
+    // 한 덩어리 대신 짧은 줄로: 1) 하는 일  2) 일하는 방식  3) 한 일  4) 대표 성과
     summary: {
-      ENG: "AI Engineer who builds LLM/VLM systems and deploys them on clients' own servers. My Mathematics and Computer Science degree from the University of St Andrews shaped how I work: build a trustworthy evaluation first, then trace where errors come from. At Korea Deep Learning I have shipped document-AI, OCR, vision and generative-video systems with Docker to on-prem and air-gapped servers; at CareSix I built the heart-rate algorithm for a dog wearable. I led Shinhan Finance Vietnam's PoC as PM and sole developer, and built the classification, schema and extraction modules of PPASS (now DeepHub), the in-house IDP platform behind 10+ client projects.",
-      KOR: "LLM·VLM 시스템을 만들어 고객사 서버에 배포하는 AI 엔지니어입니다. 세인트앤드루스 대학교에서 수학과 컴퓨터과학을 전공하며, 믿을 수 있는 평가 기준을 먼저 세우고 오류의 원인을 끝까지 추적하는 방식이 몸에 뱄습니다. 한국딥러닝에서 문서 AI·OCR·비전·생성형 영상 시스템을 Docker로 고객 서버와 폐쇄망에 배포했고, 케어식스에서는 반려견 웨어러블의 심박 알고리즘을 만들었습니다. 신한파이낸스 베트남 PoC는 PM 겸 단독 개발로 이끌었고, 사내 IDP 플랫폼 PPASS(현 DeepHub)의 분류·스키마·추출 모듈을 만들었고, 이 플랫폼으로 10개 이상의 프로젝트가 납품됐습니다.",
+      ENG: [
+        "AI Engineer who builds **LLM/VLM systems** and deploys them on clients' own servers.",
+        "My Mathematics and Computer Science degree from St Andrews shaped how I work: build a trustworthy evaluation first, then trace where errors come from.",
+        "At Korea Deep Learning I have shipped **document-AI, OCR, vision and generative-video** systems with Docker to on-prem and air-gapped servers; at CareSix I built the heart-rate algorithm for a dog wearable.",
+        "I led **Shinhan Finance Vietnam's PoC** as PM and sole developer, and built the classification, schema and extraction modules of **PPASS (now DeepHub)**, the in-house IDP platform behind 10+ client projects.",
+      ],
+      KOR: [
+        "**LLM·VLM 시스템**을 만들어 고객사 서버에 배포하는 AI 엔지니어입니다.",
+        "세인트앤드루스 대학교에서 수학과 컴퓨터과학을 전공하며, 믿을 수 있는 평가 기준을 먼저 세우고 오류의 원인을 끝까지 추적하는 방식이 몸에 뱄습니다.",
+        "한국딥러닝에서 **문서 AI·OCR·비전·생성형 영상** 시스템을 Docker로 고객 서버와 폐쇄망에 배포했고, 케어식스에서는 반려견 웨어러블의 심박 알고리즘을 만들었습니다.",
+        "**신한파이낸스 베트남 PoC**를 PM 겸 단독 개발로 이끌었고, 사내 IDP 플랫폼 **PPASS(현 DeepHub)**의 분류·스키마·추출 모듈을 만들었습니다. 이 플랫폼으로 10개 이상의 프로젝트가 납품됐습니다.",
+      ],
     },
     skills: ["LLM / VLM", "KIE · OCR", "RAG · LangChain", "LLM Evaluation", "Docker", "On-prem Deployment", "FastAPI", "vLLM", "PyTorch", "Python"],
     highlights: {
       ENG: [
         "Led Shinhan Finance Vietnam's loan-document PoC as PM and sole developer: top 8 at Global Shinhan InnoBoost 2026, Open Innovation Reward, and Korea Deep Learning's first overseas revenue",
-        "Delivered a document-extraction API to Seoyon E-Hwa's air-gapped server over 6 releases: 93.49% accuracy on the client's 3,920-cell audit ledger",
+        "Delivered a document-extraction API to Seoyon E-Hwa's air-gapped server over 6 releases: 97.64% accuracy on the client's 3,920-cell audit ledger",
         "Built the classification, automatic schema definition and extraction-result modules and the UI of PPASS (now DeepHub), the in-house IDP platform that turned one-off KIE projects into reusable modules; 10+ client projects have shipped on it",
         "Raised handwriting OCR exact-match accuracy by 4.26 pp (85.23% → 89.49%); the weights were deployed in a Hyundai Capital project",
         "Built a real-time CCTV gauge-reading system solo for a government manufacturing project, from labeling to a production Docker API (mAP50-95 0.992 / 0.949)",
       ],
       KOR: [
         "신한파이낸스 베트남 대출 서류 PoC를 PM 겸 단독 개발로 수행: 글로벌 신한 이노부스트 2026 상위 8개사, 오픈이노베이션 리워드, 한국딥러닝 첫 해외 매출",
-        "서연이화 폐쇄망 서버에 문서 추출 API 6차 납품: 고객 검수 대장 3,920칸 기준 정확도 93.49%",
+        "서연이화 폐쇄망 서버에 문서 추출 API 6차 납품: 고객 검수 대장 3,920칸 기준 정확도 97.64%",
         "고객사마다 따로 만들던 KIE 프로젝트를 모듈로 묶은 사내 IDP 플랫폼 PPASS(현 DeepHub)의 분류·자동 스키마 정의·추출 결과 모듈과 UI 개발: 이 플랫폼으로 10개 이상 프로젝트 납품",
         "필기체 OCR 정확도 4.26%p 향상(85.23% → 89.49%), 학습한 가중치를 현대캐피탈 프로젝트에 배포",
         "정부과제(제조혁신) CCTV 계기판 실시간 판독 시스템을 라벨링부터 Docker API 실서비스 배포까지 1인 구축 (mAP50-95 0.992 / 0.949)",
@@ -201,7 +212,7 @@ function App() {
     // 대표 성과 숫자 타일 (누르면 해당 프로젝트로 이동)
     stats: [
       { id: 'proj-shinhan', value: { ENG: "Top 8", KOR: "상위 8개사" }, who: { ENG: "Shinhan Finance Vietnam", KOR: "신한파이낸스 베트남" }, label: { ENG: "InnoBoost 2026, PM & sole dev", KOR: "이노부스트 2026 단독 개발" } },
-      { id: 'proj-2', value: { ENG: "93.49%", KOR: "93.49%" }, who: { ENG: "Seoyon E-Hwa", KOR: "서연이화" }, label: { ENG: "extraction accuracy (audit ledger)", KOR: "문서 추출 정확도 (검수 대장)" } },
+      { id: 'proj-2', value: { ENG: "97.64%", KOR: "97.64%" }, who: { ENG: "Seoyon E-Hwa", KOR: "서연이화" }, label: { ENG: "extraction accuracy (audit ledger)", KOR: "문서 추출 정확도 (검수 대장)" } },
       { id: 'proj-4', value: { ENG: "+4.26 pp", KOR: "+4.26%p" }, who: { ENG: "Hyundai Capital", KOR: "현대캐피탈" }, label: { ENG: "handwriting OCR exact match", KOR: "필기체 OCR 정확도 향상" } },
       { id: 'proj-3', value: { ENG: "0.992", KOR: "0.992" }, who: { ENG: "Gauge reading", KOR: "계기판 판독" }, label: { ENG: "detection mAP50-95, in production", KOR: "검출 mAP50-95, 실서비스" } },
       { id: 'proj-1', value: { ENG: "1,225 / 1,232", KOR: "1,225 / 1,232" }, who: { ENG: "LG Electronics", KOR: "LG전자" }, label: { ENG: "spec cells filled automatically", KOR: "스펙시트 칸 자동 채움" } },
@@ -317,8 +328,8 @@ function App() {
         KOR: "Python · FastAPI · MinerU · 비전 LLM (vLLM) · Docker",
       },
       results: {
-        ENG: "93.49% accuracy on the client's 3,920-cell audit ledger (from 90.84%) · process-design mismatches 389 → 3 · review UI source matching 15–41% → 97.1%",
-        KOR: "고객 검수 대장 3,920칸 기준 정확도 90.84% → 93.49% · 공정설계 검수 불일치 389 → 3건 · 검수 UI 원문 위치 표시 15~41% → 97.1%",
+        ENG: "97.64% accuracy on the client's 3,920-cell audit ledger (from 90.84%) · process-design mismatches 389 → 3 · review UI source matching 15–41% → 97.1%",
+        KOR: "고객 검수 대장 3,920칸 기준 정확도 90.84% → 97.64% · 공정설계 검수 불일치 389 → 3건 · 검수 UI 원문 위치 표시 15~41% → 97.1%",
       },
       lessons: {
         ENG: "Most of the ~210 remaining wrong cells come down to the LLM deciding how much text to copy, which more rules would not fix",
@@ -695,7 +706,7 @@ function App() {
   const work_kdl_details_ENG = [
     "**VLM document extraction & validation:** Shinhan Finance Vietnam loan-document PoC as PM and sole developer (top 8 at InnoBoost 2026, the company's first overseas revenue)",
     "**IDP platform (KIE):** classification, automatic schema and extraction modules of PPASS (now DeepHub); 10+ client projects shipped on it",
-    "**LLM/VLM document automation:** Seoyon E-Hwa quality documents (93.49% on the client's audit ledger) and LG Electronics spec sheets (1,225 / 1,232 cells)",
+    "**LLM/VLM document automation:** Seoyon E-Hwa quality documents (97.64% on the client's audit ledger) and LG Electronics spec sheets (1,225 / 1,232 cells)",
     "**Handwriting OCR:** recognizer fine-tuning, +4.26 pp exact match, weights deployed in a Hyundai Capital project",
     "**Computer vision:** CCTV gauge reading with YOLO and oriented boxes (mAP50-95 0.992), in production",
     "**Generative video:** wildfire and flood CCTV videos with FLUX.2 and Wan2.2, checked by an automated VLM QA",
@@ -704,7 +715,7 @@ function App() {
   const work_kdl_details_KOR = [
     "**VLM 문서 추출·검증:** 신한파이낸스 베트남 대출 서류 PoC, PM 겸 단독 개발 (이노부스트 2026 상위 8개사, 회사 첫 해외 매출)",
     "**IDP 플랫폼 (KIE):** PPASS(현 DeepHub)의 분류·자동 스키마·추출 모듈 개발, 10개 이상 프로젝트 납품",
-    "**LLM·VLM 문서 자동화:** 서연이화 품질 문서(고객 검수 대장 기준 93.49%), LG전자 스펙시트(1,232칸 중 1,225칸)",
+    "**LLM·VLM 문서 자동화:** 서연이화 품질 문서(고객 검수 대장 기준 97.64%), LG전자 스펙시트(1,232칸 중 1,225칸)",
     "**필기체 OCR:** Recognizer fine-tuning으로 정확도 +4.26%p, 현대캐피탈 프로젝트에 가중치 배포",
     "**컴퓨터 비전:** YOLO와 회전 박스로 CCTV 계기판 판독 (mAP50-95 0.992), 실서비스 배포",
     "**생성형 영상:** FLUX.2·Wan2.2로 산불·침수 CCTV 영상 생성, VLM 자동 검수",
@@ -1516,7 +1527,7 @@ function App() {
         <p className="hero-role">{t[lang].role}</p>
 
         <div className="contact-icons">
-          <a href="mailto:peter.jaewoochang@gmail.com" aria-label="Email"><FaEnvelope size={17} /></a>
+          <a className="contact-email" href="mailto:peter.jaewoochang@gmail.com" aria-label="Email"><FaEnvelope size={15} /><span>peter.jaewoochang@gmail.com</span></a>
           <a href="https://github.com/jwc5388" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><FaGithub size={17} /></a>
           <a href="https://www.linkedin.com/in/jwcbillion33" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaLinkedin size={17} /></a>
         </div>
@@ -1542,7 +1553,11 @@ function App() {
             ))}
           </div>
         )}
-        {profile.summary[lang] && <p className="profile-summary">{emphasize(profile.summary[lang])}</p>}
+        {profile.summary[lang] && (
+          <div className="profile-summary">
+            {profile.summary[lang].map((line, i) => <p key={i}>{emphasize(line)}</p>)}
+          </div>
+        )}
         {profile.skills.length > 0 && (
           <ul className="profile-skills">
             {profile.skills.map((sk) => <li key={sk}>{sk}</li>)}

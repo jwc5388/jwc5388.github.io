@@ -1269,3 +1269,30 @@ strong.num { font-weight: 700; color: #111827; }
 
 /* ==== 경력: 줄 앞 기술 키워드 ==== */
 strong.kw { font-weight: 700; color: #1e3a8a; }
+
+/* ===== 가독성: 요약 줄 나눔 · 이메일 노출 · 한글 줄바꿈 ===== */
+.profile-summary p { margin: 0; }
+.profile-summary p + p { margin-top: 10px; }
+.profile-summary p:first-child { font-size: 17px; color: #111827; font-weight: 500; }
+
+.contact-icons a.contact-email {
+  width: auto;
+  padding: 0 16px;
+  gap: 8px;
+  border-radius: 20px;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+/* 한글은 단어 중간에서 줄이 끊기지 않게, 마지막 줄에 한 단어만 남지 않게 */
+.App { word-break: keep-all; overflow-wrap: break-word; }
+.App p, .App li { text-wrap: pretty; }
+.App h1, .App h2, .App h3, .App h4 { text-wrap: balance; }
+
+/* 숫자 폭을 맞춰 성과 수치 정렬 */
+.stat-value, strong.num, .tl-dates, .glance-date { font-variant-numeric: tabular-nums; }
+
+@media (max-width: 600px) {
+  .profile-summary p:first-child { font-size: 16px; }
+  .contact-icons a.contact-email span { font-size: 13px; }
+}
