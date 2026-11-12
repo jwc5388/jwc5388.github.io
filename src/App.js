@@ -84,11 +84,11 @@ import {
   SiReact, SiFlutter,
   SiPytorch, SiTensorflow, SiKeras, SiNumpy, SiPandas,
   SiMysql, SiMongodb, SiPostgresql,
-  SiGit, SiJira, SiSlack,
-  SiFigma, SiOpenai, SiDocker, SiFastapi, SiOpencv, SiNextdotjs, SiAmazonaws
+  SiGit,
+  SiOpenai, SiDocker, SiFastapi, SiOpencv, SiNextdotjs, SiAmazonaws
 } from 'react-icons/si';
 
-import { FaJava, FaServer, FaLink, FaSearch, FaGlobe } from 'react-icons/fa';
+import { FaJava, FaServer, FaLink, FaSearch, FaGlobe, FaProjectDiagram, FaCrosshairs } from 'react-icons/fa';
 
 function App() {
 
@@ -201,14 +201,14 @@ function App() {
       ENG: [
         "Led Shinhan Finance Vietnam's loan-document project as PM and sole developer: top 8 at Global Shinhan InnoBoost 2026, Open Innovation Reward, and Korea Deep Learning's first overseas revenue",
         "Built a document-extraction API for Seoyon E-Hwa, deployed on an air-gapped server: 97.64% accuracy on the client's 3,920-cell audit ledger",
-        "Built the classification, automatic schema definition and extraction-result modules and the UI of DeepHub, the in-house IDP platform that turned one-off KIE projects into reusable modules; 10+ client projects have shipped on it",
+        "Co-developed DeepHub, the company's document AI platform that turned one-off KIE projects into reusable modules; 10+ client projects have shipped on it",
         "Raised handwriting OCR exact-match accuracy by 4.26 pp (85.23% → 89.49%); the weights were deployed in a Hyundai Capital project",
         "Built a real-time CCTV gauge-reading system solo for a government manufacturing project, from labeling to a production Docker API (mAP50-95 0.992 / 0.949)",
       ],
       KOR: [
         "신한파이낸스 베트남 대출 서류 프로젝트를 PM 겸 단독 개발로 수행: 글로벌 신한 이노부스트 2026 상위 8개사, 오픈이노베이션 리워드, 한국딥러닝 첫 해외 매출",
         "서연이화 문서 추출 API 개발, 폐쇄망 서버에 배포: 고객 검수 대장 3,920칸 기준 정확도 97.64%",
-        "고객사마다 따로 만들던 KIE 프로젝트를 모듈로 묶은 사내 IDP 플랫폼 DeepHub의 분류·자동 스키마 정의·추출 결과 모듈과 UI 개발: 이 플랫폼으로 10개 이상 프로젝트 납품",
+        "고객사마다 따로 만들던 KIE 프로젝트를 모듈로 묶은 사내 문서 AI 플랫폼 DeepHub 공동 개발: 이 플랫폼으로 10개 이상 프로젝트 납품",
         "필기체 OCR 정확도 4.26%p 향상(85.23% → 89.49%), 학습한 가중치를 현대캐피탈 프로젝트에 배포",
         "정부과제(제조혁신) CCTV 계기판 실시간 판독 시스템을 라벨링부터 Docker API 실서비스 배포까지 단독 구축 (mAP50-95 0.992 / 0.949)",
       ],
@@ -224,13 +224,13 @@ function App() {
           ENG: [
             '2019.09 ~ 2024.06 : University of St Andrews, BSc Mathematics and Computer Science',
             '2024.09 ~ 2025.04 : CareSix, AI/ML Engineer',
-            '2025.04 ~ 2025.10 : IBM x RedHat AI Transformation – AX Academy',
+            '2025.04 ~ 2025.10 : IBM x Red Hat AI Transformation – AX Academy',
             '2025.11 ~ : **Korea Deep Learning**, ML Engineer (current)',
           ],
           KOR: [
             '2019.09 ~ 2024.06 : 세인트 앤드류스 대학교 수학·컴퓨터과학 학사',
             '2024.09 ~ 2025.04 : 케어식스 AI/ML 엔지니어',
-            '2025.04 ~ 2025.10 : IBM x RedHat AI Transformation – AX Academy',
+            '2025.04 ~ 2025.10 : IBM x Red Hat AI Transformation – AX Academy',
             '2025.11 ~ : **한국딥러닝** ML 엔지니어 재직 중',
           ],
         },
@@ -379,8 +379,8 @@ function App() {
       },
       team: { ENG: "2 people", KOR: "2명" },
       role: {
-        ENG: "Brought in to raise handwriting recognition: owned the OCR recognizer (data, training, evaluation) in a team of 2",
-        KOR: "필기체 인식률 향상 담당으로 투입, 2인 팀에서 OCR Recognizer 전담: 데이터, 학습, 평가",
+        ENG: "Brought in to raise handwriting recognition: led the OCR recognizer work (data, training, evaluation) in a team of 2",
+        KOR: "필기체 인식률 향상 담당으로 투입, 2인 팀에서 OCR Recognizer 주도: 데이터, 학습, 평가",
       },
       contribution: {
         ENG: "85% of the recognizer research",
@@ -491,8 +491,8 @@ function App() {
         KOR: "Llama-3 · RAG (bge-m3, FAISS) · LangChain · FastAPI · AWS EC2",
       },
       results: {
-        ENG: 'Finished a system that answers with cited statutes and precedents · demoed at the final presentation of the IBM x RedHat program',
-        KOR: '법령·판례 출처를 명시해 답하는 시스템을 완성 · IBM x RedHat 과정 최종 발표에서 시연',
+        ENG: 'Finished a system that answers with cited statutes and precedents · demoed at the final presentation of the IBM x Red Hat program',
+        KOR: '법령·판례 출처를 명시해 답하는 시스템을 완성 · IBM x Red Hat 과정 최종 발표에서 시연',
       },
       lessons: {
         ENG: 'Retrieval quality was evaluated only qualitatively. Next step: a labeled legal Q&A set to measure Recall@k and answer accuracy quantitatively',
@@ -554,8 +554,8 @@ function App() {
         KOR: "심사역이 신분증과 은행거래명세서를 눈으로 대조하고 숫자를 손으로 옮겨 적어 느리고 실수가 잦았습니다.",
       },
       team: {
-        ENG: "Korea Deep Learning: ran the project as PM and sole developer on top of the in-house IDP platform (DeepHub)",
-        KOR: "한국딥러닝: 사내 IDP 플랫폼(DeepHub) 위에서 PM 겸 단독 개발로 수행",
+        ENG: "Korea Deep Learning: ran the project as PM and sole developer on top of DeepHub, the company's document AI platform",
+        KOR: "한국딥러닝: 사내 문서 AI 플랫폼(DeepHub) 위에서 PM 겸 단독 개발로 수행",
       },
       role: {
         ENG: "PM and sole developer on the in-house DeepHub platform: client communication, design, all code and client documents",
@@ -705,8 +705,8 @@ function App() {
   const work_kdl_title = lang === 'ENG' ? "ML Engineer, Korea Deep Learning" : "ML 엔지니어, 한국딥러닝";
   const work_kdl_details_ENG = [
     "**VLM document extraction & validation:** Shinhan Finance Vietnam loan-document project as PM and sole developer (top 8 at InnoBoost 2026, the company's first overseas revenue)",
-    "**IDP platform (KIE):** classification, automatic schema and extraction modules of DeepHub; 10+ client projects shipped on it",
-    "**LLM/VLM document automation:** Seoyon E-Hwa quality documents (97.64% on the client's audit ledger) and LG Electronics spec sheets (1,225 / 1,232 cells)",
+    "**Document AI platform:** co-developed DeepHub, used in 10+ client projects",
+    "**LLM document automation:** Seoyon E-Hwa quality documents (97.64% on the client's audit ledger) and LG Electronics spec sheets (1,225 / 1,232 cells)",
     "**Handwriting OCR:** recognizer fine-tuning, +4.26 pp exact match, weights deployed in a Hyundai Capital project",
     "**Computer vision:** CCTV gauge reading with YOLO and oriented boxes (mAP50-95 0.992), in production",
     "**Generative video:** wildfire and flood CCTV videos with FLUX.2 and Wan2.2, checked by an automated VLM QA",
@@ -714,8 +714,8 @@ function App() {
   ];
   const work_kdl_details_KOR = [
     "**VLM 문서 추출·검증:** 신한파이낸스 베트남 대출 서류 프로젝트, PM 겸 단독 개발 (이노부스트 2026 상위 8개사, 회사 첫 해외 매출)",
-    "**IDP 플랫폼 (KIE):** DeepHub의 분류·자동 스키마·추출 모듈 개발, 10개 이상 프로젝트 납품",
-    "**LLM·VLM 문서 자동화:** 서연이화 품질 문서(고객 검수 대장 기준 97.64%), LG전자 스펙시트(1,232칸 중 1,225칸)",
+    "**문서 AI 플랫폼:** DeepHub 공동 개발, 10개 이상 프로젝트 납품",
+    "**LLM 문서 자동화:** 서연이화 품질 문서(고객 검수 대장 기준 97.64%), LG전자 스펙시트(1,232칸 중 1,225칸)",
     "**필기체 OCR:** Recognizer fine-tuning으로 정확도 +4.26%p, 현대캐피탈 프로젝트에 가중치 배포",
     "**컴퓨터 비전:** YOLO와 회전 박스로 CCTV 계기판 판독 (mAP50-95 0.992), 실서비스 배포",
     "**생성형 영상:** FLUX.2·Wan2.2로 산불·침수 CCTV 영상 생성, VLM 자동 검수",
@@ -1171,6 +1171,8 @@ function App() {
         { Icon: SiOpenai, label: "Large Language Models (LLM)" },
         { Icon: FaSearch, label: "RAG" },
         { Icon: FaLink, label: "LangChain" },
+        { Icon: FaProjectDiagram, label: "LangGraph" },
+        { Icon: FaCrosshairs, label: "Ultralytics (YOLO)" },
         { Icon: FaServer, label: "vLLM" },
         { Icon: SiOpencv, label: "OpenCV" },
       ]},
@@ -1195,9 +1197,6 @@ function App() {
       ]},
       { title: "Workflow & Tools", items: [
         { Icon: SiGit, label: "Git" },
-        { Icon: SiJira, label: "Jira" },
-        { Icon: SiSlack, label: "Slack" },
-        { Icon: SiFigma, label: "Figma" },
         { Icon: SiDocker, label: "Docker" },
         { Icon: SiAmazonaws, label: "AWS" },
       ]},
@@ -1216,6 +1215,8 @@ function App() {
         { Icon: SiOpenai, label: "대형 언어모델 (LLM)" },
         { Icon: FaSearch, label: "RAG" },
         { Icon: FaLink, label: "LangChain" },
+        { Icon: FaProjectDiagram, label: "LangGraph" },
+        { Icon: FaCrosshairs, label: "Ultralytics (YOLO)" },
         { Icon: FaServer, label: "vLLM" },
         { Icon: SiOpencv, label: "OpenCV" },
       ]},
@@ -1240,9 +1241,6 @@ function App() {
       ]},
       { title: "워크플로 & 도구", items: [
         { Icon: SiGit, label: "Git" },
-        { Icon: SiJira, label: "Jira" },
-        { Icon: SiSlack, label: "Slack" },
-        { Icon: SiFigma, label: "Figma" },
         { Icon: SiDocker, label: "Docker" },
         { Icon: SiAmazonaws, label: "AWS" },
       ]},
@@ -1297,7 +1295,7 @@ function App() {
       },
       media: [{ src: ppassClassify, caption: { ENG: "Classification and extraction settings", KOR: "문서 분류·추출 설정" } }, { src: ppassResult, caption: { ENG: "Extraction results", KOR: "추출 결과" } }, { src: ppassUpload, caption: { ENG: "Upload: 9 formats", KOR: "업로드: 9개 형식" } }],
       id: 'proj-ppass', key: 'ppassPlatform', org: 'company', fields: ['VLM', 'OCR'],
-      title: { ENG: 'DeepHub · In-House IDP Platform', KOR: 'DeepHub · 사내 IDP 플랫폼' },
+      title: { ENG: 'DeepHub · Document AI Platform', KOR: 'DeepHub · 사내 문서 AI 플랫폼' },
       location: { ENG: 'Korea Deep Learning · co-developed by 2 AI developers', KOR: '한국딥러닝 · AI 개발자 2명 공동 개발' },
       dates: { ENG: 'April 2026 ~ August 2026', KOR: '2026.04 ~ 2026.08' },
       details: lang === 'ENG' ? ppass_ENG : ppass_KOR,
@@ -1352,7 +1350,7 @@ function App() {
       ],
       id: 'proj-4', key: 'kdlOcrResearch', org: 'company', fields: ['CV', 'OCR'],
       title: { ENG: 'Hyundai Capital · Handwriting OCR Recognition', KOR: '현대캐피탈 · 필기체 OCR 인식률 향상' },
-      location: { ENG: 'Korea Deep Learning · OCR for a VLM-based document pipeline, weights deployed', KOR: '한국딥러닝 · VLM 기반 서류 처리 프로젝트 OCR 담당, 가중치 배포' },
+      location: { ENG: 'Korea Deep Learning · handwriting OCR model training', KOR: '한국딥러닝 · 필기체 OCR 모델 학습' },
       dates: { ENG: 'January 2026 ~ April 2026', KOR: '2026.01 ~ 2026.04' },
       details: lang === 'ENG' ? kdl_ocr_ENG : kdl_ocr_KOR,
     },
@@ -1454,7 +1452,7 @@ function App() {
       id: 'side-law', key: 'lawIntelligence', org: 'program', fields: ['LLM', 'RAG'],
       title: { ENG: 'IBM x Red Hat · Law-AI', KOR: 'IBM x Red Hat · Law-AI' },
       location: { ENG: 'IBM final group project', KOR: 'IBM 파이널 그룹 프로젝트' },
-      dates: { ENG: '2025 ~ October 2025', KOR: '2025 ~ 2025.10' },
+      dates: { ENG: 'October 2025', KOR: '2025.10' },
       details: lang === 'ENG' ? law_ENG : law_KOR,
     },
   ];
@@ -1708,13 +1706,13 @@ function App() {
             />
 
             <Entry
-              title="[IBM x RedHat] AI Transformation - AX Academy"
-              location="IBM x RedHat"
+              title="IBM x Red Hat AI Transformation – AX Academy"
+              location="IBM x Red Hat"
               dates={lang==='ENG' ? "April 2025 ~ October 2025" : "2025.04 ~ 2025.10"}
               details={[
                 ...(lang==='ENG'
                   ? [
-                      "Six-month AI Transformation program run by IBM and RedHat.",
+                      "Six-month AI Transformation program run by IBM and Red Hat.",
                       "Built DNN, CNN, RNN and NLP models in TensorFlow, Keras and PyTorch.",
                       "Studied and applied key papers such as Attention Is All You Need and BERT.",
                       "Learned LLM application work (RAG, prompt engineering) from IBM developers.",
@@ -1722,7 +1720,7 @@ function App() {
                       "Led the final project team: Law-AI, a legal assistant built on an LLM with RAG."
                     ]
                   : [
-                      "IBM·RedHat 주관 6개월 AI Transformation 과정.",
+                      "IBM·Red Hat 주관 6개월 AI Transformation 과정.",
                       "TensorFlow·Keras·PyTorch로 DNN·CNN·RNN·NLP 모델 구현.",
                       "Attention Is All You Need, BERT 등 주요 논문 학습 및 적용.",
                       "IBM 현직 개발자에게 LLM 활용(RAG·프롬프트 엔지니어링) 심화 강의 수강.",
@@ -1731,7 +1729,7 @@ function App() {
                     ]),
                 // 이미지 블록
                 <div key="ibm-images" style={{ display:'flex', overflowX:'auto', whiteSpace:'nowrap', gap:'10px', padding:'10px 0' }}>
-                  <img src={ibmImage1} alt="IBM x RedHat 1" style={{ height: '400px', borderRadius: '8px' }} />
+                  <img src={ibmImage1} alt="IBM x Red Hat 1" style={{ height: '400px', borderRadius: '8px' }} />
                 </div>
               ]}
               isExpanded={expandedSections.education.entries.ibmAxAcademy}
@@ -1875,12 +1873,12 @@ function App() {
         {expandedSections.engagements.expanded && (
           <div className="section-content">
             <Entry
-              title="J-AGRI Exhibition, Tokyo"
-              location={lang==='ENG' ? "Tokyo, Japan" : "일본 도쿄"}
-              dates={lang==='ENG' ? "October 9-11, 2024" : "2024.10.09 ~ 10.11"}
-              details={getDetails(jAgri_ENG, jAgri_KOR, jAgri_media)}
-              isExpanded={expandedSections.engagements.entries.jAgri}
-              onClick={() => toggleEntry('engagements', 'jAgri')}
+              title="CES 2025 Exhibition"
+              location={lang==='ENG' ? "Las Vegas, USA" : "미국 라스베이거스"}
+              dates={lang==='ENG' ? "January 2025" : "2025.01"}
+              details={getDetails(ces_ENG, ces_KOR, ces_media)}
+              isExpanded={expandedSections.engagements.entries.ces2025}
+              onClick={() => toggleEntry('engagements', 'ces2025')}
             />
             <Entry
               title="FAVA 2024 - 23rd Federation of Asian Veterinary Associations Congress"
@@ -1891,12 +1889,12 @@ function App() {
               onClick={() => toggleEntry('engagements', 'fava2024')}
             />
             <Entry
-              title="CES 2025 Exhibition"
-              location={lang==='ENG' ? "Las Vegas, USA" : "미국 라스베이거스"}
-              dates={lang==='ENG' ? "January 2025" : "2025.01"}
-              details={getDetails(ces_ENG, ces_KOR, ces_media)}
-              isExpanded={expandedSections.engagements.entries.ces2025}
-              onClick={() => toggleEntry('engagements', 'ces2025')}
+              title="J-AGRI Exhibition, Tokyo"
+              location={lang==='ENG' ? "Tokyo, Japan" : "일본 도쿄"}
+              dates={lang==='ENG' ? "October 9-11, 2024" : "2024.10.09 ~ 10.11"}
+              details={getDetails(jAgri_ENG, jAgri_KOR, jAgri_media)}
+              isExpanded={expandedSections.engagements.entries.jAgri}
+              onClick={() => toggleEntry('engagements', 'jAgri')}
             />
           </div>
         )}
