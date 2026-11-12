@@ -284,7 +284,7 @@ function App() {
     kdlProductPlanning: {
       problem: {
         ENG: "Planners copied specs from review decks (up to 8 models each) into spec sheets and roadmaps by hand.",
-        KOR: "상품기획팀이 검토의뢰서(모델 최대 8개)의 스펙을 스펙시트와 로드맵에 손으로 옮겨 적었습니다.",
+        KOR: "상품기획팀이 검토의뢰서 한 건에 담긴 최대 8개 모델의 스펙을 스펙시트와 로드맵에 손으로 옮겨 적었습니다.",
       },
       team: { ENG: "Small team: teammates on frontend, all AI development by me", KOR: "소규모 팀: 프론트엔드는 팀원, AI 개발은 전부 본인" },
       role: {
@@ -378,13 +378,13 @@ function App() {
     },
     kdlOcrResearch: {
       problem: {
-        ENG: "Hyundai Capital's document pipeline feeds OCR text into a VLM for key information extraction (KIE), but most documents were handwritten and the OCR read only 68.63% of real handwritten fields correctly (confusing look-alikes such as 0/ㅇ/O), which capped KIE accuracy.",
-        KOR: "VLM 기반 서류 처리 파이프라인은 OCR 결과를 프롬프트에 넣어 KIE를 수행하는데, 서류 대부분이 필기체였고 OCR은 실제 손글씨 항목을 68.63%만 맞혀(0/ㅇ/O 등 혼동) KIE 정확도의 병목이 됐습니다.",
+        ENG: "The VLM alone could not read Korean handwriting reliably, so OCR was added to the pipeline, but that OCR read only 68.63% of handwritten fields correctly.",
+        KOR: "VLM만으로는 한국어 필기체를 제대로 읽지 못해 OCR을 붙였지만, 그 OCR도 손글씨 항목을 68.63%만 맞혔습니다.",
       },
       team: { ENG: "2 people", KOR: "2명" },
       role: {
-        ENG: "Brought into the VLM-based project to raise handwriting recognition: owned the OCR recognizer (data, training, evaluation) in a team of 2",
-        KOR: "VLM 기반 프로젝트에 필기체 인식률 향상 담당으로 투입, 2인 팀에서 OCR Recognizer 전담: 데이터, 학습, 평가",
+        ENG: "Brought in to raise handwriting recognition: owned the OCR recognizer (data, training, evaluation) in a team of 2",
+        KOR: "필기체 인식률 향상 담당으로 투입, 2인 팀에서 OCR Recognizer 전담: 데이터, 학습, 평가",
       },
       contribution: {
         ENG: "85% of the recognizer research",
@@ -495,8 +495,8 @@ function App() {
         KOR: "Llama-3 · RAG (bge-m3, FAISS) · LangChain · FastAPI · AWS EC2",
       },
       results: {
-        ENG: 'Finished a working system and demoed it at the final presentation of the IBM x RedHat program',
-        KOR: '동작하는 시스템을 완성해 IBM x RedHat 과정 마무리 최종 발표에서 시연·발표',
+        ENG: 'Finished a system that answers with cited statutes and precedents · demoed at the final presentation of the IBM x RedHat program',
+        KOR: '법령·판례 출처를 명시해 답하는 시스템을 완성 · IBM x RedHat 과정 최종 발표에서 시연',
       },
       lessons: {
         ENG: 'Retrieval quality was evaluated only qualitatively. Next step: a labeled legal Q&A set to measure Recall@k and answer accuracy quantitatively',
@@ -531,12 +531,12 @@ function App() {
         KOR: "KIE 고객사가 생길 때마다 분류·추출·검수 화면을 처음부터 다시 만들어야 했습니다.",
       },
       role: {
-        ENG: "Owned classification, automatic schema, extraction results and the UI; teammates designed the other modules",
-        KOR: "분류·자동 스키마·추출 결과·UI 담당, 나머지 모듈은 팀원이 설계",
+        ENG: "Built and maintained by 2 AI developers; I led classification, automatic schema, extraction results and the UI",
+        KOR: "AI 개발자 2명이 공동 개발·운영, 분류·자동 스키마·추출 결과·UI 주담당",
       },
       contribution: {
-        ENG: "50%: classification, automatic schema definition, extraction results and the UI",
-        KOR: "50%: 분류, 자동 스키마 정의, 추출 결과, UI",
+        ENG: "50%: co-developed by 2 AI developers (led classification, automatic schema definition, extraction results and the UI)",
+        KOR: "50%: AI 개발자 2명 공동 개발 (분류, 자동 스키마 정의, 추출 결과, UI 주담당)",
       },
       model: {
         ENG: "VLM on vLLM · OCR · FastAPI · Next.js / React / TypeScript · MongoDB · SeaweedFS · Docker Compose",
@@ -547,8 +547,8 @@ function App() {
         KOR: "VLM (vLLM) · OCR · FastAPI · Next.js / React · MongoDB",
       },
       results: {
-        ENG: "10+ client projects delivered on the platform · still in use · Shinhan Finance Vietnam project built on top of it",
-        KOR: "이 플랫폼으로 10개 이상 프로젝트 납품 · 지금도 사용 중 · 신한파이낸스 베트남 프로젝트도 이 플랫폼 위에서 개발",
+        ENG: "10+ client projects delivered on the platform, still in use · Shinhan Finance Vietnam project built on top of it",
+        KOR: "이 플랫폼으로 10개 이상 프로젝트 납품, 현재도 사용 중 · 신한파이낸스 베트남 프로젝트도 이 플랫폼 위에서 개발",
       },
       links: [],
     },
@@ -578,8 +578,8 @@ function App() {
         KOR: "VLM (vLLM) · FastAPI · Next.js / React · MongoDB · NCP",
       },
       results: {
-        ENG: "Top 8 of the participating companies · Open Innovation Reward (VND 200,000,000) · the project became Korea Deep Learning's first overseas revenue",
-        KOR: "참가 기업 중 상위 8개사 · 오픈이노베이션 리워드(VND 200,000,000) · 실제 사업으로 이어져 한국딥러닝 첫 해외 매출",
+        ENG: "All 5 SoW scenarios covered by 7 automated checks · Top 8 at Global Shinhan InnoBoost 2026, Open Innovation Reward (VND 200,000,000) · the project became Korea Deep Learning's first overseas revenue",
+        KOR: "SoW 시나리오 5개를 자동 검증 7종으로 모두 구현 · 글로벌 신한 이노부스트 2026 상위 8개사, 오픈이노베이션 리워드(VND 200,000,000) · 실제 사업으로 이어져 한국딥러닝 첫 해외 매출",
       },
       lessons: {
         ENG: "The VLM only reads and code makes every decision, because a prompt alone is a weak guarantee. Limits: image-forgery forensics was scoped out in favor of logical-consistency checks, and no automated accuracy report against the 92% target was built (UAT was evaluated manually)",
@@ -767,7 +767,7 @@ function App() {
   ];
 
   const kdl_ocr_ENG = [
-    "Project pipeline: OCR (text + page rotation angle) → rotation correction → VLM document classification on the deskewed page → OCR text added to the prompt → VLM key information extraction. With a high share of handwritten documents, OCR accuracy limited extraction quality, so I was brought in to train the OCR recognizer for handwriting.",
+    "Project pipeline: OCR (text + page rotation angle) → rotation correction → VLM document classification on the deskewed page → OCR text added to the prompt → VLM key information extraction. OCR was added because the VLM alone could not read Korean handwriting reliably, and I was brought in to train the OCR recognizer for handwriting.",
     "Researched the recognizer stage of the company's two-stage OCR (text detector → recognizer) for Korean handwriting, switching and comparing architectures: PARSeq, PP-OCRv5 and SVTRv2 (trained on 40.86M filtered images).",
     "Built an auto-labeling pipeline from client ROI boxes and ground truth (box-center-in-ROI, then exact → space-free substring matching): about 80k handwriting labels without manual review.",
     "Built a 15,808-sample handwriting golden set from real client forms with every label re-checked by hand: samples without valid ground truth (printed form labels) excluded, fully struck-out text excluded, and each sample tagged by difficulty (boundary: ambiguous like 이/01/OI; hard: genuinely bad handwriting), noise, strike-through and text type/length so errors can be sliced.",
@@ -778,7 +778,7 @@ function App() {
     "Other metrics on the 158,898-sample test set: CER 7.52% → 5.09%, handwriting +5.49 pp.",
   ];
   const kdl_ocr_KOR = [
-    "프로젝트 파이프라인: OCR(텍스트 추출·회전각 도출) → 회전 보정 → 0°로 정렬한 문서로 VLM 문서 분류 → OCR 결과를 프롬프트에 포함 → VLM으로 KIE 추출. 필기체 서류 비중이 높아 OCR 인식률이 추출 품질을 좌우했고, 필기체 인식률 향상을 위해 OCR Recognizer 학습 담당으로 투입.",
+    "프로젝트 파이프라인: OCR(텍스트 추출·회전각 도출) → 회전 보정 → 0°로 정렬한 문서로 VLM 문서 분류 → OCR 결과를 프롬프트에 포함 → VLM으로 KIE 추출. VLM만으로는 한국어 필기체가 잘 읽히지 않아 OCR을 붙인 구조였고, 필기체 인식률을 높이기 위해 OCR Recognizer 학습 담당으로 투입.",
     "사내 2-stage OCR(텍스트 Detector → Recognizer) 중 Recognizer의 한국어 필기체 성능 개선 연구, 아키텍처를 바꿔 가며 비교: PARSeq, PP-OCRv5, SVTRv2(필터링한 4,086만 장 학습).",
     "고객 ROI 박스와 정답(GT)으로 오토라벨링 파이프라인 구축(bbox 중심이 ROI 안 → 정확 일치 → 띄어쓰기 제거 부분 일치): 검수 없이 필기체 라벨 약 8만 장.",
     "실제 고객 서식에서 필기체 골든셋 15,808개 구축, 모든 라벨을 직접 재검수: 정답이 없는 샘플(인쇄된 서식 문구)과 전체를 두 줄로 지운 텍스트는 제외, 난이도(boundary: 이/01/OI처럼 애매한 글자, hard: 실제 악필)·노이즈·취소선·문자 유형·길이로 태깅해 오류를 구간별로 분석 가능하게 설계.",
@@ -1303,7 +1303,7 @@ function App() {
       media: [{ src: ppassClassify, caption: { ENG: "Classification and extraction settings", KOR: "문서 분류·추출 설정" } }, { src: ppassResult, caption: { ENG: "Extraction results", KOR: "추출 결과" } }, { src: ppassUpload, caption: { ENG: "Upload: 9 formats", KOR: "업로드: 9개 형식" } }],
       id: 'proj-ppass', key: 'ppassPlatform', org: 'company', fields: ['VLM', 'OCR'],
       title: { ENG: 'DeepHub · In-House IDP Platform', KOR: 'DeepHub · 사내 IDP 플랫폼' },
-      location: { ENG: 'Korea Deep Learning · classification, schema, extraction & UI', KOR: '한국딥러닝 · 분류·스키마·추출·UI 담당' },
+      location: { ENG: 'Korea Deep Learning · co-developed by 2 AI developers', KOR: '한국딥러닝 · AI 개발자 2명 공동 개발' },
       dates: { ENG: 'April 2026 ~ August 2026', KOR: '2026.04 ~ 2026.08' },
       details: lang === 'ENG' ? ppass_ENG : ppass_KOR,
       compare: {
@@ -1347,8 +1347,8 @@ function App() {
     {
       badge: { ENG: 'Contribution 85%', KOR: '기여도 85%' },
       summary: {
-        ENG: ["Owned the OCR stage of a VLM-based KIE pipeline, brought in to raise handwriting recognition", "Built a 15,808-sample handwriting golden set tagged by difficulty", "Auto-labeled ~80k handwriting samples from client ROI boxes", "Compared PARSeq, PP-OCRv5 and SVTRv2, then fine-tuned PARSeq on 11.6M samples"],
-        KOR: ["VLM 기반 KIE 파이프라인의 OCR 단계 담당, 필기체 인식률 향상을 위해 투입", "실제 서식 기반 필기체 골든셋 15,808개 구축, 난이도별 태깅", "고객 ROI 박스로 필기체 약 8만 장 오토라벨링", "PARSeq·PP-OCRv5·SVTRv2 비교 후 1,160만 장으로 PARSeq fine-tuning"],
+        ENG: ["Built a 15,808-sample handwriting golden set tagged by difficulty", "Auto-labeled ~80k handwriting samples from client ROI boxes", "Compared PARSeq, PP-OCRv5 and SVTRv2, then fine-tuned PARSeq on 11.6M samples"],
+        KOR: ["실제 서식 기반 필기체 골든셋 15,808개 구축, 난이도별 태깅", "고객 ROI 박스로 필기체 약 8만 장 오토라벨링", "PARSeq·PP-OCRv5·SVTRv2 비교 후 1,160만 장으로 PARSeq fine-tuning"],
       },
       media: [
         { src: hcOcrErrors, caption: { ENG: "Error analysis: GT vs prediction", KOR: "오답 분석: 정답 vs 예측" } },
@@ -1364,8 +1364,8 @@ function App() {
     {
       badge: { ENG: 'Contribution 100%', KOR: '기여도 100%' },
       summary: {
-        ENG: ["Extraction API for 7 document types (Excel / PPT / PDF; Korean, English, Chinese)", "LLM KIE on native PPTX / XLSX / searchable-PDF structure instead of image-based VLM", "Grader that reproduces the client's audit ledger; no change ships if a correct cell breaks"],
-        KOR: ["문서 7종 추출 API (엑셀·PPT·PDF, 국·영·중)", "이미지 VLM 대신 PPTX·XLSX·searchable PDF 원문 구조 기반 LLM KIE", "고객 검수 대장을 재현하는 채점기, 정답 칸이 깨지면 반영 안 함"],
+        ENG: ["Extraction API for 7 document types (Excel / PPT / PDF; Korean, English, Chinese)", "LLM KIE on native PPTX / XLSX / searchable-PDF structure instead of image-based VLM", "General-purpose OCR and document-parser APIs (with bbox coordinates)", "Grader that reproduces the client's audit ledger; no change ships if a correct cell breaks"],
+        KOR: ["문서 7종 추출 API (엑셀·PPT·PDF, 국·영·중)", "이미지 VLM 대신 PPTX·XLSX·searchable PDF 원문 구조 기반 LLM KIE", "범용 OCR·문서 Parser API (bbox 좌표 반환)", "고객 검수 대장을 재현하는 채점기, 정답 칸이 깨지면 반영 안 함"],
       },
       media: [{ src: seoyonImage2, caption: { ENG: "Deployed: Excel field extraction", KOR: "실제 배포 화면: 엑셀 필드 추출" } }, { src: seoyonImage1, caption: { ENG: "FMEA PDF parsing", KOR: "FMEA PDF 표 파싱" } }],
       id: 'proj-2', key: 'kdlDocExtraction', org: 'company', fields: ['LLM', 'VLM'],
