@@ -180,18 +180,20 @@ function App() {
     // 한 덩어리 대신 짧은 줄로: 1) 하는 일  2) 일하는 방식  3) 한 일  4) 대표 성과
     summary: {
       ENG: [
-        "AI Engineer who stays with a problem until it is solved and turns real-world requirements into **systems** that run on clients' own servers.",
-        "I follow new models and techniques as soon as they come out, test them hands-on, and bring what works into client projects.",
-        "With a background in Mathematics and Computer Science, I define and solve problems based on data and metrics.",
-        "At Korea Deep Learning I have shipped **document-AI, OCR, vision and generative-video** solutions to clients; at CareSix I built the heart-rate algorithm for a dog wearable.",
-        "I led **Shinhan Finance Vietnam's loan-document project** as PM and sole developer, and built the classification, schema and extraction modules of **DeepHub**, the in-house IDP platform behind 10+ client projects.",
+        "I'm an AI engineer who builds **production systems** for enterprise clients and sees them through to deployment on the client's own servers.",
+        "When a new model or technique comes out, I try it on real data first and bring it into a project once it holds up.",
+        "I studied Mathematics and Computer Science at the University of St Andrews, and I like to pin a problem down with data before I try to solve it.",
+        "At Korea Deep Learning I build **document AI, OCR, computer vision and generative video** solutions and deploy them for enterprise clients. Before that, I developed the heart-rate algorithm for a dog wearable at CareSix.",
+        "I led **Shinhan Finance Vietnam's loan-document project** as both PM and sole developer, and co-developed **DeepHub**, our document AI platform, which has since been used in more than ten client projects.",
+        "I'm a **native speaker of both English and Korean** and work directly with overseas clients.",
       ],
       KOR: [
-        "현장의 문제를 끝까지 파고들어, 실제로 돌아가는 **시스템**으로 풀어내는 AI 엔지니어입니다.",
-        "새로운 모델과 기법이 나오면 직접 돌려보고 검증해 프로젝트에 적용하며, 빠르게 바뀌는 AI 기술을 꾸준히 따라갑니다.",
-        "수학·컴퓨터과학 전공을 바탕으로, 데이터와 지표를 근거로 문제를 정의하고 해결합니다.",
-        "한국딥러닝에서 **문서 AI·OCR·비전·생성형 영상** 솔루션을 고객사에 배포했고, 케어식스에서는 반려견 웨어러블의 심박 알고리즘을 개발했습니다.",
-        "**신한파이낸스 베트남 대출 서류 프로젝트**를 PM 겸 단독 개발로 이끌었고, 사내 IDP 플랫폼 **DeepHub**의 분류·스키마·추출 모듈을 개발했습니다. 이 플랫폼으로 10개 이상의 프로젝트가 납품됐습니다.",
+        "기업 고객을 위한 **AI 시스템**을 개발하고, 고객사 서버에 배포하는 단계까지 책임지는 AI 엔지니어입니다.",
+        "새로운 모델이나 기법이 나오면 실제 데이터로 먼저 검증하고, 효과가 확인되면 프로젝트에 적용합니다.",
+        "세인트 앤드류스 대학교에서 수학과 컴퓨터과학을 전공했고, 문제를 풀기 전에 데이터로 먼저 정확히 파악하려 합니다.",
+        "한국딥러닝에서 **문서 AI·OCR·컴퓨터 비전·생성형 영상** 솔루션을 개발해 고객사에 배포하고 있습니다. 그전에는 케어식스에서 반려견 웨어러블의 심박 알고리즘을 개발했습니다.",
+        "**신한파이낸스 베트남 대출 서류 프로젝트**를 PM 겸 단독 개발로 이끌었고, 사내 문서 AI 플랫폼 **DeepHub**를 공동 개발했습니다. 이 플랫폼은 지금까지 10개 이상의 고객 프로젝트에 쓰였습니다.",
+        "**영어·한국어 모두 원어민 수준**으로, 해외 고객사와 직접 소통합니다.",
       ],
     },
     skills: ["LLM / VLM", "KIE · OCR", "RAG · LangChain", "LLM Evaluation", "Docker", "On-prem Deployment", "FastAPI", "vLLM", "PyTorch", "Python"],
@@ -211,14 +213,8 @@ function App() {
         "정부과제(제조혁신) CCTV 계기판 실시간 판독 시스템을 라벨링부터 Docker API 실서비스 배포까지 단독 구축 (mAP50-95 0.992 / 0.949)",
       ],
     },
-    // 대표 성과 숫자 타일 (누르면 해당 프로젝트로 이동)
-    stats: [
-      { id: 'proj-shinhan', value: { ENG: "Top 8", KOR: "상위 8개사" }, who: { ENG: "Shinhan Finance Vietnam", KOR: "신한파이낸스 베트남" }, label: { ENG: "InnoBoost 2026, PM & sole dev", KOR: "이노부스트 2026 · PM 겸 단독 개발" } },
-      { id: 'proj-2', value: { ENG: "97.64%", KOR: "97.64%" }, who: { ENG: "Seoyon E-Hwa", KOR: "서연이화" }, label: { ENG: "extraction accuracy (audit ledger)", KOR: "문서 추출 정확도 (검수 대장)" } },
-      { id: 'proj-4', value: { ENG: "+4.26 pp", KOR: "+4.26%p" }, who: { ENG: "Hyundai Capital", KOR: "현대캐피탈" }, label: { ENG: "handwriting OCR exact match", KOR: "필기체 OCR 정확도 향상" } },
-      { id: 'proj-3', value: { ENG: "0.992", KOR: "0.992" }, who: { ENG: "Gauge reading", KOR: "계기판 판독" }, label: { ENG: "detection mAP50-95, in production", KOR: "검출 mAP50-95, 실서비스" } },
-      { id: 'proj-1', value: { ENG: "1,225 / 1,232", KOR: "1,225 / 1,232" }, who: { ENG: "LG Electronics", KOR: "LG전자" }, label: { ENG: "spec cells filled automatically", KOR: "스펙시트 칸 자동 채움" } },
-    ],
+    // 대표 성과 숫자 타일: 비워 두면 화면에 표시되지 않음
+    stats: [],
     // 주요 이력 한눈에 보기 (직함 바로 아래 표시)
     glance: [
       {
@@ -1054,7 +1050,6 @@ function App() {
     </div>
   );
   const ach_dacon_ENG = [
-    "Competed across tabular, time-series, molecular (drug discovery) and LLM-based problems.",
     "Toss NEXT ML Challenge – ad click-through-rate (CTR) prediction on tabular Parquet data (2,206 participants): in a team of 4, built the whole pipeline myself (feature preprocessing, an XGBoost + LightGBM + CatBoost ensemble and inference), finishing 30th and earning a résumé-screening pass for Toss hiring.",
     "Boost up AI 2025 – drug discovery (1,289 participants): 37th, solo.",
     "2025 Power Consumption Forecasting (1,592 participants): 63rd, team of 3.",
@@ -1110,7 +1105,7 @@ function App() {
     "업로드 9개 형식 지원: PDF, 이미지, HWP, HWPX, DOCX, XLSX, PPT, PPTX, TIF.",
   ];
   const shinhanPj_ENG = [
-    "Ran the project as PM and sole developer: led client communication with SVFC from kickoff (06.09) through the SoW (06.30), integration testing, UAT with the client's underwriters and the final assessment (08.24), and owned the system design.",
+    "Ran the project as PM and sole developer: led client communication with SVFC (Shinhan Vietnam Finance Company) from kickoff (06.09) through the SoW (06.30), integration testing, UAT with the client's underwriters and the final assessment (08.24), and owned the system design.",
     "Built SVFC's loan-document screening system: upload bank statements and CCCD ID cards (multiple files merged into one page sequence) → page classification → schema-based field extraction → 7 automated checks, returning pass / warn / fail with the reason and the exact fields to the underwriter.",
     "Turned the SoW and client Q&A into checks that could actually be built. When the client asked for image-forgery forensics (font, color, compositing traces), I scoped it out, replaced it with logical-consistency checks (front-back MRZ match, ID-number scheme) and stated the limit in the user guide.",
     "Bank statements: balance reconciliation (opening + credits − debits = closing, ±1, sums recomputed from transaction rows), reference-number ↔ date logic (YYMMDD, Julian YYDDD, monotonic increase) to catch inserted rows, and monthly salary / bonus income with the matching evidence.",
