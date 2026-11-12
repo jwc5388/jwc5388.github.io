@@ -180,7 +180,7 @@ function App() {
     // 한 덩어리 대신 짧은 줄로: 1) 하는 일  2) 일하는 방식  3) 한 일  4) 대표 성과
     summary: {
       ENG: [
-        "AI Engineer who digs into a problem until it is solved, turning messy real-world requirements into **systems** that run on clients' own servers.",
+        "AI Engineer who stays with a problem until it is solved and turns real-world requirements into **systems** that run on clients' own servers.",
         "I follow new models and techniques as soon as they come out, test them hands-on, and bring what works into client projects.",
         "With a background in Mathematics and Computer Science, I define and solve problems based on data and metrics.",
         "At Korea Deep Learning I have shipped **document-AI, OCR, vision and generative-video** solutions to clients; at CareSix I built the heart-rate algorithm for a dog wearable.",
@@ -343,7 +343,7 @@ function App() {
     },
     kdlGaugeReading: {
       problem: {
-        ENG: "Analog gauges had to be read on foot, so nobody could watch them around the clock.",
+        ENG: "Analog gauges had to be read in person, so nobody could watch them around the clock.",
         KOR: "아날로그 계기판은 사람이 직접 가서 읽어야 해서 24시간 지켜볼 수 없었습니다.",
       },
       team: {
@@ -355,7 +355,7 @@ function App() {
         KOR: "단독: 데이터·라벨링, 모델 학습, 배포",
       },
       contribution: {
-        ENG: "100%: owned everything from data collection and labeling to model training and the Docker API deployment",
+        ENG: "100%: data collection and labeling, model training and the Docker API deployment",
         KOR: "100%: 데이터 수집·라벨링부터 모델 학습, Docker 기반 API 배포까지 전 과정 단독 수행",
       },
       model: {
@@ -399,7 +399,7 @@ function App() {
         KOR: "PARSeq · PP-OCRv5 · SVTRv2 · PyTorch · PaddleOCR",
       },
       results: {
-        ENG: "Exact match 85.23% → 89.49% (+4.26 pp) on 158,898 test samples · handwriting goldenset 68.63% → 77.33% · weights deployed to a Hyundai Capital project",
+        ENG: "Exact match 85.23% → 89.49% (+4.26 pp) on 158,898 test samples · handwriting golden set 68.63% → 77.33% · weights deployed to a Hyundai Capital project",
         KOR: "테스트 158,898개 기준 정확도 85.23% → 89.49% (+4.26%p) · 필기체 골든셋 68.63% → 77.33% · 현대캐피탈 프로젝트에 가중치 배포",
       },
       lessons: {
@@ -451,7 +451,7 @@ function App() {
         KOR: "심박 알고리즘 단독 개발, 하드웨어·생산팀과 협업",
       },
       contribution: {
-        ENG: '100%: owned the full pipeline end to end: BCG signal processing, model design and training, and validation',
+        ENG: '100%: BCG signal processing, model design and training, and validation',
         KOR: '100%: BCG 신호처리, 모델 설계·학습, 검증까지 전 과정 단독 수행',
       },
       model: {
@@ -495,7 +495,7 @@ function App() {
         KOR: "Llama-3 · RAG (bge-m3, FAISS) · LangChain · FastAPI · AWS EC2",
       },
       results: {
-        ENG: 'Delivered the working system and presented it at the final presentation that concluded the IBM x RedHat program',
+        ENG: 'Finished a working system and demoed it at the final presentation of the IBM x RedHat program',
         KOR: '동작하는 시스템을 완성해 IBM x RedHat 과정 마무리 최종 발표에서 시연·발표',
       },
       lessons: {
@@ -605,11 +605,11 @@ function App() {
       team: { ENG: '6 members (Team Road Guardian)', KOR: '6명 (팀 Road Guardian)' },
       role: { ENG: 'Object-detection model & data', KOR: '객체 인식 모델·데이터 담당' },
       contribution: {
-        ENG: 'Trained the customized YOLOv8 model and built the data preprocessing for the team\'s reckless-driving dataset',
+        ENG: 'Trained the custom YOLOv8 model and built the data preprocessing for the team\'s reckless-driving dataset',
         KOR: '커스텀 YOLOv8 모델 학습 및 팀 수집 난폭운전 데이터 전처리 담당',
       },
       model: {
-        ENG: 'Customized YOLOv8 (vehicle detection) + customized ViT (driving-behavior classification) + OCR (license plates) + LLM-based report summarization',
+        ENG: 'Custom YOLOv8 (vehicle detection) + custom ViT (driving-behavior classification) + OCR (license plates) + LLM-based report summarization',
         KOR: '커스텀 YOLOv8(차량 객체 인식) + 커스텀 ViT(난폭운전 행동 분류) + OCR(번호판 인식) + LLM 기반 신고서 자동 요약',
       },
       results: {
@@ -621,7 +621,7 @@ function App() {
     daconCompetitions: {
       team: { ENG: 'Toss: team of 4', KOR: '토스: 4인 팀' },
       role: {
-        ENG: 'Toss: owned the full pipeline (feature preprocessing, model training and inference)',
+        ENG: 'Toss: feature preprocessing, model training and inference',
         KOR: '토스: 피처 전처리 → 모델 학습 → 추론 전 과정 담당',
       },
       contribution: { ENG: '', KOR: '' },
@@ -732,7 +732,7 @@ function App() {
     "Conflicts between sources go to human review with per-source evidence; fixed multi-model documents so 1,225 of 1,232 cells fill automatically.",
     "Wrote into large Excel files by patching sheet XML directly, keeping original formatting and avoiding the bloat openpyxl caused (a 1.5MB file growing past 1GB).",
     "Generated product roadmaps by fixing lanes from PPT coordinates and reading only quarters with a VLM, with rule-based date normalization and carry-over of schedules from the previous roadmap.",
-    "Evaluated FP8 vs bf16 on a 28-document set with a re-written, unbiased answer key: same accuracy, 40% less memory, 19% faster.",
+    "Evaluated FP8 vs bf16 on a 28-document set with a corrected answer key: same accuracy, 40% less memory, 19% faster.",
     "Shipped an offline installer (install / update / rollback / backup) for an air-gapped server without sudo, ran the demo server, and delivered 30+ client requirements tracked by ID and priority, including a same-day IP-restriction security request.",
   ];
   const kdl_planning_KOR = [
@@ -752,7 +752,7 @@ function App() {
     "Deterministic first: 5 Excel types are parsed from cell borders, merges and styles without an LLM, so results are identical every run; LLMs only for free-form reports and images.",
     "Built a grader that exactly reproduces the client's audit-ledger accuracy, plus an LLM/parser response cache to separate code effects from model noise; no change shipped if any correct cell regressed.",
     "Recovered attachment names by parsing OLE binaries and reading text inside icon images: 244 → 1,182.",
-    "Accepted OCR from small images only when two models agree (≥50% trigram overlap), cleanly separating hallucinated tables (0–0.16) from real ones (0.57–1.0).",
+    "Accepted OCR from small images only when two models agree (≥50% trigram overlap), which separates hallucinated tables (0–0.16) from real ones (0.57–1.0).",
     "Replaced model-based source highlighting (15–41% accurate) in the review UI with rule-based word-coordinate matching: 97.1% of table cells matched.",
   ];
   const kdl_extract_KOR = [
@@ -770,7 +770,7 @@ function App() {
     "Project pipeline: OCR (text + page rotation angle) → rotation correction → VLM document classification on the deskewed page → OCR text added to the prompt → VLM key information extraction. With a high share of handwritten documents, OCR accuracy limited extraction quality, so I was brought in to train the OCR recognizer for handwriting.",
     "Researched the recognizer stage of the company's two-stage OCR (text detector → recognizer) for Korean handwriting, switching and comparing architectures: PARSeq, PP-OCRv5 and SVTRv2 (trained on 40.86M filtered images).",
     "Built an auto-labeling pipeline from client ROI boxes and ground truth (box-center-in-ROI, then exact → space-free substring matching): about 80k handwriting labels without manual review.",
-    "Built a 15,808-sample handwriting goldenset from real client forms with every label re-checked by hand: samples without valid ground truth (printed form labels) excluded, fully struck-out text excluded, and each sample tagged by difficulty (boundary: ambiguous like 이/01/OI; hard: genuinely bad handwriting), noise, strike-through and text type/length so errors can be sliced.",
+    "Built a 15,808-sample handwriting golden set from real client forms with every label re-checked by hand: samples without valid ground truth (printed form labels) excluded, fully struck-out text excluded, and each sample tagged by difficulty (boundary: ambiguous like 이/01/OI; hard: genuinely bad handwriting), noise, strike-through and text type/length so errors can be sliced.",
     "Analyzed errors by confusion pair (0/ㅇ/O, ㄷ/ㄹ, l/ㅣ/1) and jamo level; found and fixed a metric bug that undercounted final-consonant accuracy.",
     "Generated synthetic handwriting with MX-Font (38 styles, ascender/descender-aware word composition) and Gemini image generation for names, addresses and hard cases, then measured its real effect with ablations and gain/drop case analysis.",
     "Fine-tuned PARSeq on a curated 11.6M-sample mix (6.15M handwriting / 5.45M printed): best on 13 of 14 test datasets, and trained the weights deployed to a Hyundai Capital project.",
@@ -791,8 +791,8 @@ function App() {
 
   const kdl_gauge_ENG = [
     "Built a real-time two-stage pipeline that reads analog gauges from factory CCTV (1920×1080): YOLO26x detects the gauge (960 px), the gauge is cropped to about 60×60 px, and YOLO26x-OBB detects the needle's position and rotation (128 px).",
-    "Instead of searching the full FHD frame for a thin needle, cropped the gauge first and found the needle on a small input, securing both accuracy and inference speed.",
-    "Designed and ran a semi-automatic labeling loop (a small hand-labeled set in X-AnyLabeling → first YOLO model → auto-labeling and review → final training) to build 10,834 gauge and 9,594 needle images alone.",
+    "Instead of searching the full FHD frame for a thin needle, cropped the gauge first and found the needle on a small input, which improved both accuracy and inference speed.",
+    "Designed and ran a semi-automatic labeling loop (a small hand-labeled set in X-AnyLabeling → first YOLO model → auto-labeling and review → final training) to build 10,834 gauge and 9,594 needle images solo.",
     "Mixed about 7,000 on-site CCTV frames with a public gauge dataset for variety in gauge types, and built the needle set from Stage 1 crops so training matched the real inference input.",
     "Gauge detection reached mAP50-95 0.992 (precision and recall 0.987), trained with cosine LR, AMP, early stopping and resumable checkpoints.",
     "Compared standard boxes and oriented boxes (OBB) for the needle under identical settings with ±180° rotation augmentation: OBB raised mAP50-95 from 0.930 to 0.949 and outputs the needle angle directly, so it was adopted.",
@@ -811,8 +811,8 @@ function App() {
 
   const kdl_video_ENG = [
     "Built a generative pipeline that turns real wildfire-watch and urban-flood CCTV stills into 'disaster starting and spreading' training videos: FLUX.2 draws the start state, Wan2.2 animates it, RIFE interpolates to 10 s.",
-    "Removed sudden-onset artifacts structurally: FLUX draws each stage's start state and Wan only grows it, instead of prompting for gradual change.",
-    "Made composites seamless with tone-matching on unchanged pixels, masks on changed regions only and LAB hue correction for smoke.",
+    "Removed sudden first-frame jumps by design: FLUX draws each stage's start state and Wan only grows it, instead of prompting for gradual change.",
+    "Blended composites with tone-matching on unchanged pixels, masks on changed regions only and LAB hue correction for smoke.",
     "Rising flood water: compared start/end-frame conditioning (dry road → FLUX-flooded road, ~52% pass) against reversing a receding video (0%), and fixed client feedback on 'cement-colored' water with prompt and color-check changes.",
     "Automated QA by pairing OpenCV measurements (camera motion, sudden change, fire area, smoke-before-fire order) with a VLM calibrated on known answers.",
     "Ran a 4-GPU queue with resident models (per-request load ~9 min → 0) and a progress-based watchdog, plus a FastAPI authoring tool and an automatic prompt-optimization loop.",
@@ -930,7 +930,7 @@ function App() {
 
   const hackathon_ENG = [
     "Team project: a system that turns dashcam video into a ready-to-file reckless-driving report.",
-    "My part: trained the vehicle detector (customized YOLOv8, Ultralytics) and preprocessed the team's dataset.",
+    "My part: trained the vehicle detector (custom YOLOv8, Ultralytics) and preprocessed the team's dataset.",
     "The system also used a ViT to classify driving behavior from consecutive frames (cut-ins, hard braking, speeding) and OCR to read plates.",
     "The app fills in the plate number, location and violation type; the user adds details and files the report.",
   ];
@@ -945,7 +945,7 @@ function App() {
   // ===== Projects – Main =====
 
   const pj_sense1_ENG = [
-    "Built canine heart-rate estimation from ballistocardiogram (BCG) signals with an LSTM (TensorFlow / Keras), owning the pipeline end to end.",
+    "Built canine heart-rate estimation from ballistocardiogram (BCG) signals with an LSTM (TensorFlow / Keras), as sole developer.",
     "Denoised raw BCG with FFT and wavelet decomposition, and modeled the periodicity of IJK peaks as domain features.",
     "Applied unsupervised IJK peak detection to reduce dependence on ECG reference signals, and validated each improvement statistically with Python and NumPy.",
     "Raised accuracy to 96% on readings that trembling and motion had made unreliable; worked with hardware and production teams on signal quality.",
@@ -965,7 +965,7 @@ function App() {
   const law_ENG = [
     "Built a Korean legal AI assistant combining Llama-3 with RAG over statutes and precedents from the National Law Information System.",
     "Designed the retrieval pipeline: legal-text cleaning and chunking, bge-m3 embeddings (1024-d), FAISS / ChromaDB search; served with FastAPI on AWS EC2 and Docker.",
-    "Orchestrated retrieval, reasoning and drafting with LangChain agents, using tool routing and session memory that reuses verified citations.",
+    "Coordinated retrieval, reasoning and drafting with LangChain agents, using tool routing and session memory that reuses verified citations.",
     "Iterative RAG with CoT, role-based (plaintiff / defendant / bench) and ReAct prompting, ending in conclusions with explicit citations.",
     "Evaluated responses qualitatively for factual consistency and legal validity.",
   ];
@@ -988,11 +988,11 @@ function App() {
     </div>
   );
   const eliza_ENG = [
-    'Developed an AI chatbot in Java using a scripting system with keywords, decomposition rules, and reassembly rules, simulating three personalities: a psychologist, a politician, and a five-year-old child. Implemented pre- and post-substitutions using regex for sentence transformation and synonym handling.',
-    'Structured the chatbot engine into modular Java classes, including an Eliza Engine (managing input processing and response generation), a Decomposition Engine (applying regex-based pattern matching), and a Reassembly Engine (constructing responses with predefined grammatical structures).',
-    'Implemented priority-based keyword matching, ensuring responses aligned with conversational context. Used regular expressions (regex) for pattern recognition, allowing dynamic sentence decomposition and reassembly for natural conversations.',
-    'Collaborated using Mercurial for version control, managing project updates. Resolved merge conflicts with commands like hg resolve --all and hg merge, and manually edited clashing files for synchronization.',
-    'Conducted iterative testing, refining keyword priorities to improve chatbot accuracy and ensuring smooth response flow. Identified challenges like post-substitution issues, where responses sometimes lacked precision, and planned improvements for more nuanced conversation handling.',
+    'Built an ELIZA-style chatbot in Java driven by scripts of keywords, decomposition rules and reassembly rules, with three personas (psychologist, politician, five-year-old) and regex pre- and post-substitutions for synonyms.',
+    'Split the engine into separate classes: Eliza Engine (input and response), Decomposition Engine (regex pattern matching) and Reassembly Engine (rule-based responses).',
+    'Matched keywords by priority and used regex patterns to take sentences apart and put them back together.',
+    'Used Mercurial for version control and resolved merge conflicts (hg resolve, hg merge) by hand.',
+    'Tuned keyword priorities through repeated testing; post-substitution still produced some off answers.',
   ];
   const eliza_KOR = [
     'Java로 키워드·분해 규칙·재조립 규칙 기반 스크립팅 시스템을 구현, 심리학자/정치인/5세 어린이 3개 페르소나를 시뮬레이션. 정규식을 활용한 전/후 치환으로 문장 변환·동의어 처리.',
@@ -1347,7 +1347,7 @@ function App() {
     {
       badge: { ENG: 'Contribution 85%', KOR: '기여도 85%' },
       summary: {
-        ENG: ["Owned the OCR stage of a VLM-based KIE pipeline, brought in to raise handwriting recognition", "Built a 15,808-sample handwriting goldenset tagged by difficulty", "Auto-labeled ~80k handwriting samples from client ROI boxes", "Compared PARSeq, PP-OCRv5 and SVTRv2, then fine-tuned PARSeq on 11.6M samples"],
+        ENG: ["Owned the OCR stage of a VLM-based KIE pipeline, brought in to raise handwriting recognition", "Built a 15,808-sample handwriting golden set tagged by difficulty", "Auto-labeled ~80k handwriting samples from client ROI boxes", "Compared PARSeq, PP-OCRv5 and SVTRv2, then fine-tuned PARSeq on 11.6M samples"],
         KOR: ["VLM 기반 KIE 파이프라인의 OCR 단계 담당, 필기체 인식률 향상을 위해 투입", "실제 서식 기반 필기체 골든셋 15,808개 구축, 난이도별 태깅", "고객 ROI 박스로 필기체 약 8만 장 오토라벨링", "PARSeq·PP-OCRv5·SVTRv2 비교 후 1,160만 장으로 PARSeq fine-tuning"],
       },
       media: [
