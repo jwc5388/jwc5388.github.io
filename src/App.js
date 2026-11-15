@@ -339,8 +339,8 @@ function App() {
     },
     kdlGaugeReading: {
       problem: {
-        ENG: "Analog gauges had to be read in person, so nobody could watch them around the clock.",
-        KOR: "아날로그 계기판은 사람이 직접 가서 읽어야 해서 24시간 지켜볼 수 없었습니다.",
+        ENG: "Analog gauges were checked by people watching CCTV, and no one can watch the feeds 24 hours a day.",
+        KOR: "아날로그 계기판을 사람이 CCTV로 확인해야 했는데, 24시간 계속 모니터링할 수는 없었습니다.",
       },
       team: {
         ENG: "Solo",
@@ -406,8 +406,8 @@ function App() {
     },
     kdlDisasterVideo: {
       problem: {
-        ENG: "Real CCTV rarely captures the moment a wildfire or flood starts, which detection models need for training.",
-        KOR: "탐지 모델 학습에 필요한 산불·침수 발생 순간이 실제 CCTV에는 거의 남아 있지 않습니다.",
+        ENG: "Real wildfire and flood footage is hard to collect, so we generate a wide range of scenes with AI and use them as training data.",
+        KOR: "실제 산불·침수 영상은 수집이 어려워, 다양한 상황의 영상을 AI로 생성해 학습 데이터로 활용합니다.",
       },
       team: { ENG: "Solo", KOR: "단독" },
       role: {
