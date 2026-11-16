@@ -438,8 +438,8 @@ function App() {
     },
     sense1Vet: {
       problem: {
-        ENG: "The collar's heart-rate reading broke down whenever the dog shivered or moved, and at home there is no ECG to check it against.",
-        KOR: "강아지가 떨거나 움직이면 목걸이의 심박 측정값이 크게 흔들렸고, 집에서는 비교할 ECG도 없었습니다.",
+        ENG: "The collar's original dynamic-threshold peak detection lost the heartbeat whenever motion noise from shivering or movement swamped the BCG signal, so I replaced it with a deep learning model trained on denoised signal features.",
+        KOR: "기존 Dynamic Threshold 기반 피크 검출은 떨림·움직임 노이즈가 BCG 신호를 덮으면 심박을 놓쳤습니다. 이를 노이즈 제거한 신호 특징으로 학습한 딥러닝 모델로 대체했습니다.",
       },
       team: { ENG: 'Solo on the algorithm, working with the hardware and production teams', KOR: '알고리즘 단독, 하드웨어·생산팀과 협업' },
       role: {
