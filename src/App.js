@@ -50,6 +50,9 @@ import disasterGridFire from './assets/images/disasterGridFire.jpg';
 import seoyonImage2 from './assets/images/seoyon2.jpg';
 import lgaxImage1 from './assets/images/lgax1.jpg';
 import lgaxImage2 from './assets/images/lgax2.jpg';
+import lgaxAgentImage1 from './assets/images/lgax_agent1.webp';
+import lgaxAgentImage2 from './assets/images/lgax_agent2.webp';
+import lgaxAgentImage3 from './assets/images/lgax_agent3.webp';
 import shinhanApp1 from './assets/images/shinhanApp1.jpg';
 import ppassClassify from './assets/images/ppass_classify.jpg';
 import ppassResult from './assets/images/ppass_result.jpg';
@@ -395,8 +398,8 @@ function App() {
         KOR: "PARSeq · PP-OCRv5 · SVTRv2 · PyTorch · PaddleOCR",
       },
       results: {
-        ENG: "Exact match 85.23% → 89.49% (+4.26 pp) on 158,898 test samples · handwriting golden set 68.63% → 77.33% · deployed the improved OCR model, which let the delayed Hyundai Capital project close",
-        KOR: "테스트 158,898개 기준 정확도 85.23% → 89.49% (+4.26%p) · 필기체 골든셋 68.63% → 77.33% · 개선한 OCR 모델 배포로 지연되던 현대캐피탈 사업 마무리",
+        ENG: "Handwriting golden set 68.63% → 91.37% · average recognition across Hyundai Capital's 260 document types rose from the 80% range to 97%, which let the delayed project close",
+        KOR: "필기체 골든셋 68.63% → 91.37% · 80%대에 머물던 현대캐피탈 문서 260종 평균 인식률을 97%까지 올려 지연되던 사업 마무리",
       },
       lessons: {
         ENG: "An ablation showed synthetic handwriting added only ~0.2 pp. The gain came from data curation and the training recipe, so I stopped generating more before scaling it up",
@@ -1315,10 +1318,10 @@ function App() {
     {
       badge: { ENG: 'Contribution 100%', KOR: '기여도 100%' },
       summary: {
-        ENG: ["Extracts each model's specs from the review deck (PPT) with LLM/VLM and fills the master spec sheet (Excel) and product roadmap automatically", "The same spec can appear in several places, so values are taken from the deck body, then the spec table, then attached Excel, and finally carried over from the base model", "Values are placed by spec item name, not row number, so they land in the right cell even when the sheet layout differs", "LLM failures retried, then backfilled by rule-based extraction, so no field is left empty", "Work-assistant agent (LangGraph): 9 functions including spec lookup, comparison, history and review support", "Offline installer for the client's air-gapped server"],
-        KOR: ["검토의뢰서(PPT)에서 모델별 스펙을 LLM·VLM으로 뽑아 마스터 스펙시트(Excel)와 제품 로드맵을 자동 작성", "같은 스펙이 여러 곳에 있어 본문 → 스펙 표 → 첨부 엑셀 순으로 값을 찾고, 끝까지 없으면 기준 모델(Base) 값을 이어받음", "값은 행 번호가 아닌 스펙 항목 이름으로 찾아 넣어, 시트 구성이 달라도 정확한 칸에 입력", "LLM 실패 시 재요청 후 규칙 추출로 보완해 빈 필드 없음", "업무 도우미 에이전트(LangGraph): 스펙 조회·비교·이력·검수 보조 등 9가지 기능", "고객 폐쇄망 서버용 설치 번들 제작"],
+        ENG: ["Extracts each model's specs from the review deck (PPT) with LLM/VLM and fills the master spec sheet (Excel) and product roadmap automatically", "The same spec can appear in several places, so values are taken from the deck body, then the spec table, then attached Excel, and finally carried over from the base model", "Values are placed by spec item name, not row number, so they land in the right cell even when the sheet layout differs", "LLM failures retried, then backfilled by rule-based extraction, so no field is left empty", "Work-assistant agent on LG's in-house LLM and LangGraph: from spec and PRM lookups to registering a new model in a single chat, connected to the existing review and approval flow", "Offline installer for the client's air-gapped server"],
+        KOR: ["검토의뢰서(PPT)에서 모델별 스펙을 LLM·VLM으로 뽑아 마스터 스펙시트(Excel)와 제품 로드맵을 자동 작성", "같은 스펙이 여러 곳에 있어 본문 → 스펙 표 → 첨부 엑셀 순으로 값을 찾고, 끝까지 없으면 기준 모델(Base) 값을 이어받음", "값은 행 번호가 아닌 스펙 항목 이름으로 찾아 넣어, 시트 구성이 달라도 정확한 칸에 입력", "LLM 실패 시 재요청 후 규칙 추출로 보완해 빈 필드 없음", "LG전자 사내 LLM과 LangGraph로 업무 도우미 에이전트 개발: 스펙·PRM 조회부터 신규 모델 등록까지 채팅 한 번으로 처리하고, 기존 검수·승인 흐름에 연결", "고객 폐쇄망 서버용 설치 번들 제작"],
       },
-      media: [{ src: lgaxImage1, caption: { ENG: "Deployed service: master spec sheet", KOR: "실제 배포 화면: 마스터 스펙시트" } }, { src: lgaxImage2, caption: { ENG: "Generated product roadmap", KOR: "로드맵 자동 생성 화면" } }],
+      media: [{ src: lgaxImage1, caption: { ENG: "Deployed service: master spec sheet", KOR: "실제 배포 화면: 마스터 스펙시트" } }, { src: lgaxImage2, caption: { ENG: "Generated product roadmap", KOR: "로드맵 자동 생성 화면" } }, { src: lgaxAgentImage1, caption: { ENG: "Work assistant: new model request in chat", KOR: "업무 도우미: 채팅으로 신규 모델 등록 요청" } }, { src: lgaxAgentImage2, caption: { ENG: "Work assistant: change proposal to review document", KOR: "업무 도우미: 변경 제안 → 검수 문서 생성" } }, { src: lgaxAgentImage3, caption: { ENG: "Cell-level review before approval to the master spec sheet", KOR: "마스터 스펙시트 반영 전 셀 단위 검수 화면" } }],
       id: 'proj-1', key: 'kdlProductPlanning', org: 'company', fields: ['LLM', 'VLM'],
       title: { ENG: 'LG Electronics · Product-Planning Document Automation', KOR: 'LG전자 · 상품기획 문서 자동화' },
       location: { ENG: 'Korea Deep Learning · AX project', KOR: '한국딥러닝 · AX 프로젝트' },
