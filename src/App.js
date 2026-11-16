@@ -300,8 +300,8 @@ function App() {
         KOR: "VLM (vLLM, FP8) · FastAPI · React / TypeScript · Docker Compose · LangGraph · OOXML 패치",
       },
       results: {
-        ENG: "1,225 of 1,232 cells auto-filled on an 8-model document · FP8: 40% less memory, 19% faster, same accuracy · Agent evaluation 64/64, answering 8 concurrent questions during extraction · Found the cause of runaway LLM output (up to 16,000 tokens) and brought it back to 1,300–1,900",
-        KOR: "8개 모델 문서 1,232칸 중 1,225칸 자동 채움 · FP8 전환: 메모리 40% 절감, 응답 19% 단축, 정확도 유지 · 에이전트 평가 64/64 통과, 추출 중에도 동시 질문 8건 응답 · LLM 출력 폭주(최대 16,000토큰) 원인을 찾아 1,300~1,900토큰으로 정상화",
+        ENG: "1,225 of 1,232 cells auto-filled on an 8-model document · FP8: 40% less memory, 19% faster, same accuracy · Agent evaluation 64/64, answering 8 concurrent questions during extraction · Found the cause of runaway LLM output (up to 16,000 tokens) and brought it back to 1,300–1,900 · Korea Deep Learning selected as an LG Electronics collaboration best-practice partner",
+        KOR: "8개 모델 문서 1,232칸 중 1,225칸 자동 채움 · FP8 전환: 메모리 40% 절감, 응답 19% 단축, 정확도 유지 · 에이전트 평가 64/64 통과, 추출 중에도 동시 질문 8건 응답 · LLM 출력 폭주(최대 16,000토큰) 원인을 찾아 1,300~1,900토큰으로 정상화 · 한국딥러닝, LG전자 협업 우수사례 기업으로 선정",
       },
       links: [],
     },
@@ -374,8 +374,8 @@ function App() {
     },
     kdlOcrResearch: {
       problem: {
-        ENG: "The VLM alone could not read Korean handwriting reliably, so OCR was added to the pipeline, but that OCR read only 68.63% of handwritten fields correctly.",
-        KOR: "VLM만으로는 한국어 필기체를 제대로 읽지 못해 OCR을 붙였지만, 그 OCR도 손글씨 항목을 68.63%만 맞혔습니다.",
+        ENG: "The VLM alone could not read Korean handwriting reliably, which was holding up project sign-off. OCR was added to the pipeline, but it read only 68.63% of handwritten fields correctly.",
+        KOR: "VLM만으로는 한국어 필기체를 제대로 읽지 못해 사업 마무리가 지연되고 있었습니다. OCR을 붙였지만, 그 OCR도 손글씨 항목을 68.63%만 맞혔습니다.",
       },
       team: { ENG: "2 people", KOR: "2명" },
       role: {
@@ -395,8 +395,8 @@ function App() {
         KOR: "PARSeq · PP-OCRv5 · SVTRv2 · PyTorch · PaddleOCR",
       },
       results: {
-        ENG: "Exact match 85.23% → 89.49% (+4.26 pp) on 158,898 test samples · handwriting golden set 68.63% → 77.33% · weights deployed to a Hyundai Capital project",
-        KOR: "테스트 158,898개 기준 정확도 85.23% → 89.49% (+4.26%p) · 필기체 골든셋 68.63% → 77.33% · 현대캐피탈 프로젝트에 가중치 배포",
+        ENG: "Exact match 85.23% → 89.49% (+4.26 pp) on 158,898 test samples · handwriting golden set 68.63% → 77.33% · deployed the improved OCR model, which let the delayed Hyundai Capital project close",
+        KOR: "테스트 158,898개 기준 정확도 85.23% → 89.49% (+4.26%p) · 필기체 골든셋 68.63% → 77.33% · 개선한 OCR 모델 배포로 지연되던 현대캐피탈 사업 마무리",
       },
       lessons: {
         ENG: "An ablation showed synthetic handwriting added only ~0.2 pp. The gain came from data curation and the training recipe, so I stopped generating more before scaling it up",
