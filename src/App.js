@@ -50,6 +50,7 @@ import disasterGridFire from './assets/images/disasterGridFire.jpg';
 import seoyonImage2 from './assets/images/seoyon2.jpg';
 import lgaxImage1 from './assets/images/lgax1.jpg';
 import lgaxImage2 from './assets/images/lgax2.jpg';
+import hyundaiEval from './assets/images/hyundai_eval.png';
 import lgaxAgentImage1 from './assets/images/lgax_agent1.webp';
 import lgaxAgentImage2 from './assets/images/lgax_agent2.webp';
 import lgaxAgentImage3 from './assets/images/lgax_agent3.webp';
@@ -398,8 +399,8 @@ function App() {
         KOR: "PARSeq · PP-OCRv5 · SVTRv2 · PyTorch · PaddleOCR",
       },
       results: {
-        ENG: "Handwriting golden set 68.63% → 91.37% · average recognition across Hyundai Capital's 260 document types rose from the 80% range to 97%, which let the delayed project close",
-        KOR: "필기체 골든셋 68.63% → 91.37% · 80%대에 머물던 현대캐피탈 문서 260종 평균 인식률을 97%까지 올려 지연되던 사업 마무리",
+        ENG: "Handwriting golden set 68.63% → 91.37% · Passed Hyundai Capital's official acceptance test on live E-fax documents: classification 97%, key-value extraction 98% (printed) and 98% (handwritten) · Adding OCR raised extraction accuracy by 8–12 pp across all 260 document types, which let the delayed project close",
+        KOR: "필기체 골든셋 68.63% → 91.37% · 현대캐피탈 공식 검수(실제 E-fax 운영 문서) 전 항목 Pass: 문서 분류 97%, Key-Value 추출 인쇄체 98%·필기체 98% · OCR 적용으로 문서 260종 전체 추출 정확도 8~12%p 향상, 지연되던 사업 마무리",
       },
       lessons: {
         ENG: "An ablation showed synthetic handwriting added only ~0.2 pp. The gain came from data curation and the training recipe, so I stopped generating more before scaling it up",
@@ -1347,6 +1348,7 @@ function App() {
         KOR: ["실제 서식 기반 필기체 골든셋 15,808개 구축, 난이도별 태깅", "고객 ROI 박스로 필기체 약 8만 장 오토라벨링", "PARSeq·PP-OCRv5·SVTRv2 비교 후 1,160만 장으로 PARSeq fine-tuning"],
       },
       media: [
+        { src: hyundaiEval, caption: { ENG: "Hyundai Capital official acceptance results (all items passed)", KOR: "현대캐피탈 공식 검수 결과 (전 항목 Pass)" } },
         { src: hcOcrErrors, caption: { ENG: "Error analysis: GT vs prediction", KOR: "오답 분석: 정답 vs 예측" } },
         { src: hcOcrForm1, caption: { ENG: "Lease form: field results", KOR: "신차리스 양식 인식" } },
         { src: hcOcrForm2, caption: { ENG: "Installment form: full page", KOR: "신차할부 양식 전체 인식" } },
