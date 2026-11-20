@@ -246,7 +246,7 @@ function App() {
           ENG: [
             'Global Shinhan InnoBoost 2026 (**Top 8** · Open Innovation Reward)',
             '2025 Quantum AI Hackathon (**Excellence Prize**, 1st in qualifier)',
-            'Toss NEXT ML Challenge (**30th of 2,206**, résumé-screening pass)',
+            'Toss NEXT ML Challenge (**30th of 2,206**, résumé screening waived)',
           ],
           KOR: [
             '글로벌 신한 이노부스트 2026 (**상위 8개사** · 오픈이노베이션 리워드)',
@@ -630,7 +630,7 @@ function App() {
         KOR: '토스 CTR: 부스팅 모델 3종(XGBoost, LightGBM, CatBoost) 앙상블',
       },
       results: {
-        ENG: 'Toss NEXT ML Challenge: finished 30th of 2,206 participants, earning a résumé-screening pass for Toss hiring',
+        ENG: 'Toss NEXT ML Challenge: finished 30th of 2,206 participants, with résumé screening waived for Toss hiring',
         KOR: '토스 NEXT ML Challenge 참가자 2,206명 중 최종 30위, 토스 채용 서류전형 면제',
       },
       links: [],
@@ -732,7 +732,7 @@ function App() {
     "Conflicts between sources go to human review with per-source evidence; fixed multi-model documents so 1,225 of 1,232 cells fill automatically.",
     "Wrote into large Excel files by patching sheet XML directly, keeping original formatting and avoiding the bloat openpyxl caused (a 1.5MB file growing past 1GB).",
     "Generated product roadmaps by fixing lanes from PPT coordinates and reading only quarters with a VLM, with rule-based date normalization and carry-over of schedules from the previous roadmap.",
-    "Evaluated FP8 vs bf16 on a 28-document set with a corrected answer key: same accuracy, 40% less memory, 19% faster.",
+    "Evaluated FP8 vs BF16 on a 28-document answer key with labeling bias removed: same accuracy, 40% less memory, 19% faster.",
     "Shipped an offline installer (install / update / rollback / backup) for an air-gapped server without sudo, ran the demo server, and delivered 30+ client requirements tracked by ID and priority, including a same-day IP-restriction security request.",
   ];
   const kdl_planning_KOR = [
@@ -740,7 +740,7 @@ function App() {
     "원천 간 값이 충돌하면 근거와 함께 사람 검수로 올리고, 다중 모델 문서 처리를 고쳐 1,232칸 중 1,225칸 자동 채움.",
     "시트 XML을 직접 패치해 대형 엑셀의 서식을 유지하고, openpyxl 저장 시 1.5MB 파일이 1GB 넘게 부풀던 문제 제거.",
     "로드맵 생성: 레인은 PPT 좌표로 확정하고 분기만 VLM으로 판독, 날짜는 규칙으로 정규화하고 이전 로드맵의 일정·상태를 이어받음.",
-    "편향을 제거한 정답셋(28건)으로 FP8 vs bf16 평가: 정확도 동일, 메모리 40% 절감, 응답 19% 단축.",
+    "편향을 제거한 정답셋(28건)으로 FP8 vs BF16 평가: 정확도 동일, 메모리 40% 절감, 응답 19% 단축.",
     "sudo 없는 폐쇄망 서버용 설치 번들(install/update/rollback/backup) 제작, 데모 서버 운영, 고객 요구사항 30여 건을 ID·우선순위로 관리해 반영(IP 제한 보안 요청 당일 처리).",
   ];
 
@@ -826,22 +826,22 @@ function App() {
     "GPU 4장 큐 워커와 모델 상주(요청당 로딩 약 9분 → 0), 진척 기반 자동 재시작, FastAPI 저작툴과 프롬프트 자동 최적화 루프 구축.",
   ];
 
-  const work_ai_title = lang === 'ENG' ? "AI/ML Engineer & Researcher, CareSix Co., LTD" : "AI/ML 엔지니어 & 리서처, 케어식스";
+  const work_ai_title = lang === 'ENG' ? "AI/ML Engineer & Researcher, CareSix Co., Ltd." : "AI/ML 엔지니어 & 리서처, 케어식스";
   const work_ai_details_ENG = [
     "**Deep learning (LSTM):** sole developer of the heart-rate model for the Sense1 Vet dog wearable (TensorFlow / Keras), 96% accuracy on readings that trembling and motion had made unreliable",
     "**Signal processing (BCG):** FFT and wavelet denoising, IJK-peak periodicity as features, and unsupervised peak detection to reduce dependence on ECG",
     "**Validation:** statistical checks of every change (Python, NumPy) and SHAP feature importance",
-    "**Exhibitions:** exhibited with CareSix at J-AGRI Tokyo, FAVA 2024 and CES 2025",
+    "**Exhibitions:** exhibited with CareSix at CES 2025, FAVA 2024 and J-AGRI Tokyo 2024",
   ];
   const work_ai_details_KOR = [
     "**딥러닝 (LSTM):** Sense1 Vet 반려견 웨어러블 심박 모델 단독 개발(TensorFlow / Keras), 떨림·움직임으로 불안정하던 측정을 정확도 96%까지 개선",
     "**신호처리 (BCG):** FFT·웨이블릿 노이즈 제거, IJK 피크 주기성 피처화, 비지도 피크 검출로 ECG 의존도 감소",
     "**검증:** 개선마다 Python·NumPy 통계 검증, SHAP으로 피처 중요도 분석",
-    "**전시:** 케어식스로 J-AGRI 도쿄, FAVA 2024, CES 2025 참가",
+    "**전시:** 케어식스로 CES 2025, FAVA 2024, J-AGRI 도쿄 2024 참가",
   ];
 
 
-  const work_app_title = lang === 'ENG' ? "App Developer, CareSix Co., LTD" : "앱 개발자, 케어식스";
+  const work_app_title = lang === 'ENG' ? "App Developer, CareSix Co., Ltd." : "앱 개발자, 케어식스";
   const work_app_details_ENG = [
     "**Android (Kotlin):** Sense1 Vet production-line app that maps each device's NFC tag, QR code and barcode into a CSV so every unit can be traced",
     "**Flutter · Bluetooth:** Cotons AI app that records BCG, 6-axis motion and temperature data over Bluetooth",
@@ -851,7 +851,7 @@ function App() {
     "**Flutter · 블루투스:** BCG·6축 센서·체온 데이터를 블루투스로 수집하는 Cotons AI 앱",
   ];
 
-  const work_math_title = lang === 'ENG' ? "Mathematician, CareSix Co., LTD" : "수학 리서처, 케어식스";
+  const work_math_title = lang === 'ENG' ? "Mathematician, CareSix Co., Ltd." : "수학 리서처, 케어식스";
   const work_math_details_ENG = [
     "**Signal analysis (FFT):** filtered noise from BCG measurements with a Fourier transform in Python",
     "**Statistical testing:** checked whether each algorithm change actually helped (Python, NumPy)",
@@ -1054,7 +1054,7 @@ function App() {
     </div>
   );
   const ach_dacon_ENG = [
-    "Toss NEXT ML Challenge – ad click-through-rate (CTR) prediction on tabular Parquet data (2,206 participants): in a team of 4, built the whole pipeline myself (feature preprocessing, an XGBoost + LightGBM + CatBoost ensemble and inference), finishing 30th and earning a résumé-screening pass for Toss hiring.",
+    "Toss NEXT ML Challenge – ad click-through-rate (CTR) prediction on tabular Parquet data (2,206 participants): in a team of 4, built the whole pipeline myself (feature preprocessing, an XGBoost + LightGBM + CatBoost ensemble and inference), finishing 30th, which waived résumé screening for Toss hiring.",
     "Boost up AI 2025 – drug discovery (1,289 participants): 37th, solo.",
     "2025 Power Consumption Forecasting (1,592 participants): 63rd, team of 3.",
     "Jump AI 2025 – drug discovery (1,126 participants): 65th, team of 4.",
@@ -1438,11 +1438,11 @@ function App() {
         { src: senseoneImage4, caption: { ENG: "Raw → filtered → cycles → peaks", KOR: "원신호 → 전처리 → 주기 → 피크" } },
         { src: senseoneImage2, caption: { ENG: "Wavelet denoising (6-level DWT)", KOR: "웨이블릿 노이즈 제거 (6단계)" } },
         { src: senseoneImage5, caption: { ENG: "SHAP feature importance", KOR: "SHAP 피처 중요도" } },
-        { src: senseoneImage3, caption: { ENG: "BiLSTM model summary", KOR: "BiLSTM 모델 구조" } },
+        { src: senseoneImage3, caption: { ENG: "Model summary (bidirectional LSTM)", KOR: "모델 구조 (양방향 LSTM)" } },
       ],
       id: 'proj-6', key: 'sense1Vet', org: 'company', fields: ['DL', 'Signal'],
       title: { ENG: 'CareSix · Sense1 Vet Heart-Rate Algorithm', KOR: '케어식스 · Sense1 Vet 심박 알고리즘' },
-      location: { ENG: 'CareSix Co., LTD · wearable for dogs', KOR: '케어식스 · 반려견 웨어러블' },
+      location: { ENG: 'CareSix Co., Ltd. · wearable for dogs', KOR: '케어식스 · 반려견 웨어러블' },
       dates: { ENG: 'September 2024 ~ February 2025', KOR: '2024.09 ~ 2025.02' },
       details: lang === 'ENG' ? pj_sense1_ENG : pj_sense1_KOR,
     },
